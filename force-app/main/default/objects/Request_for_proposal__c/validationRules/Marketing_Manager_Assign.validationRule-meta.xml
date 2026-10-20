@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Marketing_Manager_Assign</fullName>
+    <active>false</active>
+    <description>Only Marketing Manager Can Change Stage to assign
+
+-- 21 August 2024 --
+Deactive because assigned user by automation</description>
+    <errorConditionFormula>AND(
+NOT(
+CONTAINS($Profile.Name,&apos;Marketing Manager&apos;)),
+ISPICKVAL(Request_for_Proposal_Status__c , &quot;Request Assign&quot;),
+ISCHANGED(Request_for_Proposal_Status__c)
+)</errorConditionFormula>
+    <errorMessage>Only Manager can move to request assign stage</errorMessage>
+</ValidationRule>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Check_file_approval</fullName>
+    <active>true</active>
+    <description>check_file_saat approval</description>
+    <errorConditionFormula>and(FileCount__c  = False, Status_Approval__c =&apos;Waiting Approval Campaign Team&apos;,ISCHANGED(Approval_Process__c))</errorConditionFormula>
+    <errorMessage>Need Upload Files</errorMessage>
+</ValidationRule>

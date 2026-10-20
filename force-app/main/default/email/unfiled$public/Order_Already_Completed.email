@@ -1,0 +1,10 @@
+Hello,
+
+The opportunity {!Order.Opportunity} with order number: {!Order.OrderNumber}  already completed
+Click link below for more information 
+Order Link:
+{!Order.Link}
+Opportunity name:
+{!Order.Opportunity}
+
+Thank You

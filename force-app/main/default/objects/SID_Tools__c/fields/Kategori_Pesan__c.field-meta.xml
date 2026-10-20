@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Kategori_Pesan__c</fullName>
+    <label>Kategori Pesan</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Type_Sender__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Premium Ads</fullName>
+                <default>false</default>
+                <label>Premium Ads</label>
+            </value>
+            <value>
+                <fullName>Premium Notif</fullName>
+                <default>false</default>
+                <label>Premium Notif</label>
+            </value>
+            <value>
+                <fullName>Premium OTP</fullName>
+                <default>false</default>
+                <label>Premium OTP</label>
+            </value>
+            <value>
+                <fullName>Regular Ads</fullName>
+                <default>false</default>
+                <label>Regular Ads</label>
+            </value>
+            <value>
+                <fullName>Regular Notif</fullName>
+                <default>false</default>
+                <label>Regular Notif</label>
+            </value>
+            <value>
+                <fullName>PNV</fullName>
+                <default>false</default>
+                <label>PNV</label>
+            </value>
+            <value>
+                <fullName>Premium Advertising</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Premium Advertising</label>
+            </value>
+            <value>
+                <fullName>Premium Notif - Ads</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Premium Notif - Ads</label>
+            </value>
+            <value>
+                <fullName>Premium OTP - Ads</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Premium OTP - Ads</label>
+            </value>
+            <value>
+                <fullName>Premium OTP - Notif</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Premium OTP - Notif</label>
+            </value>
+            <value>
+                <fullName>Premium OTP - Notif - Ads</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Premium OTP - Notif - Ads</label>
+            </value>
+            <value>
+                <fullName>Regular Advertising</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Regular Advertising</label>
+            </value>
+            <value>
+                <fullName>Regular Notif - Ads</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Regular Notif - Ads</label>
+            </value>
+            <value>
+                <fullName>Regular OTP</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Regular OTP</label>
+            </value>
+            <value>
+                <fullName>SMS Bulk</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>SMS Bulk</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Premium</controllingFieldValue>
+            <valueName>Premium Ads</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Premium</controllingFieldValue>
+            <valueName>Premium Notif</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Premium</controllingFieldValue>
+            <valueName>Premium OTP</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PNV</controllingFieldValue>
+            <valueName>PNV</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Charging_Billing</fullName>
+    <columns>NAME</columns>
+    <columns>Date__c</columns>
+    <columns>Publisher__c</columns>
+    <columns>Site_Name__c</columns>
+    <columns>Sum_of_Paid_Impressions__c</columns>
+    <columns>Sum_of_Revenue_USD__c</columns>
+    <columns>Sum_of_Net_Revenue_USD__c</columns>
+    <columns>Exchange_Rate__c</columns>
+    <columns>Billing_USD__c</columns>
+    <columns>Selisih__c</columns>
+    <columns>Traffic_Detail__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Date__c</field>
+        <operation>equals</operation>
+        <value>LAST_MONTH</value>
+    </filters>
+    <label>Charging Billing</label>
+</ListView>

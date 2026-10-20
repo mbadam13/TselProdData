@@ -1,0 +1,35 @@
+<!--
+  @description       : 
+  @author            : Andre Prasetya
+  @group             : 
+  @last modified on  : 09-15-2022
+  @last modified by  : Andre Prasetya
+-->
+
+<apex:page lightningStyleSheets="true" controller="GenerateAdexMonthly" action="{!execute}">
+	<script type="text/javascript">
+        function doRedirect(){
+            window.history.back();
+        }
+    </script>
+    
+    <div align="left" >
+    	<apex:sectionHeader title="Generate Adex Transaction Monthly" />
+    </div>
+    <apex:pageMessages />
+    
+    <apex:form >
+        <apex:pageBlock id="idPageBlock">
+            <apex:pageBlockSection rendered="{!batchStatusBool}">
+                <apex:actionStatus id="idActionStatus" startText="Checking…" />
+                	<apex:outputLabel > Generate Adex Transaction Monthly Status is <b>{!batchStatus}</b> </apex:outputLabel>
+                <apex:actionPoller interval="5" action="{!checkBatchStatus}" enabled="{!pollerBool}" reRender="idPageBlock" status="idActionStatus"/>
+
+            </apex:pageBlockSection>
+            <div style="text-align: left">
+		    	<apex:commandButton value="Back" oncomplete="doRedirect();"/>   
+			</div>
+        </apex:pageBlock>
+    </apex:form>
+
+</apex:page>

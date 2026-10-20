@@ -1,0 +1,13 @@
+.file-input-container {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.file-input {
+    margin-bottom: 5px; /* Adds space between the input and the label */
+}
+
+.file-name {
+    margin-bottom: 5px; /* Adds space between the label and the import button */
+}

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IsSubmitApproval__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>dibuat untuk penanda agar sales tidak dapat update stage sebelum submit approval</description>
+    <label>IsSubmitApproval?</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

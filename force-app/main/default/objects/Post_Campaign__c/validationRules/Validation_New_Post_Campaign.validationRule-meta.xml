@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Validation_New_Post_Campaign</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+NOT(ISPICKVAL(Opportunity__r.StageName, &apos;Closed Won&apos;)),
+ISNEW())</errorConditionFormula>
+    <errorMessage>Tidak bisa create Post Campaign Advanced karena Opportunity masih belum Closed Won</errorMessage>
+</ValidationRule>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Mitra_MyAds__c</fullName>
+    <formula>IF( ISPICKVAL( Account_Type__c , &apos;DOR&apos;), TRUE, FALSE )</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Mitra MyAds</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

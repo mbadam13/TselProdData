@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Account_Need_to_be_checked</fullName>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>NPWP__c</columns>
+    <columns>ACCOUNT.ADDRESS1_STATE</columns>
+    <columns>ACCOUNT.PHONE1</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>Reason_by_Settlement__c</columns>
+    <columns>Status__c</columns>
+    <columns>ACCOUNT.CREATED_DATE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Reason_by_Settlement__c</field>
+        <operation>equals</operation>
+    </filters>
+    <filters>
+        <field>Status__c</field>
+        <operation>equals</operation>
+    </filters>
+    <label>Account Need to be checked</label>
+    <sharedTo>
+        <role>General_Sales_Manager</role>
+        <role>Sales_Manager_A</role>
+        <role>Sales_Manager_B</role>
+        <role>Settlement_Manager</role>
+        <role>Settlement_Team</role>
+    </sharedTo>
+</ListView>

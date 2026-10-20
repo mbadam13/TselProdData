@@ -1,0 +1,418 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Pricing_Model__c</fullName>
+    <label>Pricing Model</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Buying_Method__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>CPM</fullName>
+                <default>false</default>
+                <label>CPM</label>
+            </value>
+            <value>
+                <fullName>CPC</fullName>
+                <default>false</default>
+                <label>CPC</label>
+            </value>
+            <value>
+                <fullName>CPU</fullName>
+                <default>false</default>
+                <label>CPU</label>
+            </value>
+            <value>
+                <fullName>CPMin</fullName>
+                <default>false</default>
+                <label>CPMin</label>
+            </value>
+            <value>
+                <fullName>CPTS</fullName>
+                <default>false</default>
+                <label>CPTS</label>
+            </value>
+            <value>
+                <fullName>CPL</fullName>
+                <default>false</default>
+                <label>CPL</label>
+            </value>
+            <value>
+                <fullName>CPA</fullName>
+                <default>false</default>
+                <label>CPA</label>
+            </value>
+            <value>
+                <fullName>All</fullName>
+                <default>false</default>
+                <label>All</label>
+            </value>
+            <value>
+                <fullName>CPMB</fullName>
+                <default>false</default>
+                <label>CPMB</label>
+            </value>
+            <value>
+                <fullName>CPV</fullName>
+                <default>false</default>
+                <label>CPV</label>
+            </value>
+            <value>
+                <fullName>CPCV</fullName>
+                <default>false</default>
+                <label>CPCV</label>
+            </value>
+            <value>
+                <fullName>CPD</fullName>
+                <default>false</default>
+                <label>CPD</label>
+            </value>
+            <value>
+                <fullName>CPI</fullName>
+                <default>false</default>
+                <label>CPI</label>
+            </value>
+            <value>
+                <fullName>Cost perspot</fullName>
+                <default>false</default>
+                <label>Cost perspot</label>
+            </value>
+            <value>
+                <fullName>Cost Perslot</fullName>
+                <default>false</default>
+                <label>Cost Perslot</label>
+            </value>
+            <value>
+                <fullName>Cost per subscriber</fullName>
+                <default>false</default>
+                <label>Cost per subscriber</label>
+            </value>
+            <value>
+                <fullName>CPM OMP</fullName>
+                <default>false</default>
+                <label>CPM OMP</label>
+            </value>
+            <value>
+                <fullName>Cost Per Outlet</fullName>
+                <default>false</default>
+                <label>Cost Per Outlet</label>
+            </value>
+            <value>
+                <fullName>Cost Per Week</fullName>
+                <default>false</default>
+                <label>Cost Per Week</label>
+            </value>
+            <value>
+                <fullName>Cost Per 15 Days</fullName>
+                <default>false</default>
+                <label>Cost Per 15 Days</label>
+            </value>
+            <value>
+                <fullName>Cost Per Month</fullName>
+                <default>false</default>
+                <label>Cost Per Month</label>
+            </value>
+            <value>
+                <fullName>Cost Per Claim</fullName>
+                <default>false</default>
+                <label>Cost Per Claim</label>
+            </value>
+            <value>
+                <fullName>Cost Per Voucher</fullName>
+                <default>false</default>
+                <label>Cost Per Voucher</label>
+            </value>
+            <value>
+                <fullName>Cost Per Audience</fullName>
+                <default>false</default>
+                <label>Cost Per Audience</label>
+            </value>
+            <value>
+                <fullName>CPT</fullName>
+                <default>false</default>
+                <label>CPT</label>
+            </value>
+            <value>
+                <fullName>Per Agent</fullName>
+                <default>false</default>
+                <label>Per Agent</label>
+            </value>
+            <value>
+                <fullName>ECPM</fullName>
+                <default>false</default>
+                <label>ECPM</label>
+            </value>
+            <value>
+                <fullName>Audience</fullName>
+                <default>false</default>
+                <label>Audience</label>
+            </value>
+            <value>
+                <fullName>Account</fullName>
+                <default>false</default>
+                <label>Account</label>
+            </value>
+            <value>
+                <fullName>Year</fullName>
+                <default>false</default>
+                <label>Year</label>
+            </value>
+            <value>
+                <fullName>Agent</fullName>
+                <default>false</default>
+                <label>Agent</label>
+            </value>
+            <value>
+                <fullName>One Time</fullName>
+                <default>false</default>
+                <label>One Time</label>
+            </value>
+            <value>
+                <fullName>CPM PMP Telco</fullName>
+                <default>false</default>
+                <label>CPM PMP Telco</label>
+            </value>
+            <value>
+                <fullName>CPM PMP Non Telco</fullName>
+                <default>false</default>
+                <label>CPM PMP Non Telco</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>I/O</controllingFieldValue>
+            <controllingFieldValue>Programmatic</controllingFieldValue>
+            <controllingFieldValue>Performance</controllingFieldValue>
+            <controllingFieldValue>Non Programmatic</controllingFieldValue>
+            <controllingFieldValue>Programmatic Self Service</controllingFieldValue>
+            <valueName>CPM</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>I/O</controllingFieldValue>
+            <controllingFieldValue>Programmatic</controllingFieldValue>
+            <controllingFieldValue>Performance</controllingFieldValue>
+            <controllingFieldValue>Non Programmatic</controllingFieldValue>
+            <controllingFieldValue>Programmatic Self Service</controllingFieldValue>
+            <valueName>CPC</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>I/O</controllingFieldValue>
+            <controllingFieldValue>Programmatic</controllingFieldValue>
+            <controllingFieldValue>Performance</controllingFieldValue>
+            <controllingFieldValue>Non Programmatic</controllingFieldValue>
+            <controllingFieldValue>Programmatic Self Service</controllingFieldValue>
+            <valueName>CPU</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>I/O</controllingFieldValue>
+            <controllingFieldValue>Programmatic</controllingFieldValue>
+            <controllingFieldValue>Performance</controllingFieldValue>
+            <controllingFieldValue>Non Programmatic</controllingFieldValue>
+            <controllingFieldValue>Programmatic Self Service</controllingFieldValue>
+            <valueName>CPMin</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>I/O</controllingFieldValue>
+            <controllingFieldValue>Programmatic</controllingFieldValue>
+            <controllingFieldValue>Performance</controllingFieldValue>
+            <controllingFieldValue>Non Programmatic</controllingFieldValue>
+            <controllingFieldValue>Programmatic Self Service</controllingFieldValue>
+            <valueName>CPTS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>I/O</controllingFieldValue>
+            <controllingFieldValue>Programmatic</controllingFieldValue>
+            <controllingFieldValue>Performance</controllingFieldValue>
+            <controllingFieldValue>Non Programmatic</controllingFieldValue>
+            <controllingFieldValue>Programmatic Self Service</controllingFieldValue>
+            <valueName>CPL</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>I/O</controllingFieldValue>
+            <controllingFieldValue>Programmatic</controllingFieldValue>
+            <controllingFieldValue>Performance</controllingFieldValue>
+            <controllingFieldValue>Non Programmatic</controllingFieldValue>
+            <controllingFieldValue>Programmatic Self Service</controllingFieldValue>
+            <valueName>CPA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>I/O</controllingFieldValue>
+            <controllingFieldValue>Programmatic</controllingFieldValue>
+            <controllingFieldValue>Performance</controllingFieldValue>
+            <controllingFieldValue>Non Programmatic</controllingFieldValue>
+            <controllingFieldValue>Programmatic Self Service</controllingFieldValue>
+            <valueName>All</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>I/O</controllingFieldValue>
+            <controllingFieldValue>Programmatic</controllingFieldValue>
+            <controllingFieldValue>Performance</controllingFieldValue>
+            <controllingFieldValue>Non Programmatic</controllingFieldValue>
+            <controllingFieldValue>Programmatic Self Service</controllingFieldValue>
+            <valueName>CPMB</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>I/O</controllingFieldValue>
+            <controllingFieldValue>Programmatic</controllingFieldValue>
+            <controllingFieldValue>Performance</controllingFieldValue>
+            <controllingFieldValue>Non Programmatic</controllingFieldValue>
+            <controllingFieldValue>Programmatic Self Service</controllingFieldValue>
+            <valueName>CPV</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>I/O</controllingFieldValue>
+            <controllingFieldValue>Programmatic</controllingFieldValue>
+            <controllingFieldValue>Performance</controllingFieldValue>
+            <controllingFieldValue>Non Programmatic</controllingFieldValue>
+            <controllingFieldValue>Programmatic Self Service</controllingFieldValue>
+            <valueName>CPCV</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>I/O</controllingFieldValue>
+            <controllingFieldValue>Programmatic</controllingFieldValue>
+            <controllingFieldValue>Performance</controllingFieldValue>
+            <controllingFieldValue>Non Programmatic</controllingFieldValue>
+            <controllingFieldValue>Programmatic Self Service</controllingFieldValue>
+            <valueName>CPD</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>I/O</controllingFieldValue>
+            <controllingFieldValue>Programmatic</controllingFieldValue>
+            <controllingFieldValue>Performance</controllingFieldValue>
+            <controllingFieldValue>Non Programmatic</controllingFieldValue>
+            <controllingFieldValue>Programmatic Self Service</controllingFieldValue>
+            <valueName>CPI</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>I/O</controllingFieldValue>
+            <controllingFieldValue>Programmatic</controllingFieldValue>
+            <controllingFieldValue>Performance</controllingFieldValue>
+            <controllingFieldValue>Non Programmatic</controllingFieldValue>
+            <controllingFieldValue>Programmatic Self Service</controllingFieldValue>
+            <valueName>Cost perspot</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>I/O</controllingFieldValue>
+            <controllingFieldValue>Programmatic</controllingFieldValue>
+            <controllingFieldValue>Performance</controllingFieldValue>
+            <controllingFieldValue>Non Programmatic</controllingFieldValue>
+            <controllingFieldValue>Programmatic Self Service</controllingFieldValue>
+            <valueName>Cost Perslot</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>I/O</controllingFieldValue>
+            <controllingFieldValue>Programmatic</controllingFieldValue>
+            <controllingFieldValue>Performance</controllingFieldValue>
+            <controllingFieldValue>Non Programmatic</controllingFieldValue>
+            <controllingFieldValue>Programmatic Self Service</controllingFieldValue>
+            <valueName>Cost per subscriber</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>I/O</controllingFieldValue>
+            <controllingFieldValue>Programmatic</controllingFieldValue>
+            <controllingFieldValue>Performance</controllingFieldValue>
+            <controllingFieldValue>Non Programmatic</controllingFieldValue>
+            <controllingFieldValue>Programmatic Self Service</controllingFieldValue>
+            <valueName>CPM OMP</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>I/O</controllingFieldValue>
+            <controllingFieldValue>Programmatic</controllingFieldValue>
+            <controllingFieldValue>Performance</controllingFieldValue>
+            <controllingFieldValue>Non Programmatic</controllingFieldValue>
+            <controllingFieldValue>Programmatic Self Service</controllingFieldValue>
+            <valueName>Cost Per Outlet</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>I/O</controllingFieldValue>
+            <controllingFieldValue>Programmatic</controllingFieldValue>
+            <controllingFieldValue>Performance</controllingFieldValue>
+            <controllingFieldValue>Non Programmatic</controllingFieldValue>
+            <controllingFieldValue>Programmatic Self Service</controllingFieldValue>
+            <valueName>Cost Per Week</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>I/O</controllingFieldValue>
+            <controllingFieldValue>Programmatic</controllingFieldValue>
+            <controllingFieldValue>Performance</controllingFieldValue>
+            <controllingFieldValue>Non Programmatic</controllingFieldValue>
+            <controllingFieldValue>Programmatic Self Service</controllingFieldValue>
+            <valueName>Cost Per 15 Days</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>I/O</controllingFieldValue>
+            <controllingFieldValue>Programmatic</controllingFieldValue>
+            <controllingFieldValue>Performance</controllingFieldValue>
+            <controllingFieldValue>Non Programmatic</controllingFieldValue>
+            <controllingFieldValue>Programmatic Self Service</controllingFieldValue>
+            <valueName>Cost Per Month</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>I/O</controllingFieldValue>
+            <controllingFieldValue>Programmatic</controllingFieldValue>
+            <controllingFieldValue>Performance</controllingFieldValue>
+            <controllingFieldValue>Non Programmatic</controllingFieldValue>
+            <controllingFieldValue>Programmatic Self Service</controllingFieldValue>
+            <valueName>Cost Per Claim</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>I/O</controllingFieldValue>
+            <controllingFieldValue>Programmatic</controllingFieldValue>
+            <controllingFieldValue>Performance</controllingFieldValue>
+            <controllingFieldValue>Non Programmatic</controllingFieldValue>
+            <controllingFieldValue>Programmatic Self Service</controllingFieldValue>
+            <valueName>Cost Per Voucher</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>I/O</controllingFieldValue>
+            <controllingFieldValue>Programmatic</controllingFieldValue>
+            <valueName>Cost Per Audience</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>I/O</controllingFieldValue>
+            <controllingFieldValue>Programmatic</controllingFieldValue>
+            <valueName>CPT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>I/O</controllingFieldValue>
+            <controllingFieldValue>Programmatic</controllingFieldValue>
+            <valueName>Per Agent</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>I/O</controllingFieldValue>
+            <controllingFieldValue>Programmatic</controllingFieldValue>
+            <valueName>ECPM</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>I/O</controllingFieldValue>
+            <controllingFieldValue>Programmatic</controllingFieldValue>
+            <valueName>Audience</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>I/O</controllingFieldValue>
+            <valueName>Account</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>I/O</controllingFieldValue>
+            <valueName>Year</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>I/O</controllingFieldValue>
+            <valueName>Agent</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>I/O</controllingFieldValue>
+            <valueName>One Time</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>I/O</controllingFieldValue>
+            <valueName>CPM PMP Telco</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>I/O</controllingFieldValue>
+            <valueName>CPM PMP Non Telco</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

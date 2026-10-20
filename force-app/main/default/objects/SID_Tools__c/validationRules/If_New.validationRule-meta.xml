@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>If_New</fullName>
+    <active>true</active>
+    <description>For clone purposes</description>
+    <errorConditionFormula>AND(
+   ISNEW(), 
+   TEXT (Status__c) &lt;&gt; &apos;Draft&apos;,
+   RecordType.DeveloperName != &apos;PNV&apos;
+)</errorConditionFormula>
+    <errorMessage>Please change status to Draft</errorMessage>
+</ValidationRule>

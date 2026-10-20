@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Lead_Tadex_Compact</fullName>
+    <fields>Name</fields>
+    <fields>Company</fields>
+    <fields>Site_Domain__c</fields>
+    <fields>Email</fields>
+    <fields>MobilePhone</fields>
+    <fields>Nomor_Verifikasi_Dewan_Pers__c</fields>
+    <label>Lead Tadex Compact</label>
+</CompactLayout>

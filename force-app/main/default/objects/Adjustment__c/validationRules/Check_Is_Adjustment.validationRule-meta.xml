@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Check_Is_Adjustment</fullName>
+    <active>true</active>
+    <description>Please check &quot;Is Adjustment&quot; in UTMS record.</description>
+    <errorConditionFormula>AND(
+ISNEW(),
+Usage_Traffic_Media_Seller__r.Is_Adjustment__c = False
+)</errorConditionFormula>
+    <errorMessage>Please check &quot;Is Adjustment&quot; in UTMS record.</errorMessage>
+</ValidationRule>

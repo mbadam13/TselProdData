@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Media_Seller_Discount_Tierings</fullName>
+    <columns>NAME</columns>
+    <columns>Object_Name__c</columns>
+    <columns>Account__c</columns>
+    <columns>Brand__c</columns>
+    <columns>Product_Services_and_Code__c</columns>
+    <columns>Product__c</columns>
+    <columns>Start_Date__c</columns>
+    <columns>End_Date__c</columns>
+    <columns>Tiering_Type__c</columns>
+    <columns>Greater_Than_Equal__c</columns>
+    <columns>Less_Than__c</columns>
+    <columns>Value_Type__c</columns>
+    <columns>Value__c</columns>
+    <columns>Applies_to_Category__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Object_Name__c</field>
+        <operation>equals</operation>
+        <value>Monthly_Discount_Inventory_Seller__c</value>
+    </filters>
+    <filters>
+        <field>RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Additional_Setting__c.Monthly_Discount_Inventory_Media_Seller</value>
+    </filters>
+    <filters>
+        <field>Active__c</field>
+        <operation>equals</operation>
+        <value>1</value>
+    </filters>
+    <filters>
+        <field>CREATED_DATE</field>
+        <operation>equals</operation>
+        <value>LAST_YEAR</value>
+    </filters>
+    <label>Monthly Discount Inventory Media Seller</label>
+</ListView>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Usage_After_Disc__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(
+  TEXT(Order.Order_Type__c) =  &apos;Opportunity&apos; &amp;&amp; TEXT(Order.Order_Type__c) =  &apos;&apos;, 
+  ( Usage_Actual__c * UnitPrice ) * Discount__c , 
+  (Total_Gross_Inventory__c * (1- Discount__c ))
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Usage After Disc</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

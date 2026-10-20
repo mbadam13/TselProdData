@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Additional_Fee__c</fullName>
+    <formula>IF(Account_Name__c == &apos;Kinarya Solusi&apos; &amp;&amp; text( Bucket_Detail__r.Opportunity__r.StageName ) == &apos;Closed Won&apos;, 
+(0-(0.05*(IF(Amount__c &lt; Order_Amount__c ,Amount__c ,Order_Amount__c )* round(Sales_Price__c,2) ))),0)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Additional Fee</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PC_Creation</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+   TEXT(StageName) = &apos;Negotiation&apos;,
+   Performance_Product__c = true,
+   Performance_Product_Count__c &gt; 0,
+   OR(
+      PC_Form_Counter__c = 0,
+      ISNULL(PC_Form_Counter__c)
+   )
+)</errorConditionFormula>
+    <errorMessage>Please create Performance Campaign.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All_IPTV_Inventories</fullName>
+    <columns>NAME</columns>
+    <columns>IPTV_Channels__c</columns>
+    <columns>keyword__c</columns>
+    <columns>Type__c</columns>
+    <columns>Show_Time__c</columns>
+    <columns>Spot_Limits__c</columns>
+    <columns>Time__c</columns>
+    <columns>CREATED_DATE</columns>
+    <columns>LAST_UPDATE</columns>
+    <filterScope>Everything</filterScope>
+    <label>All IPTV Inventories</label>
+</ListView>

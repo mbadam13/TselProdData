@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>cannot_final_if_bukti_pembayaran_not_tic</fullName>
+    <active>false</active>
+    <description>tidak bisa lanjut ke final status jika checkbox belum di tick</description>
+    <errorConditionFormula>AND(
+   (Upload_Bukti_Pembayaran__c = FALSE),
+   ISPICKVAL(Status , &quot;Final&quot;),
+NOT(ISPICKVAL(  Status , &quot;Draft&quot;)
+))</errorConditionFormula>
+    <errorMessage>You have to upload invoice and checklist the upload bukti pembayaran checkbox</errorMessage>
+</ValidationRule>

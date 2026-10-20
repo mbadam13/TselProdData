@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>PNV_Approval</fullName>
+        <ccEmails>andhito.revandra@saasten.com</ccEmails>
+        <ccEmails>debora.pormes@saasten.com</ccEmails>
+        <ccEmails>sartikaratnasari2@gmail.com</ccEmails>
+        <description>PNV Approval</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>anissa_citarianida@telkomsel.co.id</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>k_dhani_darmawan@telkomsel.co.id</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>sartika_r_sari@telkomsel.co.id</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/PNV_Approved_Rejected_1665643056156</template>
+    </alerts>
+    <alerts>
+        <fullName>PNV_Rejected</fullName>
+        <ccEmails>debora.pormes@saasten.com</ccEmails>
+        <ccEmails>andhito.revandra@saasten.com</ccEmails>
+        <ccEmails>sartikaratnasari2@gmail.com</ccEmails>
+        <description>PNV Rejected</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>anissa_citarianida@telkomsel.co.id</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>k_dhani_darmawan@telkomsel.co.id</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>sartika_r_sari@telkomsel.co.id</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/PNV_Approved_Rejected_1665643056156</template>
+    </alerts>
+    <alerts>
+        <fullName>SID_Approval_Approved</fullName>
+        <description>SID Approval Approved</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>almira_h_suprapto@telkomsel.co.id</recipient>
+            <type>user</type>
+        </recipients>
+        <senderAddress>david.wong@saasten.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>unfiled$public/SID_Approval_Approved</template>
+    </alerts>
+    <alerts>
+        <fullName>SID_Approval_Rejected</fullName>
+        <description>SID Approval Rejected</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>almira_h_suprapto@telkomsel.co.id</recipient>
+            <type>user</type>
+        </recipients>
+        <senderAddress>david.wong@saasten.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>unfiled$public/SID_Approval_Rejected</template>
+    </alerts>
+    <alerts>
+        <fullName>SID_Approval_Submited</fullName>
+        <description>SID Approval Submited</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>almira_h_suprapto@telkomsel.co.id</recipient>
+            <type>user</type>
+        </recipients>
+        <senderAddress>david.wong@saasten.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>unfiled$public/SID_Approval_Submited</template>
+    </alerts>
+    <alerts>
+        <fullName>Submitted_PNV</fullName>
+        <ccEmails>debora.pormes@saasten.com</ccEmails>
+        <ccEmails>andhito.revandra@saasten.com</ccEmails>
+        <ccEmails>sartikaratnasari2@gmail.com</ccEmails>
+        <description>Submitted PNV</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>anissa_citarianida@telkomsel.co.id</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>k_dhani_darmawan@telkomsel.co.id</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>sartika_r_sari@telkomsel.co.id</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/PNV_Approved_Rejected_1665643056156</template>
+    </alerts>
+    <fieldUpdates>
+        <fullName>Back_To_Draft</fullName>
+        <field>Status__c</field>
+        <literalValue>Draft</literalValue>
+        <name>Back To Draft</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Done_Date</fullName>
+        <field>Done_Date__c</field>
+        <formula>NOW()</formula>
+        <name>Done Date</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Field_update_Negotiation_SID</fullName>
+        <field>Status__c</field>
+        <literalValue>Negotiation</literalValue>
+        <name>Field update Negotiation SID</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Field_update_draft_SID</fullName>
+        <field>Status__c</field>
+        <literalValue>Draft</literalValue>
+        <name>Field update draft SID</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Move_Verify</fullName>
+        <description>Move to Verify</description>
+        <field>Status__c</field>
+        <literalValue>Verify</literalValue>
+        <name>Move Verify</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>PNV</fullName>
+        <field>SID_Approval__c</field>
+        <literalValue>Approved</literalValue>
+        <name>PNV Approved</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>PNV_rejected</fullName>
+        <field>SID_Approval__c</field>
+        <literalValue>Rejected</literalValue>
+        <name>PNV rejected</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>SID_Approval_Rejected</fullName>
+        <field>SID_Approval__c</field>
+        <literalValue>Rejected</literalValue>
+        <name>SID Approval Rejected</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>SID_Approval_Submited</fullName>
+        <field>SID_Approval__c</field>
+        <literalValue>Submited</literalValue>
+        <name>SID Approval Submited</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>SID_Approved</fullName>
+        <field>SID_Approval__c</field>
+        <literalValue>Approved</literalValue>
+        <name>SID Approved</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_SID</fullName>
+        <field>SID__c</field>
+        <formula>SID_Name__c</formula>
+        <name>Set SID</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_Status_to_Completed</fullName>
+        <field>Status__c</field>
+        <literalValue>Completed</literalValue>
+        <name>Set Status to Completed</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_Status_to_Submission</fullName>
+        <field>Status__c</field>
+        <literalValue>Submission</literalValue>
+        <name>Set Status to Submission</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Status_PrivyId</fullName>
+        <description>akan pindah ke status verivy jika dokumen status sudah completed *Workflow</description>
+        <field>Status__c</field>
+        <literalValue>Verify</literalValue>
+        <name>Status PrivyId</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <rules>
+        <fullName>SID Completed</fullName>
+        <actions>
+            <name>Done_Date</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>SID_Tools__c.Status__c</field>
+            <operation>equals</operation>
+            <value>Completed</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>SID to Verify</fullName>
+        <actions>
+            <name>Move_Verify</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>SID_Tools__c.documentStatus__c</field>
+            <operation>equals</operation>
+            <value>Completed</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>SID_Tools__c.Status__c</field>
+            <operation>notEqual</operation>
+            <value>Completed</value>
+        </criteriaItems>
+        <description>SID move to verify when documentstatus from privyid completed</description>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+</Workflow>

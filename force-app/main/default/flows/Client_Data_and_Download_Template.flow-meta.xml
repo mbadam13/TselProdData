@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>59.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <choices>
+        <name>DataSalesNIK</name>
+        <choiceText>Report Sales NIK</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>Report Sales NIK</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <name>TemplateProgrammaticTraffic</name>
+        <choiceText>Template Client Traffic</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>Template Client Traffic</stringValue>
+        </value>
+    </choices>
+    <decisions>
+        <name>pilih_data_decision</name>
+        <label>pilih data decision</label>
+        <locationX>314</locationX>
+        <locationY>242</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Sales_NIK</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Pilihan</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Report Sales NIK</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Report_Sales_NIK</targetReference>
+            </connector>
+            <label>Sales NIK</label>
+        </rules>
+        <rules>
+            <name>Pilih_Template_Client_Traffic</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Pilihan</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Template Client Traffic</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>DisplayTemplateDownload</targetReference>
+            </connector>
+            <label>Pilih Template Client Traffic</label>
+        </rules>
+    </decisions>
+    <environments>Default</environments>
+    <interviewLabel>Client - Data and Download Template {!$Flow.CurrentDateTime}</interviewLabel>
+    <isAdditionalPermissionRequiredToRun>true</isAdditionalPermissionRequiredToRun>
+    <label>Client - Data and Download Template</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>Flow</processType>
+    <screens>
+        <name>Data_Information</name>
+        <label>Data Information</label>
+        <locationX>314</locationX>
+        <locationY>134</locationY>
+        <allowBack>false</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <connector>
+            <targetReference>pilih_data_decision</targetReference>
+        </connector>
+        <fields>
+            <name>Pilihan</name>
+            <choiceReferences>DataSalesNIK</choiceReferences>
+            <choiceReferences>TemplateProgrammaticTraffic</choiceReferences>
+            <dataType>String</dataType>
+            <fieldText>Pilihan</fieldText>
+            <fieldType>DropdownBox</fieldType>
+            <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+            <isRequired>true</isRequired>
+            <styleProperties>
+                <verticalAlignment>
+                    <stringValue>top</stringValue>
+                </verticalAlignment>
+                <width>
+                    <stringValue>12</stringValue>
+                </width>
+            </styleProperties>
+        </fields>
+        <nextOrFinishButtonLabel>Next</nextOrFinishButtonLabel>
+        <pauseButtonLabel>Cancel</pauseButtonLabel>
+        <showFooter>true</showFooter>
+        <showHeader>false</showHeader>
+    </screens>
+    <screens>
+        <name>DisplayTemplateDownload</name>
+        <label>DisplayTemplateDownload</label>
+        <locationX>314</locationX>
+        <locationY>350</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <fields>
+            <name>TemplateDownloadClient</name>
+            <fieldText>&lt;p&gt;&lt;strong style=&quot;font-size: 18px;&quot;&gt;Client Template&lt;/strong&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+            <styleProperties>
+                <verticalAlignment>
+                    <stringValue>top</stringValue>
+                </verticalAlignment>
+                <width>
+                    <stringValue>12</stringValue>
+                </width>
+            </styleProperties>
+        </fields>
+        <fields>
+            <name>ReportDetailSalesNIK_0</name>
+            <fieldText>&lt;p&gt;Klik Link dibawah untuk mengunduh template Client&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;https://digiads.my.salesforce.com/sfc/p/2v000001Y3cJ/a/2u000000OAsG/OypWmLOW_9Ot3xHE_1qGHTQePgvit4p2rv_w63_4g.0&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot;&gt;Template Client Traffic&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Format yang diterima:&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;https://digiads.file.force.com/sfc/servlet.shepherd/version/download/0682u00000OjLbi?asPdf=false&amp;amp;operationContext=CHATTER&quot; alt=&quot;image.png&quot;&gt;&lt;/p&gt;&lt;p&gt;1. kolom periode yang diterima yaitu yyyy-MM-dd Contoh: &lt;strong&gt;2023-02-18&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;2. kolom detil status wajib seperti berikut &lt;strong&gt;Sukses: 499 Gagal: 1 &lt;/strong&gt;karena terdapat otomasi untuk memisahkan traffic sukses dan gagal&lt;/p&gt;&lt;p&gt;3. Kolom Total harga di isi dengan dibuat format number dengan rounding 2 seperti contoh berikut Contoh: &lt;strong&gt;714215.00&lt;/strong&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+            <styleProperties>
+                <verticalAlignment>
+                    <stringValue>top</stringValue>
+                </verticalAlignment>
+                <width>
+                    <stringValue>12</stringValue>
+                </width>
+            </styleProperties>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>false</showHeader>
+    </screens>
+    <screens>
+        <name>Report_Sales_NIK</name>
+        <label>Display Report Sales NIK</label>
+        <locationX>50</locationX>
+        <locationY>350</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <fields>
+            <name>ReportSales</name>
+            <fieldText>&lt;p&gt;&lt;strong style=&quot;font-size: 16px;&quot;&gt;Report: Sales NIK&lt;/strong&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+            <styleProperties>
+                <verticalAlignment>
+                    <stringValue>top</stringValue>
+                </verticalAlignment>
+                <width>
+                    <stringValue>12</stringValue>
+                </width>
+            </styleProperties>
+        </fields>
+        <fields>
+            <name>ReportDetailSalesNIK</name>
+            <fieldText>&lt;p&gt;Klik Link dibawah untuk melihat User Sales NIK&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;https://digiads.lightning.force.com/lightning/r/Report/00O2u000000kHeqEAE/view&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot;&gt;Report Sales NIK&lt;/a&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+            <styleProperties>
+                <verticalAlignment>
+                    <stringValue>top</stringValue>
+                </verticalAlignment>
+                <width>
+                    <stringValue>12</stringValue>
+                </width>
+            </styleProperties>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>false</showHeader>
+    </screens>
+    <start>
+        <locationX>188</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Data_Information</targetReference>
+        </connector>
+    </start>
+    <status>Active</status>
+</Flow>

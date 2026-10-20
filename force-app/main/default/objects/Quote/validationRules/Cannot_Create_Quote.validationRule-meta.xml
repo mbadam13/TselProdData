@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cannot_Create_Quote</fullName>
+    <active>false</active>
+    <errorConditionFormula>AND(ISPICKVAL( Status, &quot;Final&quot;), Contract_Status__c !=&apos;Activated&apos;)</errorConditionFormula>
+    <errorMessage>Contract Not Activate</errorMessage>
+</ValidationRule>

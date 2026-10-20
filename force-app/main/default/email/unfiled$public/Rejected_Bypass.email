@@ -1,0 +1,9 @@
+Dear {!Account.Name},
+
+Contract Bypass Approval has Rejected
+Thank you.
+
+https://digiads.lightning.force.com/{!Account.Id}
+
+Regards,
+Salesforce

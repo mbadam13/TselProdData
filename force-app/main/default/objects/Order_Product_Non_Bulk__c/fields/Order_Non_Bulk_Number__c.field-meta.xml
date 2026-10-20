@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Order_Non_Bulk_Number__c</fullName>
+    <label>Order Non Bulk Number</label>
+    <referenceTo>Order_Non_Bulk__c</referenceTo>
+    <relationshipLabel>Order Product Non Bulks</relationshipLabel>
+    <relationshipName>Order_Product_Non_Bulks</relationshipName>
+    <relationshipOrder>0</relationshipOrder>
+    <reparentableMasterDetail>false</reparentableMasterDetail>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MasterDetail</type>
+    <writeRequiresMasterRead>false</writeRequiresMasterRead>
+</CustomField>

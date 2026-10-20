@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Advertiser_Opportunity_Owner_Not_Same</fullName>
+    <active>false</active>
+    <description>Advertiser_Opportunity_Owner_Not_Same</description>
+    <errorConditionFormula>AND(Account.OwnerId != OwnerId,ISPICKVAL( Account_Type__c,&apos;Advertiser&apos;))</errorConditionFormula>
+    <errorDisplayField>AccountId</errorDisplayField>
+    <errorMessage>Advertiser_Opportunity_Owner_Not_Same</errorMessage>
+</ValidationRule>

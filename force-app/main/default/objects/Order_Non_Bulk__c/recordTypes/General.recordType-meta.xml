@@ -1,0 +1,903 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>General</fullName>
+    <active>true</active>
+    <label>General</label>
+    <picklistValues>
+        <picklist>Approval_Process__c</picklist>
+        <values>
+            <fullName>Approved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rejected</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Submitted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Waiting Approval Campaign Manager</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Waiting Approval Campaign Team</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Waiting Approval MS Manager</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Campaign_Categories__c</picklist>
+        <values>
+            <fullName>LBA OFF Location</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LBA ON Location</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Campaign_Type__c</picklist>
+        <values>
+            <fullName>BROADCAST</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LBA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TARGETED</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Channel__c</picklist>
+        <values>
+            <fullName>MMS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SMS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>USSD</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Line_of_Business__c</picklist>
+        <values>
+            <fullName>APPAREL%2FPERSONAL ACCESSORIES - ACCESSORIES</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>APPAREL%2FPERSONAL ACCESSORIES - CHILDREN%27S WEAR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>APPAREL%2FPERSONAL ACCESSORIES - JEWELLERY%2FJEWELLERS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>APPAREL%2FPERSONAL ACCESSORIES - LADIES%27 WEAR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>APPAREL%2FPERSONAL ACCESSORIES - MEN%27S WEAR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>APPAREL%2FPERSONAL ACCESSORIES - PHOTOGRAPHIC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>APPAREL%2FPERSONAL ACCESSORIES - RANGE OF APPAREL%2FPERSONAL EQUIPMENT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>APPAREL%2FPERSONAL ACCESSORIES - SHOE POLISH</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>APPAREL%2FPERSONAL ACCESSORIES - SHOES%2C SLIPPER%2C SHOCK%2C STOCKING</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>APPAREL%2FPERSONAL ACCESSORIES - SPECTACLES%2C OPTICAL LENSES</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>APPAREL%2FPERSONAL ACCESSORIES - SPORTS%2FSPORTING GOODS%2C HOBBIES%2C TOYS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>APPAREL%2FPERSONAL ACCESSORIES - SPORTSWEAR%2C SWIMSUIT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>APPAREL%2FPERSONAL ACCESSORIES - TEXTILE%2C TOWEL%2C BED SHEET%2C BED COVER</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>APPAREL%2FPERSONAL ACCESSORIES - UNDERWEAR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>APPAREL%2FPERSONAL ACCESSORIES - WATCHES%2C CLOCKS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>APPAREL%2FPERSONAL ACCESSORIES - WEARING APPAREL%2C ALL OTHER CLOTCHING</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AUTOMOTIVE %26 ACCESSORIES - AUTO SERVICE%2C WORKSHOP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AUTOMOTIVE %26 ACCESSORIES - CAR BATTERIES</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AUTOMOTIVE %26 ACCESSORIES - COMMERCIAL VEHICLES</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AUTOMOTIVE %26 ACCESSORIES - DEALER%2C SHOWROOM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AUTOMOTIVE %26 ACCESSORIES - MOTORCYCLES%2C SCOOTERS%2C BIKES</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AUTOMOTIVE %26 ACCESSORIES - ONLINE AUTOMOTIVE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AUTOMOTIVE %26 ACCESSORIES - PETROLEUM PRODUCTS %26 COMPANIES</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AUTOMOTIVE %26 ACCESSORIES - PRIVATE VEHICLES</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AUTOMOTIVE %26 ACCESSORIES - SPARE PARTS%2C AUTO EQUIPMENT%2C ACCESSOR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AUTOMOTIVE %26 ACCESSORIES - TYRES%2C VELG RACING</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BANKING - BANKING CONSUMER LOAN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BANKING - BANKING CORPORATE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BANKING - BANKING CREDIT CARD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BANKING - BANKING ECHANEL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BANKING - BANKING LOYALTY PROGRAM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BANKING - BANKING OTHERS PRODUCT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BANKING - BANKING SAVING</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BEVERAGES - BEER</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BEVERAGES - CARBONATED%2FMIXED RANGE OF S</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BEVERAGES - COFFEE%2C TEA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BEVERAGES - DIET DRINK</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BEVERAGES - FRESH MILK</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BEVERAGES - FRUIT %26 VEGETABLE JUICE%2C SY</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BEVERAGES - GROWING UP MILK%2C FOLLOW ON</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BEVERAGES - HEALTH DRINK</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BEVERAGES - LIQUID MILK%2C EVAPORATED</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BEVERAGES - MINERAL WATER</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BEVERAGES - NON-CARBONATED SOFT DRINKS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BEVERAGES - NUTRITION DRINK</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BEVERAGES - OTHER DRINK</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BEVERAGES - OTHER MILK</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BEVERAGES - POWDER MILK</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BEVERAGES - PREGNANT %26 NURSING WOMEN MILK</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BEVERAGES - RANGE OF BEVERAGE PRODUCTS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BEVERAGES - RANGE OF MILK PRODUCTS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BEVERAGES - SWEETENED CONDENCED MILK</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BEVERAGES - WINES %26 SPIRITS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CIGARETTE - CLOVE CIGARETTES</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CIGARETTE - WHITE CIGARETTES</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EDUCATION - FORMAL EDUCATION</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EDUCATION - INFORMAL EDUCATION</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FINANCIAL NON BANKING - FINANCIAL INSTITUTION</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FINANCIAL NON BANKING - INSURANCE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FMCG - ACNE TREATMENT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FMCG - BABY ACCESSORIES%2FUTILITIES</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FMCG - BABY SHAMPOO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FMCG - BABY SOAP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FMCG - BABY TALC%2FPOWDER</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FMCG - BODY CARE%2C BODY LOTION</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FMCG - COSMETICS%2C MAKE UP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FMCG - DEODORANT%2C BODY ODOUR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FMCG - DEODORISERS%2C DISINFECTANTS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FMCG - DISHWASHING LIQUIDS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FMCG - FACIAL CARE PRODUCTS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FMCG - GARDENING %26 GARDEN SUPPLIES</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FMCG - HAIR CARE PRODUCTS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FMCG - HANDSOAP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FMCG - INSECTICIDES%2C MOSQUITO COILS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FMCG - LAUNDRY CLEANSER %26 CARE%2C FABRIC SOFT%27</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FMCG - MOUTHWASH%2C ORAL HIGIENE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FMCG - OTHER BABY%26MATERNITY PROD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FMCG - OTHER CLEANSERS%2C POLISHERS%2C BLEACHERS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FMCG - OTHER HOUSEHOLD PRODUCTS%2FSUPPLIES</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FMCG - PERFUMES%2C COLOGNE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FMCG - PETS %26 PET SUPPLIES</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FMCG - RANGE OF BABY PRODUCTS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FMCG - RANGE OF TOILETRIES</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FMCG - RAZOR BLADES</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FMCG - SANITARY NAPKIN%2C ADULT DIAPERS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FMCG - TISSUE%2C PERFUME TISSUE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FMCG - TOILET SOAP%2C LIQUID SOAP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FMCG - TOOTHPASTE%2C DENTAL CREAM%2C TOOTHBRUSH</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FOOD - ADDITIONAL FOOD - CHIPS%2C ETC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FOOD - BABY FOOD%2C BABY CEREAL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FOOD - BAKERY GOODS%2C BAKING MIXES%2C FLOUR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FOOD - CANNED%2FPROCESSED FOOD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FOOD - CEREALS%2C BREAKFAST FOOD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FOOD - CONFECTIONARY - CANDY%2C CHEWING GUMS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FOOD - CONFECTIONARY - CHOCOLATE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FOOD - CONFECTIONARY - COUGH DROPS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FOOD - COOKING OIL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FOOD - DESSERTS%2C DESSERT INGREDIENTS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FOOD - DIET FOOD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FOOD - FLAVOUR OIL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FOOD - FRUIT %26 VEGETABLES - CANNED%2FPROCESSED</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FOOD - FRUIT %26 VEGETABLES - FRESH%2FDRY%2FFROZEN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FOOD - GRAINS%2C BULK FOODS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FOOD - INSTANT FOOD%2C INSTANT NOODLES</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FOOD - MARGARINE%2C DAIRY PRODUCTS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FOOD - RANGE OF FOOD PRODUCTS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FOOD - SEASONING%2C CONDIMENTS %28SAUCES%2FSPICES%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FOOD - SNACKS%2C BISCUITS%2C COOKIES%2C CAKES</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GOVERNMENT %26 PUBLIC SERVICE - GOVERNMENT%2C POLITIC ORGANIZATION</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GOVERNMENT %26 PUBLIC SERVICE - NON PROFIT ORGANIZATION</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GOVERNMENT %26 PUBLIC SERVICE - ORMAS OTGANIZATION</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GOVERNMENT %26 PUBLIC SERVICE - PUBLIC SERVICE ADVERTISEMENT %28PSA%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HEALTHCARE %26 PHARMACEUTICAL - ANALGESICS%2C HEADACHE REMEDIES</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HEALTHCARE %26 PHARMACEUTICAL - ANTACIDS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HEALTHCARE %26 PHARMACEUTICAL - ANTHELMINTICS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HEALTHCARE %26 PHARMACEUTICAL - ANTISEPTIC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HEALTHCARE %26 PHARMACEUTICAL - CONTRACEPTIVES</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HEALTHCARE %26 PHARMACEUTICAL - COUGH MEDICINES</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HEALTHCARE %26 PHARMACEUTICAL - EYE CARES%2FDROPS%2FLOTION</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HEALTHCARE %26 PHARMACEUTICAL - HOSPITAL%2CCLINIC%2CTRADITION%27 MEDICATION</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HEALTHCARE %26 PHARMACEUTICAL - MEDICAL EQUIPMENTS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HEALTHCARE %26 PHARMACEUTICAL - OTHER MEDICAL%2FPHARMACEUTICAL PRODUCTS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HEALTHCARE %26 PHARMACEUTICAL - RANGE OF MEDICAL%2FPHARMACEUTICAL PRODS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HEALTHCARE %26 PHARMACEUTICAL - REDUCING AIDS%2C PLASTERS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HEALTHCARE %26 PHARMACEUTICAL - RUBS %26 BALMS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HEALTHCARE %26 PHARMACEUTICAL - STOMACH REMEDIES</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HEALTHCARE %26 PHARMACEUTICAL - TRADITIONAL MEDICINE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HEALTHCARE %26 PHARMACEUTICAL - VITAMIN%2C TONIC%2C ESSENCES%2C SUPPLEMENTS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HOSPITALITY%2C RECREATION %26 ENTERTAINMENT - CINEMA PROMO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HOSPITALITY%2C RECREATION %26 ENTERTAINMENT - ENTERTAINMENT%2CFASHION SHOW%2CORGANIZER</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HOSPITALITY%2C RECREATION %26 ENTERTAINMENT - HOTEL%2C BAR%2C RESTAURANT%2C DIS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HOSPITALITY%2C RECREATION %26 ENTERTAINMENT - MUSIC PROMO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HOSPITALITY%2C RECREATION %26 ENTERTAINMENT - ONLINE ENTERTAINMENT %28SOCIAL MEDIA%2C LIFESTYLE%2C AND GAMES%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HOSPITALITY%2C RECREATION %26 ENTERTAINMENT - RECORDING</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HOSPITALITY%2C RECREATION %26 ENTERTAINMENT - TOURISM%2CRECREATION%2CAMUSEMENT-C%2CTRAVEL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HOUSEHOLD EQUIPMENT %26 APPLIANCES - AC%2C FAN%2C REFRIG%2C W-MACHINE%2C GAS STOVE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HOUSEHOLD EQUIPMENT %26 APPLIANCES - AUDIO EQUIPMENTS%2C SYSTEM%2C SUPPLIES</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HOUSEHOLD EQUIPMENT %26 APPLIANCES - AUDIO-VISUAL EQUIPMENTS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HOUSEHOLD EQUIPMENT %26 APPLIANCES - DRY BATTERIES</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HOUSEHOLD EQUIPMENT %26 APPLIANCES - ELECTRICAL KITCHEN%2FH-HOLD APPLIANCES</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HOUSEHOLD EQUIPMENT %26 APPLIANCES - FURNITURE%2C OFFICE FURNITURE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HOUSEHOLD EQUIPMENT %26 APPLIANCES - HOUSEHOLD EQUIPMENT SHOWROOM%2C SERVICE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HOUSEHOLD EQUIPMENT %26 APPLIANCES - LAMPS%2C LIGHTING SUPPLIES</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HOUSEHOLD EQUIPMENT %26 APPLIANCES - MUSICAL INSTRUMENT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HOUSEHOLD EQUIPMENT %26 APPLIANCES - NON-ELECTRICAL KITCHEN%2FH-HOLD APPLI%27</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HOUSEHOLD EQUIPMENT %26 APPLIANCES - RANGE OF H%2FH EQUIPMENT AND APPLIANCES</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>INDUSTRIAL PRODUCTS - AGRICULTURE%2C RANCH%2C FISHING</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>INDUSTRIAL PRODUCTS - BUILDING MATERIAL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>INDUSTRIAL PRODUCTS - CHEMICALS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>INDUSTRIAL PRODUCTS - CONSTRUCTION%2C HARDWARE SUPPLIERS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>INDUSTRIAL PRODUCTS - INDUSTRIAL ELECTRONICS%2FELECTRIC APPL%27</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>INDUSTRIAL PRODUCTS - INDUSTRIAL EQUIPMENT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LIFESTYLE - B-SALON%2CBARBER-S%2CWEDDING-P%2CSLIMMING-C</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LIFESTYLE - FOTO STUDIO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LIFESTYLE - HOT-LINE SERVICE%2CPARTY LINE%2CHOROSCOPE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LIFESTYLE - MASSAGE%2C SAUNA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LIFESTYLE - SPORT CLUB%2C FITNESS%2C GOLF CLUB%2FCOURSE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LIFESTYLE - VIDEO%2C LASER DISC RENTAL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MEDIA %26 PROMOTION - EXHIBITION</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MEDIA %26 PROMOTION - GREETING%2C CONGRATULATION</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MEDIA %26 PROMOTION - MEDIA SELF PROMOTION</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MEDIA %26 PROMOTION - MEDIA%2C AD AGENCY%2C PRODUCTION</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MEDIA %26 PROMOTION - ONLINE MEDIA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MEDIA %26 PROMOTION - PRINTING%2C SCREEN PRINTING%2C PUBLISHER</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MEDIA %26 PROMOTION - TV PROGRAMME PROMOTION</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MEDIA %26 PROMOTION - TV PROGRAMME SCHEDULE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OFFICE EQP%27T%2C TECHNOLOGY%2C COMPUTER %26 COMMUNICATIONS - COMMUNICATION EQUIPMENT%2C SERVICES</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OFFICE EQP%27T%2C TECHNOLOGY%2C COMPUTER %26 COMMUNICATIONS - COMPUTER HARDWARE%2C EQUIPMENT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OFFICE EQP%27T%2C TECHNOLOGY%2C COMPUTER %26 COMMUNICATIONS - COMPUTER SOFTWARE%2CCONSULTANTS%2CSERVICE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OFFICE EQP%27T%2C TECHNOLOGY%2C COMPUTER %26 COMMUNICATIONS - OFFICE EQUIPMENT %28ELECTRIC%2FNON ELEC%27%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OFFICE EQP%27T%2C TECHNOLOGY%2C COMPUTER %26 COMMUNICATIONS - STATIONERY%2C BOOK</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ONLINE BUSINESS - FINTECH - FINTECH</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ONLINE BUSINESS - MARKET PLACE - MARKET PLACE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ONLINE BUSINESS - ONLINE TRANSPORTATION - ONLINE TRANSPORTATION</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ONLINE BUSINESS - ONLINE TRAVEL AGENCY - ONLINE TRAVEL AGENCY</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ONLINE SERVICE - ONLINE SERVICE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PROPERTY - OFFICE BUILDING%2CRUKO%2CINDUSTRIAL ESTAT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PROPERTY - OVERSEAS BUILDING%2C INDUSTRIAL ESTATE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PROPERTY - OVERSEAS REAL ESTATE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PROPERTY - REAL ESTATE%2C HOUSING%2C APART</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RETAIL - ART GALLERY</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RETAIL - BAKERY%2C CAKE SHOP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RETAIL - BOOK STORE%2C BOOK DISTRIBUTOR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RETAIL - BOUTIQUE%2C TAILOR%2C FASHION HOUSE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RETAIL - DEPARTMENT STORE%2CSHOPPING CENTER%2CMALL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RETAIL - FAST FOOD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RETAIL - FLORIST SHOP%2CNURSERY%2CPET SHOP%2CGARDEN%27</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RETAIL - MEDIA SHOPPING</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RETAIL - PHARMACY%2C DISPENSARY%2C DRUG STORE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RETAIL - SHOP%2C OTHER SPECIALTY SHOP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RETAIL - SPORTS SHOP%2C MUSIC SHOP%2C TOYS SHOP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RETAIL - SUPERMARKET</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RETAIL - TOILETRIES SHOP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TRANSPORTATION - AIRLINES</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TRANSPORTATION - CAR%2C AUTOMOTIVE RENTAL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TRANSPORTATION - FREIGHT FORW%27%2CMOVERS%2CCOURIER-S%2CPARCEL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TRANSPORTATION - TRANSPORTATION%2C SHIPPING</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Order_Status__c</picklist>
+        <values>
+            <fullName>Finish</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Paused</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Progress</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Stopped</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Status__c</picklist>
+        <values>
+            <fullName>Completed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Draft</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Running</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Validate</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

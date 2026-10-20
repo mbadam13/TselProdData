@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesIncludeBosses>true</doesIncludeBosses>
+    <doesSendEmailToMembers>false</doesSendEmailToMembers>
+    <name>Whatsapp General</name>
+    <queueMembers>
+        <users>
+            <user>faisal_mukhtar_x@telkomsel.co.id</user>
+            <user>dev2026@telkomsel.co.id</user>
+        </users>
+    </queueMembers>
+    <queueRoutingConfig>Whatsapp</queueRoutingConfig>
+</Queue>

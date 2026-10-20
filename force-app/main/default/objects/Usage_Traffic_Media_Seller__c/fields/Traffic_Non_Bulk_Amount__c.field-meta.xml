@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Traffic_Non_Bulk_Amount__c</fullName>
+    <label>Traffic Non Bulk Amount</label>
+    <summarizedField>Traffic_Non_Bulk__c.Amount__c</summarizedField>
+    <summaryForeignKey>Traffic_Non_Bulk__c.Usage_Traffic_Media_Seller__c</summaryForeignKey>
+    <summaryOperation>sum</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

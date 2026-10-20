@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CC</fullName>
+    <columns>NAME</columns>
+    <columns>ID_Transaksi__c</columns>
+    <columns>Account_User_id__c</columns>
+    <columns>User_Id__c</columns>
+    <columns>Nama_Instansi__c</columns>
+    <columns>Province__c</columns>
+    <columns>Amount__c</columns>
+    <columns>Payment_Type__c</columns>
+    <columns>Payment_Method__c</columns>
+    <columns>Paid_Date__c</columns>
+    <columns>LAST_UPDATE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Payment_Method__c</field>
+        <operation>equals</operation>
+        <value>Credit Card</value>
+    </filters>
+    <label>CC</label>
+</ListView>

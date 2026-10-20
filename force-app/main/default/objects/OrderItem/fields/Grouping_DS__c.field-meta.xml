@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Grouping_DS__c</fullName>
+    <label>Grouping DS</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>ADVERTISING</fullName>
+                <default>false</default>
+                <label>ADVERTISING</label>
+            </value>
+            <value>
+                <fullName>COUPON</fullName>
+                <default>false</default>
+                <label>COUPON</label>
+            </value>
+            <value>
+                <fullName>DIY</fullName>
+                <default>false</default>
+                <label>DIY</label>
+            </value>
+            <value>
+                <fullName>IPTV</fullName>
+                <default>false</default>
+                <label>IPTV</label>
+            </value>
+            <value>
+                <fullName>MS</fullName>
+                <default>false</default>
+                <label>MS</label>
+            </value>
+            <value>
+                <fullName>RCS</fullName>
+                <default>false</default>
+                <label>RCS</label>
+            </value>
+            <value>
+                <fullName>REV SHARE</fullName>
+                <default>false</default>
+                <label>REV SHARE</label>
+            </value>
+            <value>
+                <fullName>TADEX</fullName>
+                <default>false</default>
+                <label>TADEX</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Change_Owner</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+	ISCHANGED(OwnerId),
+	AND(
+		Deadline__c &lt;Default_Deadline__c,
+		NOT(ISPICKVAL(Approval_Status_RFP__c,&quot;Approved&quot;))
+	),
+NOT(
+CONTAINS($Profile.Name,&apos;Marketing Manager&apos;))
+)</errorConditionFormula>
+    <errorMessage>Approval Must Approved Before Change Owner</errorMessage>
+</ValidationRule>

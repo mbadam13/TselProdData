@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Display_Contract_End_Date_Info__c</fullName>
+    <formula>IF(
+NOT(ISBLANK(ContractId)),
+VALUE($Label.Days_Before_ContractEndDate_For_Notification) &gt; Day_s_Before_Contract_End__c,
+False
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Display Contract End Date Info</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

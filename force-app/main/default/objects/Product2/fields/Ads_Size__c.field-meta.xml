@@ -1,0 +1,1651 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Ads_Size__c</fullName>
+    <label>Ads Size</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Product_Channel__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Standard</fullName>
+                <default>false</default>
+                <label>Standard</label>
+            </value>
+            <value>
+                <fullName>Sticky Big</fullName>
+                <default>false</default>
+                <label>Sticky Big</label>
+            </value>
+            <value>
+                <fullName>Sticky Medium</fullName>
+                <default>false</default>
+                <label>Sticky Medium</label>
+            </value>
+            <value>
+                <fullName>Sticky Small</fullName>
+                <default>false</default>
+                <label>Sticky Small</label>
+            </value>
+            <value>
+                <fullName>FRIDA | 300 - 1.000 GB</fullName>
+                <default>false</default>
+                <label>FRIDA | 300 - 1.000 GB</label>
+            </value>
+            <value>
+                <fullName>FRIDA | 1.001 - 3.000 GB</fullName>
+                <default>false</default>
+                <label>FRIDA | 1.001 - 3.000 GB</label>
+            </value>
+            <value>
+                <fullName>FRIDA | 3.001 - 10.000 GB</fullName>
+                <default>false</default>
+                <label>FRIDA | 3.001 - 10.000 GB</label>
+            </value>
+            <value>
+                <fullName>FRIDA | 10.001 - 30.000 GB</fullName>
+                <default>false</default>
+                <label>FRIDA | 10.001 - 30.000 GB</label>
+            </value>
+            <value>
+                <fullName>FRIDA | &gt;100.000 GB</fullName>
+                <default>false</default>
+                <label>FRIDA | &gt;100.000 GB</label>
+            </value>
+            <value>
+                <fullName>FRIDA | 30.001 - 100.000 GB</fullName>
+                <default>false</default>
+                <label>FRIDA | 30.001 - 100.000 GB</label>
+            </value>
+            <value>
+                <fullName>GITA | 5 MB 1 day</fullName>
+                <default>false</default>
+                <label>GITA | 5 MB 1 day</label>
+            </value>
+            <value>
+                <fullName>GITA | 10 MB 1 day</fullName>
+                <default>false</default>
+                <label>GITA | 10 MB 1 day</label>
+            </value>
+            <value>
+                <fullName>GITA | 20 MB 1 day</fullName>
+                <default>false</default>
+                <label>GITA | 20 MB 1 day</label>
+            </value>
+            <value>
+                <fullName>GITA | 50 MB 7 day</fullName>
+                <default>false</default>
+                <label>GITA | 50 MB 7 day</label>
+            </value>
+            <value>
+                <fullName>GITA | 100 MB 7 days</fullName>
+                <default>false</default>
+                <label>GITA | 100 MB 7 days</label>
+            </value>
+            <value>
+                <fullName>GITA | 110 MB 7 days</fullName>
+                <default>false</default>
+                <label>GITA | 110 MB 7 days</label>
+            </value>
+            <value>
+                <fullName>GITA | 250 MB 30 days</fullName>
+                <default>false</default>
+                <label>GITA | 250 MB 30 days</label>
+            </value>
+            <value>
+                <fullName>GITA | 420 MB 30 days</fullName>
+                <default>false</default>
+                <label>GITA | 420 MB 30 days</label>
+            </value>
+            <value>
+                <fullName>GITA | 500 MB 30 days</fullName>
+                <default>false</default>
+                <label>GITA | 500 MB 30 days</label>
+            </value>
+            <value>
+                <fullName>GITA | 750 MB 30 days</fullName>
+                <default>false</default>
+                <label>GITA | 750 MB 30 days</label>
+            </value>
+            <value>
+                <fullName>GITA | 1 GB 30 days</fullName>
+                <default>false</default>
+                <label>GITA | 1 GB 30 days</label>
+            </value>
+            <value>
+                <fullName>GITA | 2 GB 30 days</fullName>
+                <default>false</default>
+                <label>GITA | 2 GB 30 days</label>
+            </value>
+            <value>
+                <fullName>GITA | 3 GB 30 days</fullName>
+                <default>false</default>
+                <label>GITA | 3 GB 30 days</label>
+            </value>
+            <value>
+                <fullName>GITA | 4 GB 30 days</fullName>
+                <default>false</default>
+                <label>GITA | 4 GB 30 days</label>
+            </value>
+            <value>
+                <fullName>GITA | 5 GB 30 days</fullName>
+                <default>false</default>
+                <label>GITA | 5 GB 30 days</label>
+            </value>
+            <value>
+                <fullName>GITA | 8 GB 30 days</fullName>
+                <default>false</default>
+                <label>GITA | 8 GB 30 days</label>
+            </value>
+            <value>
+                <fullName>GITA | 11 GB 30 days</fullName>
+                <default>false</default>
+                <label>GITA | 11 GB 30 days</label>
+            </value>
+            <value>
+                <fullName>GITA | 16 GB 30 days</fullName>
+                <default>false</default>
+                <label>GITA | 16 GB 30 days</label>
+            </value>
+            <value>
+                <fullName>GITA | 30 GB 30 days</fullName>
+                <default>false</default>
+                <label>GITA | 30 GB 30 days</label>
+            </value>
+            <value>
+                <fullName>GITA | 35 GB 30 days</fullName>
+                <default>false</default>
+                <label>GITA | 35 GB 30 days</label>
+            </value>
+            <value>
+                <fullName>Non Sticky Small</fullName>
+                <default>false</default>
+                <label>Non Sticky Small</label>
+            </value>
+            <value>
+                <fullName>Non Sticky Big</fullName>
+                <default>false</default>
+                <label>Non Sticky Big</label>
+            </value>
+            <value>
+                <fullName>Non Sticky Medium</fullName>
+                <default>false</default>
+                <label>Non Sticky Medium</label>
+            </value>
+            <value>
+                <fullName>Full Screen</fullName>
+                <default>false</default>
+                <label>Full Screen</label>
+            </value>
+            <value>
+                <fullName>Big</fullName>
+                <default>false</default>
+                <label>Big</label>
+            </value>
+            <value>
+                <fullName>Medium</fullName>
+                <default>false</default>
+                <label>Medium</label>
+            </value>
+            <value>
+                <fullName>Small</fullName>
+                <default>false</default>
+                <label>Small</label>
+            </value>
+            <value>
+                <fullName>Pre Roll Full Screen 30&quot;</fullName>
+                <default>false</default>
+                <label>Pre Roll Full Screen 30&quot;</label>
+            </value>
+            <value>
+                <fullName>Pre Roll Full Screen 15&quot;</fullName>
+                <default>false</default>
+                <label>Pre Roll Full Screen 15&quot;</label>
+            </value>
+            <value>
+                <fullName>In Vehicle Screen</fullName>
+                <default>false</default>
+                <label>In Vehicle Screen</label>
+            </value>
+            <value>
+                <fullName>All</fullName>
+                <default>false</default>
+                <label>All</label>
+            </value>
+            <value>
+                <fullName>Position 1 (full screen)</fullName>
+                <default>false</default>
+                <label>Position 1 (full screen)</label>
+            </value>
+            <value>
+                <fullName>Position 2 (full screen)</fullName>
+                <default>false</default>
+                <label>Position 2 (full screen)</label>
+            </value>
+            <value>
+                <fullName>15 slot (348x218.5)</fullName>
+                <default>false</default>
+                <label>15 slot (348x218.5)</label>
+            </value>
+            <value>
+                <fullName>Position 1-3</fullName>
+                <default>false</default>
+                <label>Position 1-3</label>
+            </value>
+            <value>
+                <fullName>Position 4-10</fullName>
+                <default>false</default>
+                <label>Position 4-10</label>
+            </value>
+            <value>
+                <fullName>EPG Lama - Home (340x440)</fullName>
+                <default>false</default>
+                <label>EPG Lama - Home (340x440)</label>
+            </value>
+            <value>
+                <fullName>EPG Baru - Channel (340x440)</fullName>
+                <default>false</default>
+                <label>EPG Baru - Channel (340x440)</label>
+            </value>
+            <value>
+                <fullName>Position 1-3 (503x284)</fullName>
+                <default>false</default>
+                <label>Position 1-3 (503x284)</label>
+            </value>
+            <value>
+                <fullName>Position 4-6 (503x284)</fullName>
+                <default>false</default>
+                <label>Position 4-6 (503x284)</label>
+            </value>
+            <value>
+                <fullName>Position 1 (530x300)</fullName>
+                <default>false</default>
+                <label>Position 1 (530x300)</label>
+            </value>
+            <value>
+                <fullName>Position 2-3 (530x300)</fullName>
+                <default>false</default>
+                <label>Position 2-3 (530x300)</label>
+            </value>
+            <value>
+                <fullName>Position 1-3 (530x300)</fullName>
+                <default>false</default>
+                <label>Position 1-3 (530x300)</label>
+            </value>
+            <value>
+                <fullName>Position 4-5 (530x300)</fullName>
+                <default>false</default>
+                <label>Position 4-5 (530x300)</label>
+            </value>
+            <value>
+                <fullName>All Spot (415x207.5)</fullName>
+                <default>false</default>
+                <label>All Spot (415x207.5)</label>
+            </value>
+            <value>
+                <fullName>Fast Forward &amp; Rewind (398x264.5)</fullName>
+                <default>false</default>
+                <label>Fast Forward &amp; Rewind (398x264.5)</label>
+            </value>
+            <value>
+                <fullName>Pause (1007x566)</fullName>
+                <default>false</default>
+                <label>Pause (1007x566)</label>
+            </value>
+            <value>
+                <fullName>All Spot</fullName>
+                <default>false</default>
+                <label>All Spot</label>
+            </value>
+            <value>
+                <fullName>All Spot (1920x1080)</fullName>
+                <default>false</default>
+                <label>All Spot (1920x1080)</label>
+            </value>
+            <value>
+                <fullName>PRIME TIME 17.00 - 24.00</fullName>
+                <default>false</default>
+                <label>PRIME TIME 17.00 - 24.00</label>
+            </value>
+            <value>
+                <fullName>REGULAR TIME 00.00 - 17.00</fullName>
+                <default>false</default>
+                <label>REGULAR TIME 00.00 - 17.00</label>
+            </value>
+            <value>
+                <fullName>All Time</fullName>
+                <default>false</default>
+                <label>All Time</label>
+            </value>
+            <value>
+                <fullName>15&quot;</fullName>
+                <default>false</default>
+                <label>15&quot;</label>
+            </value>
+            <value>
+                <fullName>30&quot;</fullName>
+                <default>false</default>
+                <label>30&quot;</label>
+            </value>
+            <value>
+                <fullName>Program</fullName>
+                <default>false</default>
+                <label>Program</label>
+            </value>
+            <value>
+                <fullName>Position 1-2 (980x120)</fullName>
+                <default>false</default>
+                <label>Position 1-2 (980x120)</label>
+            </value>
+            <value>
+                <fullName>Position 1 (468x60)</fullName>
+                <default>false</default>
+                <label>Position 1 (468x60)</label>
+            </value>
+            <value>
+                <fullName>Position 2 (980x120)</fullName>
+                <default>false</default>
+                <label>Position 2 (980x120)</label>
+            </value>
+            <value>
+                <fullName>Position 1 (320x100)</fullName>
+                <default>false</default>
+                <label>Position 1 (320x100)</label>
+            </value>
+            <value>
+                <fullName>468x60</fullName>
+                <default>false</default>
+                <label>468x60</label>
+            </value>
+            <value>
+                <fullName>980x120</fullName>
+                <default>false</default>
+                <label>980x120</label>
+            </value>
+            <value>
+                <fullName>N/A</fullName>
+                <default>false</default>
+                <label>N/A</label>
+            </value>
+            <value>
+                <fullName>300x50</fullName>
+                <default>false</default>
+                <label>300x50</label>
+            </value>
+            <value>
+                <fullName>320x100</fullName>
+                <default>false</default>
+                <label>320x100</label>
+            </value>
+            <value>
+                <fullName>Position 1 (300x50)</fullName>
+                <default>false</default>
+                <label>Position 1 (300x50)</label>
+            </value>
+            <value>
+                <fullName>Position 2 (320x100)</fullName>
+                <default>false</default>
+                <label>Position 2 (320x100)</label>
+            </value>
+            <value>
+                <fullName>Rich Media</fullName>
+                <default>false</default>
+                <label>Rich Media</label>
+            </value>
+            <value>
+                <fullName>Medium (300x250)</fullName>
+                <default>false</default>
+                <label>Medium (300x250)</label>
+            </value>
+            <value>
+                <fullName>GITA | 1 GB 3 days</fullName>
+                <default>false</default>
+                <label>GITA | 1 GB 3 days</label>
+            </value>
+            <value>
+                <fullName>GITA | 2 GB 3 days</fullName>
+                <default>false</default>
+                <label>GITA | 2 GB 3 days</label>
+            </value>
+            <value>
+                <fullName>GITA | 2.5 GB 5 days</fullName>
+                <default>false</default>
+                <label>GITA | 2.5 GB 5 days</label>
+            </value>
+            <value>
+                <fullName>GITA | 3 GB 5 days</fullName>
+                <default>false</default>
+                <label>GITA | 3 GB 5 days</label>
+            </value>
+            <value>
+                <fullName>GITA | 7 GB 7 days</fullName>
+                <default>false</default>
+                <label>GITA | 7 GB 7 days</label>
+            </value>
+            <value>
+                <fullName>GITA | 500 MB 3 days</fullName>
+                <default>false</default>
+                <label>GITA | 500 MB 3 days</label>
+            </value>
+            <value>
+                <fullName>Position 3-4</fullName>
+                <default>false</default>
+                <label>Position 3-4</label>
+            </value>
+            <value>
+                <fullName>Position 4</fullName>
+                <default>false</default>
+                <label>Position 4</label>
+            </value>
+            <value>
+                <fullName>Position 4-5</fullName>
+                <default>false</default>
+                <label>Position 4-5</label>
+            </value>
+            <value>
+                <fullName>Position 1</fullName>
+                <default>false</default>
+                <label>Position 1</label>
+            </value>
+            <value>
+                <fullName>(348x218.5)</fullName>
+                <default>false</default>
+                <label>(348x218.5)</label>
+            </value>
+            <value>
+                <fullName>(503x284)</fullName>
+                <default>false</default>
+                <label>(503x284)</label>
+            </value>
+            <value>
+                <fullName>(530x300)</fullName>
+                <default>false</default>
+                <label>(530x300)</label>
+            </value>
+            <value>
+                <fullName>Pause</fullName>
+                <default>false</default>
+                <label>Pause</label>
+            </value>
+            <value>
+                <fullName>Position 2</fullName>
+                <default>false</default>
+                <label>Position 2</label>
+            </value>
+            <value>
+                <fullName>Position 3</fullName>
+                <default>false</default>
+                <label>Position 3</label>
+            </value>
+            <value>
+                <fullName>Position 5</fullName>
+                <default>false</default>
+                <label>Position 5</label>
+            </value>
+            <value>
+                <fullName>Position 6</fullName>
+                <default>false</default>
+                <label>Position 6</label>
+            </value>
+            <value>
+                <fullName>Position 7</fullName>
+                <default>false</default>
+                <label>Position 7</label>
+            </value>
+            <value>
+                <fullName>Position 8</fullName>
+                <default>false</default>
+                <label>Position 8</label>
+            </value>
+            <value>
+                <fullName>Position 9</fullName>
+                <default>false</default>
+                <label>Position 9</label>
+            </value>
+            <value>
+                <fullName>Position 10</fullName>
+                <default>false</default>
+                <label>Position 10</label>
+            </value>
+            <value>
+                <fullName>1200x628</fullName>
+                <default>false</default>
+                <label>1200x628</label>
+            </value>
+            <value>
+                <fullName>640 x 480</fullName>
+                <default>false</default>
+                <label>640 x 480</label>
+            </value>
+            <value>
+                <fullName>DATA | 0.5 GB (30 Days)</fullName>
+                <default>false</default>
+                <label>DATA | 0.5 GB (30 Days)</label>
+            </value>
+            <value>
+                <fullName>DATA | 1 GB (30 Days)</fullName>
+                <default>false</default>
+                <label>DATA | 1 GB (30 Days)</label>
+            </value>
+            <value>
+                <fullName>DATA | 2 GB (30 Days)</fullName>
+                <default>false</default>
+                <label>DATA | 2 GB (30 Days)</label>
+            </value>
+            <value>
+                <fullName>DATA | 2.5 GB (5 Days)</fullName>
+                <default>false</default>
+                <label>DATA | 2.5 GB (5 Days)</label>
+            </value>
+            <value>
+                <fullName>DATA | 3 GB (5 Days)</fullName>
+                <default>false</default>
+                <label>DATA | 3 GB (5 Days)</label>
+            </value>
+            <value>
+                <fullName>DATA | 7 GB (7 Days)</fullName>
+                <default>false</default>
+                <label>DATA | 7 GB (7 Days)</label>
+            </value>
+            <value>
+                <fullName>300 x 250 Px</fullName>
+                <default>false</default>
+                <label>300 x 250 Px</label>
+            </value>
+            <value>
+                <fullName>320 x 50 Px</fullName>
+                <default>false</default>
+                <label>320 x 50 Px</label>
+            </value>
+            <value>
+                <fullName>320 x 100 Px</fullName>
+                <default>false</default>
+                <label>320 x 100 Px</label>
+            </value>
+            <value>
+                <fullName>1312 x 564 Px</fullName>
+                <default>false</default>
+                <label>1312 x 564 Px</label>
+            </value>
+            <value>
+                <fullName>Ratio : 16:9 preferred Length : 15 s (pre roll) 15s 30 s (mid roll) Resolution : 1920 x 1080</fullName>
+                <default>false</default>
+                <label>Ratio : 16:9 preferred Length : 15 s (pre roll) 15s 30 s (mid roll) Resolution : 1920 x 1080</label>
+            </value>
+            <value>
+                <fullName>Image 1920 x252 and 492 x 828 pixel or MOV format for animation</fullName>
+                <default>false</default>
+                <label>Image 1920 x252 and 492 x 828 pixel or MOV format for animation</label>
+            </value>
+            <value>
+                <fullName>10 word / 140 characters</fullName>
+                <default>false</default>
+                <label>10 word / 140 characters</label>
+            </value>
+            <value>
+                <fullName>16:9</fullName>
+                <default>false</default>
+                <label>16:9</label>
+            </value>
+            <value>
+                <fullName>Ratio : 16:9 preferred Length : 15 s Resolution : 1920 x 108</fullName>
+                <default>false</default>
+                <label>Ratio : 16:9 preferred Length : 15 s Resolution : 1920 x 108</label>
+            </value>
+            <value>
+                <fullName>1920 x 1080 Pixel</fullName>
+                <default>false</default>
+                <label>1920 x 1080 Pixel</label>
+            </value>
+            <value>
+                <fullName>Size ：675x858px with safe space</fullName>
+                <default>false</default>
+                <label>Size ：675x858px with safe space</label>
+            </value>
+            <value>
+                <fullName>File size max 100mb Size ratio 1:1 (1000px x 1000px)</fullName>
+                <default>false</default>
+                <label>File size max 100mb Size ratio 1:1 (1000px x 1000px)</label>
+            </value>
+            <value>
+                <fullName>Size ratio: 1:1</fullName>
+                <default>false</default>
+                <label>Size ratio: 1:1</label>
+            </value>
+            <value>
+                <fullName>1312 x 564 Pixel</fullName>
+                <default>false</default>
+                <label>1312 x 564 Pixel</label>
+            </value>
+            <value>
+                <fullName>Size 750x750px</fullName>
+                <default>false</default>
+                <label>Size 750x750px</label>
+            </value>
+            <value>
+                <fullName>640 x 180 pixell</fullName>
+                <default>false</default>
+                <label>640 x 180 pixell</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Page VOD</controllingFieldValue>
+            <controllingFieldValue>Mobile</controllingFieldValue>
+            <controllingFieldValue>Off Deck</controllingFieldValue>
+            <controllingFieldValue>On Deck</controllingFieldValue>
+            <controllingFieldValue>Vending Machine</controllingFieldValue>
+            <controllingFieldValue>All</controllingFieldValue>
+            <controllingFieldValue>Partner</controllingFieldValue>
+            <valueName>468x60</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Detail VOD</controllingFieldValue>
+            <controllingFieldValue>Mobile</controllingFieldValue>
+            <controllingFieldValue>Off Deck</controllingFieldValue>
+            <controllingFieldValue>On Deck</controllingFieldValue>
+            <controllingFieldValue>Vending Machine</controllingFieldValue>
+            <controllingFieldValue>All</controllingFieldValue>
+            <controllingFieldValue>Partner</controllingFieldValue>
+            <valueName>980x120</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Blocking Channel IPTV SD + HD</controllingFieldValue>
+            <controllingFieldValue>Blocking Channel OTT SD + HD</controllingFieldValue>
+            <controllingFieldValue>OBB</controllingFieldValue>
+            <controllingFieldValue>CBB</controllingFieldValue>
+            <controllingFieldValue>BI</controllingFieldValue>
+            <controllingFieldValue>BO</controllingFieldValue>
+            <controllingFieldValue>Credit Title</controllingFieldValue>
+            <controllingFieldValue>Adlibs</controllingFieldValue>
+            <controllingFieldValue>Template Host / Name</controllingFieldValue>
+            <controllingFieldValue>Product Placement</controllingFieldValue>
+            <controllingFieldValue>Bundling Mini Studio + Alat + Crew</controllingFieldValue>
+            <controllingFieldValue>Bundling Usee Hall + Alat + Crew (1)</controllingFieldValue>
+            <controllingFieldValue>Production</controllingFieldValue>
+            <controllingFieldValue>Built in</controllingFieldValue>
+            <controllingFieldValue>Mobile</controllingFieldValue>
+            <controllingFieldValue>Off Deck</controllingFieldValue>
+            <controllingFieldValue>On Deck</controllingFieldValue>
+            <controllingFieldValue>Vending Machine</controllingFieldValue>
+            <controllingFieldValue>All</controllingFieldValue>
+            <controllingFieldValue>Partner</controllingFieldValue>
+            <controllingFieldValue>SCREENSAVER ADS</controllingFieldValue>
+            <controllingFieldValue>Stilll Image</controllingFieldValue>
+            <controllingFieldValue>Dynamic Image</controllingFieldValue>
+            <controllingFieldValue>Filler</controllingFieldValue>
+            <controllingFieldValue>Advertorial</controllingFieldValue>
+            <controllingFieldValue>OBB (Creative Ads)</controllingFieldValue>
+            <controllingFieldValue>CBB (Creative Ads)</controllingFieldValue>
+            <controllingFieldValue>BI (Creative Ads)</controllingFieldValue>
+            <controllingFieldValue>BO (Creative Ads)</controllingFieldValue>
+            <controllingFieldValue>Running Text (Super Impose)</controllingFieldValue>
+            <controllingFieldValue>Credit Title (Super Impose)</controllingFieldValue>
+            <controllingFieldValue>Adlibs (TVC)</controllingFieldValue>
+            <controllingFieldValue>Template Host (Creative Ads)</controllingFieldValue>
+            <controllingFieldValue>Product Placement (Creative Ads)</controllingFieldValue>
+            <controllingFieldValue>Production (TVC)</controllingFieldValue>
+            <controllingFieldValue>Built in (TVC)</controllingFieldValue>
+            <controllingFieldValue>Studio Usee Hall</controllingFieldValue>
+            <controllingFieldValue>RUNNING TEXT</controllingFieldValue>
+            <controllingFieldValue>2 Studio + Alat +Crew</controllingFieldValue>
+            <controllingFieldValue>Studio (mini studio)</controllingFieldValue>
+            <controllingFieldValue>Venue</controllingFieldValue>
+            <controllingFieldValue>Production Off Air</controllingFieldValue>
+            <controllingFieldValue>Bundling Package</controllingFieldValue>
+            <valueName>Standard</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Blocking Channel IPTV SD + HD</controllingFieldValue>
+            <controllingFieldValue>Blocking Channel OTT SD + HD</controllingFieldValue>
+            <controllingFieldValue>Mobile</controllingFieldValue>
+            <controllingFieldValue>Off Deck</controllingFieldValue>
+            <controllingFieldValue>On Deck</controllingFieldValue>
+            <controllingFieldValue>Vending Machine</controllingFieldValue>
+            <controllingFieldValue>All</controllingFieldValue>
+            <controllingFieldValue>Partner</controllingFieldValue>
+            <controllingFieldValue>TVC ROS</controllingFieldValue>
+            <controllingFieldValue>TVC Cross Platform</controllingFieldValue>
+            <controllingFieldValue>SUPER IMPOSE</controllingFieldValue>
+            <controllingFieldValue>SQUEEZE FRAME</controllingFieldValue>
+            <controllingFieldValue>Blocking Channel SD</controllingFieldValue>
+            <controllingFieldValue>Blocking Channel HD</controllingFieldValue>
+            <controllingFieldValue>Blocking Channel SD + HD</controllingFieldValue>
+            <controllingFieldValue>Blocking Channel Manage Service IPTV SD Channel</controllingFieldValue>
+            <controllingFieldValue>Blocking Channel Manage Service IPTV HD Channel</controllingFieldValue>
+            <controllingFieldValue>Blocking Channel UseeTV Go</controllingFieldValue>
+            <controllingFieldValue>RUNNING TEXT</controllingFieldValue>
+            <controllingFieldValue>SUPER IMPOSE (SEA TODAY)</controllingFieldValue>
+            <controllingFieldValue>RUNNING TEXT (SEA TODAY)</controllingFieldValue>
+            <valueName>All Time</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Page Radio</controllingFieldValue>
+            <controllingFieldValue>Page News &amp; Promotion</controllingFieldValue>
+            <controllingFieldValue>Detail News &amp; Promotion</controllingFieldValue>
+            <controllingFieldValue>Page About</controllingFieldValue>
+            <controllingFieldValue>Page FAQ</controllingFieldValue>
+            <controllingFieldValue>Mobile</controllingFieldValue>
+            <controllingFieldValue>Off Deck</controllingFieldValue>
+            <controllingFieldValue>On Deck</controllingFieldValue>
+            <controllingFieldValue>IPTV Creative CPM</controllingFieldValue>
+            <controllingFieldValue>Vending Machine</controllingFieldValue>
+            <controllingFieldValue>TVC CPM</controllingFieldValue>
+            <controllingFieldValue>All</controllingFieldValue>
+            <controllingFieldValue>TVC CPM PMP</controllingFieldValue>
+            <controllingFieldValue>Partner</controllingFieldValue>
+            <controllingFieldValue>My Telkomsel Appss</controllingFieldValue>
+            <valueName>N/A</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Detail Live TV - Showcase</controllingFieldValue>
+            <controllingFieldValue>Homepage Banner</controllingFieldValue>
+            <controllingFieldValue>Mobile</controllingFieldValue>
+            <controllingFieldValue>Off Deck</controllingFieldValue>
+            <controllingFieldValue>On Deck</controllingFieldValue>
+            <controllingFieldValue>Vending Machine</controllingFieldValue>
+            <controllingFieldValue>All</controllingFieldValue>
+            <controllingFieldValue>Partner</controllingFieldValue>
+            <valueName>300x50</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Live TV Banner</controllingFieldValue>
+            <controllingFieldValue>Mobile</controllingFieldValue>
+            <controllingFieldValue>Off Deck</controllingFieldValue>
+            <controllingFieldValue>On Deck</controllingFieldValue>
+            <controllingFieldValue>Vending Machine</controllingFieldValue>
+            <controllingFieldValue>All</controllingFieldValue>
+            <controllingFieldValue>Partner</controllingFieldValue>
+            <controllingFieldValue>Detail Live TV</controllingFieldValue>
+            <valueName>320x100</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mobile</controllingFieldValue>
+            <controllingFieldValue>Off Deck</controllingFieldValue>
+            <controllingFieldValue>On Deck</controllingFieldValue>
+            <controllingFieldValue>Vending Machine</controllingFieldValue>
+            <controllingFieldValue>All</controllingFieldValue>
+            <controllingFieldValue>Partner</controllingFieldValue>
+            <valueName>Sticky Big</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mobile</controllingFieldValue>
+            <controllingFieldValue>Off Deck</controllingFieldValue>
+            <controllingFieldValue>On Deck</controllingFieldValue>
+            <controllingFieldValue>Vending Machine</controllingFieldValue>
+            <controllingFieldValue>All</controllingFieldValue>
+            <controllingFieldValue>Partner</controllingFieldValue>
+            <valueName>Sticky Medium</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mobile</controllingFieldValue>
+            <controllingFieldValue>Off Deck</controllingFieldValue>
+            <controllingFieldValue>On Deck</controllingFieldValue>
+            <controllingFieldValue>Vending Machine</controllingFieldValue>
+            <controllingFieldValue>All</controllingFieldValue>
+            <controllingFieldValue>Partner</controllingFieldValue>
+            <valueName>Sticky Small</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mobile</controllingFieldValue>
+            <controllingFieldValue>Off Deck</controllingFieldValue>
+            <controllingFieldValue>On Deck</controllingFieldValue>
+            <controllingFieldValue>Vending Machine</controllingFieldValue>
+            <controllingFieldValue>All</controllingFieldValue>
+            <controllingFieldValue>Partner</controllingFieldValue>
+            <valueName>FRIDA | 300 - 1.000 GB</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mobile</controllingFieldValue>
+            <controllingFieldValue>Off Deck</controllingFieldValue>
+            <controllingFieldValue>On Deck</controllingFieldValue>
+            <controllingFieldValue>Vending Machine</controllingFieldValue>
+            <controllingFieldValue>All</controllingFieldValue>
+            <controllingFieldValue>Partner</controllingFieldValue>
+            <valueName>FRIDA | 1.001 - 3.000 GB</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mobile</controllingFieldValue>
+            <controllingFieldValue>Off Deck</controllingFieldValue>
+            <controllingFieldValue>On Deck</controllingFieldValue>
+            <controllingFieldValue>Vending Machine</controllingFieldValue>
+            <controllingFieldValue>All</controllingFieldValue>
+            <controllingFieldValue>Partner</controllingFieldValue>
+            <valueName>FRIDA | 3.001 - 10.000 GB</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mobile</controllingFieldValue>
+            <controllingFieldValue>Off Deck</controllingFieldValue>
+            <controllingFieldValue>On Deck</controllingFieldValue>
+            <controllingFieldValue>Vending Machine</controllingFieldValue>
+            <controllingFieldValue>All</controllingFieldValue>
+            <controllingFieldValue>Partner</controllingFieldValue>
+            <valueName>FRIDA | 10.001 - 30.000 GB</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mobile</controllingFieldValue>
+            <controllingFieldValue>Off Deck</controllingFieldValue>
+            <controllingFieldValue>On Deck</controllingFieldValue>
+            <controllingFieldValue>Vending Machine</controllingFieldValue>
+            <controllingFieldValue>All</controllingFieldValue>
+            <controllingFieldValue>Partner</controllingFieldValue>
+            <valueName>FRIDA | &gt;100.000 GB</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mobile</controllingFieldValue>
+            <controllingFieldValue>Off Deck</controllingFieldValue>
+            <controllingFieldValue>On Deck</controllingFieldValue>
+            <controllingFieldValue>Vending Machine</controllingFieldValue>
+            <controllingFieldValue>All</controllingFieldValue>
+            <controllingFieldValue>Partner</controllingFieldValue>
+            <valueName>FRIDA | 30.001 - 100.000 GB</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mobile</controllingFieldValue>
+            <controllingFieldValue>Off Deck</controllingFieldValue>
+            <controllingFieldValue>On Deck</controllingFieldValue>
+            <controllingFieldValue>Vending Machine</controllingFieldValue>
+            <controllingFieldValue>All</controllingFieldValue>
+            <controllingFieldValue>Partner</controllingFieldValue>
+            <valueName>GITA | 5 MB 1 day</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mobile</controllingFieldValue>
+            <controllingFieldValue>Off Deck</controllingFieldValue>
+            <controllingFieldValue>On Deck</controllingFieldValue>
+            <controllingFieldValue>Vending Machine</controllingFieldValue>
+            <controllingFieldValue>All</controllingFieldValue>
+            <controllingFieldValue>Partner</controllingFieldValue>
+            <valueName>GITA | 10 MB 1 day</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mobile</controllingFieldValue>
+            <controllingFieldValue>Off Deck</controllingFieldValue>
+            <controllingFieldValue>On Deck</controllingFieldValue>
+            <controllingFieldValue>Vending Machine</controllingFieldValue>
+            <controllingFieldValue>All</controllingFieldValue>
+            <controllingFieldValue>Partner</controllingFieldValue>
+            <valueName>GITA | 20 MB 1 day</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mobile</controllingFieldValue>
+            <controllingFieldValue>Off Deck</controllingFieldValue>
+            <controllingFieldValue>On Deck</controllingFieldValue>
+            <controllingFieldValue>Vending Machine</controllingFieldValue>
+            <controllingFieldValue>All</controllingFieldValue>
+            <controllingFieldValue>Partner</controllingFieldValue>
+            <valueName>GITA | 50 MB 7 day</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mobile</controllingFieldValue>
+            <controllingFieldValue>Off Deck</controllingFieldValue>
+            <controllingFieldValue>On Deck</controllingFieldValue>
+            <controllingFieldValue>Vending Machine</controllingFieldValue>
+            <controllingFieldValue>All</controllingFieldValue>
+            <controllingFieldValue>Partner</controllingFieldValue>
+            <valueName>GITA | 100 MB 7 days</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mobile</controllingFieldValue>
+            <controllingFieldValue>Off Deck</controllingFieldValue>
+            <controllingFieldValue>On Deck</controllingFieldValue>
+            <controllingFieldValue>Vending Machine</controllingFieldValue>
+            <controllingFieldValue>All</controllingFieldValue>
+            <controllingFieldValue>Partner</controllingFieldValue>
+            <valueName>GITA | 110 MB 7 days</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mobile</controllingFieldValue>
+            <controllingFieldValue>Off Deck</controllingFieldValue>
+            <controllingFieldValue>On Deck</controllingFieldValue>
+            <controllingFieldValue>Vending Machine</controllingFieldValue>
+            <controllingFieldValue>All</controllingFieldValue>
+            <controllingFieldValue>Partner</controllingFieldValue>
+            <valueName>GITA | 250 MB 30 days</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mobile</controllingFieldValue>
+            <controllingFieldValue>Off Deck</controllingFieldValue>
+            <controllingFieldValue>On Deck</controllingFieldValue>
+            <controllingFieldValue>Vending Machine</controllingFieldValue>
+            <controllingFieldValue>All</controllingFieldValue>
+            <controllingFieldValue>Partner</controllingFieldValue>
+            <valueName>GITA | 420 MB 30 days</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mobile</controllingFieldValue>
+            <controllingFieldValue>Off Deck</controllingFieldValue>
+            <controllingFieldValue>On Deck</controllingFieldValue>
+            <controllingFieldValue>Vending Machine</controllingFieldValue>
+            <controllingFieldValue>All</controllingFieldValue>
+            <controllingFieldValue>Partner</controllingFieldValue>
+            <valueName>GITA | 500 MB 30 days</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mobile</controllingFieldValue>
+            <controllingFieldValue>Off Deck</controllingFieldValue>
+            <controllingFieldValue>On Deck</controllingFieldValue>
+            <controllingFieldValue>Vending Machine</controllingFieldValue>
+            <controllingFieldValue>All</controllingFieldValue>
+            <controllingFieldValue>Partner</controllingFieldValue>
+            <valueName>GITA | 750 MB 30 days</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mobile</controllingFieldValue>
+            <controllingFieldValue>Off Deck</controllingFieldValue>
+            <controllingFieldValue>On Deck</controllingFieldValue>
+            <controllingFieldValue>Vending Machine</controllingFieldValue>
+            <controllingFieldValue>All</controllingFieldValue>
+            <controllingFieldValue>Partner</controllingFieldValue>
+            <valueName>GITA | 1 GB 30 days</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mobile</controllingFieldValue>
+            <controllingFieldValue>Off Deck</controllingFieldValue>
+            <controllingFieldValue>On Deck</controllingFieldValue>
+            <controllingFieldValue>Vending Machine</controllingFieldValue>
+            <controllingFieldValue>All</controllingFieldValue>
+            <controllingFieldValue>Partner</controllingFieldValue>
+            <valueName>GITA | 2 GB 30 days</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mobile</controllingFieldValue>
+            <controllingFieldValue>Off Deck</controllingFieldValue>
+            <controllingFieldValue>On Deck</controllingFieldValue>
+            <controllingFieldValue>Vending Machine</controllingFieldValue>
+            <controllingFieldValue>All</controllingFieldValue>
+            <controllingFieldValue>Partner</controllingFieldValue>
+            <valueName>GITA | 3 GB 30 days</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mobile</controllingFieldValue>
+            <controllingFieldValue>Off Deck</controllingFieldValue>
+            <controllingFieldValue>On Deck</controllingFieldValue>
+            <controllingFieldValue>Vending Machine</controllingFieldValue>
+            <controllingFieldValue>All</controllingFieldValue>
+            <controllingFieldValue>Partner</controllingFieldValue>
+            <valueName>GITA | 4 GB 30 days</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mobile</controllingFieldValue>
+            <controllingFieldValue>Off Deck</controllingFieldValue>
+            <controllingFieldValue>On Deck</controllingFieldValue>
+            <controllingFieldValue>Vending Machine</controllingFieldValue>
+            <controllingFieldValue>All</controllingFieldValue>
+            <controllingFieldValue>Partner</controllingFieldValue>
+            <valueName>GITA | 5 GB 30 days</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mobile</controllingFieldValue>
+            <controllingFieldValue>Off Deck</controllingFieldValue>
+            <controllingFieldValue>On Deck</controllingFieldValue>
+            <controllingFieldValue>Vending Machine</controllingFieldValue>
+            <controllingFieldValue>All</controllingFieldValue>
+            <controllingFieldValue>Partner</controllingFieldValue>
+            <valueName>GITA | 8 GB 30 days</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mobile</controllingFieldValue>
+            <controllingFieldValue>Off Deck</controllingFieldValue>
+            <controllingFieldValue>On Deck</controllingFieldValue>
+            <controllingFieldValue>Vending Machine</controllingFieldValue>
+            <controllingFieldValue>All</controllingFieldValue>
+            <controllingFieldValue>Partner</controllingFieldValue>
+            <valueName>GITA | 11 GB 30 days</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mobile</controllingFieldValue>
+            <controllingFieldValue>Off Deck</controllingFieldValue>
+            <controllingFieldValue>On Deck</controllingFieldValue>
+            <controllingFieldValue>Vending Machine</controllingFieldValue>
+            <controllingFieldValue>All</controllingFieldValue>
+            <controllingFieldValue>Partner</controllingFieldValue>
+            <valueName>GITA | 16 GB 30 days</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mobile</controllingFieldValue>
+            <controllingFieldValue>Off Deck</controllingFieldValue>
+            <controllingFieldValue>On Deck</controllingFieldValue>
+            <controllingFieldValue>Vending Machine</controllingFieldValue>
+            <controllingFieldValue>All</controllingFieldValue>
+            <controllingFieldValue>Partner</controllingFieldValue>
+            <valueName>GITA | 30 GB 30 days</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mobile</controllingFieldValue>
+            <controllingFieldValue>Off Deck</controllingFieldValue>
+            <controllingFieldValue>On Deck</controllingFieldValue>
+            <controllingFieldValue>Vending Machine</controllingFieldValue>
+            <controllingFieldValue>All</controllingFieldValue>
+            <controllingFieldValue>Partner</controllingFieldValue>
+            <valueName>GITA | 35 GB 30 days</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mobile</controllingFieldValue>
+            <controllingFieldValue>Off Deck</controllingFieldValue>
+            <controllingFieldValue>On Deck</controllingFieldValue>
+            <controllingFieldValue>Vending Machine</controllingFieldValue>
+            <controllingFieldValue>All</controllingFieldValue>
+            <controllingFieldValue>Partner</controllingFieldValue>
+            <valueName>Non Sticky Small</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mobile</controllingFieldValue>
+            <controllingFieldValue>Off Deck</controllingFieldValue>
+            <controllingFieldValue>On Deck</controllingFieldValue>
+            <controllingFieldValue>Vending Machine</controllingFieldValue>
+            <controllingFieldValue>All</controllingFieldValue>
+            <controllingFieldValue>Partner</controllingFieldValue>
+            <valueName>Non Sticky Big</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mobile</controllingFieldValue>
+            <controllingFieldValue>Off Deck</controllingFieldValue>
+            <controllingFieldValue>On Deck</controllingFieldValue>
+            <controllingFieldValue>Vending Machine</controllingFieldValue>
+            <controllingFieldValue>All</controllingFieldValue>
+            <controllingFieldValue>Partner</controllingFieldValue>
+            <valueName>Non Sticky Medium</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mobile</controllingFieldValue>
+            <controllingFieldValue>Off Deck</controllingFieldValue>
+            <controllingFieldValue>On Deck</controllingFieldValue>
+            <controllingFieldValue>Vending Machine</controllingFieldValue>
+            <controllingFieldValue>All</controllingFieldValue>
+            <controllingFieldValue>Partner</controllingFieldValue>
+            <valueName>Full Screen</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mobile</controllingFieldValue>
+            <controllingFieldValue>Off Deck</controllingFieldValue>
+            <controllingFieldValue>On Deck</controllingFieldValue>
+            <controllingFieldValue>Vending Machine</controllingFieldValue>
+            <controllingFieldValue>All</controllingFieldValue>
+            <controllingFieldValue>Partner</controllingFieldValue>
+            <valueName>Big</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mobile</controllingFieldValue>
+            <controllingFieldValue>Off Deck</controllingFieldValue>
+            <controllingFieldValue>On Deck</controllingFieldValue>
+            <controllingFieldValue>Vending Machine</controllingFieldValue>
+            <controllingFieldValue>All</controllingFieldValue>
+            <controllingFieldValue>Partner</controllingFieldValue>
+            <valueName>Medium</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mobile</controllingFieldValue>
+            <controllingFieldValue>Off Deck</controllingFieldValue>
+            <controllingFieldValue>On Deck</controllingFieldValue>
+            <controllingFieldValue>Vending Machine</controllingFieldValue>
+            <controllingFieldValue>All</controllingFieldValue>
+            <controllingFieldValue>Partner</controllingFieldValue>
+            <valueName>Small</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mobile</controllingFieldValue>
+            <controllingFieldValue>Off Deck</controllingFieldValue>
+            <controllingFieldValue>On Deck</controllingFieldValue>
+            <controllingFieldValue>Vending Machine</controllingFieldValue>
+            <controllingFieldValue>All</controllingFieldValue>
+            <controllingFieldValue>Partner</controllingFieldValue>
+            <valueName>Pre Roll Full Screen 30&quot;</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mobile</controllingFieldValue>
+            <controllingFieldValue>Off Deck</controllingFieldValue>
+            <controllingFieldValue>On Deck</controllingFieldValue>
+            <controllingFieldValue>Vending Machine</controllingFieldValue>
+            <controllingFieldValue>All</controllingFieldValue>
+            <controllingFieldValue>Partner</controllingFieldValue>
+            <valueName>Pre Roll Full Screen 15&quot;</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mobile</controllingFieldValue>
+            <controllingFieldValue>Off Deck</controllingFieldValue>
+            <controllingFieldValue>On Deck</controllingFieldValue>
+            <controllingFieldValue>Vending Machine</controllingFieldValue>
+            <controllingFieldValue>All</controllingFieldValue>
+            <controllingFieldValue>Partner</controllingFieldValue>
+            <valueName>In Vehicle Screen</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mobile</controllingFieldValue>
+            <controllingFieldValue>Off Deck</controllingFieldValue>
+            <controllingFieldValue>On Deck</controllingFieldValue>
+            <controllingFieldValue>Vending Machine</controllingFieldValue>
+            <controllingFieldValue>All</controllingFieldValue>
+            <controllingFieldValue>Partner</controllingFieldValue>
+            <valueName>All</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mobile</controllingFieldValue>
+            <controllingFieldValue>Off Deck</controllingFieldValue>
+            <controllingFieldValue>On Deck</controllingFieldValue>
+            <controllingFieldValue>Vending Machine</controllingFieldValue>
+            <controllingFieldValue>All</controllingFieldValue>
+            <controllingFieldValue>Partner</controllingFieldValue>
+            <controllingFieldValue>BOOTING ADS</controllingFieldValue>
+            <valueName>Position 1 (full screen)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mobile</controllingFieldValue>
+            <controllingFieldValue>Off Deck</controllingFieldValue>
+            <controllingFieldValue>On Deck</controllingFieldValue>
+            <controllingFieldValue>Vending Machine</controllingFieldValue>
+            <controllingFieldValue>All</controllingFieldValue>
+            <controllingFieldValue>Partner</controllingFieldValue>
+            <controllingFieldValue>BOOTING ADS</controllingFieldValue>
+            <valueName>Position 2 (full screen)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mobile</controllingFieldValue>
+            <controllingFieldValue>Off Deck</controllingFieldValue>
+            <controllingFieldValue>On Deck</controllingFieldValue>
+            <controllingFieldValue>Vending Machine</controllingFieldValue>
+            <controllingFieldValue>All</controllingFieldValue>
+            <controllingFieldValue>Partner</controllingFieldValue>
+            <controllingFieldValue>NAVIGATION ADS</controllingFieldValue>
+            <valueName>15 slot (348x218.5)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mobile</controllingFieldValue>
+            <controllingFieldValue>Off Deck</controllingFieldValue>
+            <controllingFieldValue>On Deck</controllingFieldValue>
+            <controllingFieldValue>Vending Machine</controllingFieldValue>
+            <controllingFieldValue>All</controllingFieldValue>
+            <controllingFieldValue>Partner</controllingFieldValue>
+            <controllingFieldValue>POTRAIT BANNER</controllingFieldValue>
+            <valueName>Position 1-3</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mobile</controllingFieldValue>
+            <controllingFieldValue>Off Deck</controllingFieldValue>
+            <controllingFieldValue>On Deck</controllingFieldValue>
+            <controllingFieldValue>Vending Machine</controllingFieldValue>
+            <controllingFieldValue>All</controllingFieldValue>
+            <controllingFieldValue>Partner</controllingFieldValue>
+            <controllingFieldValue>POTRAIT BANNER</controllingFieldValue>
+            <valueName>Position 4-10</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mobile</controllingFieldValue>
+            <controllingFieldValue>Off Deck</controllingFieldValue>
+            <controllingFieldValue>On Deck</controllingFieldValue>
+            <controllingFieldValue>Vending Machine</controllingFieldValue>
+            <controllingFieldValue>All</controllingFieldValue>
+            <controllingFieldValue>Partner</controllingFieldValue>
+            <controllingFieldValue>ROTATE BANNER</controllingFieldValue>
+            <valueName>EPG Lama - Home (340x440)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mobile</controllingFieldValue>
+            <controllingFieldValue>Off Deck</controllingFieldValue>
+            <controllingFieldValue>On Deck</controllingFieldValue>
+            <controllingFieldValue>Vending Machine</controllingFieldValue>
+            <controllingFieldValue>All</controllingFieldValue>
+            <controllingFieldValue>Partner</controllingFieldValue>
+            <controllingFieldValue>ROTATE BANNER</controllingFieldValue>
+            <valueName>EPG Baru - Channel (340x440)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mobile</controllingFieldValue>
+            <controllingFieldValue>Off Deck</controllingFieldValue>
+            <controllingFieldValue>On Deck</controllingFieldValue>
+            <controllingFieldValue>Vending Machine</controllingFieldValue>
+            <controllingFieldValue>All</controllingFieldValue>
+            <controllingFieldValue>Partner</controllingFieldValue>
+            <controllingFieldValue>LANDSCAPE ADS (HOME MENU)</controllingFieldValue>
+            <valueName>Position 1-3 (503x284)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mobile</controllingFieldValue>
+            <controllingFieldValue>Off Deck</controllingFieldValue>
+            <controllingFieldValue>On Deck</controllingFieldValue>
+            <controllingFieldValue>Vending Machine</controllingFieldValue>
+            <controllingFieldValue>All</controllingFieldValue>
+            <controllingFieldValue>Partner</controllingFieldValue>
+            <controllingFieldValue>LANDSCAPE ADS (HOME MENU)</controllingFieldValue>
+            <valueName>Position 4-6 (503x284)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mobile</controllingFieldValue>
+            <controllingFieldValue>Off Deck</controllingFieldValue>
+            <controllingFieldValue>On Deck</controllingFieldValue>
+            <controllingFieldValue>Vending Machine</controllingFieldValue>
+            <controllingFieldValue>All</controllingFieldValue>
+            <controllingFieldValue>Partner</controllingFieldValue>
+            <controllingFieldValue>LANDSCAPE ADS (MOVIE MENU)</controllingFieldValue>
+            <controllingFieldValue>LANDSCAPE ADS (APPS MENU)</controllingFieldValue>
+            <valueName>Position 1 (530x300)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mobile</controllingFieldValue>
+            <controllingFieldValue>Off Deck</controllingFieldValue>
+            <controllingFieldValue>On Deck</controllingFieldValue>
+            <controllingFieldValue>Vending Machine</controllingFieldValue>
+            <controllingFieldValue>All</controllingFieldValue>
+            <controllingFieldValue>Partner</controllingFieldValue>
+            <controllingFieldValue>LANDSCAPE ADS (MOVIE MENU)</controllingFieldValue>
+            <controllingFieldValue>LANDSCAPE ADS (APPS MENU)</controllingFieldValue>
+            <valueName>Position 2-3 (530x300)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mobile</controllingFieldValue>
+            <controllingFieldValue>Off Deck</controllingFieldValue>
+            <controllingFieldValue>On Deck</controllingFieldValue>
+            <controllingFieldValue>Vending Machine</controllingFieldValue>
+            <controllingFieldValue>All</controllingFieldValue>
+            <controllingFieldValue>Partner</controllingFieldValue>
+            <controllingFieldValue>TV Shopping Landscape</controllingFieldValue>
+            <valueName>Position 1-3 (530x300)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mobile</controllingFieldValue>
+            <controllingFieldValue>Off Deck</controllingFieldValue>
+            <controllingFieldValue>On Deck</controllingFieldValue>
+            <controllingFieldValue>Vending Machine</controllingFieldValue>
+            <controllingFieldValue>All</controllingFieldValue>
+            <controllingFieldValue>Partner</controllingFieldValue>
+            <controllingFieldValue>TV Shopping Landscape</controllingFieldValue>
+            <valueName>Position 4-5 (530x300)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mobile</controllingFieldValue>
+            <controllingFieldValue>Off Deck</controllingFieldValue>
+            <controllingFieldValue>PICTURE IN PICTURE</controllingFieldValue>
+            <controllingFieldValue>On Deck</controllingFieldValue>
+            <controllingFieldValue>Vending Machine</controllingFieldValue>
+            <controllingFieldValue>All</controllingFieldValue>
+            <controllingFieldValue>Partner</controllingFieldValue>
+            <controllingFieldValue>PIP</controllingFieldValue>
+            <valueName>All Spot (415x207.5)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mobile</controllingFieldValue>
+            <controllingFieldValue>Off Deck</controllingFieldValue>
+            <controllingFieldValue>On Deck</controllingFieldValue>
+            <controllingFieldValue>Vending Machine</controllingFieldValue>
+            <controllingFieldValue>All</controllingFieldValue>
+            <controllingFieldValue>Partner</controllingFieldValue>
+            <controllingFieldValue>TIMESHIFT ADS</controllingFieldValue>
+            <valueName>Fast Forward &amp; Rewind (398x264.5)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mobile</controllingFieldValue>
+            <controllingFieldValue>Off Deck</controllingFieldValue>
+            <controllingFieldValue>On Deck</controllingFieldValue>
+            <controllingFieldValue>Vending Machine</controllingFieldValue>
+            <controllingFieldValue>All</controllingFieldValue>
+            <controllingFieldValue>Partner</controllingFieldValue>
+            <controllingFieldValue>TIMESHIFT ADS</controllingFieldValue>
+            <valueName>Pause (1007x566)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mobile</controllingFieldValue>
+            <controllingFieldValue>Off Deck</controllingFieldValue>
+            <controllingFieldValue>On Deck</controllingFieldValue>
+            <controllingFieldValue>Vending Machine</controllingFieldValue>
+            <controllingFieldValue>All</controllingFieldValue>
+            <controllingFieldValue>Partner</controllingFieldValue>
+            <controllingFieldValue>PRE ROLL</controllingFieldValue>
+            <controllingFieldValue>QR Code</controllingFieldValue>
+            <controllingFieldValue>SUPER IMPOSE</controllingFieldValue>
+            <controllingFieldValue>SQUEEZE FRAME</controllingFieldValue>
+            <controllingFieldValue>Geo Targeted Creative Ads Navigation</controllingFieldValue>
+            <controllingFieldValue>Geo Targeted Creative Ads Pre Roll</controllingFieldValue>
+            <controllingFieldValue>Geo Targeted Creative Ads Time Shift</controllingFieldValue>
+            <controllingFieldValue>Geo Targeted Creative Ads PIP</controllingFieldValue>
+            <valueName>All Spot</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mobile</controllingFieldValue>
+            <controllingFieldValue>Off Deck</controllingFieldValue>
+            <controllingFieldValue>On Deck</controllingFieldValue>
+            <controllingFieldValue>Vending Machine</controllingFieldValue>
+            <controllingFieldValue>All</controllingFieldValue>
+            <controllingFieldValue>Partner</controllingFieldValue>
+            <controllingFieldValue>SCREENSAVER ADS</controllingFieldValue>
+            <valueName>All Spot (1920x1080)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mobile</controllingFieldValue>
+            <controllingFieldValue>Off Deck</controllingFieldValue>
+            <controllingFieldValue>On Deck</controllingFieldValue>
+            <controllingFieldValue>Vending Machine</controllingFieldValue>
+            <controllingFieldValue>All</controllingFieldValue>
+            <controllingFieldValue>Partner</controllingFieldValue>
+            <controllingFieldValue>TVC PLATINUM</controllingFieldValue>
+            <controllingFieldValue>TVC GOLD</controllingFieldValue>
+            <controllingFieldValue>TVC SILVER</controllingFieldValue>
+            <valueName>PRIME TIME 17.00 - 24.00</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mobile</controllingFieldValue>
+            <controllingFieldValue>Off Deck</controllingFieldValue>
+            <controllingFieldValue>On Deck</controllingFieldValue>
+            <controllingFieldValue>Vending Machine</controllingFieldValue>
+            <controllingFieldValue>All</controllingFieldValue>
+            <controllingFieldValue>Partner</controllingFieldValue>
+            <controllingFieldValue>TVC PLATINUM</controllingFieldValue>
+            <controllingFieldValue>TVC GOLD</controllingFieldValue>
+            <controllingFieldValue>TVC SILVER</controllingFieldValue>
+            <valueName>REGULAR TIME 00.00 - 17.00</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mobile</controllingFieldValue>
+            <controllingFieldValue>Off Deck</controllingFieldValue>
+            <controllingFieldValue>On Deck</controllingFieldValue>
+            <controllingFieldValue>Vending Machine</controllingFieldValue>
+            <controllingFieldValue>All</controllingFieldValue>
+            <controllingFieldValue>Partner</controllingFieldValue>
+            <controllingFieldValue>Targeted TVC Ads</controllingFieldValue>
+            <controllingFieldValue>TVC</controllingFieldValue>
+            <valueName>15&quot;</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mobile</controllingFieldValue>
+            <controllingFieldValue>Off Deck</controllingFieldValue>
+            <controllingFieldValue>On Deck</controllingFieldValue>
+            <controllingFieldValue>Vending Machine</controllingFieldValue>
+            <controllingFieldValue>All</controllingFieldValue>
+            <controllingFieldValue>Partner</controllingFieldValue>
+            <controllingFieldValue>Targeted TVC Ads</controllingFieldValue>
+            <controllingFieldValue>TVC</controllingFieldValue>
+            <valueName>30&quot;</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mobile</controllingFieldValue>
+            <controllingFieldValue>Off Deck</controllingFieldValue>
+            <controllingFieldValue>On Deck</controllingFieldValue>
+            <controllingFieldValue>Vending Machine</controllingFieldValue>
+            <controllingFieldValue>All</controllingFieldValue>
+            <controllingFieldValue>Partner</controllingFieldValue>
+            <controllingFieldValue>Live Streaming</controllingFieldValue>
+            <controllingFieldValue>Talkshow</controllingFieldValue>
+            <controllingFieldValue>Liputan</controllingFieldValue>
+            <controllingFieldValue>Webinar</controllingFieldValue>
+            <valueName>Program</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mobile</controllingFieldValue>
+            <controllingFieldValue>Off Deck</controllingFieldValue>
+            <controllingFieldValue>On Deck</controllingFieldValue>
+            <controllingFieldValue>Vending Machine</controllingFieldValue>
+            <controllingFieldValue>All</controllingFieldValue>
+            <controllingFieldValue>Partner</controllingFieldValue>
+            <controllingFieldValue>Halaman Utama</controllingFieldValue>
+            <valueName>Position 1-2 (980x120)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mobile</controllingFieldValue>
+            <controllingFieldValue>Off Deck</controllingFieldValue>
+            <controllingFieldValue>On Deck</controllingFieldValue>
+            <controllingFieldValue>Vending Machine</controllingFieldValue>
+            <controllingFieldValue>All</controllingFieldValue>
+            <controllingFieldValue>Partner</controllingFieldValue>
+            <controllingFieldValue>Page Channel</controllingFieldValue>
+            <valueName>Position 1 (468x60)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mobile</controllingFieldValue>
+            <controllingFieldValue>Off Deck</controllingFieldValue>
+            <controllingFieldValue>On Deck</controllingFieldValue>
+            <controllingFieldValue>Vending Machine</controllingFieldValue>
+            <controllingFieldValue>All</controllingFieldValue>
+            <controllingFieldValue>Partner</controllingFieldValue>
+            <controllingFieldValue>Page Channel</controllingFieldValue>
+            <controllingFieldValue>Detail Live TV</controllingFieldValue>
+            <valueName>Position 2 (980x120)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mobile</controllingFieldValue>
+            <controllingFieldValue>Off Deck</controllingFieldValue>
+            <controllingFieldValue>On Deck</controllingFieldValue>
+            <controllingFieldValue>Vending Machine</controllingFieldValue>
+            <controllingFieldValue>All</controllingFieldValue>
+            <controllingFieldValue>Partner</controllingFieldValue>
+            <controllingFieldValue>Detail Live TV</controllingFieldValue>
+            <valueName>Position 1 (320x100)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mobile</controllingFieldValue>
+            <controllingFieldValue>Off Deck</controllingFieldValue>
+            <controllingFieldValue>On Deck</controllingFieldValue>
+            <controllingFieldValue>Vending Machine</controllingFieldValue>
+            <controllingFieldValue>All</controllingFieldValue>
+            <controllingFieldValue>Partner</controllingFieldValue>
+            <controllingFieldValue>Halaman Utama</controllingFieldValue>
+            <valueName>Position 1 (300x50)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mobile</controllingFieldValue>
+            <controllingFieldValue>Off Deck</controllingFieldValue>
+            <controllingFieldValue>On Deck</controllingFieldValue>
+            <controllingFieldValue>Vending Machine</controllingFieldValue>
+            <controllingFieldValue>All</controllingFieldValue>
+            <controllingFieldValue>Partner</controllingFieldValue>
+            <controllingFieldValue>Halaman Utama</controllingFieldValue>
+            <valueName>Position 2 (320x100)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mobile</controllingFieldValue>
+            <valueName>GITA | 1 GB 3 days</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mobile</controllingFieldValue>
+            <valueName>GITA | 2 GB 3 days</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mobile</controllingFieldValue>
+            <valueName>GITA | 2.5 GB 5 days</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mobile</controllingFieldValue>
+            <valueName>GITA | 3 GB 5 days</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mobile</controllingFieldValue>
+            <valueName>GITA | 7 GB 7 days</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mobile</controllingFieldValue>
+            <valueName>GITA | 500 MB 3 days</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mobile</controllingFieldValue>
+            <controllingFieldValue>Programmatic Push Notification</controllingFieldValue>
+            <valueName>DATA | 0.5 GB (30 Days)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mobile</controllingFieldValue>
+            <controllingFieldValue>Programmatic Push Notification</controllingFieldValue>
+            <valueName>DATA | 1 GB (30 Days)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mobile</controllingFieldValue>
+            <controllingFieldValue>Programmatic Push Notification</controllingFieldValue>
+            <valueName>DATA | 2 GB (30 Days)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mobile</controllingFieldValue>
+            <controllingFieldValue>Programmatic Push Notification</controllingFieldValue>
+            <valueName>DATA | 2.5 GB (5 Days)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mobile</controllingFieldValue>
+            <controllingFieldValue>Programmatic Push Notification</controllingFieldValue>
+            <valueName>DATA | 3 GB (5 Days)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mobile</controllingFieldValue>
+            <controllingFieldValue>Programmatic Push Notification</controllingFieldValue>
+            <valueName>DATA | 7 GB (7 Days)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>POTRAIT BANNER (Home Carousel)</controllingFieldValue>
+            <controllingFieldValue>LANDSCAPE ADS (MOVIE MENU)</controllingFieldValue>
+            <valueName>Position 4</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>POTRAIT BANNER (Home Carousel)</controllingFieldValue>
+            <controllingFieldValue>LANDSCAPE ADS (Best Streaming Apps)</controllingFieldValue>
+            <controllingFieldValue>LANDSCAPE ADS (Top Picks)</controllingFieldValue>
+            <controllingFieldValue>LANDSCAPE ADS (Highlight of The Week)</controllingFieldValue>
+            <valueName>Position 1</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>POTRAIT BANNER (Home Carousel)</controllingFieldValue>
+            <valueName>Position 2</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>POTRAIT BANNER (Home Carousel)</controllingFieldValue>
+            <valueName>Position 3</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>POTRAIT BANNER (Home Carousel)</controllingFieldValue>
+            <valueName>Position 5</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>POTRAIT BANNER (Home Carousel)</controllingFieldValue>
+            <valueName>Position 6</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>POTRAIT BANNER (Home Carousel)</controllingFieldValue>
+            <valueName>Position 7</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>POTRAIT BANNER (Home Carousel)</controllingFieldValue>
+            <valueName>Position 8</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>POTRAIT BANNER (Home Carousel)</controllingFieldValue>
+            <valueName>Position 9</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>POTRAIT BANNER (Home Carousel)</controllingFieldValue>
+            <valueName>Position 10</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>All</controllingFieldValue>
+            <controllingFieldValue>My Telkomsel Apps</controllingFieldValue>
+            <controllingFieldValue>My Telkomsel Appss</controllingFieldValue>
+            <valueName>320 x 100 Px</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>All</controllingFieldValue>
+            <controllingFieldValue>My Telkomsel Apps</controllingFieldValue>
+            <controllingFieldValue>My Telkomsel Appss</controllingFieldValue>
+            <valueName>1312 x 564 Px</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>My Telkomsel Apps</controllingFieldValue>
+            <valueName>Medium (300x250)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>My Telkomsel Apps</controllingFieldValue>
+            <valueName>1200x628</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>My Telkomsel Apps</controllingFieldValue>
+            <controllingFieldValue>My Telkomsel Appss</controllingFieldValue>
+            <valueName>300 x 250 Px</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>My Telkomsel Apps</controllingFieldValue>
+            <controllingFieldValue>My Telkomsel Appss</controllingFieldValue>
+            <valueName>320 x 50 Px</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>My Telkomsel Apps</controllingFieldValue>
+            <controllingFieldValue>My Telkomsel Appss</controllingFieldValue>
+            <valueName>Size 750x750px</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NAVIGATION ADS</controllingFieldValue>
+            <valueName>(348x218.5)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Vidio</controllingFieldValue>
+            <valueName>640 x 480</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>My Telkomsel Appss</controllingFieldValue>
+            <controllingFieldValue>Maxstream TV (App)</controllingFieldValue>
+            <valueName>Ratio : 16:9 preferred Length : 15 s (pre roll) 15s 30 s (mid roll) Resolution : 1920 x 1080</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>My Telkomsel Appss</controllingFieldValue>
+            <controllingFieldValue>Maxstream TV (App)</controllingFieldValue>
+            <valueName>Image 1920 x252 and 492 x 828 pixel or MOV format for animation</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>My Telkomsel Appss</controllingFieldValue>
+            <controllingFieldValue>Maxstream TV (App)</controllingFieldValue>
+            <valueName>10 word / 140 characters</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>My Telkomsel Appss</controllingFieldValue>
+            <controllingFieldValue>Maxstream TV (App)</controllingFieldValue>
+            <valueName>16:9</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>My Telkomsel Appss</controllingFieldValue>
+            <controllingFieldValue>Maxstream TV (App)</controllingFieldValue>
+            <valueName>Ratio : 16:9 preferred Length : 15 s Resolution : 1920 x 108</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>My Telkomsel Appss</controllingFieldValue>
+            <controllingFieldValue>Maxstream TV (App)</controllingFieldValue>
+            <valueName>1920 x 1080 Pixel</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>My Telkomsel Appss</controllingFieldValue>
+            <valueName>Size ：675x858px with safe space</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>My Telkomsel Appss</controllingFieldValue>
+            <valueName>File size max 100mb Size ratio 1:1 (1000px x 1000px)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>My Telkomsel Appss</controllingFieldValue>
+            <valueName>Size ratio: 1:1</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>My Telkomsel Appss</controllingFieldValue>
+            <valueName>1312 x 564 Pixel</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>My Telkomsel Appss</controllingFieldValue>
+            <valueName>640 x 180 pixell</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>POTRAIT BANNER</controllingFieldValue>
+            <valueName>Position 3-4</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>LANDSCAPE ADS (HOME MENU)</controllingFieldValue>
+            <valueName>(503x284)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>LANDSCAPE ADS (APPS MENU)</controllingFieldValue>
+            <valueName>Position 4-5</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>LANDSCAPE ADS (APPS MENU)</controllingFieldValue>
+            <valueName>(530x300)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TIMESHIFT ADS</controllingFieldValue>
+            <valueName>Pause</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>RCS</controllingFieldValue>
+            <controllingFieldValue>Net Message</controllingFieldValue>
+            <controllingFieldValue>OTA</controllingFieldValue>
+            <valueName>Rich Media</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

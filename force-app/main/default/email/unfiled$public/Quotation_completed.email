@@ -1,0 +1,6 @@
+Dear {!User.FirstName}{!User.MiddleName}{!User.LastName} ,
+
+The Quotation {!Quote.Name} is already final please check here {!Campaign.Id}
+
+cheers,
+Salesforce

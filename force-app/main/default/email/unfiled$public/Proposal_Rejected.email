@@ -1,0 +1,9 @@
+Hello {!Opportunity.Opportunity_Owner_Name__c},
+
+The proposal for opportunity {!Opportunity.Name} was rejected.
+Click link below for more information
+Opportunity:
+{!Opportunity.Link}
+
+Regards,
+Salesforce

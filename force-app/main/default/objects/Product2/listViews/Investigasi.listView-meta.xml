@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Investigasi</fullName>
+    <columns>PRODUCT2.NAME</columns>
+    <columns>Product_Type__c</columns>
+    <columns>Business_Product__c</columns>
+    <columns>Product_Category__c</columns>
+    <columns>Ads_Size__c</columns>
+    <columns>PRODUCT2.DESCRIPTION</columns>
+    <columns>List_Price__c</columns>
+    <columns>Buying_Method__c</columns>
+    <columns>Pricing_Model__c</columns>
+    <columns>Product_Channel__c</columns>
+    <columns>Product_id_number__c</columns>
+    <columns>PRODUCT2.ACTIVE</columns>
+    <columns>PRODUCT2.CREATED_DATE</columns>
+    <columns>PRODUCT2.LAST_UPDATE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>PRODUCT2.NAME</field>
+        <operation>contains</operation>
+        <value>Home Page,rectangle</value>
+    </filters>
+    <label>Investigasi</label>
+</ListView>

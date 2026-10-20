@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CheckContract_For_Creating_Quote</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+    Invoice_Settlement_App__c == false,
+    OR(
+        ISBLANK(Opportunity.ContractId),
+        Opportunity.Contract_Status__c != &apos;Activated&apos;
+    )
+)</errorConditionFormula>
+    <errorMessage>Opportunity must be related to Active Contract before creating Quotation.</errorMessage>
+</ValidationRule>

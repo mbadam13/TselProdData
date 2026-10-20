@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>64.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <decisions>
+        <name>check_role</name>
+        <label>check role</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <defaultConnector>
+            <targetReference>update_sales_manager_to_AM</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>if_senior_officer</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Sales__r.UserRole.Name</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>SALES SENIOR OFFICER</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>update_senior_officer_to_AM</targetReference>
+            </connector>
+            <label>if senior officer</label>
+        </rules>
+    </decisions>
+    <description>Set manager direct sales as AM. If the business is media seller, then AM filled with &quot;Intan&quot; in other automation</description>
+    <environments>Default</environments>
+    <interviewLabel>AM Updater {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>AM Updater</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>update_sales_manager_to_AM</name>
+        <label>update sales manager to AM</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Group_Type__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Actual</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>AM__c</field>
+            <operator>IsNull</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>AM__c</field>
+            <value>
+                <elementReference>$Record.Sales__r.ManagerId</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>update_senior_officer_to_AM</name>
+        <label>update senior officer to AM</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Group_Type__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Actual</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>AM__c</field>
+            <operator>IsNull</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>AM__c</field>
+            <value>
+                <elementReference>$Record.Sales__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>check_role</targetReference>
+        </connector>
+        <filterLogic>or</filterLogic>
+        <filters>
+            <field>MST_Type__c</field>
+            <operator>NotEqualTo</operator>
+            <value>
+                <stringValue>Media Seller</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>MST_Type__c</field>
+            <operator>NotEqualTo</operator>
+            <value>
+                <stringValue>SME</stringValue>
+            </value>
+        </filters>
+        <object>Monthly_Sales_Target__c</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordBeforeSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

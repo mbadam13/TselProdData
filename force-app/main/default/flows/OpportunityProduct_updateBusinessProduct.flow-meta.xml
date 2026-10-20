@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>60.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <decisions>
+        <name>businessProductDecision</name>
+        <label>businessProductDecision</label>
+        <locationX>314</locationX>
+        <locationY>323</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Digital_Media</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Product2.Business_Product__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Digital Media</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>updateDigitalMedia</targetReference>
+            </connector>
+            <label>Digital Media</label>
+        </rules>
+        <rules>
+            <name>TV_Media</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Product2.Business_Product__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>TV Media</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>updateTVMedia</targetReference>
+            </connector>
+            <label>TV Media</label>
+        </rules>
+    </decisions>
+    <description>11/28/2025 - Product tidak masuk Business productnya saat update data product</description>
+    <environments>Default</environments>
+    <interviewLabel>OpportunityProduct - updateBusinessProduct {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>OpportunityProduct - updateBusinessProduct</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>updateDigitalMedia</name>
+        <label>updateDigitalMedia</label>
+        <locationX>50</locationX>
+        <locationY>431</locationY>
+        <inputAssignments>
+            <field>Business_Product__c</field>
+            <value>
+                <stringValue>Digital Media</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>updateTVMedia</name>
+        <label>updateTVMedia</label>
+        <locationX>314</locationX>
+        <locationY>431</locationY>
+        <inputAssignments>
+            <field>Business_Product__c</field>
+            <value>
+                <stringValue>TV Media</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>188</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>businessProductDecision</targetReference>
+        </connector>
+        <object>OpportunityLineItem</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+    <triggerOrder>100</triggerOrder>
+</Flow>

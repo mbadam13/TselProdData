@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FBO__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(
+   AND(
+      TEXT(Opportunity.Penagihan_based_on__c) = &apos;Prepaid&apos;,
+      NOT(ISBLANK(QuoteId))
+   ),
+   Quote.Name, 
+   IF(
+      AND(
+         TEXT(Opportunity.Penagihan_based_on__c) = &apos;Postpaid&apos;, 
+         NOT(ISBLANK(SOA__c))
+      ),
+      SOA__r.SOA_Number__c, 
+      OrderNumber
+   )
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>FBO</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

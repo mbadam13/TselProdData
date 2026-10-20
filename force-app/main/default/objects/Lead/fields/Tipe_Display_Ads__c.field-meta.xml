@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Tipe_Display_Ads__c</fullName>
+    <label>Tipe Display Ads</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Desktop Display 300x250</fullName>
+                <default>false</default>
+                <label>Desktop Display 300x250</label>
+            </value>
+            <value>
+                <fullName>Desktop Display 728x90</fullName>
+                <default>false</default>
+                <label>Desktop Display 728x90</label>
+            </value>
+            <value>
+                <fullName>Desktop Display 320x50</fullName>
+                <default>false</default>
+                <label>Desktop Display 320x50</label>
+            </value>
+            <value>
+                <fullName>Desktop Display 300x600</fullName>
+                <default>false</default>
+                <label>Desktop Display 300x600</label>
+            </value>
+            <value>
+                <fullName>Mobile Display 300x250</fullName>
+                <default>false</default>
+                <label>Mobile Display 300x250</label>
+            </value>
+            <value>
+                <fullName>Mobile Display 320x50</fullName>
+                <default>false</default>
+                <label>Mobile Display 320x50</label>
+            </value>
+            <value>
+                <fullName>Mobile Display 300x600</fullName>
+                <default>false</default>
+                <label>Mobile Display 300x600</label>
+            </value>
+            <value>
+                <fullName>IOS Display 728x90</fullName>
+                <default>false</default>
+                <label>IOS Display 728x90</label>
+            </value>
+            <value>
+                <fullName>IOS Display 300x250</fullName>
+                <default>false</default>
+                <label>IOS Display 300x250</label>
+            </value>
+            <value>
+                <fullName>IOS Display 320x50</fullName>
+                <default>false</default>
+                <label>IOS Display 320x50</label>
+            </value>
+            <value>
+                <fullName>IOS Display 300x600</fullName>
+                <default>false</default>
+                <label>IOS Display 300x600</label>
+            </value>
+            <value>
+                <fullName>Android Display 728x90</fullName>
+                <default>false</default>
+                <label>Android Display 728x90</label>
+            </value>
+            <value>
+                <fullName>Android Display 300x250</fullName>
+                <default>false</default>
+                <label>Android Display 300x250</label>
+            </value>
+            <value>
+                <fullName>Android Display 320x50</fullName>
+                <default>false</default>
+                <label>Android Display 320x50</label>
+            </value>
+            <value>
+                <fullName>Android Display 300x600</fullName>
+                <default>false</default>
+                <label>Android Display 300x600</label>
+            </value>
+            <value>
+                <fullName>Mobile Display 728x90</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Mobile Display 728x90</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

@@ -1,0 +1,16 @@
+Dear,
+
+This is to notify you that the approval process for the following brand has been completed:
+
+Brand Name: {!Brand__c.Name}
+Brand ID: {!Brand__c.Id}
+Approval Status: {!Brand__c.Status__c}
+
+You can review the complete details, history, or any comments left by the approver by clicking the link below:
+
+{!Brand__c.Link}
+
+Thank you for your attention.
+
+Best regards,
+Marketing Team

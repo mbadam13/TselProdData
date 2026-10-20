@@ -1,0 +1,48 @@
+<apex:page standardController="Kertas_Kerja__c" extensions="KKSummary_Controller" contentType="application/vnd.ms-excel#KKSummaryRecords.xls" cache="true">
+    
+    <table width="100%">
+        <tr>
+            <td style="font-size: 23px;text-align: center;"><b>Kertas Kerja Validasi</b></td>
+        </tr>
+        <tr>
+            <td style="font-size: 15px;text-align: center;"><b>{!kkRec.Kertas_Kerja_Name__c}</b></td>
+        </tr>
+        <tr>
+            <td style="font-size: 12px;text-align: center;">{!kkRec.Type__c} | {!kkRec.Month__c} {!kkRec.Year__c}</td>
+        </tr>
+        <tr>
+            <td style="border-bottom: 1.5px solid;">&nbsp;</td>
+        </tr>
+    </table>
+       
+    <br/>
+    
+    <apex:repeat value="{!map_prodName_oiwList}" var="prodName">
+        <b style="font-size: 13px;">{!prodName}</b>
+        <apex:pageBlock >
+            <apex:pageBlockTable value="{!map_prodName_oiwList[prodName]}" var="oiw" width="100%">
+                <!--<apex:column value="{!oiw.wProductName}" headerValue="Product" styleClass="TableRow" headerClass="htable"/>-->
+                <apex:column value="{!oiw.wStartDate}" headerValue="Start Date" styleClass="TableRow" headerClass="htable" style="text-align: center;" width="15%" />
+                <apex:column value="{!oiw.wEndDate}" headerValue="End Date" styleClass="TableRow" headerClass="htable" style="text-align: center;" width="15%"/>
+                <apex:column value="{!oiw.wRemark}" headerValue="Remark" styleClass="TableRow" headerClass="htable" width="40%"/>
+                <apex:column headerValue="Pembelian" styleClass="TableRow" headerClass="htable" style="text-align: right; padding-right: 10px;" width="10%">
+                    <apex:outputText value="{0, number,#,##0.00}">
+                        <apex:param value="{!oiw.wPembelian}"/>
+                    </apex:outputText>
+                </apex:column>
+                <apex:column headerValue="Penggunaan" styleClass="TableRow" headerClass="htable" style="text-align: right; padding-right: 5px;" width="10%">
+                    <apex:outputText value="{0, number,#,##0.00}">
+                        <apex:param value="{!oiw.wPenggunaan}"/>
+                    </apex:outputText>
+                </apex:column>
+                <apex:column headerValue="Saldo" styleClass="TableRow" headerClass="htable" style="text-align: right;" width="10%">
+                    <apex:outputText value="{0, number,#,##0.00}">
+                        <apex:param value="{!oiw.wSaldo}"/>
+                    </apex:outputText>
+                </apex:column>
+            </apex:pageBlockTable>
+        </apex:pageBlock>
+        <br/>
+    </apex:repeat>
+    
+</apex:page>

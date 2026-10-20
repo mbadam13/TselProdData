@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldUpdates>
+        <fullName>Discount_Product</fullName>
+        <field>Discount__c</field>
+        <formula>Product__r.Discount__c</formula>
+        <name>Discount Product</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>List_Price</fullName>
+        <field>Sales_Price__c</field>
+        <formula>Product__r.List_Price__c</formula>
+        <name>List Price</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Sales_Price</fullName>
+        <field>Sales_Price__c</field>
+        <formula>Product__r.List_Price__c</formula>
+        <name>Sales Price</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>update_temp_amount</fullName>
+        <field>Temp_Amount__c</field>
+        <formula>Amount__c</formula>
+        <name>update temp amount</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <rules>
+        <fullName>Isi temp amount</fullName>
+        <actions>
+            <name>update_temp_amount</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>untuk mengisi rollup summare traffic sid</description>
+        <formula>OR(
+   ISCHANGED(Traffic__c),
+   ISNEW(),
+   ISCHANGED(Amount__c)
+)</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Setup Discount sid</fullName>
+        <actions>
+            <name>Discount_Product</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Sales_Price</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <formula>and($Label.Discount_without_lob ==&apos;Yes&apos;)</formula>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>Setup Discount sid LOB</fullName>
+        <actions>
+            <name>List_Price</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <formula>and(isnew())</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+</Workflow>

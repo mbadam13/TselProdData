@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CP_Name__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(
+    ISBLANK(CP_Name_Existing__c),
+
+    IF(
+        RecordType.DeveloperName = &apos;PNV&apos;,
+
+        LOWER(
+            &apos;PNV&apos; &amp; &apos;-&apos; &amp;
+            Merchant_Name__c &amp; &apos;-&apos; &amp;
+            PNV_Code__c &amp; &apos;-&apos; &amp;
+            SUBSTITUTE(App_Name__c, &quot; &quot;, &quot;&quot;)
+        ),
+
+        IF(
+            AND(
+                RecordType.DeveloperName = &apos;SID&apos;,
+                TEXT(Type_SMS__c) = &apos;SMS Interaktif&apos;
+            ),
+
+            LOWER(
+                &quot;i_&quot; &amp;
+                Media_Seller__r.prefix_ms__c &amp;
+                &quot;_&quot; &amp;
+                SUBSTITUTE(newSenderid__c, &quot;+&quot;, &quot;&quot;)
+            ),
+
+            LOWER(
+                &quot;SMS-&quot; &amp;
+
+                IF(
+                    ISPICKVAL(Type_Sender__c, &apos;Premium&apos;),
+                    &apos;P&apos;,
+                    IF(
+                        ISPICKVAL(Type_Sender__c, &apos;Regular&apos;),
+                        &apos;R&apos;,
+                        &apos;C&apos;
+                    )
+                ) &amp;
+
+                &quot;-&quot; &amp;
+                Owner:User.Suffix &amp;
+
+                IF(
+                    OR(
+                        Owner:User.Suffix = &apos;dws&apos;,
+                        Owner:User.Suffix = &apos;jts&apos;,
+                        Owner:User.Suffix = &apos;mcm&apos;
+                    ),
+                    &quot;-&quot; &amp; Media_Seller__r.prefix_ms__c,
+                    &quot;&quot;
+                ) &amp;
+
+                IF(
+                    TEXT(Karet__c) = &apos;Yes&apos;,
+                    &quot;-krt-&quot;,
+                    &quot;-&quot;
+                ) &amp;
+
+                Kategori_Industri__r.prefix_ms__c
+            )
+        )
+    ),
+
+    CP_Name_Existing__c
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>CP Name</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

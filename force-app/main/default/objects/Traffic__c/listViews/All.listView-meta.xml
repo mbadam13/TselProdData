@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All</fullName>
+    <columns>Date__c</columns>
+    <columns>Deal__c</columns>
+    <columns>Deal_ID__c</columns>
+    <columns>Deal_Source__c</columns>
+    <columns>Fee__c</columns>
+    <columns>Site_ID__c</columns>
+    <columns>Site_Name__c</columns>
+    <columns>Sites__c</columns>
+    <columns>CREATED_DATE</columns>
+    <columns>Paid_Impressions__c</columns>
+    <columns>Revenue_USD__c</columns>
+    <columns>Demand_Source__c</columns>
+    <columns>PMP_Fees__c</columns>
+    <columns>Net_Revenue__c</columns>
+    <columns>PMP_OMP_Fees__c</columns>
+    <filterScope>Everything</filterScope>
+    <label>All</label>
+</ListView>

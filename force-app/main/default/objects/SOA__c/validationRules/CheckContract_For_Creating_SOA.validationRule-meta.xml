@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CheckContract_For_Creating_SOA</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+Invoice_Settlement_App__c == false,
+text( SOA_Type__c ) = &apos;Opportunity&apos;,
+OR(
+ISBLANK(Opportunity__r.ContractId),
+Opportunity__r.Contract_Status__c != &apos;Activated&apos;
+)
+)</errorConditionFormula>
+    <errorMessage>Opportunity must be related to Active Contract before creating SOA.</errorMessage>
+</ValidationRule>

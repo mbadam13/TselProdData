@@ -1,0 +1,11 @@
+Hello,
+
+The PO for opportunity {!Opportunity.Name} need Approval
+Click link bellow for more information
+Opportunity: 
+{!Opportunity.Link}
+{!Opportunity.Account}
+
+
+Regards,
+Salesforce

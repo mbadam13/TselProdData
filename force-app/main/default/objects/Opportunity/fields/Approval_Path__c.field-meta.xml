@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Approval_Path__c</fullName>
+    <description>If Has_Adjustment_After_Close_Won__c = TRUE, uses Max_ACW_App_Path_No__c.
+
+If only Digital Media exists, uses Discount_Average__c:
+0 %  → Manager
+1 - 30% → Manager &gt; GM
+30 - 80% → Manager &gt; GM &gt; VP
+80 - 100% → Manager &gt; GM &gt; VP &gt; DIR
+
+If only TV Media exists, uses Max_App_Path_No__c.
+
+If both Digital &amp; TV exist, uses the highest value of Max_App_Path_No_Digital__c or Max_App_Path_No__c.</description>
+    <externalId>false</externalId>
+    <formula>/*IF(
+    Has_Adjustment_After_Close_Won__c,
+    IF(
+        Max_ACW_App_Path_No__c = 1, &quot;Manager&quot;,
+        IF(Max_ACW_App_Path_No__c = 2, &quot;Manager &gt; GM&quot;,
+        IF(Max_ACW_App_Path_No__c = 3, &quot;Manager &gt; GM &gt; VP&quot;,
+        &quot;Manager &gt; GM &gt; VP &gt; DIR&quot;
+    ))),
+    
+    IF(
+        Digital_Media_Products__c &gt; 0 &amp;&amp; TV_Media_Products__c = 0,
+        IF(
+            Discount_Average__c = 0, 
+                &quot;Manager&quot;,
+                 IF(
+                    AND(Discount_Average__c * 100 &gt; 0, Discount_Average__c * 100 &lt;= 30), &quot;Manager &gt; GM&quot;,
+                    IF(Discount_Average__c * 100 &lt;= 80, &quot;Manager &gt; GM &gt; VP&quot;,
+                        &quot;Manager &gt; GM &gt; VP &gt; DIR&quot;
+                    )
+                )
+            )
+       ,
+        IF(
+            Digital_Media_Products__c = 0 &amp;&amp; TV_Media_Products__c &gt; 0,
+            IF(
+                AND(Max_App_Path_No__c = 1, ISBLANK(Approval_1__c)), &quot;Manager &gt; GM&quot;,
+                IF(Max_App_Path_No__c = 2, &quot;Manager &gt; GM&quot;,
+                IF(Max_App_Path_No__c = 3, &quot;Manager &gt; GM &gt; VP&quot;,
+                IF(AND(Max_App_Path_No__c = 1, NOT ISBLANK(Approval_1__c)), &quot;Manager&quot;,
+                &quot;Manager &gt; GM &gt; VP &gt; DIR&quot;
+            )))),
+
+            IF(
+                MAX(Max_App_Path_No_Digital__c, Max_App_Path_No__c) = 1, &quot;Manager&quot;,
+                IF(MAX(Max_App_Path_No_Digital__c, Max_App_Path_No__c) = 2, &quot;Manager &gt; GM&quot;,
+                IF(MAX(Max_App_Path_No_Digital__c, Max_App_Path_No__c) = 3, &quot;Manager &gt; GM &gt; VP&quot;,
+                &quot;Manager &gt; GM &gt; VP &gt; DIR&quot;
+            )))
+        )
+    )
+)*/
+
+/*New*/
+IF(
+    Has_Adjustment_After_Close_Won__c,
+    IF(
+        Max_ACW_App_Path_No__c = 1, &quot;Manager&quot;,
+        IF(Max_ACW_App_Path_No__c = 2, &quot;Manager &gt; GM&quot;,
+        IF(Max_ACW_App_Path_No__c = 3, &quot;Manager &gt; GM &gt; VP&quot;,
+        &quot;Manager &gt; GM &gt; VP &gt; DIR&quot;
+    ))),
+    
+    IF(
+        Digital_Media_Products__c &gt; 0 &amp;&amp; TV_Media_Products__c = 0,
+        IF(
+            Discount_Average__c = 0, 
+                &quot;Manager&quot;,
+                 IF(
+                    AND(Discount_Average__c &gt; 0, Discount_Average__c &lt;= 30), &quot;Manager &gt; GM&quot;,
+                    IF(Discount_Average__c &lt;= 80, &quot;Manager &gt; GM &gt; VP&quot;,
+                        &quot;Manager &gt; GM &gt; VP &gt; DIR&quot;
+                    )
+                )
+            )
+       ,
+        IF(
+            Digital_Media_Products__c = 0 &amp;&amp; TV_Media_Products__c &gt; 0,
+            IF(
+                AND(Max_App_Path_No__c = 1, ISBLANK(Approval_1__c)), &quot;Manager &gt; GM&quot;,
+                IF(Max_App_Path_No__c = 2, &quot;Manager &gt; GM&quot;,
+                IF(Max_App_Path_No__c = 3, &quot;Manager &gt; GM &gt; VP&quot;,
+                IF(AND(Max_App_Path_No__c = 1, NOT(ISBLANK(Approval_1__c))), &quot;Manager&quot;,
+                &quot;Manager &gt; GM &gt; VP &gt; DIR&quot;
+            )))),
+
+            IF(
+                MAX(Max_App_Path_No_Digital__c, Max_App_Path_No__c) = 1, &quot;Manager&quot;,
+                IF(MAX(Max_App_Path_No_Digital__c, Max_App_Path_No__c) = 2, &quot;Manager &gt; GM&quot;,
+                IF(MAX(Max_App_Path_No_Digital__c, Max_App_Path_No__c) = 3, &quot;Manager &gt; GM &gt; VP&quot;,
+                &quot;Manager &gt; GM &gt; VP &gt; DIR&quot;
+            )))
+        )
+    )
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Approval Path</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

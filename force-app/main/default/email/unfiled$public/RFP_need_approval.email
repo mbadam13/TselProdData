@@ -1,0 +1,11 @@
+Dear {!ApprovalRequest.Process_Approver},
+
+This RFP deadline date has been changed. Please review it and do approval.
+You can adjust the deadline date too.
+
+Opportunity Name : {!Opportunity.Name}
+RFP  Name : {!Request_for_proposal__c.Name}
+Deadlne date : {!Request_for_proposal__c.Deadline__c}
+Deadline change to : 
+Link approval : {!ApprovalRequest.External_URL}
+Link RFP : {!Request_for_proposal__c.Link}

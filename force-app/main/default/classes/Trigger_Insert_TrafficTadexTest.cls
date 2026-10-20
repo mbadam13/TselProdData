@@ -1,0 +1,148 @@
+/**
+ * @description       : 
+ * @author            : Ahmat Zulkifli Murad
+ * @group             : 
+ * @last modified on  : 10-20-2023
+ * @last modified by  : Ahmat Zulkifli Murad
+**/
+@IsTest
+public with sharing class Trigger_Insert_TrafficTadexTest {
+  @isTest
+    static void testInsertTrafficData(){
+
+        Account accountRecord = new Account(
+            Name = 'PT. Dinamo Media NTq',                                                                                                             // Account Name
+            Site_Domain__c = 'dinamomediant.com',                                                                                                        // Site Domain
+            Account_Type__c = 'Publisher',                                                                                                               // Account Type
+            Nomor_Verifikasi_Dewan_Pers__c = '456/DP-Terverifikasi/K/XI/2020',                                                                           // Nomor Verifikasi Dewan Pers
+            AccountSource = 'TADEX Form',                                                                                                                // Account Source
+            Nomor_Induk_Berusaha__c = '123450017862',                                                                                                    // Nomor Induk Berusaha
+            Publisher_Status__c = 'Ad Tag Shared',                                                                                                       // Publisher Status
+            Nama_Penjabat__c = 'Joice',                                                                                                                  // Nama Penjabat
+            Jabatan_Penjabat__c = 'Manager',                                                                                                             // Jabatan Penjabat
+            Contract_Bypass_Approval__c = 'Approved',                                                                                                    // Contract Bypass Approval
+            Status__c = 'Approved by Settlement',                                                                                                        // Status
+            Tipe_Platform__c = 'Web;Mobile',                                                                                                             // Tipe Platform
+            Total_Ad_Request_Bulan__c = 973,                                                                                                     // Total Ad Request/Bulan
+            Tipe_Display_Ads__c = 'Desktop Display 300x250;Desktop Display 728x90;Desktop Display 320x50;Mobile Display 300x250;Mobile Display 320x50',  // Tipe Display Ads
+            Content__c = 'General',                                                                                                                     // Content
+            Nama_Pemilik__c = 'Tika',                                                                                                                    // Nama Pemilik
+            Nomor_Rekening__c = '098907890079',                                                                                                          // Nomor Rekening
+            Chatter_Name__c = 'Siska',                                                                                                                   // Chatter Name
+            Chatter_Email__c = 'siska@dmnt.com',                                                                                                         // Chatter Email
+            Chatter_Group_Id__c = '0F9p0000000NWljCAG'                                                                                                  // Chatter Group Id
+                                                                                                               // Account Record Type
+        );
+        insert accountRecord;
+
+        Sites__c siteRecord = new Sites__c(
+            
+            
+            Site_ID__c = '801823',                               // Site ID
+            siteUrl__c = 'TADEX|MobileWeb|Abc|Abc.com|Outstream',  // siteUrl
+            Platform__c = 'Mobile',                                // Platform
+            Status__c = 'New'                                     // Status
+        	
+            
+            /*Site_ID__c = '34567890',                               // Site ID
+            siteUrl__c = 'TADEX|Web|PT_Arkadia_Media_Nusantara|Hitekno.com',  // siteUrl
+            Platform__c = 'Web',                                // Platform
+            Status__c = 'Approved'*/                                     // Status
+        );
+        
+        insert siteRecord;
+
+        Demand_Source_Information__c DSIRecord = new Demand_Source_Information__c(
+            Demand_Source__c = 'Programmatic PMP with Client\'s DSP',// Demand Source
+            Share__c = 17                                          // Share
+            
+            /*Demand_Source__c = 'OMP',// Demand Source
+            Share__c = 0 */                                          // Share
+        );
+        insert DSIRecord;
+
+        Business_Model_Category__c BMCRecord = new Business_Model_Category__c(
+            BMC_Name__c = 'Tadex Client',                           // BMC Name
+            Demand_Source_Information__c = DSIRecord.Id,
+            BMC_Text__c = 'TADEX_',                                   // BMC Text
+            Percentage__c = 17.00,                                  // Percentage
+            Demand_Source__c = 'Programmatic PMP with Client\'s DSP'  // Demand Source
+            
+            /*BMC_Name__c = 'Tadex OMP',                           // BMC Name
+            Demand_Source_Information__c = DSIRecord.Id,
+            BMC_Text__c = 'TADEX_OMP',                                   // BMC Text
+            Percentage__c = 0.00,                                  // Percentage
+            Demand_Source__c = 'OMP'  // Demand Source*/
+        );
+        insert BMCRecord;
+
+        list<traffic__c> newTrafficList = new list <traffic__c>();
+        for(Integer i = 0; i < 5; i++){ 
+            traffic__c newTrafficRec = new traffic__c();
+            newTrafficRec.Deal_ID__c = 'PM-DAOB-0603-001';                          // Deal ID
+            newTrafficRec.Deal__c = 'TADEX_NESTLE_TTD_0000_DISPLAY_08042021';       // Deal
+            newTrafficRec.Total_Telkomsel_Share__c = 17;                          // Total Telkomsel Share
+            newTrafficRec.Date__c = date.newInstance(2028, 06, 01);
+            newTrafficRec.Demand_Source__c = 'Programmatic PMP with Clients DSP';  // Demand Source
+            newTrafficRec.Deal_Source__c = 'Publisher';                             // Deal Source
+            newTrafficRec.Paid_Impressions__c = 3401;                            // Paid Impressions
+            newTrafficRec.Revenue_USD__c = 2.72;                                  // Revenue (USD)
+            newTrafficRec.PMP_Fees__c = 0.27;                                     // PMP Fees
+            newTrafficRec.Fee__c = 10;                                            // Fee (%)
+            newTrafficRec.Net_Revenue__c = 2.45;                                  // Net Revenue
+            newTrafficRec.Sites__c = siteRecord.id;
+			newTrafficRec.Business_Model_Category__c = BMCRecord.id;
+            newTrafficList.add(newTrafficRec);
+        }
+        for(Integer i = 0; i < 5; i++){ 
+            traffic__c newTrafficRec = new traffic__c();
+            newTrafficRec.Deal_ID__c = 'OMPID';                          // Deal ID
+            newTrafficRec.Deal__c = 'TADEX_OMP_';       // Deal
+            newTrafficRec.Total_Telkomsel_Share__c = 0;                          // Total Telkomsel Share
+            newTrafficRec.Date__c = date.newInstance(2023, 01, 01);
+            newTrafficRec.Demand_Source__c = 'OMP';  							// Demand Source
+            newTrafficRec.Deal_Source__c = 'OMPID';                             // Deal Source
+            newTrafficRec.Paid_Impressions__c = 1234;                            // Paid Impressions
+            newTrafficRec.Revenue_USD__c = 2.90;                                  // Revenue (USD)
+            newTrafficRec.PMP_Fees__c = 0.0;                                     // PMP Fees
+            newTrafficRec.Fee__c = 100;                                            // Fee (%)
+            newTrafficRec.Net_Revenue__c = 2.95;                                  // Net Revenue
+            newTrafficRec.Sites__c = siteRecord.id;
+			newTrafficRec.Business_Model_Category__c = BMCRecord.id;
+            newTrafficList.add(newTrafficRec);
+        }
+        test.startTest();
+        insert newTrafficList;
+        test.stopTest();
+    }
+    
+    /*static testMethod void testTrigger() {
+        // Create test data
+        //Business_Model_Category__c bmc = new Business_Model_Category__c(BMC_Name__c = 'Test BMC', BMC_Text__c = 'Test Text');
+        //insert bmc;
+
+        Traffic__c traffic = new Traffic__c(Deal_Source__c = 'OMPID', Date__c = Date.today(), Deal_ID__c = 'TestDealID', Fee__c = 100);
+        insert traffic;
+
+        //system.label.Tadex_BMC_Text = 'Test';
+
+        Test.startTest();
+        // Trigger execution
+        Traffic__c testTraffic = new Traffic__c(Deal_Source__c = 'OMPID', Date__c = Date.today(), Deal_ID__c = 'TestDealID2', Fee__c = 200);
+        insert testTraffic;
+        Test.stopTest();
+
+        // Retrieve the inserted record
+        Traffic__c insertedTraffic = [SELECT Id, Business_Model_Category__c, Demand_Source__c, Total_Telkomsel_Share__c, Fee__c FROM Traffic__c WHERE Id = :testTraffic.Id];
+
+        // Assert that the trigger properly updated the fields
+        //System.assertEquals(bmc.Id, insertedTraffic.Business_Model_Category__c);
+        //System.assertEquals(bmc.Demand_Source__c, insertedTraffic.Demand_Source__c);
+        //System.assertEquals(bmc.Percentage__c, insertedTraffic.Total_Telkomsel_Share__c);
+        //System.assertEquals(100, insertedTraffic.Fee__c);
+
+        // Clean up test data
+        delete insertedTraffic;
+        //delete bmc;
+    }*/
+}

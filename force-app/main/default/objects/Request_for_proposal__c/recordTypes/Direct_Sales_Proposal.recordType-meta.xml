@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Direct_Sales_Proposal</fullName>
+    <active>true</active>
+    <label>Direct Sales Proposal</label>
+    <picklistValues>
+        <picklist>Approval_Status_RFP__c</picklist>
+        <values>
+            <fullName>Approved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rejected</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Submit</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Buying_Method__c</picklist>
+        <values>
+            <fullName>I%2FO Based</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Performance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Programmatic</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Deal_Source__c</picklist>
+        <values>
+            <fullName>Agency - %E2%81%A0ADA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Agency - %E2%81%A0Aisensum</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Agency - %E2%81%A0Dentsu %28Carat%2C Iprospect%2C Merkle%2CDentsu X%2C DwiSapta%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Agency - %E2%81%A0Havas Moonfolk</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Agency - %E2%81%A0IDA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Agency - %E2%81%A0IDAC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Agency - %E2%81%A0Innocean</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Agency - %E2%81%A0Jatis</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Agency - %E2%81%A0KPSG</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Agency - %E2%81%A0Leverate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Agency - %E2%81%A0MD Media</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Agency - %E2%81%A0OMG %28OMD%2C PhD%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Agency - %E2%81%A0Publicis %28Starcomm%2C Zenith%2C APEX%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Agency - Bintang Pratama</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Agency - GroupM %28incl%2E Essence Mediacom%2C Mindshare%2C Wavemaker%2C Nexus%2C Msix%2C Xaxis%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Direct Brand</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Document_Version__c</picklist>
+        <values>
+            <fullName>Draft</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Submit</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Proposal_Type__c</picklist>
+        <values>
+            <fullName>Audience size only %28with page%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Audience sizing %2B inventory inquiry</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Data request only %28no page%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>End to end proposal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Insights pack</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Inventory inquiry only</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Joint Business Proposal %28JBP%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Media plan only</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Post-campaign report</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Teaser refresh</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Request_for_Proposal_Status__c</picklist>
+        <values>
+            <fullName>Ask Revision</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Closed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Completed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>In_Revision</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Progress</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Request</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Request Assign</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Send Proposal</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>SME_Approval_Status__c</picklist>
+        <values>
+            <fullName>Approved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rejected</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Submited</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

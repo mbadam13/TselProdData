@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Charge_Description__c</fullName>
+    <label>Charge Description</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Media Cost</fullName>
+                <default>false</default>
+                <label>Media Cost</label>
+            </value>
+            <value>
+                <fullName>Data Cost</fullName>
+                <default>false</default>
+                <label>Data Cost</label>
+            </value>
+            <value>
+                <fullName>Feature Cost</fullName>
+                <default>false</default>
+                <label>Feature Cost</label>
+            </value>
+            <value>
+                <fullName>TTD Fee</fullName>
+                <default>false</default>
+                <label>TTD Fee</label>
+            </value>
+            <value>
+                <fullName>Non-USD Currency Charge</fullName>
+                <default>false</default>
+                <label>Non-USD Currency Charge</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

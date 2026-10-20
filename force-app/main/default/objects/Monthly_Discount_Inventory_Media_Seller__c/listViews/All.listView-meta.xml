@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All</fullName>
+    <columns>CREATED_DATE</columns>
+    <columns>NAME</columns>
+    <columns>Periode__c</columns>
+    <columns>Media_Seller__c</columns>
+    <columns>Brand__c</columns>
+    <columns>Product_Services_and_Code__c</columns>
+    <columns>Product_Name__c</columns>
+    <columns>Discount_Type__c</columns>
+    <columns>Value__c</columns>
+    <columns>Revenue_From_Traffic__c</columns>
+    <columns>Current_Revenue_from_traffic__c</columns>
+    <columns>Additional_Setting__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CREATED_DATE</field>
+        <operation>equals</operation>
+        <value>THIS_YEAR</value>
+    </filters>
+    <label>All</label>
+</ListView>

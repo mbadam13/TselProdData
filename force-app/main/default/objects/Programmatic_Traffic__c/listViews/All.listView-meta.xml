@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All</fullName>
+    <columns>Periode__c</columns>
+    <columns>Date__c</columns>
+    <columns>Campaign__c</columns>
+    <columns>Monthly_Programmatic_Traffic__c</columns>
+    <columns>NAME</columns>
+    <columns>Channel__c</columns>
+    <columns>Deal__c</columns>
+    <columns>Sales__c</columns>
+    <columns>Mitra_Related__c</columns>
+    <columns>Brand_Related__c</columns>
+    <columns>Inventory_Related__c</columns>
+    <columns>Paid_Impression__c</columns>
+    <columns>Revenue__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Monthly_Programmatic_Traffic__c</field>
+        <operation>equals</operation>
+        <value>MPT-2311-00095</value>
+    </filters>
+    <label>All</label>
+</ListView>

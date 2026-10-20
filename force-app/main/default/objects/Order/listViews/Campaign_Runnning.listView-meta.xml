@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Campaign_Runnning</fullName>
+    <columns>ORDERS.ORDER_NUMBER</columns>
+    <columns>SALES.ACCOUNT.NAME</columns>
+    <columns>ORDERS.TOTAL_AMOUNT</columns>
+    <columns>ORDERS.EFFECTIVE_DATE</columns>
+    <columns>ORDERS.STATUS</columns>
+    <columns>CONTRACT.CONTRACT_NUMBER</columns>
+    <columns>ORDERS.CREATED_DATE</columns>
+    <filterScope>Mine</filterScope>
+    <filters>
+        <field>ORDERS.STATUS</field>
+        <operation>equals</operation>
+        <value>Running</value>
+    </filters>
+    <label>Campaign Runnning</label>
+    <sharedTo>
+        <role>Campaign_Operation_Manager</role>
+        <role>Campaign_Operation_Team</role>
+    </sharedTo>
+</ListView>

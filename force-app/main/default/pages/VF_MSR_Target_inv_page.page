@@ -1,0 +1,24 @@
+<!--
+  Created by : David W
+  30 December 2019
+-->
+<apex:page controller="MSR_Target_uretopup_Controller">
+    <apex:sectionHeader title="Upload Target Retopup" subtitle="AM Target Retopup"/>
+    <apex:pageMessages id="msg"/>
+    
+    <apex:form >
+        <apex:pageBlock >
+                  <apex:inputFile value="{!csvFileBody}"  filename="{!csvAsString}"/>
+                  <apex:commandButton value="Preview" action="{!importCSVFile}"/>
+                  <apex:commandButton value="Upload" action="{!insertCSVFile}"/>
+                  <apex:commandButton value="Back" action="{!callpageredirect}"/>
+        <apex:pageblocktable value="{!MSRList2}" var="msr">
+                <apex:column value="{!msr.MSR.AM__c}" />
+                <apex:column headerValue="Period" value="{!msr.month}-{!msr.year}"/>
+                <apex:column value="{!msr.MSR.NIK__c}" />
+                <apex:column value="{!msr.MSR.Number_of__c}" />
+                <apex:column headerValue="Notes" value="{!msr.Notes}" /> 
+        </apex:pageblocktable>
+        </apex:pageBlock>
+   </apex:form>
+</apex:page>

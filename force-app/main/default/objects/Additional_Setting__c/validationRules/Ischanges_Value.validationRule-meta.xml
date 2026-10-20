@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Ischanges_Value</fullName>
+    <active>true</active>
+    <errorConditionFormula>or(
+ISCHANGED( Value__c ),
+ISCHANGED( Start_Date__c ),
+ISCHANGED( End_Date__c )
+)</errorConditionFormula>
+    <errorMessage>Tidak Dapat mengubah data, silahkan buat data Additional baru</errorMessage>
+</ValidationRule>

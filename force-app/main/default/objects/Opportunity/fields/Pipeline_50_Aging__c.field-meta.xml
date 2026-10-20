@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Pipeline_50_Aging__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(ISNULL(RFP_Aging__c ),0,RFP_Aging__c ) + 
+IF(ISNULL(Send_Proposal_Aging__c ),0,Send_Proposal_Aging__c ) +
+IF(ISNULL(Visit_Call_Aging__c ),0,Visit_Call_Aging__c )</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Pipeline 50% Aging</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

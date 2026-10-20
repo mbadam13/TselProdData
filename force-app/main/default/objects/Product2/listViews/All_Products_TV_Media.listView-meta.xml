@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All_Products_TV_Media</fullName>
+    <columns>PRODUCT2.NAME</columns>
+    <columns>Product_Category__c</columns>
+    <columns>PRODUCT2.FAMILY</columns>
+    <columns>Product_Channel__c</columns>
+    <columns>Ads_Size__c</columns>
+    <columns>List_Price__c</columns>
+    <columns>Buying_Method__c</columns>
+    <columns>IPTV_Channel__c</columns>
+    <columns>Product_id_number__c</columns>
+    <columns>CP_Share__c</columns>
+    <columns>PRODUCT2.ACTIVE</columns>
+    <columns>PRODUCT2.LAST_UPDATE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Business_Product__c</field>
+        <operation>equals</operation>
+        <value>TV Media</value>
+    </filters>
+    <label>All Products TV Media</label>
+</ListView>

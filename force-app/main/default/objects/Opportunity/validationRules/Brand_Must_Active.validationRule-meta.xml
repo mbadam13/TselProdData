@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Brand_Must_Active</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+    NOT(ISPICKVAL( Brand__r.Status__c ,&apos;Approved&apos;)) ,
+    OR(
+       ISCHANGED(Brand__c),
+       ISNEW()
+    )
+)</errorConditionFormula>
+    <errorMessage>Brand yang dipilih harus sudah approved Sales Excellent. Silahkan hubungi administrator atau Sales Excellent terkait!</errorMessage>
+</ValidationRule>

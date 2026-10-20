@@ -1,0 +1,11 @@
+Hello,
+
+The order {!Order.OrderNumber} need to be check 
+Click link below for more information.
+Order:
+{!Order.Link}
+Opportunity:
+{!Order.Opportunity}
+
+Regards,
+Salesforce

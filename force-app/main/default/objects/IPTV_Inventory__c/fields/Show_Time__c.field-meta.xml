@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Show_Time__c</fullName>
+    <label>Show Time</label>
+    <required>true</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>PRIME TIME</fullName>
+                <default>false</default>
+                <label>PRIME TIME</label>
+            </value>
+            <value>
+                <fullName>REGULAR TIME</fullName>
+                <default>false</default>
+                <label>REGULAR TIME</label>
+            </value>
+            <value>
+                <fullName>ALL TIME</fullName>
+                <default>false</default>
+                <label>ALL TIME</label>
+            </value>
+            <value>
+                <fullName>ALL SPOT</fullName>
+                <default>false</default>
+                <label>ALL SPOT</label>
+            </value>
+            <value>
+                <fullName>OTHER</fullName>
+                <default>false</default>
+                <label>OTHER</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

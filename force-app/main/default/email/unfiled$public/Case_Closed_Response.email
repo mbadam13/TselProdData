@@ -1,0 +1,12 @@
+Dear {!Case.SuppliedEmail},
+
+Menginformasikan bahwa komplain anda dengan nomor tiket #{!Case.CaseNumber} sudah kami tutup.
+
+Terima kasih sudah menyampaikan komplain anda kepada kami, semoga kendalanya sudah terjawab.
+
+Apabila masih ada pertanyaan, silahkan mengirimkan email baru lagi kepada kami ke complaint@digiads.id dengan cc ke digiads_complaint@telkomsel.co.id
+
+Terima kasih.
+
+Best Regards,
+Digital Advertising Team

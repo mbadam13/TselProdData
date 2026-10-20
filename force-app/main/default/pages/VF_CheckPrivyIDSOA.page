@@ -1,0 +1,21 @@
+<apex:page standardController="SOA__c" showHeader="false"  extensions="REST_PrivyID_Check_Doc_Status"  >
+
+  <apex:form >
+    <apex:actionFunction name="CheckDocument" action="{!CheckDocument}" rerender="allPanel"/>
+
+        <apex:pageMessage summary="Berhasil Check Status Dari PrivyId." severity="Success" strength="3" rendered="{!IF(SOAget[0].docToken__c != null, true, false)}" />
+        <apex:pageMessage summary="Gagal Check Status dari privyId, dokumen tidak di temukan." severity="warning" strength="3" rendered="{!IF(SOAget[0].docToken__c == null, true, false)}" />
+        
+        <!--<apex:outputText rendered="{!IF(SOAget[0].docToken__c == null, true, false)}">Failed.</apex:outputText>-->
+        <script>
+           window.onload=function()
+           {
+             CheckDocument();
+           };
+        </script>
+                <br/>
+        <apex:commandButton action="{!back}" value="Back"/>
+  </apex:form>
+
+
+</apex:page>

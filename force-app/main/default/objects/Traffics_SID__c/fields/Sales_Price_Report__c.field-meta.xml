@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sales_Price_Report__c</fullName>
+    <formula>if(Sales_Price__c==null,Product__r.List_Price__c - (IF(SID__r.Kategori_Industri__r.Name=&apos;Others Telkom&apos;,0.5*Product__r.List_Price__c,(IF(OR(SID__r.Kategori_Industri__r.Name =&apos;Government&apos;,SID__r.Kategori_Industri__r.Name =&apos;Banking&apos;),0.4*Product__r.List_Price__c,0.35*Product__r.List_Price__c)))),Sales_Price__c - (if(Discount__c!=null,Sales_Price__c*Discount__c,IF(SID__r.Kategori_Industri__r.Name=&apos;Others Telkom&apos;,0.5*Sales_Price__c,(IF(OR(SID__r.Kategori_Industri__r.Name =&apos;Government&apos;,SID__r.Kategori_Industri__r.Name =&apos;Banking&apos;),0.4*Sales_Price__c,0.35*Sales_Price__c))))))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Sales Price Report</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

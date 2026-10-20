@@ -1,0 +1,23 @@
+<apex:page controller="GITA_ProductDiscount_Controller">
+    <apex:form >
+        <apex:pageBlock >
+            <!--apex:outputLabel value="Opportunity Product" style="font-size: 15px; font-weight: bold;" />
+            <br/><br/-->
+            <apex:pageBlockTable value="{!oli_list}" var="oli" width="100%">
+                <apex:column style="text-align: left;" value="{!oli.Product2.Name}"/>
+                <apex:column style="text-align: center;" value="{!oli.Quantity}"/>
+                <apex:column style="text-align: center;" value="{!oli.Discount__c}"/>
+                <!--apex:column style="text-align: right;" value="{!oli.Max_Discount__c}"/>
+                <apex:column style="text-align: left;" value="{!oli.Discount_Checking__c }"/-->
+                <apex:column style="text-align: center;" headerValue="Max. Discount (%)">
+                    <apex:outputText value="{!oli.Max_Discount__c}" rendered="{!IF(oli.Max_Discount__c>0,true,false)}"/>
+                    <apex:outputText value="-" rendered="{!IF(oli.Max_Discount__c = null || oli.Max_Discount__c = 0,true,false)}"/>
+                </apex:column>
+                <apex:column style="text-align: center;" headerValue="Discount Checking">
+                    <apex:outputText value="{!oli.Discount_Checking__c}" rendered="{!IF(oli.Max_Discount__c>0,true,false)}"/>
+                    <apex:outputText value="" rendered="{!IF(oli.Max_Discount__c = null || oli.Max_Discount__c = 0,true,false)}"/>
+                </apex:column>
+            </apex:pageBlockTable>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

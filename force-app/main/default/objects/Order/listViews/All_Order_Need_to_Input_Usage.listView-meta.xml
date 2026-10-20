@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All_Order_Need_to_Input_Usage</fullName>
+    <columns>ORDERS.ORDER_NUMBER</columns>
+    <columns>Business_Product__c</columns>
+    <columns>CONTRACT.CONTRACT_NUMBER</columns>
+    <columns>SALES.ACCOUNT.NAME</columns>
+    <columns>ORDERS.EFFECTIVE_DATE</columns>
+    <columns>ORDERS.TOTAL_AMOUNT</columns>
+    <columns>ORDERS.STATUS</columns>
+    <columns>Product__c</columns>
+    <columns>ORDERS.LAST_UPDATE</columns>
+    <columns>Usage_Plan__c</columns>
+    <columns>Usage_Date__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>ORDERS.STATUS</field>
+        <operation>equals</operation>
+        <value>Running</value>
+    </filters>
+    <filters>
+        <field>Approval_Status__c</field>
+        <operation>equals</operation>
+        <value>Approved</value>
+    </filters>
+    <label>All Order Need to Input Usage</label>
+    <sharedTo>
+        <group>Administrator</group>
+        <group>Campaign_Operation</group>
+    </sharedTo>
+</ListView>

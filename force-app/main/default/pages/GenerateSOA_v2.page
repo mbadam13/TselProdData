@@ -1,0 +1,397 @@
+<apex:page StandardController="SOA__c" extensions="GenerateSOAController" renderAs="pdf" showHeader="false" sidebar="false" standardStylesheets="false" applyBodyTag="false" applyHtmlTag="false" title="{!soaRec[0].SOA_Number__c}">
+<!--
+/**
+ * @Last Modified By   : Ibrahim Syafiq
+ * @Last Modified On   : 08-Sep-2026
+ * @Modification Log   : penambahan field start date & end date
+ * Ver   |   Date   |   Author   |   Modification
+ * 2.0   |   29-Agu-2026   |   Ibrahim Syafiq   |   Initial version with VF page. standarisasi template SOA dengan Quotation
+ * 2.1   |   31-Agu-2026   |   Ibrahim Syafiq   |   bug fixing billing address
+ */
+-->
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+<style>
+@page {
+    size: A4;
+    margin-top: 10mm;
+    margin-bottom: 10mm;
+    margin-left: 15mm;
+    margin-right: 15mm;
+    @bottom-right {
+        content: element(footer);
+    }
+}
+
+div.footer {
+    position: running(footer);
+}
+
+.pagenumber:before {
+    content: counter(page);
+}
+.pagecount:before {
+    content: counter(pages);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 11px;
+    color: #333333;
+    line-height: 1.4;
+}
+
+.page-break {
+    display: block;
+    page-break-after: always;
+}
+
+/* HEADER */
+.header-container {
+    width: 100%;
+    margin-bottom: 12px;
+}
+
+.header-top {
+    width: 100%;
+    margin-bottom: 10px;
+    border-collapse: collapse;
+}
+.header-top td {
+    vertical-align: middle;
+    border: none;
+    padding: 0;
+}
+
+.logo-img {
+    height: 40px;
+}
+
+.doc-number {
+    font-size: 14px;
+    font-weight: bold;
+    color: #333333;
+    text-align: right;
+}
+
+.header-line {
+    width: 100%;
+    height: 3px;
+    background-color: #D32F2F;
+    margin-bottom: 5px;
+}
+
+.header-subline {
+    width: 100%;
+    height: 1px;
+    background-color: #CCCCCC;
+    margin-bottom: 15px;
+}
+
+/* SECTION TITLES */
+.section-title {
+    font-size: 12px;
+    font-weight: bold;
+    color: #333333;
+    background-color: #F0F0F0;
+    padding: 5px 10px;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border: 1px solid #DDDDDD;
+}
+
+/* INFO BLOCKS */
+.info-grid {
+    width: 100%;
+    margin-bottom: 14px;
+    border-collapse: collapse;
+}
+
+.info-grid td {
+    padding: 4px 10px;
+    border: none;
+    font-size: 11px;
+    vertical-align: top;
+}
+
+.info-grid td.label {
+    font-weight: bold;
+    color: #555555;
+    width: 20%;
+}
+
+.info-grid td.value {
+    color: #333333;
+    width: 30%;
+}
+
+/* PRODUCT TABLE */
+.product-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 10px;
+    border: 1px solid #CCCCCC;
+}
+
+.product-table thead th {
+    background-color: #F5F5F5;
+    color: #333333;
+    font-weight: bold;
+    font-size: 11px;
+    padding: 6px 8px;
+    border: 1px solid #CCCCCC;
+    text-align: left;
+}
+
+.product-table thead th.right {
+    text-align: right;
+}
+
+.product-table thead th.center {
+    text-align: center;
+}
+
+.product-table tbody td {
+    padding: 5px 8px;
+    border: 1px solid #CCCCCC;
+    font-size: 11px;
+    vertical-align: top;
+}
+
+.product-table tbody td.right {
+    text-align: right;
+}
+
+.product-table tbody td.center {
+    text-align: center;
+}
+
+/* GRAND TOTAL */
+.grand-total-container {
+    width: 100%;
+    margin-bottom: 16px;
+}
+
+.grand-total-table {
+    margin-left: auto;
+    border-collapse: collapse;
+    border: 1px solid #CCCCCC;
+    width: 300px;
+}
+
+.grand-total-table td {
+    padding: 5px 10px;
+    border: 1px solid #CCCCCC;
+    font-size: 11px;
+}
+
+.grand-total-table td.label {
+    font-weight: bold;
+    background-color: #F5F5F5;
+    width: 140px;
+}
+
+.grand-total-table td.value {
+    text-align: right;
+    font-weight: bold;
+    color: #D32F2F;
+    font-size: 12px;
+}
+
+/* APPROVAL BLOCK */
+.approval-table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #CCCCCC;
+    margin-top: 20px;
+    page-break-inside: avoid;
+}
+
+.approval-table td {
+    border: 1px solid #CCCCCC;
+    padding: 8px 10px;
+    font-size: 11px;
+    vertical-align: top;
+    text-align: center;
+}
+
+.approval-table .header-cell {
+    font-weight: bold;
+    background-color: #F5F5F5;
+    text-transform: uppercase;
+    font-size: 11px;
+}
+
+.approval-table .signature-cell {
+    height: 100px;
+}
+
+.approval-table .name-cell {
+    font-weight: bold;
+    color: #333333;
+    padding-bottom: 2px;
+}
+
+.approval-table .dept-cell {
+    color: #555555;
+    font-size: 10px;
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<div class="header-container">
+    <table class="header-top">
+        <tr>
+            <td style="text-align:left;"><img class="logo-img" src="{!$Resource.Logo}" alt="DigiAds Logo"/></td>
+            <td style="text-align:right;"><span class="doc-number">SOA / QUOTATION - DOCUMENT NUMBER: {!soaRec[0].SOA_Number__c}</span></td>
+        </tr>
+    </table>
+    <div class="header-line"></div>
+    <div class="header-subline"></div>
+</div>
+
+<!-- GENERAL & CLIENT INFORMATION -->
+<div class="section-title">General &amp; Client Information</div>
+<table class="info-grid">
+    <tr>
+        <td class="label">Document Number</td>
+        <td class="value">{!soaRec[0].SOA_Number__c}</td>
+        <td class="label">Date</td>
+        <td class="value">{!soaRec[0].Date__c}</td>
+    </tr>
+    <tr>
+        <td class="label">Company / Account Name</td>
+        <td class="value">{!soaRec[0].Company_Name__c}</td>
+        <td class="label">Agency / Advertiser Name</td>
+        <td class="value">{!soaRec[0].Agency_Name_Advertiser_Name__c}</td>
+    </tr>
+    <tr>
+        <td class="label">Product / Brand</td>
+        <td class="value">{!soaRec[0].Product_Brand__c}</td>
+        <td class="label">Brand Category</td>
+        <td class="value">{!soaRec[0].Brand_Category__c}</td>
+    </tr>
+    <tr>
+        <td class="label">Campaign Name</td>
+        <td class="value">{!soaRec[0].Campaign_Name__c}</td>
+        <td class="label">Start Date</td>
+        <td class="value"><apex:outputText value="{0, date, dd/MM/yyyy}"><apex:param value="{!soaRec[0].SOA_Start_Date__c}"/></apex:outputText></td>
+    </tr>
+    <tr>
+        <td class="label">Contact Name</td>
+        <td class="value">{!soaRec[0].Attention__r.Name}</td>
+        <td class="label">End Date</td>
+        <td class="value"><apex:outputText value="{0, date, dd/MM/yyyy}"><apex:param value="{!soaRec[0].SOA_End_Date__c}"/></apex:outputText></td>
+    </tr>
+    <tr>
+        <td class="label">Address</td>
+        <td class="value" colspan="3">{!soaRec[0].Address__c}</td>
+    </tr>
+</table>
+
+<!-- TELKOMSEL INFO -->
+<div class="section-title">Telkomsel Information</div>
+<table class="info-grid">
+    <tr>
+        <td class="label">Proposed By (PIC)</td>
+        <td class="value">{!soaRec[0].Owner_Name__c}</td>
+        <td class="label">Email</td>
+        <td class="value">{!soaRec[0].Owner.Email}</td>
+    </tr>
+    <tr>
+        <td class="label">Contact Number</td>
+        <td class="value">{!soaRec[0].Owner_Contact_Number__c}</td>
+        <td class="label"></td>
+        <td class="value"></td>
+    </tr>
+</table>
+
+<!-- PRODUCT LINE ITEMS -->
+<div class="section-title">Service Order Agreement (SOA) - Line Items</div>
+<table class="product-table">
+    <thead>
+        <tr>
+            <th style="width: 30%;">Product</th>
+            <th style="width: 25%;">Remarks</th>
+            <th class="right" style="width: 15%;">Sales Price</th>
+            <th class="center" style="width: 10%;">Quantity</th>
+            <th class="right" style="width: 20%;">Total Price</th>
+        </tr>
+    </thead>
+    <tbody>
+        <apex:repeat value="{!soaRecDetail}" var="string">
+        <tr>
+            <td>{!string.Product_Name__c}</td>
+            <td>{!string.Remarks__c}</td>
+            <td class="right">
+                <apex:outputText value="{0, number, ###,###}">Rp. <apex:param value="{!string.Unit_Price__c}"/></apex:outputText>
+            </td>
+            <td class="center">
+                <apex:outputText value="{0, number, ###,###}"><apex:param value="{!string.Quantity__c}"/></apex:outputText>
+            </td>
+            <td class="right">
+                <apex:outputText value="{0, number, ###,###}">Rp. <apex:param value="{!string.Unit_Price__c * string.Quantity__c}"/></apex:outputText>
+            </td>
+        </tr>
+        </apex:repeat>
+    </tbody>
+</table>
+
+<!-- GRAND TOTAL -->
+<div class="grand-total-container">
+    <table class="grand-total-table">
+        <tr>
+            <td class="label">Grand Total</td>
+            <td class="value">
+                <apex:outputText value="{0, number, ###,###}">Rp. <apex:param value="{!grandTotal}"/></apex:outputText>
+            </td>
+        </tr>
+    </table>
+</div>
+
+<!-- ADVERTISING T&C -->
+<div class="section-title">Advertising Term and Condition</div>
+<ol style="margin-left:18px;margin-bottom:14px;font-size:10px;color:#444444;">
+    <li style="margin-bottom:3px;line-height:1.5;">Materi informasi / Promosi tidak mengandung unsur minuman keras maupun senjata api.</li>
+    <li style="margin-bottom:3px;line-height:1.5;">Pelanggan yang menerima materi informasi / Promosi adalah mereka yang tidak keberatan.</li>
+    <li style="margin-bottom:3px;line-height:1.5;">Materi Informasi / promosi merupakan tanggung jawab klien.</li>
+    <li style="margin-bottom:3px;line-height:1.5;">Jika terjadi kegagalan maka akan dilakukan broadcast ulang.</li>
+</ol>
+
+<!-- APPROVAL BLOCK -->
+<table class="approval-table">
+    <tr>
+        <td class="header-cell">Known By</td>
+        <td class="header-cell">Arranged By</td>
+        <td class="header-cell">Approved By</td>
+    </tr>
+    <tr>
+        <td class="signature-cell"></td>
+        <td class="signature-cell"></td>
+        <td class="signature-cell"></td>
+    </tr>
+    <tr>
+        <td class="name-cell">{!soaRec[0].Sales_Manager__c}</td>
+        <td class="name-cell">{!soaRec[0].Owner_Name__c}</td>
+        <td class="name-cell">{!soaRec[0].Attention__r.Name}</td>
+    </tr>
+    <tr>
+        <td class="dept-cell">Cluster Lead</td>
+        <td class="dept-cell">Sales Department</td>
+        <td class="dept-cell">{!soaRec[0].Company_Name__c}</td>
+    </tr>
+</table>
+
+</body>
+</html>
+</apex:page>

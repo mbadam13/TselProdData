@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Media_Seller_Achievement</fullName>
+    <columns>NAME</columns>
+    <columns>Date__c</columns>
+    <columns>CREATED_DATE</columns>
+    <columns>Brand__c</columns>
+    <columns>Month__c</columns>
+    <columns>Group_Type__c</columns>
+    <columns>Type__c</columns>
+    <columns>Sales__c</columns>
+    <columns>Amount_Report__c</columns>
+    <columns>Media_Seller__c</columns>
+    <columns>Amount_Report_MTD__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Group_Type__c</field>
+        <operation>equals</operation>
+        <value>Actual</value>
+    </filters>
+    <filters>
+        <field>Date__c</field>
+        <operation>notEqual</operation>
+    </filters>
+    <filters>
+        <field>MST_Type__c</field>
+        <operation>equals</operation>
+        <value>Media Seller</value>
+    </filters>
+    <label>Media Seller Achievement</label>
+    <sharedTo>
+        <role>Campaign_Operation_Manager</role>
+        <role>Campaign_Operation_Team</role>
+        <role>MS_SMC_Manager</role>
+        <role>Media_Seller_Team</role>
+    </sharedTo>
+</ListView>

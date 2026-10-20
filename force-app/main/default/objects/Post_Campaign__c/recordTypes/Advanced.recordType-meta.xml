@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Advanced</fullName>
+    <active>true</active>
+    <compactLayoutAssignment>New_Compact_Layout</compactLayoutAssignment>
+    <label>Advanced</label>
+    <picklistValues>
+        <picklist>Status__c</picklist>
+        <values>
+            <fullName>Assign</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Completed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Draft</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>On Progress</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Validation_rule_for_Account</fullName>
+    <active>true</active>
+    <description>//sementara dinonaktifkan untuk kebutuhan deployment</description>
+    <errorConditionFormula>and (NOT(ISPICKVAL(Account.Status__c, &apos;Approved by Settlement&apos;)), ISPICKVAL( Status , &apos;Activated&apos;)  )</errorConditionFormula>
+    <errorMessage>Account must Approved by Settlement</errorMessage>
+</ValidationRule>

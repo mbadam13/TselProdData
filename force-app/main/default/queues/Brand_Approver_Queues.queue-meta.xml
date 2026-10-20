@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesIncludeBosses>true</doesIncludeBosses>
+    <doesSendEmailToMembers>true</doesSendEmailToMembers>
+    <name>Brand Approver Queues</name>
+    <queueMembers>
+        <roles>
+            <role>SALES_EXCELLENT</role>
+            <role>SALES_EXCELLENT_MANAGER</role>
+        </roles>
+        <users>
+            <user>ahmad_faisal1@telkomsel.co.id</user>
+            <user>puteri_dwijanti@telkomsel.co.id</user>
+        </users>
+    </queueMembers>
+    <queueSobject>
+        <sobjectType>Brand__c</sobjectType>
+    </queueSobject>
+</Queue>

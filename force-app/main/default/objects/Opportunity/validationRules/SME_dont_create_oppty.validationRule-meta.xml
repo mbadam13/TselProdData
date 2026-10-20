@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SME_dont_create_oppty</fullName>
+    <active>true</active>
+    <description>SME tidak ada oppty</description>
+    <errorConditionFormula>SME__c = TRUE</errorConditionFormula>
+    <errorMessage>Silahkan Centang Check Box &quot;Don&apos;t create an opportunity upon conversion&quot;</errorMessage>
+</ValidationRule>

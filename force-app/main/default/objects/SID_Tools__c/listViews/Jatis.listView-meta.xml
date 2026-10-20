@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Jatis</fullName>
+    <columns>NAME</columns>
+    <columns>Media_Seller__c</columns>
+    <columns>CP_Name__c</columns>
+    <columns>Sender_ID__c</columns>
+    <columns>SID__c</columns>
+    <columns>SID_Name__c</columns>
+    <columns>CREATED_DATE</columns>
+    <columns>LAST_UPDATE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Media_Seller__c</field>
+        <operation>equals</operation>
+        <value>PT Informasi Teknologi Indonesia Tbk (Jatis Mobile)</value>
+    </filters>
+    <label>Jatis</label>
+</ListView>

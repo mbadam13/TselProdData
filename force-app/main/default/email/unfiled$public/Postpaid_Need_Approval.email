@@ -1,0 +1,7 @@
+Hello,
+
+The opportunity {!Opportunity.Name} with postpaid payment need to be check, Please check link below
+{!Opportunity.Link}
+
+Regards,
+Salesforce

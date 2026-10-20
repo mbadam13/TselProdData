@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Close_Won_Cannot_Add_product</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND (ISPICKVAL( Opportunity.StageName , &apos;Closed Won&apos;),ISBLANK( CreatedDate ))</errorConditionFormula>
+    <errorMessage>Cannot add product after Closed Won</errorMessage>
+</ValidationRule>

@@ -1,0 +1,8 @@
+Hello,
+
+The opportunity {!Opportunity.Name} need to be check for approval Programmatic product.
+Please check link below
+{!Opportunity.Link}
+
+Regards,
+Salesforce

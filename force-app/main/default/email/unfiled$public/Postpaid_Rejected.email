@@ -1,0 +1,7 @@
+Dear {!Opportunity.OwnerFirstName}{!Opportunity.OwnerLastName},
+
+The postpaid payment for Opportunity {!Opportunity.Name} was rejected Click ink below for more information.
+{!Opportunity.Link}
+
+Regards,
+Salesforce

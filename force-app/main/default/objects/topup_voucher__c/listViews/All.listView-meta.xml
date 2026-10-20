@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All</fullName>
+    <columns>NAME</columns>
+    <columns>ID_Transaksi__c</columns>
+    <columns>Voucher_ID__c</columns>
+    <columns>Campaign_MyAds__c</columns>
+    <columns>Date_Time_Reedem__c</columns>
+    <columns>Amount__c</columns>
+    <columns>CREATEDBY_USER</columns>
+    <columns>Voucher_Category__c</columns>
+    <columns>CREATED_DATE</columns>
+    <columns>LAST_UPDATE</columns>
+    <columns>Payment_Method__c</columns>
+    <columns>Total_Fee_Finnet__c</columns>
+    <filterScope>Everything</filterScope>
+    <label>All</label>
+</ListView>

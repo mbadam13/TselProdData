@@ -1,0 +1,218 @@
+/**
+ * @description       : 
+ * @author            : Syaiful Syafani
+ * @group             : 
+ * @last modified on  : 27/03/2025
+ * @last modified by  : Syaiful Syafani
+ * Modifications Log
+ * Ver   Date         Author            Modification
+ * 1.0   21/02/2025   Syaiful Syafani   Initial Version
+**/
+@isTest
+public with sharing class TA_VR_Opp_BU_PenagihanMustSameTest {
+    private static User createUser() {
+        Profile proRec = [SELECT Id FROM Profile WHERE Name = 'SALES' LIMIT 1];
+        UserRole roleRec = [SELECT Id, Name, PortalRole FROM UserRole WHERE Name='SALES DA' LIMIT 1];
+        User userRec = new User(
+            FirstName           = 'Admin',
+            LastName            = 'TV Ads',
+            NIK__c              = '444999',
+            Username            = 'admintv@digiads.com.invalid',
+            Alias               = 'AdmTV',
+            EmailEncodingKey    = 'UTF-8',
+            Email               = 'admintv@digiads.com.invalid',
+            ProfileId           = proRec.Id,
+            UserRoleId          = roleRec.Id,
+            LocaleSidKey        = 'en_US',
+            LanguageLocaleKey   = 'en_US',
+            TimeZoneSidKey      = 'America/Los_Angeles'
+        );
+        insert userRec;
+        return userRec;
+    }
+
+    @TestSetup
+    static void makeData(){
+        User sales = createUser();
+        System.runAs(sales) {
+            MetadataTriggerHandler.bypass('TA_AT_CreateOpptyTeamMember_AI');
+            Id recordTypeAccId = Schema.SObjectType.Account.getRecordTypeInfosByName().get('Agency').getRecordTypeId();
+            Account acc = new Account(
+                Name = 'Wira Pamungkas Pratama #2',          				// Account Name
+                Legal_Name__c = 'Wira Pamungkas Pratama #2',
+                RecordTypeId = recordTypeAccId,                                  // Account Record Type
+                Account_Type__c = 'Agency',                                  // Account Type
+                Direct_Indirect__c = 'Direct',                               // Direct/Indirect
+                Status__c = 'Approved by Settlement',                        // Status
+                No_PKS__c = '123456',                                        // No PKS
+                NPWP__c = '1234567890123456',                                               // NPWP
+                NPWP_Address__c = 'Jakarta',
+                PKS_Tracker__c = 'Pending',
+                Reason_by_Settlement__c = 'reason'      
+            );
+            insert acc;
+        
+            Contact contactRec = new Contact(
+                AccountId = acc.id,                 // Account Name
+                Title = 'Planner',                         // Title
+                Email = 'test@gmail.com',  // Email
+                Phone = '231313123123',                   // Phone
+                LastName = 'user1',
+                MobilePhone = '231313123123',             // Mobile
+                Active__c = true,                         // Active?
+                Priority__c = 'Priority 1',                // Priority
+                Converted_from_Lead__c = false            // Converted from Lead
+            );
+            insert contactRec;
+            
+            Contract contract = new Contract(
+                StartDate = Date.valueOf('2019-09-01'),// Contract Start Date
+                ContractTerm = 9999,                  // Contract Term (months)
+                AccountId = acc.Id,
+                OwnerExpirationNotice = '120',      // Owner Expiration Notice
+                Status = 'Draft',                    // Status
+                Terminate__c = false,                    // Terminate
+                Archive__c = false,                      // Archive
+                No_PKS__c = '123456',                    // No.PKS
+                Contract_Signed__c = 'Circulation'     // Contract Signed ?
+            // Opportunity__c = oppRecord.Id
+            );
+            insert contract;
+            
+            contract.Status = 'Activated';
+            update contract;
+            Id recordTypeOppId = Schema.SObjectType.Opportunity.getRecordTypeInfosByName().get('Agency Postpaid').getRecordTypeId();
+
+            acc.ContractId__c = contract.Id;
+            update acc;
+
+            Id pricebookId = Test.getStandardPricebookId();
+            
+            Product2 prodTV = new Product2(
+                Name                = 'TVC PRIME TIME 30" AXN',     // Product Name
+                Business_Product__c = 'TV Media',                   // Business Product
+                Product_Category__c = 'IPTV',                       // Product Category
+                Family              = 'TVC',                        // Product Family
+                Product_Type__c     = 'TVC',                        // Product Type
+                Product_Channel__c  = 'TVC PLATINUM',               // Product Channel
+                Ads_Format__c       = 'Video',                      // Ads Format
+                Ads_Size__c         = 'PRIME TIME 17.00 - 24.00	',  // Ads Size
+                Channel_Detail__c   = 'My Telkomsel',               // Channel Detail
+                Tarif__c            = 120000,                       // Tarif
+                HJM__c              = 20,                           // HJM
+                List_Price__c       = 1300000,                      // Rate Card
+                Duration__c         = 10,                           // Duration
+                IsActive            = true,                          // Active
+                PIC_Product_Type__c = 'IPTV'
+            );
+            insert prodTV;
+
+            Product2 prodDigital = new Product2(
+                Name = 'BULK (SMS Basic)',                          // Product Name
+                IsActive = true,                                    // Active
+                Family = 'Messaging',                               // Product Family
+                Product_Type__c = 'SMS',                            // Product Type
+                ProductCode = 'SMS',                                // Product Code
+                Ads_Format__c = 'Text',                             // Ads Format
+                Ads_Detail__c = 'BULK (SMS Premium)_3telco_Icode',  // Ads Detail
+                Ads_Size__c = 'Standard',                           // Ads Size
+                Product_Channel__c = 'Mobile',                      // Product Channel
+                Channel_Detail__c = 'Mobile',                       // Channel Detail
+                Buying_Method__c = 'I/O',                           // Buying Method
+                Rate_Card_Refference__c = 'Messaging',              // Rate Card Refference
+                List_Price__c = 500,                                // List Price
+                Business_Product__c = 'Digital Media',
+                Product_Category__c = 'Advertising',                // Product Category
+                Description = '500',                                 // Product Description
+                PIC_Product_Type__c = 'IPTV'
+            );
+            insert prodDigital;
+                
+            //Create your pricebook entry
+            PricebookEntry pbEntryTV = new PricebookEntry(
+                Pricebook2Id = pricebookId,
+                Product2Id = prodTV.Id,
+                UnitPrice = 100.00,
+                IsActive = true
+                );
+            insert pbEntryTV;
+
+            PricebookEntry pbEntryDigital = new PricebookEntry(
+                Pricebook2Id = pricebookId,
+                Product2Id = prodDigital.Id,
+                UnitPrice = 100.00,
+                IsActive = true
+                );
+            insert pbEntryDigital;
+                
+            Opportunity oppRecord = new Opportunity(
+                RecordTypeId = recordTypeOppId,                                                            // Opportunity Record Type
+                Name = 'TSEL / OPP-2309-003498 / Wira Pamungkas Pratama / Agency Postpaid / 9/21/2024',  // Opportunity Name
+                AccountId = acc.Id,                                                           // Account Name
+                CloseDate = Date.valueOf('2024-09-21'),                                                  // Close Date
+                Account_Type__c = 'Agency',                                                              // Account Type
+                StageName = 'Proposal',                                                                // Stage
+                Regional__c = 'HEAD OFFICE',                                                             // Regional  (Required)
+                Probability = 100,                                                                       // Probability (%)
+                Agency_Name__c = acc.Id,                                                      // Agency Name
+                Campaign_Customize__c = false,                                                           // Campaign Customize
+                Templated_Proposal__c = true,                                                            // Own Proposal?
+                Approval_Remark__c = 'Approved',                                                         // Approval Remark
+                Document_Version__c = 'Submit',                                                          // Document Version
+                Approval_Status__c = 'Approved',                                                         // Approval Status
+                Marketing_Package__c = false,                                                            // Marketing Package
+                SME__c = false,                                                                          // SME
+                // Brand__c = 'a011s00000Dk5rF',                                                            // Brand
+                Type = 'Existing Business',                                                              // Type
+                Penagihan_based_on__c = 'Postpaid',                                                      // Penagihan based on
+                Performance_Product__c = false,                                                          // Performance Product
+                Programmatic_Product__c = false,                                                         // Programmatic Product
+                Performance_Done__c = false,                                                             // Performance Done
+                RFP_Status_sales__c = 'Completed',                                                       // RFP Status (sales)
+                Check_PO__c = 'OK',
+                Pricebook2Id = Test.getStandardPricebookId(),
+                OwnerId = sales.Id            
+            );
+            insert oppRecord;
+
+            OpportunityLineItem oliTVRec = new OpportunityLineItem(
+                OpportunityId = oppRecord.Id,
+                Product2Id = prodTV.Id,
+                PricebookEntryId = pbEntryTV.Id,
+                Discount__c = 0.00,
+                UnitPrice = 500.00,
+                Quantity = 100.00,
+                Business_Product__c = 'TV Media'
+            );
+            insert oliTVRec;
+
+            OpportunityLineItem oliDigitalRec = new OpportunityLineItem(
+                OpportunityId = oppRecord.Id,
+                Product2Id = prodDigital.Id,
+                PricebookEntryId = pbEntryDigital.Id,
+                Discount__c = 0.00,
+                UnitPrice = 500.00,
+                Quantity = 100.00,
+                Business_Product__c = 'Digital Media'
+            );
+            insert oliDigitalRec;
+        }
+    }
+
+    @isTest
+    static void ValidationPenagihanMustSame(){
+        Opportunity opptyRec = [SELECT Id, Penagihan_based_on__c, Penagihan_based_on_TV__c FROM Opportunity LIMIT 1];
+
+        Test.startTest();
+        try {
+            opptyRec.Penagihan_based_on__c = 'Prepaid';
+            opptyRec.Penagihan_based_on_TV__c = 'Postpaid';
+            update opptyRec;
+
+            System.assert(false, 'Expected an exception to be thrown due to duplicate channel insertion.');
+        } catch (DmlException e) {
+            System.assert(e.getDmlMessage(0).contains('Penagihan based on (Digital) dan Penagihan based on (TV) harus diisi dengan tipe Penagihan yang sama'), 'Unexpected error message: ' + e.getMessage());
+        }
+        Test.stopTest();
+    }
+}

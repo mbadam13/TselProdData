@@ -1,0 +1,6 @@
+Sorry, this approval has been Rejected.
+
+Opportunity Name : {!Opportunity.Name}
+RFP  Name : {!Request_for_proposal__c.Name}
+Deadlne date : {!Request_for_proposal__c.Deadline__c}
+Deadline change to :

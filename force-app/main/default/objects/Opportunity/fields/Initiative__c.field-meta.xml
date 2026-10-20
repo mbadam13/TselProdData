@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Initiative__c</fullName>
+    <label>Initiative</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Campaign Renewals</fullName>
+                <default>false</default>
+                <label>Campaign Renewals</label>
+            </value>
+            <value>
+                <fullName>Integrated Pitch</fullName>
+                <default>false</default>
+                <label>Integrated Pitch</label>
+            </value>
+            <value>
+                <fullName>RCS/WA Outreach</fullName>
+                <default>false</default>
+                <label>RCS/WA Outreach</label>
+            </value>
+            <value>
+                <fullName>Display Outreach</fullName>
+                <default>false</default>
+                <label>Display Outreach</label>
+            </value>
+            <value>
+                <fullName>Dormant Acc Reactivation</fullName>
+                <default>false</default>
+                <label>Dormant Acc Reactivation</label>
+            </value>
+            <value>
+                <fullName>Rich Media Ad Format Push</fullName>
+                <default>false</default>
+                <label>Rich Media Ad Format Push</label>
+            </value>
+            <value>
+                <fullName>FMCG Awareness Push</fullName>
+                <default>false</default>
+                <label>FMCG Awareness Push</label>
+            </value>
+            <value>
+                <fullName>IPTV Push (Survey bundling)</fullName>
+                <default>false</default>
+                <label>IPTV Push (Survey bundling)</label>
+            </value>
+            <value>
+                <fullName>OTT push</fullName>
+                <default>false</default>
+                <label>OTT push</label>
+            </value>
+            <value>
+                <fullName>ACS Pipeline</fullName>
+                <default>false</default>
+                <label>ACS Pipeline</label>
+            </value>
+            <value>
+                <fullName>Retargeting</fullName>
+                <default>false</default>
+                <label>Retargeting</label>
+            </value>
+            <value>
+                <fullName>BAU</fullName>
+                <default>false</default>
+                <label>BAU</label>
+            </value>
+            <value>
+                <fullName>Others</fullName>
+                <default>false</default>
+                <label>Others</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Total_Settlement_Client_Inc_PPN__c</fullName>
+    <formula>IF(
+	TEXT(Payment_Method__c)!=&apos;Pulsa&apos;, 
+	IF(
+	Total_Settlement_Client_del__c &gt; 0, 
+		IF(
+			Paid_Date__c &gt; DATETIMEVALUE(&quot;2022-03-31 17:00:00&quot;),
+			Total_Settlement_Client_del__c + (Total_Settlement_Client_del__c *0.11),
+			Total_Settlement_Client_del__c + (Total_Settlement_Client_del__c*0.1)
+		),
+		IF(
+			Paid_Date__c &gt; DATETIMEVALUE(&quot;2022-03-31 17:00:00&quot;),
+			Total_Settlement_Client__c + (Total_Settlement_Client__c *0.11),
+			Total_Settlement_Client__c + (Total_Settlement_Client__c*0.1)
+		)
+	),
+	0
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Total Settlement Client (Inc PPN)</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

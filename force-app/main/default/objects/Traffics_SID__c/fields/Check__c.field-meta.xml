@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Check__c</fullName>
+    <description>Hanya untuk pengecekan value field. Saat ini untuk compare value Amount &amp; Temp Amount.</description>
+    <externalId>false</externalId>
+    <formula>IF( 
+   Amount__c &lt;&gt; Temp_Amount__c,
+   &apos;BEDA Amount&apos;,
+   &apos;&apos;
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Check</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

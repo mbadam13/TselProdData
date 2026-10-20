@@ -1,0 +1,258 @@
+<apex:page StandardController="SID_Tools__c" extensions="GenerateSID_PDFController" renderAs="PDF" showHeader="false" sidebar="false" standardStylesheets="false" applyBodyTag="false" applyHtmlTag="false">
+   <html>   
+    <head>
+        <style>       
+             @page {
+                 size: A4 landscape;
+                margin-right: 15mm;
+                margin-left: 20mm;
+                margin-top: 5mm;
+                margin-bottom: 10mm;
+                 @bottom-right {
+                  content: element(footer);
+                                        }
+            } 
+            
+                div.header {
+               
+                }
+               div.footer {
+                            position: running(footer);
+                      }
+                                     .pagenumber:before {
+                                        content: counter(page);
+                                     }
+                                    .pagecount:before {
+                               content: counter(pages);
+                            }
+            
+            .page-break {
+                display:block;
+                page-break-after:always;
+            }
+            body {
+                font-family: 'Verdana', 'Geneva', sans-serif;
+                font-size: 12px;
+            }
+           
+           .companyName { font: bold 25px; color: red; }
+            .title {font: bold 18px; color: black;} 
+            .regFont { font: 10px;}
+            .h3Green{
+            background-color:#064172;
+            padding:2px;
+            font-size:12px;
+            text-indent:14px;
+            color:#FFFFFF;
+            font-family: 'Verdana', 'Geneva', sans-serif;
+            }
+            
+            .italicBoldText 
+            { 
+                font-style: italic; 
+                font-weight: bold
+            }
+           
+            #table1 {top: 15px;}
+            #dimg1 {position:fixed;} 
+
+            /* Diperbarui: Menggunakan ID unik untuk tabel utama dan class untuk baris/kolom */
+            table#IOM {
+                font-family: "Arial Unicode MS", Arial, Helvetica, sans-serif;
+                border-collapse: collapse;
+                width: 100%;
+                border: 1px solid black;
+                padding: 2px;
+                table-layout: fixed;
+            }
+
+            th.IOM {
+                background-color: #f5f5f5; 
+                color: Black;
+                border: 1px solid black;
+                padding: 10px;
+                text-align: center;
+                font-size: 11px;
+            }
+
+            td.IOM {
+                border: 1px solid black;
+                padding: 4px;
+                font-size: 12px;
+                text-align: left; 
+                word-wrap: break-word;
+            }
+
+            .tab-2{
+                display:inline-block; 
+                width:TWO-TAB-WIDTH;
+            }               
+            
+            .price {
+                number-format: "###,##0.00", "price";
+            }
+           
+            .ol_d 
+            {
+            list-style-type: lower-alpha;
+            }
+           
+            .data_row
+            {
+            width: 18px !important; 
+            background-color: #FFFFFF;
+            }
+           
+            .letterList{
+                list-style-type: lower-alpha;
+            }
+        </style>
+    </head>
+    <body>
+    
+    <apex:form >
+         <table width="100%">
+             <tr>
+             <td width="90%"><div align="center" valign="top" class="title">FORM SENDER ID DAN FORMAT PESAN</div></td>
+             <td width="5%"><div align="left" class="header" width="200px"><apex:image url="{!$Resource.Logo}"/></div></td></tr>
+             <tr>
+                 <td width="90%"><div align="center" valign="top">No: <apex:outputText value="{!senderRec[0].No_Surat__c}"/></div></td>
+             </tr>
+         </table>
+         
+         <table width="100%">
+                <tr>
+                    <td width="15%">Tanggal</td>
+                    <td>:</td>
+                    <td>
+                         <apex:outputText value="{0, date,EEEE',' d MMMM yyyy HH:mm:ss}">
+                            <apex:param value="{!NOW()+offset}"/>
+                         </apex:outputText>
+                    </td>
+                </tr>
+                <tr>
+                    <td>No Kontrak</td>
+                    <td>:</td>
+                    <td><apex:outputText value="{!senderRec[0].No_Kontrak__c}"/></td>
+                </tr>
+                <tr>
+                    <td>Media Seller</td>
+                    <td>:</td>
+                    <td><apex:outputText value="{!senderRec[0].Media_Seller__r.Name}"/></td>
+                </tr>
+         </table>
+         <br/>
+         <br/>
+         
+         <!-- Tabel Utama dengan Lebar Kolom Terstruktur (Total 100%) -->
+         <table id="IOM">
+             <tr>
+                 <th class="IOM" style="width: 22%;">Pengiklan (Companys Name)</th>
+                 <th class="IOM" style="width: 15%;">Merk (Brand)</th>
+                 <th class="IOM" style="width: 14%;">Kategori industri <br/>(Industry Category)</th>
+                 <th class="IOM" style="width: 13%;">Kategori Pesan <br/> (Message Category)</th>
+                 <th class="IOM" style="width: 13%;">Format Pesan <br/> (Message Format)</th>
+                 <th class="IOM" style="width: 8%;">Type</th>
+                 <th class="IOM" style="width: 15%;">Sender ID / Masking</th>
+             </tr>
+             <apex:repeat value="{!senderitemRec}" var="string" id="theRepeat">
+             <tr>
+                 <td class="IOM">
+                     <apex:outputText value="{!string.Company__c}" id="Company__c"/>
+                  </td>
+                  <td class="IOM">
+                     <apex:outputText value="{!string.Brand__r.Name}" id="Brand"/>
+                  </td>
+                   <td class="IOM">
+                     <apex:outputText value="{!string.Kategori_Industri__r.name}" id="Kategori_Industri"/>
+                  </td>
+                   <td class="IOM">
+                      <apex:outputText value="{!string.Kategori_Pesan__c}" id="Kategori_Pesan__c"/>
+                   </td>
+                   <td class="IOM">
+                      <apex:outputText value="{!string.Format_Pesan__c}" id="Format_Pesan__c"/>
+                   </td>
+                  <td class="IOM">
+                       <apex:outputText value="{!string.Type_SMS__c}" id="Type_SMS__c"/>
+                  </td>
+                  <td class="IOM">
+                       <!-- Aman dari crash PDF: Menggunakan span terstruktur alih-alih sub-tabel kaku -->
+                       <div style="width: 100%; word-break: break-all;">
+                           <apex:repeat value="{!NewStrings}" var="a">
+                               <span style="display: inline-block; border: 1px solid black; padding: 3px 6px; margin: 1px; text-align: center; background-color: #fff;">
+                                   <apex:outputText value="{!a}"/>
+                               </span>
+                           </apex:repeat>
+                       </div>
+                  </td>
+             </tr>
+             </apex:repeat>
+         </table>
+    </apex:form>
+    
+    <br/>
+    <table width="100%" border="0">
+         <tr>
+         <td width="30%"><div align="left" class="header">Media Seller</div></td>
+         <td width="30%"><div align="left" valign="top" class="header">PT. TELEKOMUNIKASI SELULAR</div></td>
+         <td width="30%"><div align="left" class="header"></div></td>
+         </tr>
+         <tr>
+             <td style="vertical-align: top;">
+                 <table border="0" width="100%" style="vertical-align: top;">
+                     <tr>
+                         <td>Ordered by:</td>
+                     </tr>
+                     <tr>
+                         <td height="20"></td>
+                     </tr>
+                     <tr>
+                         <td height="135"></td>
+                     </tr>
+                     <tr>
+                         <td>
+                              <apex:outputText value="{!senderRec[0].Owner.Name}"/><br/><br/>
+                              <apex:outputText value="{!senderRec[0].Owner.Title}"/> 
+                         </td>
+                         <td></td>
+                     </tr>
+                     <tr>
+                         <td></td>
+                         <td></td>
+                     </tr>
+                 </table>
+             </td>    
+             <td>
+                 <table border="0" cellspacing="10px">
+                     <tr>
+                         <td>Approved by:</td>
+                     </tr>
+                     <tr>
+                         <td height="20"></td>
+                     </tr>
+                     <tr>
+                         <td height="100"></td>
+                     </tr>
+                     <tr>
+                         <td>
+                              {!$Label.Manager_Partnership}
+                         </td>
+                         <td>
+                              Andhy Sukma Perdana
+                         </td>
+                     </tr>
+                     <tr>
+                         <td>
+                              Manager - Digital and Connectivity Business Development
+                         </td>
+                         <td>
+                              Pj. Manager - Wholesale and Interconnect Operations
+                         </td>
+                     </tr>
+                 </table>
+             </td>
+         </tr>
+    </table>
+    </body>
+   </html>
+</apex:page>

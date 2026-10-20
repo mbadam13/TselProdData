@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Price__c</fullName>
+    <formula>IF(
+OR(isblank( Revenue__c ), isblank( Exchange_Rates_Related__c ), isblank( VAT_Related__c )), 
+0 ,  
+((Revenue__c *  Exchange_Rate__c)/ VAT__c)/ Trafik__c ) / 100</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Price</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

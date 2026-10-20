@@ -1,0 +1,24 @@
+<!--
+  Created by : David W
+  30 December 2019
+-->
+
+<apex:page controller="Settlement_usage_Controller">
+    <apex:sectionHeader title="Upload Usage Data" subtitle="AM Usage"/>
+    <apex:pageMessages id="msg"/>
+    
+    <apex:form >
+        <apex:pageBlock >
+                  <apex:inputFile value="{!csvFileBody}"  filename="{!csvAsString}"/>
+                  <apex:commandButton value="Upload" action="{!importCSVFile}"/>
+                  <apex:commandButton value="Back" action="{!callpageredirect}"/>
+        <apex:pageblocktable value="{!usageList2}" var="usg">
+                <apex:column value="{!usg.Usage.Sales__c}" />
+                <apex:column value="{!usg.Usage.NIK__c}" />
+                <apex:column value="{!usg.Usage.Campaign_ID__c}" />
+                <apex:column value="{!usg.Usage.Amount__c}" />
+                <apex:column headerValue="Notes" value="{!usg.Notes}" /> 
+        </apex:pageblocktable>
+        </apex:pageBlock>
+   </apex:form>
+</apex:page>

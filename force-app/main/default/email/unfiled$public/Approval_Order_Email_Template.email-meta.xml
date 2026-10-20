@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Template Email Approval untuk Order</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Approval Order Email Template</name>
+    <style>none</style>
+    <subject>Need Approval for Sub Order: {!Sub_Order__c.Name}</subject>
+    <type>text</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

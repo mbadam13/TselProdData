@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SID_Name__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(
+    TEXT(Type_SMS__c) = &apos;SMS Interaktif&apos;,
+
+    LOWER(
+        &quot;i&quot; +
+        SUBSTITUTE(Media_Seller__r.prefix_ms__c, &quot;-&quot;, &quot;&quot;) +
+        SUBSTITUTE(newSenderid__c, &quot;+&quot;, &quot;&quot;)
+    ),
+
+    IF(TEXT(Type_Sender__c)=&apos;Premium&apos;,&apos;p&apos;,&apos;r&apos;)
+
+    +
+
+    LOWER(
+
+    IF(
+
+    /* Cek apakah prefixnya mcm atau jts */
+
+    OR(
+
+    Media_Seller__r.prefix_ms__c = &apos;mcm&apos;,
+
+    Media_Seller__r.prefix_ms__c = &apos;jts&apos;
+
+    ),
+
+    /* Jika ya, tulis dua kali (doubled) */
+
+    Media_Seller__r.prefix_ms__c + Media_Seller__r.prefix_ms__c,
+
+
+
+    /* Jika bukan, jalankan logika mustika/normal seperti sebelumnya */
+
+    IF(
+
+    Media_Seller__r.prefix_ms__c != &apos;mustika&apos;,
+
+    SUBSTITUTE(Media_Seller__r.prefix_ms__c, &quot;-&quot;, &quot;&quot;),
+
+    IF(TEXT(Karet__c) = &apos;YES&apos;, &apos;muskrt&apos;, &apos;mustika&apos;)
+
+    )
+
+    )
+
+    )
+
+    +
+
+    LOWER(Kategori_Industri__r.prefix_ms__c + SUBSTITUTE(newSenderid__c, &quot;+&quot;, &quot;&quot;))
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>SID Name</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

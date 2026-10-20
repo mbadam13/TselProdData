@@ -1,0 +1,113 @@
+<apex:page standardController="Kertas_Kerja__c" extensions="KKDetail_Controller" renderAs="pdf" applyBodyTag="false">
+    <head>
+        <style type="text/css" media="print">
+            @page {
+                size: A4 potrait;
+                @bottom-center {
+                    content: element(footer);
+                }
+            }
+            div.footer {
+                display: block;
+                padding: 5px;
+                position: running(footer);
+            }
+            .pagenumber:before {
+                content: counter(page);
+            }
+            .pagecount:before {
+                content: counter(pages);
+            }
+            .htable {
+                font-size: 12px;
+                text-align: center;
+                border-top: 1.5px solid #a39e9e;
+                border-bottom: 1.5px solid #a39e9e;
+            }
+            .TableRow {
+                font-size: 10px;
+                border-top: 0.5px solid #a39e9e;
+                padding: 2px;
+            }
+        </style>
+    </head>
+    
+    <body>
+    <div class="footer">
+        <!--<div style="font-size: 10px;text-align: center;">Page <span class="pagenumber"/> of <span class="pagecount"/></div>-->
+        <table width="100%" border="0">
+            <tr>
+                <td style="border-top: 1.5px solid" colspan="3"></td>
+            </tr>
+            <tr>
+                <td width="30%" style="font-size: 10px;text-align: left;">{!kkRec.Kertas_Kerja_Name__c}</td>
+                <td width="40%" style="font-size: 10px;text-align: center;">
+                    Page <span class="pagenumber"/> of <span class="pagecount"/>
+                </td>
+                <td width="30%" style="font-size: 10px;text-align: right;">{!kkRec.Type__c} | {!kkRec.Month__c} {!kkRec.Year__c}</td>
+            </tr>
+        </table>
+    </div>
+        
+    <table width="100%">
+        <tr>
+            <td style="font-size: 23px;text-align: center;"><b>Kertas Kerja Validasi</b></td>
+        </tr>
+        <tr>
+            <td style="font-size: 15px;text-align: center;"><b>{!kkRec.Kertas_Kerja_Name__c}</b></td>
+        </tr>
+        <tr>
+            <td style="font-size: 12px;text-align: center;">{!kkRec.Type__c} | {!kkRec.Month__c} {!kkRec.Year__c}</td>
+        </tr>
+        <tr>
+            <td style="border-bottom: 1.5px solid;">&nbsp;</td>
+        </tr>
+    </table>
+       
+    <br/>
+        
+    <b style="font-size: 13px;">{!kkRec.Media_Seller_Name__c}</b>
+    <apex:pageBlock >
+        <apex:pageBlockTable value="{!kkdw_list}" var="kkdw" width="100%" border="0">
+            <apex:column value="{!kkdw.wStartDate}" headerValue="Start Date" styleClass="TableRow" headerClass="htable" style="text-align: center;" width="12.5%"/>
+            <apex:column value="{!kkdw.wEndDate}" headerValue="End Date" styleClass="TableRow" headerClass="htable" style="text-align: center;" width="12.5%"/>
+            <apex:column value="{!kkdw.wRemark}" headerValue="Remark" styleClass="TableRow" headerClass="htable" width="30%"/>
+            <apex:column headerValue="Pembelian" styleClass="TableRow" headerClass="htable" style="text-align: right; padding-right: 10px;" width="15%">
+                <apex:outputText value="{0, number,#,##0.00}">
+                    <apex:param value="{!kkdw.wPembelian}"/>
+                </apex:outputText>
+            </apex:column>
+            <apex:column headerValue="Penggunaan" styleClass="TableRow" headerClass="htable" style="text-align: right; padding-right: 10px;" width="15%">
+                <apex:outputText value="{0, number,#,##0.00}">
+                    <apex:param value="{!kkdw.wPenggunaan}"/>
+                </apex:outputText>
+            </apex:column>
+            <apex:column headerValue="Saldo" styleClass="TableRow" headerClass="htable" style="text-align: right; padding-right: 10px;" width="15%">
+                <apex:outputText value="{0, number,#,##0.00}">
+                    <apex:param value="{!kkdw.wSaldo}"/>
+                </apex:outputText>
+            </apex:column>
+        </apex:pageBlockTable>
+    </apex:pageBlock>
+    
+    <br/><br/>
+        
+    <p style="font-size: 13px;">Jakarta, {!str_pdfGenerateDate}</p>
+    <br/><br/><br/><br/><br/><br/>
+    <table width="100%">
+        <tr>
+            <td style="font-size: 13px;text-align: center;" colspan="3"><u><b>Eka P. Sjaerodji</b></u></td>
+            <td style="font-size: 13px;text-align: center;" colspan="3"><u><b>Achmad S. Fariz</b></u></td>
+        </tr>
+        <tr>
+            <td width="10%">&nbsp;</td>
+            <td style="font-size: 13px;text-align: center;" width="30%">Manager Digital Advertising and Financial Services Budgeting, Settlement and Performance</td>
+            <td width="10%">&nbsp;</td>
+            <td width="10%">&nbsp;</td>
+            <td style="font-size: 13px;text-align: center;" width="30%">Manager Digital Advertising and Financial Services Business Operation</td>
+            <td width="10%">&nbsp;</td>
+        </tr>
+    </table>
+        
+    </body>
+</apex:page>

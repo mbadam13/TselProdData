@@ -1,0 +1,304 @@
+<apex:page StandardController="Order" extensions="GenerateOrderCOController" renderAs="PDF" showHeader="false" sidebar="false" standardStylesheets="false" applyBodyTag="false" applyHtmlTag="false">
+  <html>    
+    <head>
+        <style>      
+             @page {
+                size: A4 landscape;
+               margin-right: 15mm;
+               margin-left: 20mm;
+               margin-top: 5mm;
+               margin-bottom: 10mm;
+                 @bottom-right {
+                  content: element(footer);
+                                  }
+            } 
+            
+                div.header {
+                
+                }
+               div.footer {
+                               position: running(footer);
+                      }
+                                     .pagenumber:before {
+                                        content: counter(page);
+                       }
+                                   .pagecount:before {
+                             content: counter(pages);
+                        }
+            
+            .page-break {
+                display:block;
+                page-break-after:always;
+            }
+            body {
+                font-family: 'Verdana', 'Geneva', sans-serif;
+                font-size: 12px;
+            }
+            
+           
+            .companyName { font: bold 25px; color: red; }
+            .title {font: bold 18px; color: black;} 
+            .regFont { font: 10px;}
+            .h3Green{
+            background-color:#064172;
+            padding:2px;
+            font-size:12px;
+            text-indent:14px;
+            color:#FFFFFF;
+            font-family: 'Verdana', 'Geneva', sans-serif;
+            }
+            
+            .italicBoldText 
+            { 
+                font-style: italic; 
+                font-weight: bold
+            }
+           
+            #table1 {top: 15px;}
+            #dimg1 {position:fixed;} 
+
+           
+            table#IOM{
+                font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+                border-collapse:collapse;
+                width: 100%;
+                border: 1px solid black;
+                padding: 2px;
+                
+                }
+                .tab-2{
+    display:inline-block; width:TWO-TAB-WIDTH;
+                }               
+                
+            td#IOM{
+                border: 1px solid black;
+                padding: 2px;
+                font-size: 12px;
+                text-align: left; 
+                word-break: break-all;
+            }
+            td.price {
+                  number-format: "###,##0.00", "price";
+                  /* price is actually redundant as this format would be the default */
+              }
+           
+            .ol_d 
+            {
+            list-style-type: lower-alpha;
+            }
+            
+            
+            .data_row
+            {
+            width: 18px !important; 
+            background-color: #FFFFFF;
+            }
+           .letterList{
+                list-style-type: lower-alpha;
+            }
+            
+            </style>
+    </head>
+    <body>
+    
+    <apex:form >
+         <table width="100%">
+             <tr>
+             <td width="90"><div align="center" valign="top" class="title">SMS BULK, SMS TARGETED, SMS LBA CAMPAIGN</div></td>
+             <td width="10%"><div align="left" class="header"><apex:image url="{!$Resource.Logo}"/> </div></td></tr>
+         </table>
+          <table width="100%">
+                <tr>
+                    <td>Advertiser Name</td>
+                    <td>:</td>
+                    <td> {!orderRec[0].Advertiser_Name__c}</td>
+                    <td>Telephone</td>
+                    <td>:</td>
+                    <td> {!orderRec[0].Telephone__c}</td>
+                </tr>
+                 <tr>
+                    <td>Address</td>
+                    <td>:</td>
+                    <td> {!orderRec[0].Address__c}</td>
+                    <td>Fax</td>
+                    <td>:</td>
+                    <td> {!orderRec[0].Fax__c}</td>
+                </tr>
+                 <tr>
+                    <td>Product</td>
+                    <td>:</td>
+                    <td> {!orderRec[0].Brand_Product__c}</td>
+                    <td>Email</td>
+                    <td>:</td>
+                    <td> {!orderRec[0].Email__c}</td>
+                </tr>
+                 <tr>
+                    <td>PIC</td>
+                    <td>:</td>
+                    <td> {!orderRec[0].PIC__c}</td>
+                    <td>Quotation Number</td>
+                    <td>:</td>
+                    <td> {!orderRec[0].Quotation_Number__c}</td>
+                </tr>
+         </table>
+         <br></br>
+         <div style="text-decoration: underline">ORDER DETAILS</div>
+         <br></br>
+         <table id="IOM">
+                <tr>
+                    <th id="IOM" style="background-color: #f5f5f5; color: Black;border: 1px solid black;">Masking Sender**</th>
+                    <th id="IOM" style="background-color: #f5f5f5; color: Black;border: 1px solid black;">Profiling / Lokasi</th>
+                    <th id="IOM" style="background-color: #f5f5f5; color: Black;border: 1px solid black;">Channel*</th>
+                    <th id="IOM" style="background-color: #f5f5f5; color: Black;border: 1px solid black;">Delivery Date/Time</th>
+                    <th id="IOM" style="background-color: #f5f5f5; color: Black;border: 1px solid black;">Impression | Click</th>
+                    <th id="IOM" style="background-color: #f5f5f5; color: Black;border: 1px solid black;">SMS Per Day/Location</th>
+                    <th id="IOM" style="background-color: #f5f5f5; color: Black;border: 1px solid black;">Wording/LandingPage</th>
+                    <th id="IOM" style="background-color: #f5f5f5; color: Black;border: 1px solid black;">Placement</th>
+                </tr>
+                <apex:repeat value="{!coRec}" var="string" id="theRepeat">
+                <tr>
+                    <td id="IOM">
+                        <apex:outputText value="{!string.Masking_Sender_Brand__c}" id="Masking_Sender_Brand__c"/><br/>
+                     </td>
+                     <td id="IOM">
+                        <apex:outputText value="{!string.Profiling_Lokasi__c}" id="Profiling_Lokasi__c"/><br/>
+                     </td>
+                      <td id="IOM">
+                        <apex:outputText value="{!string.Channel__c}" id="Channel__c"/><br/>
+                     </td>
+                      <td id="IOM" >
+                          <apex:outputText value="{!string.Start_Campaign__c}  -  {!string.End_Campaign__c}" id="Delivery_Date_Time__c"/><br/>
+                      </td>
+                     <td id="IOM" >
+                         <apex:outputText value="{!string.Impression_Click__c}" id="Impression_Click__c"/><br/>
+                     </td>
+                     <td id="IOM" >
+                         <apex:outputText value="{!string.SMS_Per_Day_Location__c}" id="SMS_Per_Day_Location__c"/><br/>
+                     </td>
+                      <td id="IOM">
+                        <apex:outputText value="{!string.WORDING_PICTURE_VIDEO__c}" id="WORDING_PICTURE_VIDEO__c"/><br/>
+                     </td>
+                     <td id="IOM">
+                        <apex:outputText value="{!string.Placement__c}" id="Placement__c"/><br/>
+                     </td>
+                 </tr>
+                 </apex:repeat>
+         </table>
+         </apex:form>
+            <table width="100%">
+             <tr>
+             <td width="30%"><div align="left" valign="top" class="header">PT. TELEKOMUNIKASI SELULER</div></td>
+             <td width="30%"><div align="left" class="header">Nama Advertiser</div></td>
+             <td width="30%"><div align="left" class="header"></div></td>
+             </tr>
+             <tr>
+                 <td>
+                     <table border='0'>
+                         <tr>
+                             <td>Approved by:</td>
+                         </tr>
+                         <tr>
+                             <td height="20">
+                             </td>
+                         </tr>
+                         <tr>
+                             <td height="100">
+                             </td>
+                         </tr>
+                         <tr>
+                             <td> 
+                                  {!orderRec[0].Order_Owner__c}
+                             </td>
+                             <td>
+                                  {!orderRec[0].Owner_Manager__c}
+                             </td>
+                             <td>
+                                 {!$Label.Manager_Campaign_Operation}
+                             </td>
+                         </tr>
+                     </table>
+                 </td>
+                 <td>
+                     <table border='0'>
+                         <tr>
+                             <td valign="top">Ordered By</td>
+                         </tr>
+                         <tr>
+                             <td>
+                                 Advertiser
+                             </td>
+                         </tr>
+                         
+                         <tr>
+                             <td height="90">
+                             </td>
+                         </tr>
+                         <tr>
+                             <td>
+                                 {!orderRec[0].PIC__c}
+                             </td>
+                         </tr>
+                         <tr>
+                             <td>
+                                 {!orderRec[0].Advertiser_Name__c}
+                             </td>
+                         </tr>
+                     </table>
+                 </td>
+                 <td valign="center">
+                 <center>
+                         {!orderRec[0].Whitelist_and_UAT__c}<br></br>
+                         {!orderRec[0].PIC__c}: <br></br>
+                            {!orderRec[0].Telephone__c}
+                     </center>
+                 </td>
+             </tr>
+             <tr>
+                  <td>Date:</td>
+                  <td>Date:</td>
+                  <td>
+                  
+                  </td>
+             </tr>
+            
+         </table>
+         <br></br>
+Terms and Conditions : <Strong>"Jika terjadi gagal broadcast maka akan dilakukan broadcast ulang di waktu yang ditentukan oleh brand" "Wording, Picture dan Isi Url diluar tanggung jawab Telkomsel"</strong>
+<ol>
+<li>            
+Materi informasi / promosi tidak mengandung unsur minuman keras, maupun senjata api maupun yang mengandung unsur perjudian, pornografi, pelecehan, atau penghinaan  atas norma / unsur                      
+    SARA (Suku, Agama, Ras dan Antar Golongan) penipuan maupun penyesatan
+</li>
+<li>                     
+Pelanggan yang menerima materi informasi / promosi adalah mereka yang tidak berkeberatan untuk menerima materi informasi / promosi tersebut , dengan mekanisme pelanggan yang                       
+    berkeberatan akan mendaftarkan nomornya kepada Telkomsel untuk tidak diblast pada kesempatan berikutnya
+</li>
+<li>                     
+Materi informasi / promosi merupakan tanggung jawab klien, bukan tanggung jawab Telkomsel
+</li>
+<li>                    
+Jika terjadi gagal broadcast maka akan dilakukan broadcast ulang pada waktu yang ditentukan oleh brand dan disepakati Telkomsel
+</li>
+<li>                    
+Telkomsel sewaktu-waktu dapat menghentikan pengiriman SMS apabila terdapat unsur-unsur yang memenuhi perkara sebagaimana diatur dalam butir 1., dengan terlebih dahulu                      
+    memberitahukan kepada klien; atas pemberitahuan dimaksud, klien wajib menyampaikan tanggapannya kepada Telkomsel selambat - lambatnya dalam waktu 1x24 jam terhitung sejak                      
+    pemberitahuan dimaksud diterima klien; apabila setelah 1x24 jam klien tidak menyampaikan tanggapan, maka Telkomsel dapat menghentikan  pengiriman SMS dan klien dianggap telah                      
+    menyetujui. Penghentian pengiriman SMS dilakukan setelah disepakati oleh kedua belah pihak                      
+</li>
+<li>
+Additional Surcharge : 
+    <ol class="letterList" type="a">                     
+    <li>100% dari publish rate jika FCO (Form Campaign Order) diterima pada hari yang sama dengan jadwal campaign berjalan   </li>                    
+    <li>75% dari publish rate jika FCO (Form Campaign Order) diterima 1 hari sebelum jadwal campaign berjalan         </li>               
+    <li>Nilai Diskon tidak berlaku untuk additional surcharge</li>
+    </ol>
+</li>
+<li>                
+* Beri tanda √ pada pilihan                         
+**  isi sesuai keinginan                            
+*** Max 300 KB                          
+</li>
+</ol>
+     </body>
+   </html>   
+</apex:page>

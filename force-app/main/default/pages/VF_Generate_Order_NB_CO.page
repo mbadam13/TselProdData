@@ -1,0 +1,384 @@
+<apex:page StandardController="Order_Non_Bulk__c" extensions="GenerateOrderCO_NB_Controller" renderAs="PDF" showHeader="false" sidebar="false" standardStylesheets="false" applyBodyTag="false" applyHtmlTag="false">
+  <html>    
+    <head>
+        <style>      
+             @page {
+                size: A4 landscape;
+               margin-right: 15mm;
+               margin-left: 20mm;
+               margin-top: 5mm;
+               margin-bottom: 10mm;
+                 @bottom-right {
+                  content: element(footer);
+                                  }
+            } 
+            
+                div.header {
+                
+                }
+               div.footer {
+                               position: running(footer);
+                      }
+                                     .pagenumber:before {
+                                        content: counter(page);
+                       }
+                                   .pagecount:before {
+                             content: counter(pages);
+                        }
+            
+            .page-break {
+                display:block;
+                page-break-after:always;
+            }
+            body {
+                font-family: 'Verdana', 'Geneva', sans-serif;
+                font-size: 12px;
+            }
+            
+           
+            .companyName { font: bold 25px; color: red; }
+            .title {font: bold 18px; color: black;} 
+            .regFont { font: 10px;}
+            .h3Green{
+            background-color:#064172;
+            padding:2px;
+            font-size:12px;
+            text-indent:14px;
+            color:#FFFFFF;
+            font-family: 'Verdana', 'Geneva', sans-serif;
+            }
+            
+            .italicBoldText 
+            { 
+                font-style: italic; 
+                font-weight: bold
+            }
+           
+            #table1 {top: 15px;}
+            #dimg1 {position:fixed;} 
+
+           
+            table#IOM{
+                font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+                border-collapse:collapse;
+                width: 100%;
+                border: 1px solid black;
+                padding: 2px;
+                
+                }
+                .tab-2{
+    display:inline-block; width:TWO-TAB-WIDTH;
+                }               
+                
+            td#IOM{
+                border: 1px solid black;
+                padding: 2px;
+                font-size: 12px;
+                text-align: left; 
+                word-break: break-all;
+            }
+            td.price {
+                  number-format: "###,##0.00", "price";
+                  /* price is actually redundant as this format would be the default */
+              }
+           
+            .ol_d 
+            {
+            list-style-type: lower-alpha;
+            }
+            
+            
+            .data_row
+            {
+            width: 18px !important; 
+            background-color: #FFFFFF;
+            }
+           .letterList{
+                list-style-type: lower-alpha;
+            }
+            
+            </style>
+    </head>
+    <body>
+    
+    <apex:form >
+         <table width="100%">
+             <tr>
+             <td width="90"><div align="center" valign="top" class="title">FORM CAMPAIGN ORDER</div></td>
+             <td width="10%"><div align="left" class="header"><apex:image url="{!$Resource.Logo}"/> </div></td></tr>
+         </table>
+          <table width="100%" border="0">
+                <tr>
+                    <td width="5%">Media Seller Name</td>
+                    <td width="1%">:</td>
+                    <td width="25%"> {!IF(ISNULL(orderRec[0].Agency__r.Parent.Name),orderRec[0].Agency__r.Name,orderRec[0].Agency__r.Parent.Name)}</td>
+                    <td width="5%">Telephone</td>
+                    <td width="1%">:</td>
+                    <td width="25%"> {!orderRec[0].Telephone__c}</td>
+                </tr>
+                 <tr>
+                    <td>Address</td>
+                    <td>:</td>
+                    <td width="25%"> {!orderRec[0].Address__c}</td>
+                    <td>Fax</td>
+                    <td>:</td>
+                    <td> {!orderRec[0].Fax__c}</td>
+                </tr>
+                 <tr>
+                    <td>Agency</td>
+                    <td>:</td>
+                    <td>
+                    {! IF(orderRec[0].Agency__r.Legal_Name__c!= null,orderRec[0].Agency__r.Legal_Name__c,orderRec[0].Agency__r.Name)}
+                    </td>
+                    <td>Email</td>
+                    <td>:</td>
+                    <td>{!orderRec[0].Email__c}</td>
+                </tr>
+                 <tr>
+                    <td>Brand</td>
+                    <td>:</td>
+                    <td>{!orderRec[0].Brand__r.Name}</td>
+
+                </tr>
+         </table>
+         <br></br>
+         <div style="text-decoration: underline">ORDER DETAILS</div>
+         <br></br>
+         <table id="IOM"  cellspacing="10px">
+                <tr>
+                    <th id="IOM" style="background-color: #f5f5f5; color: Black;border: 1px solid black;">No</th>
+                    <th id="IOM" style="background-color: #f5f5f5; color: Black;border: 1px solid black;">Masking Sender**</th>
+                    <th id="IOM" style="background-color: #f5f5f5; color: Black;border: 1px solid black;">Profiling / Lokasi</th>
+                    <th id="IOM" style="background-color: #f5f5f5; color: Black;border: 1px solid black;">Channel*</th>
+                    <th id="IOM" style="background-color: #f5f5f5; color: Black;border: 1px solid black;">Delivery Date/Time</th>
+                    <th id="IOM" style="background-color: #f5f5f5; color: Black;border: 1px solid black;"># of Broadcast</th>
+                    <th id="IOM" style="background-color: #f5f5f5; color: Black;border: 1px solid black;">Wording/LandingPage</th>
+                </tr>
+                <apex:variable value="{!1}" var="rowNum"/>
+                <apex:repeat value="{!coRec}" var="string" id="theRepeat">
+                <tr>
+                   <td id="IOM">
+                        {!rowNum}<br/>
+                        <apex:variable var="rowNum" value="{!rowNum + 1}"/>
+                    </td>
+                    <td id="IOM">
+                        <apex:outputText value="{!string.Masking_Sender_Brand__c}" id="Masking_Sender_Brand__c"/><br/>
+                     </td>
+                     <td id="IOM">
+                         <table>
+                             <tr>
+                                 <td>
+                                    Gender<br/>
+                                  </td>
+                                  <td>:</td>
+                                  <td>
+                                     <apex:outputText value="{!string.Gender__c}" id="Gender__c"/><br/>
+                                  </td>
+                             </tr>
+                              <tr>
+                                 <td>
+                                    Umur<br/>
+                                  </td>
+                                  <td>:</td>
+                                  <td>
+                                     <apex:outputText value="{!string.Umur__c}" id="Umur__c"/><br/>
+                                  </td>
+                             </tr>
+                              <tr>
+                                 <td>
+                                    ARPU<br/>
+                                  </td>
+                                  <td>:</td>
+                                  <td>
+                                      <apex:outputText value="{!string.ARPU__c}" id="ARPU__c"/><br/>
+                                  </td>
+                             </tr>
+                              <tr>
+                                 <td>
+                                    Religion <br/>
+                                  </td>
+                                  <td>:</td>
+                                  <td>
+                                      <apex:outputText value="{!string.Religion__c}" id="Religion__c"/><br/>
+                                  </td>
+                             </tr>
+                              <tr>
+                                 <td>
+                                    Lokasi<br/>
+                                  </td>
+                                  <td>:</td>
+                                  <td>
+                                    <apex:outputText value="{!string.Profiling_Lokasi__c}" id="Profiling_Lokasi__c"/><br/>
+                                  </td>
+                             </tr>
+                         </table>
+                     </td>
+                      <td id="IOM">
+                        <apex:outputText value="{!string.Channel__c}" id="Channel__c"/><br/>
+                     </td>
+                      <td id="IOM" >
+                          <table>
+                              <tr>
+                                  <td>
+                                      Delivery Start Date<br/>
+                                       
+                                  </td>
+                              </tr>
+                              <tr>
+                                   <td>
+                                      <apex:outputText value="{0, date,EEEE',' d MMMM yyyy HH:mm:ss}" id="Delivery_Date_Time_Start__c">
+                                            <apex:param value="{!string.Start_Campaign__c+offset}"/>
+                                        </apex:outputText>
+                                      <br/>
+                                      Delivery End Date<br/>
+                                       <apex:outputText value="{0, date,EEEE',' d MMMM yyyy HH:mm:ss}" id="Delivery_Date_Time_End__c">
+                                            <apex:param value="{!string.End_Campaign__c+offset}"/>
+                                        </apex:outputText>
+                                      <br/>
+                                  </td>
+                              </tr>
+                          </table>
+                      </td>
+                     <td id="IOM" >
+                         <apex:outputText value="{!string.of_Broadcast__c}" id="of_Broadcast__c"/><br/>
+                     </td>
+                      <td id="IOM">
+                        <apex:outputText value="{!string.WORDING_PICTURE_VIDEO__c}" id="WORDING_PICTURE_VIDEO__c"/><br/>
+                     </td>
+
+                 </tr>
+                 </apex:repeat>
+         </table>
+         </apex:form>
+            <table width="100%">
+             <tr>
+             
+             <td width="30%"><div align="left" class="header">{!orderRec[0].Account__r.Name}</div></td>
+             <td width="30%"><div align="left" valign="top" class="header">PT. TELEKOMUNIKASI SELULAR</div></td>
+             <td width="30%"><div align="left" class="header"></div></td>
+             </tr>
+             <tr>
+             <td>
+                     <table border='0'>
+                         <tr>
+                             <td>Ordered By:</td>
+                         </tr>
+                         
+                         <tr>
+                             <td>
+                             </td>
+                               <td>
+                                 
+                             </td>
+                         </tr>
+                         
+                         <tr>
+                             <td height="110">
+                             </td>
+                         </tr>
+                         <tr>
+                             <td>
+                                {!orderRec[0].Media_Seller_Manager__c }
+                             </td>
+                              <td>
+
+                             </td>
+                         </tr>
+                         <tr>
+                             <td>
+                                 {!orderRec[0].Media_Seller_Manager_Title__c }
+                             </td>
+
+                         </tr>
+                         <tr>
+                             <td>
+                             </td>
+                             <td>
+
+                             </td>
+                         </tr>
+                     </table>
+                 </td>
+                 <td>
+                     <table border='0'>
+                         <tr>
+                             <td>Approved by:</td>
+                         </tr>
+                         <tr>
+                             <td height="20">
+                             </td>
+                         </tr>
+                         <tr>
+                              <td height="100">
+                             <!--<img src="{! IF(orderRec[0].Status_Approval__c== "Approved", $Resource.Approved, IF(orderRec[0].Status_Approval__c=="Rejected", $Resource.Rejected, $Resource.Blank))}" width="128" height="70" />. -->
+                             <apex:image id="theImage" value="{!IF(orderRec[0].Status_Approval__c== "Approved",'/servlet/servlet.FileDownload?file=0152u0000004GMv',IF(orderRec[0].Status_Approval__c=="Rejected",'/servlet/servlet.FileDownload?file=0152u0000004GMx','/servlet/servlet.FileDownload?file=0152u0000004GMw'))}" width="128" height="70"/></td>
+                              <td height="100">
+                             <!--<img src="{! IF(orderRec[0].Status_Approval__c== "Approved", $Resource.Approved, IF(orderRec[0].Status_Approval__c=="Rejected", $Resource.Rejected, $Resource.Blank))}" width="128" height="70" />. -->
+                                 <apex:image id="theImage1" value="{!IF(orderRec[0].Status_Approval__c== "Approved",'/servlet/servlet.FileDownload?file=0152u0000004GMv',IF(orderRec[0].Status_Approval__c=="Rejected",'/servlet/servlet.FileDownload?file=0152u0000004GMx','/servlet/servlet.FileDownload?file=0152u0000004GMw'))}" width="128" height="70"/>
+                             
+                             </td>
+                         </tr>
+                         <tr>
+                             <td>
+                                 {!$Label.Manager_Partnership}
+                             </td>
+                             <td>
+                                 {!$Label.Manager_Campaign_Operation}
+                             </td>
+                         </tr>
+                         <tr>
+                             <td>
+                                 Mgr. Digital Advertising Media Seller Partnership
+                             </td>
+                             <td>
+                                 Mgr. Digital Advertising Campaign Operation
+                             </td>
+                         </tr>
+                     </table>
+                 </td>
+                 
+                 <td valign="center">
+                 <center>
+                         UAT Client : {!orderRec[0].Whitelist_and_UAT__c}<br></br>
+                         UAT Internal : {!orderRec[0].Whitelist_and_UAT_Media_Seller__c}<br></br>
+                     </center>
+                 </td>
+             </tr>
+            
+         </table>
+         <br></br>
+         <!--<apex:image id="theImage" value="{!IF(orderRec[0].Status_Approval__c== "Approved",'/servlet/servlet.FileDownload?file=0152u0000004GMv','/servlet/servlet.FileDownload?file=0152u0000004GMx')}"/>-->
+Advertising Term and Condition:
+<ol>
+<li>            
+Materi informasi / promosi tidak mengandung unsur minuman keras, maupun senjata api maupun yang mengandung unsur perjudian, pornografi, pelecehan, atau penghinaan  atas norma / unsur SARA (Suku, Agama, Ras dan Antar Golongan) penipuan maupun penyesatan
+</li>
+<li>                     
+Pelanggan yang menerima materi informasi / promosi adalah mereka yang tidak berkeberatan untuk menerima materi informasi / promosi tersebut , dengan mekanisme pelanggan yang berkeberatan akan mendaftarkan nomornya kepada Telkomsel untuk tidak diblast pada kesempatan berikutnya
+</li>
+<li>                     
+Materi informasi / promosi merupakan tanggung jawab klien, bukan tanggung jawab Telkomsel
+</li>
+<li>                    
+Jika terjadi gagal broadcast maka akan dilakukan broadcast ulang pada waktu yang ditentukan oleh brand dan disepakati Telkomsel
+</li>
+<li>                    
+Telkomsel sewaktu-waktu dapat menghentikan pengiriman SMS apabila terdapat unsur-unsur yang memenuhi perkara sebagaimana diatur dalam butir 1., dengan terlebih dahulu                      
+    memberitahukan kepada klien; atas pemberitahuan dimaksud, klien wajib menyampaikan tanggapannya kepada Telkomsel selambat - lambatnya dalam waktu 1x24 jam terhitung sejak                      
+    pemberitahuan dimaksud diterima klien; apabila setelah 1x24 jam klien tidak menyampaikan tanggapan, maka Telkomsel dapat menghentikan  pengiriman SMS dan klien dianggap telah                      
+    menyetujui. Penghentian pengiriman SMS dilakukan setelah disepakati oleh kedua belah pihak                      
+</li>
+<li>
+Additional Surcharge : 
+    <ol class="letterList" type="a">                     
+    <li>100% dari publish rate jika FCO (Form Campaign Order) diterima pada hari yang sama dengan jadwal campaign berjalan</li>                    
+    <li>75% dari publish rate jika FCO (Form Campaign Order) diterima 1 hari sebelum jadwal campaign berjalan</li>               
+    <li>Nilai Diskon tidak berlaku untuk additional surcharge</li>
+    </ol>
+</li>
+<li>Materi FCO yang sudah diproses submit tidak dapat direvisi</li>
+
+</ol>
+     </body>
+   </html>   
+</apex:page>

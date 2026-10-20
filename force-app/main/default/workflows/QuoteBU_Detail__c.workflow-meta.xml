@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldUpdates>
+        <fullName>Update_Addtional_Fee_QBUD</fullName>
+        <field>Temp_Additional_Fee__c</field>
+        <formula>Additional_fee__c</formula>
+        <name>Update Addtional Fee - QBUD</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Temp_Total_Price_USD_QBUD</fullName>
+        <field>Temp_Additional_Fee_USD__c</field>
+        <formula>Additional_Fee_USD__c</formula>
+        <name>Update Temp Total Price USD - QBUD</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <rules>
+        <fullName>Update Temp Additional Fee - QBUD</fullName>
+        <actions>
+            <name>Update_Addtional_Fee_QBUD</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <formula>1=1</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Update Total price - QBUD</fullName>
+        <actions>
+            <name>Update_Temp_Total_Price_USD_QBUD</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <formula>1=1</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+</Workflow>

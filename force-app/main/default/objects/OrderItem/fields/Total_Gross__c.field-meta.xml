@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Total_Gross__c</fullName>
+    <formula>IF(
+   AND(
+     TEXT(Order.Type) = &apos;Opportunity&apos;, 
+     TEXT(Order.Type) = &apos;&apos;
+   ), 
+ListPrice * Quantity, 
+UnitPrice * Quantity 
+
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Total Gross</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <type>Currency</type>
+</CustomField>

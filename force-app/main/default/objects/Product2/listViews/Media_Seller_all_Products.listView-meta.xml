@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Media_Seller_all_Products</fullName>
+    <columns>PRODUCT2.NAME</columns>
+    <columns>PRODUCT2.CUSTOMER_PRODUCT_ID</columns>
+    <columns>PRODUCT2.DESCRIPTION</columns>
+    <columns>PRODUCT2.FAMILY</columns>
+    <columns>Buying_Method__c</columns>
+    <columns>Pricing_Model__c</columns>
+    <columns>Product_Channel__c</columns>
+    <columns>Product_id_number__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>PRODUCT2.ACTIVE</field>
+        <operation>equals</operation>
+        <value>1</value>
+    </filters>
+    <filters>
+        <field>Grouping__c</field>
+        <operation>equals</operation>
+        <value>Media Seller</value>
+    </filters>
+    <label>Media Seller all Products</label>
+    <sharedTo>
+        <role>Campaign_Operation_Manager</role>
+        <role>Campaign_Operation_Team</role>
+        <role>MS_SMC_Manager</role>
+        <role>Media_Seller_Team</role>
+    </sharedTo>
+</ListView>

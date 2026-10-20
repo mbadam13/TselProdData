@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IsLead__c</fullName>
+    <defaultValue>true</defaultValue>
+    <description>When working with Leads and Contacts (and Opportunities and Accounts), we often need to know which ones came from Lead Conversion, and which came did not.</description>
+    <label>IsLead</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

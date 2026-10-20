@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Operation_User_PrivyID__c</fullName>
+    <externalId>false</externalId>
+    <formula>/* $Label.OPS_User_s_PrivyID
+Request by: Yohanes
+Date modified: 7/1/2026
+Description: mengganti approver dari Mas Hari (pensiun) ke Mas Saeful
+*/
+$Label.OPS_User_s_PrivyID_New</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>PrivyID approver #2</inlineHelpText>
+    <label>Operation User PrivyID</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

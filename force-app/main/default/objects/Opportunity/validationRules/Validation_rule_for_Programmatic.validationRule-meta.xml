@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Validation_rule_for_Programmatic</fullName>
+    <active>false</active>
+    <description>manager product remarks to approve if opportunity have programmatic product
+// 2025-05-15 request inactive oleh mas Yohanes via email</description>
+    <errorConditionFormula>AND(
+ISPICKVAL( StageName , &quot;Negotiation&quot;), NOT(ISPICKVAL(Manager_Product_Remarks__c , &quot;Approved&quot;)), Programmatic_Product__c = TRUE, 
+ISBLANK( Programmatic_Notes__c) )</errorConditionFormula>
+    <errorDisplayField>Manager_Product_Remarks__c</errorDisplayField>
+    <errorMessage>programmatic must approved and fill deal id</errorMessage>
+</ValidationRule>

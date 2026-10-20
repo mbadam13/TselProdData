@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Technology_Partner_Bundling_Scheme</fullName>
+    <active>true</active>
+    <label>Technology Partner (Bundling Scheme)</label>
+    <picklistValues>
+        <picklist>Approval_Status__c</picklist>
+        <values>
+            <fullName>No Discount Apply</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+</RecordType>

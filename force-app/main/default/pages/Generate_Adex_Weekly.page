@@ -1,0 +1,65 @@
+<!--
+  @description       : 
+  @author            : Andre Prasetya
+  @group             : 
+  @last modified on  : 11-14-2022
+  @last modified by  : Andre Prasetya
+-->
+
+<apex:page lightningStyleSheets="true" controller="GenerateAdexWeekly" action="{!execute}">
+	<script type="text/javascript">
+        function doRedirect(){
+            window.history.back();
+        }
+    </script>
+    
+    <div align="left" >
+    	<apex:sectionHeader title="Generate Adex Transaction Weekly" />
+    </div>
+    <apex:pageMessages />
+    
+    <apex:form >
+        <apex:pageBlock id="idPageBlock">
+            <apex:pageBlockSection rendered="{!batchStatusBool1}">
+                <apex:actionStatus id="idActionStatus1" startText="Checking…" />
+               	<apex:outputLabel > Generate Adex Transaction Weekly 1 Status is <b>{!batchStatus1}</b> </apex:outputLabel>
+                <apex:actionPoller interval="5" action="{!checkBatchStatus1}" enabled="{!pollerBool1}" reRender="idPageBlock" status="idActionStatus1"/>
+            </apex:pageBlockSection>
+            
+            <apex:pageBlockSection rendered="{!batchStatusBool2}">
+                <apex:actionStatus id="idActionStatus2" startText="Checking…" />
+               	<apex:outputLabel > Generate Adex Transaction Weekly 2 Status is <b>{!batchStatus2}</b> </apex:outputLabel>
+                <apex:actionPoller interval="5" action="{!checkBatchStatus2}" enabled="{!pollerBool2}" reRender="idPageBlock" status="idActionStatus2"/>
+            </apex:pageBlockSection>
+
+            <apex:pageBlockSection rendered="{!batchStatusBool3}">
+                <apex:actionStatus id="idActionStatus3" startText="Checking…" />
+               	<apex:outputLabel > Generate Adex Transaction Weekly 3 Status is <b>{!batchStatus3}</b> </apex:outputLabel>
+                <apex:actionPoller interval="5" action="{!checkBatchStatus3}" enabled="{!pollerBool3}" reRender="idPageBlock" status="idActionStatus3"/>
+            </apex:pageBlockSection>
+
+            <apex:pageBlockSection rendered="{!batchStatusBool4}">
+                <apex:actionStatus id="idActionStatus4" startText="Checking…" />
+               	<apex:outputLabel > Generate Adex Transaction Weekly 4 Status is <b>{!batchStatus4}</b> </apex:outputLabel>
+                <apex:actionPoller interval="5" action="{!checkBatchStatus4}" enabled="{!pollerBool4}" reRender="idPageBlock" status="idActionStatus4"/>
+            </apex:pageBlockSection>
+
+            <apex:pageBlockSection rendered="{!batchStatusBool5}">
+                <apex:actionStatus id="idActionStatus5" startText="Checking…" />
+               	<apex:outputLabel > Generate Adex Transaction Weekly 5 Status is <b>{!batchStatus5}</b> </apex:outputLabel>
+                <apex:actionPoller interval="5" action="{!checkBatchStatus5}" enabled="{!pollerBool5}" reRender="idPageBlock" status="idActionStatus5"/>
+            </apex:pageBlockSection>
+
+            <apex:pageBlockSection rendered="{!batchStatusBool6}">
+                <apex:actionStatus id="idActionStatus6" startText="Checking…" />
+               	<apex:outputLabel > Generate Adex Transaction Weekly 6 Status is <b>{!batchStatus6}</b> </apex:outputLabel>
+                <apex:actionPoller interval="5" action="{!checkBatchStatus6}" enabled="{!pollerBool6}" reRender="idPageBlock" status="idActionStatus6"/>
+            </apex:pageBlockSection>
+            
+            <div style="text-align: left">
+		    	<apex:commandButton value="Back" oncomplete="doRedirect();"/>   
+			</div>
+        </apex:pageBlock>
+    </apex:form>
+   
+</apex:page>

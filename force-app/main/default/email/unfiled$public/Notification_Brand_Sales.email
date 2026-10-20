@@ -1,0 +1,4 @@
+Brand " {!Task.Brand_Name__c} " already completed, please check.
+
+Or click link below
+{!Task.Link}

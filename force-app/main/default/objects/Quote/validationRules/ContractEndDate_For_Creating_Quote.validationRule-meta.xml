@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ContractEndDate_For_Creating_Quote</fullName>
+    <active>true</active>
+    <errorConditionFormula>End_Date__c &gt; Opportunity.Contract_End_Date__c</errorConditionFormula>
+    <errorMessage>Please renew the Contract. Quotation End Date cannot exceed Contract End Date.</errorMessage>
+</ValidationRule>

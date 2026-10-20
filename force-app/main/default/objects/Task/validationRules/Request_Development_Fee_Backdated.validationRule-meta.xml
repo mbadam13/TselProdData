@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Request_Development_Fee_Backdated</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+OR(
+ISNEW(),
+ISCHANGED(  ActivityDate  )),
+ActivityDate  &lt; TODAY(),
+Subject =&apos;Request Development Fee&apos;)</errorConditionFormula>
+    <errorDisplayField>ActivityDate</errorDisplayField>
+    <errorMessage>Due Date tidak boleh backdated</errorMessage>
+</ValidationRule>

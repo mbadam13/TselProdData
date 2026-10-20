@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Post_Campaign_Basic_Cannot_Be_Changed</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+RecordType.Name = &apos;Basic&apos;,
+OR(
+$Profile.Name = &apos;Marketing Custom User&apos;,
+$Profile.Name = &apos;Marketing Manager&apos;))</errorConditionFormula>
+    <errorMessage>Post Campaign Basic tidak bisa diedit oleh Marketing</errorMessage>
+</ValidationRule>

@@ -1,0 +1,35 @@
+<!--
+  @description       : 
+  @author            : Andre Prasetya
+  @group             : 
+  @last modified on  : 09-15-2022
+  @last modified by  : Andre Prasetya
+-->
+
+<apex:page lightningStyleSheets="true" controller="DeleteAdexDaily" action="{!execute}">
+	<script type="text/javascript">
+        function doRedirect(){
+            window.history.back();
+        }
+    </script>
+    
+    <div align="left" >
+    	<apex:sectionHeader title="Delete Adex Daily" />
+    </div>
+    <apex:pageMessages />
+    
+    <apex:form >
+        <apex:pageBlock id="idPageBlock">
+            <apex:pageBlockSection rendered="{!batchStatusBool}">
+                <apex:actionStatus id="idActionStatus" startText="Checking…" />
+                	<apex:outputLabel >Delete Adex Transaction Status is <b>{!batchStatus}</b> </apex:outputLabel>
+                <apex:actionPoller interval="5" action="{!checkBatchStatus}" enabled="{!pollerBool}" reRender="idPageBlock" status="idActionStatus"/>
+
+            </apex:pageBlockSection>
+            <div style="text-align: left">
+		    	<apex:commandButton value="Back" oncomplete="doRedirect();"/>   
+			</div>
+        </apex:pageBlock>
+    </apex:form>
+
+</apex:page>

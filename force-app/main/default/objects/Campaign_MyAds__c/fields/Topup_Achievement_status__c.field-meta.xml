@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Topup_Achievement_status__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF( Target_User_Topup_Voucher__c = 0, &apos;&apos;,
+IF(  User_Top_Up__c &gt;= Target_User_Topup_Voucher__c , &apos;Achiev&apos;, &apos;Not Achiev&apos;))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Topup Achievement status</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

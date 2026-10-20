@@ -1,0 +1,9 @@
+Dear {!Opportunity.Opportunity_Owner_Name__c},
+
+Congratulations !!! 
+The Account {!Opportunity.Account}  for opportunity {!Opportunity.Name} is Close Won. It's time to activate the contract, and don't forget to make SOA and Quotation.
+for more information click link below.
+{!Opportunity.Link}
+
+Regards,
+Salesforce

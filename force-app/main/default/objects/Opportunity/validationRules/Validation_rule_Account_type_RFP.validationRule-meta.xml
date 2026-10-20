@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Validation_rule_Account_type_RFP</fullName>
+    <active>false</active>
+    <description>Validation for RFP Stage</description>
+    <errorConditionFormula>AND(
+	ISPICKVAL( StageName , &quot;Request for Proposal&quot;),
+	OR(
+		AND(
+			ISPICKVAL( Account_Type__c , &quot;Advertiser&quot;),
+			OR(
+				ISBLANK(  Brand__c  ),
+				ISNULL( Start_Period__c ),
+				ISNULL( End_Period__c )
+				
+			)
+		),
+		AND(
+			ISPICKVAL( Account_Type__c , &quot;Agency&quot;),
+			OR(
+				ISBLANK( Advertiser__c ),
+				ISBLANK(  Brand__c  ),
+				ISNULL( Start_Period__c ),
+				ISNULL( End_Period__c )
+				
+			)
+		),
+		AND(
+			ISPICKVAL( Account_Type__c , &quot;Reseller&quot;),
+			OR(
+				ISBLANK( Advertiser__c ),
+				ISBLANK(  Brand__c  ),
+				ISNULL( Start_Period__c ),
+				ISNULL( End_Period__c )
+				
+			)
+		)
+	)
+)</errorConditionFormula>
+    <errorMessage>Brand, Start and End Period and Advertiser Cannot Empty</errorMessage>
+</ValidationRule>

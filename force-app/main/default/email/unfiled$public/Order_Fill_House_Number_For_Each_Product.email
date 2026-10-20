@@ -1,0 +1,14 @@
+Dear Tim Admin Operation,
+
+Order: {!Order.OrderNumber} telah dibuat oleh sistem, tolong diinputkan data House Number untuk setiap produk. 
+
+Jika House Number belum ada, silahkan buat data House Number baru terlebih dahulu (Version dan Brand).
+
+Order Number : {!Order.OrderNumber}
+Order Link : {!Order.Link}
+Opportunity Name : {!Order.Opportunity}
+
+Create new House Number click: https://digiads--pc1.sandbox.lightning.force.com/lightning/o/House_Number__c/list?filterName=All
+
+Regards,
+Salesforce

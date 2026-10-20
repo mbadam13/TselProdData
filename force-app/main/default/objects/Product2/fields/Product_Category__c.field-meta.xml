@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Product_Category__c</fullName>
+    <label>Product Category</label>
+    <required>true</required>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Business_Product__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Advertising</fullName>
+                <default>false</default>
+                <label>Advertising</label>
+            </value>
+            <value>
+                <fullName>Tadex</fullName>
+                <default>false</default>
+                <label>Tadex</label>
+            </value>
+            <value>
+                <fullName>RCS</fullName>
+                <default>false</default>
+                <label>RCS</label>
+            </value>
+            <value>
+                <fullName>IPTV</fullName>
+                <default>false</default>
+                <label>IPTV</label>
+            </value>
+            <value>
+                <fullName>Display</fullName>
+                <default>false</default>
+                <label>Display</label>
+            </value>
+            <value>
+                <fullName>Data</fullName>
+                <default>false</default>
+                <label>Data</label>
+            </value>
+            <value>
+                <fullName>Sponsorship</fullName>
+                <default>false</default>
+                <label>Sponsorship</label>
+            </value>
+            <value>
+                <fullName>OTT</fullName>
+                <default>false</default>
+                <label>OTT</label>
+            </value>
+            <value>
+                <fullName>Social Media Ads</fullName>
+                <default>false</default>
+                <label>Social Media Ads</label>
+            </value>
+            <value>
+                <fullName>Programmatic</fullName>
+                <default>false</default>
+                <label>Programmatic</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Digital Media</controllingFieldValue>
+            <controllingFieldValue>TV Media</controllingFieldValue>
+            <controllingFieldValue>Wholesale Data</controllingFieldValue>
+            <valueName>Advertising</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Digital Media</controllingFieldValue>
+            <valueName>Tadex</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Digital Media</controllingFieldValue>
+            <valueName>RCS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Digital Media</controllingFieldValue>
+            <valueName>Display</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Digital Media</controllingFieldValue>
+            <valueName>Data</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Digital Media</controllingFieldValue>
+            <controllingFieldValue>TV Media</controllingFieldValue>
+            <valueName>OTT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Digital Media</controllingFieldValue>
+            <valueName>Social Media Ads</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Digital Media</controllingFieldValue>
+            <valueName>Programmatic</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TV Media</controllingFieldValue>
+            <valueName>IPTV</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

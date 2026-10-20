@@ -1,0 +1,10 @@
+Hello,
+
+Proposal untuk Order Non Bulk {!Order_Non_Bulk__c.Name}  telah disetujui
+
+Klik link dibawah untuk informasi lebih lanjut
+Link:
+{!Order_Non_Bulk__c.Link}
+
+Terimakasih,
+Salesforce

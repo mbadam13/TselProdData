@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DIRECT_SALES_ACTUAL_ALL</fullName>
+    <columns>NAME</columns>
+    <columns>Opportunity__c</columns>
+    <columns>Unique_ID__c</columns>
+    <columns>Month__c</columns>
+    <columns>Group_Type__c</columns>
+    <columns>Type__c</columns>
+    <columns>Sales__c</columns>
+    <columns>OWNER.LAST_NAME</columns>
+    <columns>Amount__c</columns>
+    <columns>Usage__c</columns>
+    <columns>Amount_Report__c</columns>
+    <columns>Probability__c</columns>
+    <columns>CREATED_DATE</columns>
+    <columns>LAST_UPDATE</columns>
+    <columns>Inventory_Layanan__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>MST_Type__c</field>
+        <operation>equals</operation>
+    </filters>
+    <filters>
+        <field>Group_Type__c</field>
+        <operation>equals</operation>
+        <value>Actual</value>
+    </filters>
+    <filters>
+        <field>Month__c</field>
+        <operation>contains</operation>
+        <value>APR 2024</value>
+    </filters>
+    <filters>
+        <field>Sales__c</field>
+        <operation>contains</operation>
+        <value>Affandi</value>
+    </filters>
+    <label>DIRECT SALES ACTUAL ALL</label>
+</ListView>

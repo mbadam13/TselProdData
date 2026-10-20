@@ -1,0 +1,9 @@
+Hello,
+
+The proposal for opportunity {!Opportunity.Name} was approved and the opportunity is already close won.
+please check link below for more information.
+Opportunity:
+{!Opportunity.Link}
+
+Regards,
+Salesforce

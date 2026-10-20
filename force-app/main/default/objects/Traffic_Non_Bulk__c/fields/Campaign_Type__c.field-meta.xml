@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Campaign_Type__c</fullName>
+    <label>Campaign Type</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>SMS BROADCAST</fullName>
+                <default>false</default>
+                <label>SMS BROADCAST</label>
+            </value>
+            <value>
+                <fullName>SMS TARGETED</fullName>
+                <default>false</default>
+                <label>SMS TARGETED</label>
+            </value>
+            <value>
+                <fullName>LBA ON Location</fullName>
+                <default>false</default>
+                <label>LBA ON Location</label>
+            </value>
+            <value>
+                <fullName>LBA OFF Location</fullName>
+                <default>false</default>
+                <label>LBA OFF Location</label>
+            </value>
+            <value>
+                <fullName>MMS BROADCAST</fullName>
+                <default>false</default>
+                <label>MMS BROADCAST</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

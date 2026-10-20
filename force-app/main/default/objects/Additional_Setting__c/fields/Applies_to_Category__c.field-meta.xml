@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Applies_to_Category__c</fullName>
+    <label>Applies to Category</label>
+    <required>true</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Object_Name__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>General</fullName>
+                <default>false</default>
+                <label>General</label>
+            </value>
+            <value>
+                <fullName>Specific</fullName>
+                <default>false</default>
+                <label>Specific</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Monthly_Programmatic_Traffic__c</controllingFieldValue>
+            <controllingFieldValue>MonthlyTTDTraffic__c</controllingFieldValue>
+            <controllingFieldValue>Monthly_Discount_Inventory_Seller__c</controllingFieldValue>
+            <controllingFieldValue>Monthly_Special_Price_Allocation__c</controllingFieldValue>
+            <controllingFieldValue>Revenue_Calculation_for_Discount_Inventory__c</controllingFieldValue>
+            <controllingFieldValue>Monthly_Client_Traffic__c</controllingFieldValue>
+            <valueName>Specific</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Monthly_Discount_Inventory_Seller__c</controllingFieldValue>
+            <controllingFieldValue>Monthly_Special_Price_Allocation__c</controllingFieldValue>
+            <controllingFieldValue>VAT</controllingFieldValue>
+            <valueName>General</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

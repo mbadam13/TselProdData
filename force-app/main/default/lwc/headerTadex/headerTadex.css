@@ -1,0 +1,555 @@
+body {
+  font-family: "Poppins", sans-serif !important;
+  margin: 0;
+  padding: 0;
+}
+
+.logo {
+  display: none;
+}
+
+[flowruntime-flow_flow-host] {
+  font-family: 'Poppins';
+}
+
+.title-mobile {
+  display: none;
+}
+
+.message-mobile {
+  display: none;
+}
+
+.modal-button {
+  display: none;
+}
+
+.text-informasi {
+  color: #FFF;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 33px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 32px;
+  /* 80% */
+  letter-spacing: 0.1px;
+}
+
+.banner {
+  position: relative;
+  height: 600px;
+  width: 100%;
+  top: 0px;
+  margin: 0 auto;
+  background: #001a41;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  background-size: cover;
+  background-position: center;
+  flex-shrink: 0;
+  display: flex;
+  align-items: flex-end;
+}
+
+.card-flow {
+  padding: 10px;
+}
+
+.backbutton {
+  position: absolute;
+  top: 5%;
+  flex-shrink: 0;
+
+}
+
+.banner_info {
+  position: relative;
+  height: 600px;
+  width: 100%;
+  top: 0px;
+  margin: 0 auto;
+  background: url("https://i.imgur.com/tkJzX01.png") center / 50% no-repeat, linear-gradient(137.61deg, rgb(62 60 60 / 90%) 25%, rgb(36 36 36) 100%);
+  background-repeat: no-repeat;
+  background-blend-mode: overlay;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  backdrop-filter: blur(2px);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  background-size: cover;
+  background-position: center;
+  flex-shrink: 0;
+  display: flex;
+  align-items: flex-end;
+}
+
+.card_info {
+  position: absolute;
+  width: 85%;
+  height: 280px;
+  top: 50%;
+  left: 50%;
+  display: flex;
+  flex-direction: column;
+  transform: translate(-50%, -50%);
+}
+
+.icon_success {
+  width: 177px;
+  height: 166px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+}
+
+.container_email {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.img_email {
+  max-width: 25%;
+  max-height: 15%;
+  float: left;
+}
+
+.text_email {
+  color: #000;
+  font-family: Poppins;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 32px;
+  /* 160% */
+  letter-spacing: 0.1px;
+}
+
+.card_success {
+  position: absolute;
+  width: 85%;
+  height: 85%;
+  top: 50%;
+  left: 50%;
+  border-radius: 20px;
+  background: rgba(220, 220, 220, 0.78);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  transform: translate(-50%, -50%);
+  align-items: center;
+}
+
+.text_success {
+  color: #EE1D1D;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 40px;
+  /* 100% */
+}
+
+
+
+.mt-1 {
+  margin-top: 8px !important;
+}
+
+.mt-2 {
+  margin-top: 16px !important;
+}
+
+.mt-3 {
+  margin-top: 24px !important;
+}
+
+.mt-4 {
+  margin-top: 32px !important;
+}
+
+.mt-5 {
+  margin-top: 40px !important;
+}
+
+.ps-4 {
+  padding-left: 32px !important;
+}
+
+.pe-4 {
+  padding-right: 32px !important;
+}
+
+.registrasi {
+  position: absolute;
+  left: 8.68%;
+  right: 68.4%;
+  top: 20.4%;
+  bottom: 93.08%;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 55px;
+  line-height: 29px;
+  /* or 49% */
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.1px;
+  color: #ffffff;
+}
+
+.paraghrap_info {
+
+  justify-content: center;
+  flex-shrink: 0;
+  color: #FFF;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 200;
+  line-height: normal;
+  letter-spacing: 0.1px;
+  display: flex;
+  width: 100%;
+
+}
+
+.publisher {
+  position: absolute;
+  left: 8.68%;
+  right: 70.9%;
+  top: 35.03%;
+  bottom: 91.29%;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 85;
+  font-size: 55px;
+  line-height: 32px;
+  /* or 49% */
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.1px;
+  color: #ffffff;
+}
+
+.message {
+  position: absolute;
+  left: 8.68%;
+  right: 57.29%;
+  top: 57.1%;
+  bottom: 87.95%;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 130%;
+  /* or 31px */
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.09em;
+  color: #ffffff;
+}
+
+.txtbtn {
+  position: absolute;
+  left: 8.68%;
+  right: 67.74%;
+  top: 73.05%;
+  bottom: 85.86%;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 23px;
+  line-height: 34px;
+  text-align: center;
+  letter-spacing: 0.1px;
+  color: #ffffff;
+}
+
+.imgbg {
+  width: 44%;
+  position: relative;
+  left: 56%;
+  right: 100%;
+  top: -13%;
+  transform: translate(0%, 0%);
+  bottom: 84.26%;
+  height: 450px;
+  background: url(https://api.microsite.id/assets/img/tadex_form.png);
+  filter: blur(0.1px);
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+}
+
+.tmfillform {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  top: 100px;
+  bottom: 9px;
+  background: linear-gradient(0deg,
+      rgba(255, 255, 255, 0.2),
+      rgba(255, 255, 255, 0.2)),
+    #f4e6e6;
+  border-radius: 10px;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  padding-right: 32px;
+  padding-left: 32px;
+  margin: 24px;
+}
+
+.desktop-button {
+  background: linear-gradient(90deg,
+      rgba(238, 29, 29, 0.8) 32.32%,
+      rgba(212, 28, 57, 0.8) 45.36%,
+      rgba(188, 27, 78, 0.8) 91.39%);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 9px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+  text-align: center;
+  letter-spacing: 0px;
+  color: #ffffff !important;
+  text-decoration: none;
+  padding: 8px 15px;
+  border: none;
+  cursor: pointer;
+}
+
+.textfillform {
+  color: #B91C29;
+  font-style: italic;
+  padding: 20px;
+  font-family: Poppins;
+  font-size: 17px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.3px;
+}
+
+.card-button {
+  position: absolute;
+  left: 8.68%;
+  right: 64.79%;
+  top: 73.05%;
+  bottom: 85.5%;
+  background: linear-gradient(90deg,
+      rgba(238, 29, 29, 0.8) 32.32%,
+      rgba(212, 28, 57, 0.8) 45.36%,
+      rgba(188, 27, 78, 0.8) 91.39%);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 8px;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: left;
+  text-align: left;
+}
+
+/**==CSS Mobile==**/
+@media screen and (max-width: 600px) {
+  .desktop-button {
+    display: none;
+  }
+
+  .banner {
+    background: #001a41;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    background-size: cover;
+    width: 100%;
+    height: 350px;
+    position: relative;
+  }
+
+  .imgbg {
+    display: none;
+  }
+
+  .card {
+    position: absolute;
+    width: 85%;
+    height: 280px;
+    top: 50%;
+    left: 50%;
+    background: url("https://api.microsite.id/assets/img/tadex_form.png") center / 50% no-repeat, linear-gradient(137.61deg, rgba(255, 255, 255, 0.9) 25%, rgba(255, 255, 255, 0) 100%);
+    background-size: cover, 100% 100%;
+    background-repeat: no-repeat;
+    background-blend-mode: overlay;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    backdrop-filter: blur(2px);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    transform: translate(-50%, -50%);
+  }
+
+  .logo-title-container {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+  }
+
+  .logo {
+    display: block !important;
+    position: absolute;
+    top: 30px;
+    left: 25px;
+    width: 30%;
+  }
+
+  .message-mobile {
+    display: block !important;
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 130%;
+    text-align: justify;
+    letter-spacing: 0.09em;
+    color: #000000;
+  }
+
+  .card-button {
+    position: unset !important;
+    margin-top: 30px;
+  }
+
+  .card-container {
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+  }
+
+  .title-mobile {
+    display: block !important;
+    color: #EE224B;
+    text-align: left;
+    font-family: Poppins;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 32px;
+    /* 145.455% */
+    letter-spacing: 0.1px;
+  }
+
+  .italic {
+    font-family: "Poppins";
+    font-style: italic;
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 20px;
+    text-align: center;
+    letter-spacing: -0.3px;
+    color: rgba(51, 51, 51, 0.7);
+  }
+
+  p.title {
+    display: none;
+  }
+
+  .modal-button {
+    display: block;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 30px;
+    text-align: center;
+    letter-spacing: 0px;
+    color: #ffffff !important;
+    text-decoration: none;
+    padding: 8px 15px;
+    border-radius: 8px;
+    background: linear-gradient(90deg, rgba(238, 29, 29, 0.80) 0%, rgba(212, 28, 57, 0.80) 19.27%, rgba(188, 27, 78, 0.80) 87.27%);
+    border: none;
+    cursor: pointer;
+  }
+
+  .tmfillform {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    top: 100px;
+    bottom: 9px;
+    background: linear-gradient(0deg,
+        rgba(255, 255, 255, 0.2),
+        rgba(255, 255, 255, 0.2)),
+      #f4e6e6;
+    border-radius: 10px;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 19px;
+  }
+
+  .textfillform {
+    color: #B91C29;
+    font-style: italic;
+    font-size: 12px;
+  }
+}
+
+/* Add new CSS for the popup modal */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 9999;
+}
+
+.modal-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 25px;
+  background: #FFF;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  width: revert;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+.text-modal {
+  color: #000;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  letter-spacing: -0.3px;
+}
+
+.title-modal {
+  color: #000;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -0.3px;
+  margin-bottom: 10px;
+}

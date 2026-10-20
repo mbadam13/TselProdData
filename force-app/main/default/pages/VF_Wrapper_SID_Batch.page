@@ -1,0 +1,55 @@
+<apex:page controller="WrapperSIDBatchController">
+    <script type="text/javascript">
+        function selectAllCheckboxes(obj,receivedInputID){
+            var inputCheckBox = document.getElementsByTagName("input");
+            for(var i=0; i<inputCheckBox.length; i++){
+                if(inputCheckBox[i].id.indexOf(receivedInputID)!=-1){
+                    inputCheckBox[i].checked = obj.checked;
+                }
+            }
+        }
+    </script>
+    <apex:form >
+        <apex:pageBlock id="PB1">
+            <apex:pageBlockButtons >
+                <apex:commandButton value="Add to Grid" action="{!processSelected}" rerender="table2,PB2"/>
+            </apex:pageBlockButtons>
+
+            <apex:pageblockSection title="All SID" collapsible="false" columns="1">
+                    <apex:inputText value="{!searchKeyname}" label="CP-Name"/>
+                    <apex:inputText value="{!searchKeytype}" label="Type Sender"/>
+                    <apex:commandButton value="Search records" action="{!searchRecord}"/>
+                    <apex:commandButton value="Clear records" action="{!clear}"/>
+                <apex:pageBlockTable value="{!listSIDWrapper}" var="sidWrap" id="table" title="All SID">
+                    <apex:column >
+                        <apex:facet name="header">
+                            <apex:inputCheckbox onclick="selectAllCheckboxes(this,'inputId')"/>
+                        </apex:facet>
+                        <apex:inputCheckbox value="{!sidWrap.selected}" id="inputId"/>
+                    </apex:column>
+                    <apex:column value="{!sidWrap.sid.Name}" />
+                    <apex:column value="{!sidWrap.sid.CP_Name__c}" />
+                    <apex:column value="{!sidWrap.sid.SID__c}" />
+                    <apex:column value="{!sidWrap.sid.Media_Seller__r.name}" />
+                </apex:pageBlockTable>
+
+
+            </apex:pageblockSection>
+        </apex:pageBlock>
+       
+        <apex:pageBlock id="PB2" >
+            <apex:pageBlockButtons >
+                <apex:commandButton value="Activate" action="{!ActivateData}" rerender="PB1,PB2"/>
+                <apex:commandButton value="DeActivate" action="{!DeActivateData}" rerender="PB1,PB2"/>
+                <apex:commandButton action="{!callpageredirect}" value="Back" rerender="PB1,PB2"/>
+            </apex:pageBlockButtons>
+
+                <apex:pageBlockTable value="{!selectedSIDs}" var="c" id="table2" title="Selected SID">
+                    <apex:column value="{!c.Name}" headerValue="SID Name"/>
+                    <apex:column value="{!c.Batch__c}" headerValue="Batch"/>
+                </apex:pageBlockTable>
+        </apex:pageBlock>
+
+       
+    </apex:form>
+</apex:page>

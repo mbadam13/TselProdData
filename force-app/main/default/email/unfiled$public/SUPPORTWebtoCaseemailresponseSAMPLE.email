@@ -1,0 +1,14 @@
+Dear {!Case.SuppliedEmail},  
+
+Berikut nomor tiket anda #{!Case.CaseNumber}.
+
+Terima kasih sudah mengirimkan email kepada kami, informasinya sudah kami terima. Akan kami respon kembali email ini secepatnya.
+
+Silahkan membalas email ini jika ada tambahan informasi yang akan disampaikan.
+
+Terima kasih.
+
+Best Regards,
+Digital Advertising Team
+
+{!Case.Thread_Id}

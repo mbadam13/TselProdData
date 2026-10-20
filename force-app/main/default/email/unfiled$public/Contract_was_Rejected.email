@@ -1,0 +1,14 @@
+Hello {!Opportunity.Opportunity_Owner_Name__c},
+
+The contract for opportunity {!Contract.Opportunity__c} was Reject.
+Click link bellow for more information
+Contract:
+{!Contract.Link}
+Opportunity:
+{!Opportunity.Link}
+Account:
+{!Account.Link}
+
+
+Regards,
+Salesforce

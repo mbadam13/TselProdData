@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldUpdates>
+        <fullName>Discount</fullName>
+        <field>Discount</field>
+        <formula>Discount__c</formula>
+        <name>Discount</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Addtional_Fee</fullName>
+        <description>Update Addtional Fee</description>
+        <field>Temp_Additional_Fee__c</field>
+        <formula>Additional_fee__c</formula>
+        <name>Update Addtional Fee</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Temp_Total_Price_USD</fullName>
+        <description>update field tep additional price USD</description>
+        <field>Temp_Additional_Fee_USD__c</field>
+        <formula>Additional_Fee_USD__c</formula>
+        <name>Update Temp Total Price USD</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <rules>
+        <fullName>Update Temp Additional Fee</fullName>
+        <actions>
+            <name>Update_Addtional_Fee</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>Update Temp Additional Fee</description>
+        <formula>1=1</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Update Total price</fullName>
+        <actions>
+            <name>Update_Temp_Total_Price_USD</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>Update Total price USD untuk di roll up summary</description>
+        <formula>1=1</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+</Workflow>

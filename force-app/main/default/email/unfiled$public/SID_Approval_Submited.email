@@ -1,0 +1,11 @@
+Hello,
+
+Untuk proposal SID {!SID_Tools__c.SID_Name__c} membutuhkan persetujuan,
+
+Silahkan periksa dokumen yang terlampir di dalam SID Tools
+
+Klik Link dibawah ini:
+ {!SID_Tools__c.Link}
+
+Terimakasih,
+Salesforce

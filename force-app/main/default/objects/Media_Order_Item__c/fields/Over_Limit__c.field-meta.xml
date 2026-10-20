@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Over_Limit__c</fullName>
+    <formula>IF (  
+
+      OR ( 
+        TEXT(Media_Order__r.Order__r.Approval_Status__c) = &apos;Submit&apos;,
+        TEXT(Media_Order__r.Order__r.Approval_Status__c) = &apos;Need to Revise&apos;,
+        TEXT(Media_Order__r.Order__r.Approval_Status__c) = &apos;Approved&apos;
+      ),
+      False,
+  
+      IF( IPTV_Spot_Daily_Status__r.Spot_Remaining__c - Spot_Needed__c &gt;= 0, 
+        False, 
+        True
+      )
+   
+)</formula>
+    <label>Over Limit</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

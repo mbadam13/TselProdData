@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Type_SMS__c</fullName>
+    <label>Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>SMS Bulk</fullName>
+                <default>true</default>
+                <label>SMS Bulk</label>
+            </value>
+            <value>
+                <fullName>SMS Interaktif</fullName>
+                <default>false</default>
+                <label>SMS Interaktif</label>
+            </value>
+            <value>
+                <fullName>MMS Bulk</fullName>
+                <default>false</default>
+                <label>MMS Bulk</label>
+            </value>
+            <value>
+                <fullName>USSD Bulk</fullName>
+                <default>false</default>
+                <label>USSD Bulk</label>
+            </value>
+            <value>
+                <fullName>PNV</fullName>
+                <default>false</default>
+                <label>PNV</label>
+            </value>
+            <value>
+                <fullName>Reward Data 0.5 GB (30 Days)</fullName>
+                <default>false</default>
+                <label>Reward Data 0.5 GB (30 Days)</label>
+            </value>
+            <value>
+                <fullName>Reward Data 1 GB (30 Days)</fullName>
+                <default>false</default>
+                <label>Reward Data 1 GB (30 Days)</label>
+            </value>
+            <value>
+                <fullName>Reward Data 2 GB (30 Days)</fullName>
+                <default>false</default>
+                <label>Reward Data 2 GB (30 Days)</label>
+            </value>
+            <value>
+                <fullName>Reward Data 2.5 GB (5 Days)</fullName>
+                <default>false</default>
+                <label>Reward Data 2.5 GB (5 Days)</label>
+            </value>
+            <value>
+                <fullName>Reward Data 3 GB (5 Days)</fullName>
+                <default>false</default>
+                <label>Reward Data 3 GB (5 Days)</label>
+            </value>
+            <value>
+                <fullName>Reward Data 7 GB (7 Days)</fullName>
+                <default>false</default>
+                <label>Reward Data 7 GB (7 Days)</label>
+            </value>
+            <value>
+                <fullName>CDN Eyeball Telkomsel</fullName>
+                <default>false</default>
+                <label>CDN Eyeball Telkomsel</label>
+            </value>
+            <value>
+                <fullName>Bulk</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Bulk</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

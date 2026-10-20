@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Prevent_SUM_Quantity_MOI</fullName>
+    <active>true</active>
+    <description>Prevent Qty MOI Must Be SameThan Qty MO</description>
+    <errorConditionFormula>AND(
+ Sum_Quantity_MOI__c &gt; 0,
+ NOT(Sum_Quantity_MOI__c  = Quantity__c)
+)</errorConditionFormula>
+    <errorMessage>Total Quantity MOI must be same than Quantity MO / Order Item.</errorMessage>
+</ValidationRule>

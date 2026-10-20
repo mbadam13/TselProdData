@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CheckActiveContract_For_Creating_Order</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+   Opportunity.Contract_Status__c != &apos;Activated&apos;,
+    ISNULL(OpportunityId),
+   ISNEW()
+)</errorConditionFormula>
+    <errorMessage>Contract in Opportunity is not Activated.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,5 @@
+<apex:page controller="ContractEndDateInfo_Controller" lightningStyleSheets="true">
+    <div>
+        <b style="color:red;">{!contractInfo_msg}</b>
+    </div>
+</apex:page>

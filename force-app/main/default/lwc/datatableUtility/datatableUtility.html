@@ -1,0 +1,127 @@
+<!--
+  @description       : 
+  @author            : Diky Nurosid
+  @group             : 
+  @last modified on  : 09-22-2023
+  @last modified by  : Diky Nurosid
+-->
+<template>
+    <template if:true={records}>
+        <div class="isLoading">
+            <lightning-spinner if:true={showSpinner} size="medium" class="slds-is-fixed"></lightning-spinner>
+       </div>
+        <template if:true={isOpenFilterInput}>
+           <!-- Modal/Popup Box LWC starts here -->
+            <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+                <div class="slds-modal__container">
+                    <!-- Modal/Popup Box LWC header here -->
+                    <header class="slds-modal__header">
+                        <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" title="Close" onclick={closeModal}>
+                            <lightning-icon icon-name="utility:close"
+                                alternative-text="close"
+                                variant="inverse"
+                                size="small" ></lightning-icon>
+                            <span class="slds-assistive-text">Close</span>
+                        </button>
+                        <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">Filter Your Data</h2>
+                    </header>
+                    <!-- Modal/Popup Box LWC body starts here -->
+                    <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+                        <c-multiple-select-custom
+                        label="Options"
+                        name="options"
+                        options={optionsColumn}
+                        onchange={handleMultipleSelectChange}
+                    ></c-multiple-select-custom>
+                    </div>
+                    <!-- Modal/Popup Box LWC footer starts here -->
+                    <footer class="slds-modal__footer">
+                        <button class="slds-button slds-button_neutral" onclick={closeModal} title="Cancel">Cancel</button>
+                        <button class="slds-button slds-button_brand" onclick={handleSetFilter} title="OK">OK</button>
+                    </footer>
+                </div>
+            </section>
+            <div class="slds-backdrop slds-backdrop_open"></div>
+        </template>
+          
+        <div class="slds-grid slds-grid_vertical-align-center">
+            <div class="slds-col"><!--RECORDS PER PAGE-->
+                <div style={paginationVisibility} class="slds-list_inline slds-p-bottom_xx-small customSelect">
+                    <label class="slds-text-color_weak slds-p-horizontal_x-small" for="recordsPerPage">Page Size:</label> 
+                    <div class="slds-select_container">
+                        <select class="slds-select" id="recordsPerPage" onchange={handleRecordsPerPage}>
+                            <template for:each={pageSizeOptions} for:item="option">
+                                <option key={option} value={option}>{option}</option>
+                            </template>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="slds-col slds-no-flex slds-grid slds-align-bottom slds-shrink"><!--Search Box to Seach in Columns-->
+                <div if:true={showSearchBox}>
+                  <lightning-input label="" type="search" placeholder="Search" variant="label-hidden" onchange={handleKeyChange}></lightning-input>
+                </div>
+            </div>   
+            <div class="slds-col slds-no-flex slds-grid slds-align-bottom">
+                <lightning-button-icon icon-name="utility:refresh" onclick={setRecordsOnPage} variant="border-filled" alternative-text="Reload" class="slds-m-left_xx-small" title="Reload"></lightning-button-icon>
+            </div> 
+            <div class="slds-col slds-no-flex slds-grid slds-align-bottom"></div>    
+        </div>
+
+        <div class="slds-grid slds-grid_vertical-align-center slds-grid_align-spread">
+            <div class="slds-col">             
+                <div class="slds-col slds-p-bottom_xx-small">
+                    <span>
+                        <label class="slds-text-color_weak slds-p-horizontal_x-small" >Total: {filtredNum}</label>  
+                    </span>  
+                    <span>
+                        <label class="slds-text-color_weak slds-p-horizontal_x-small" >Selected: {totalSelected}</label>  
+                    </span>                                                                                               
+                </div>
+            </div>
+        </div> 
+        
+        <div class="slds-col slds-no-flex slds-align-bottom slds-shrink" style={tableHeightStyle}>
+            <c-datatable-utility-component key-field={keyField} 
+                data={recordsToDisplay} 
+                columns={columns}
+                oncellchange={handleCellChange}
+                onsave={handleSave}
+                oncancel={handleCancel}
+                max-row-selection={maxRowSelection} 
+                onrowselection={getSelectedRows}   
+                selected-rows={preSelected}    
+                default-sort-direction={defaultSortDirection}
+                sorted-direction={sortDirection}
+                sorted-by={sortedBy}
+                onsort={handelSort}
+                onheaderaction={handleHeaderAction}
+                draft-values={saveDraftValues}
+                hide-checkbox-column>
+            </c-datatable-utility-component>              
+        </div>  
+
+        <div class="slds-grid slds-grid_vertical-align-center slds-grid_align-spread" style="padding-top: 0.5em;">
+            <div class="slds-col"></div>
+            <div class="slds-col"></div>
+            <!--PAGE NAVIGATION-->
+            <div class="slds-col">
+                <div style={paginationVisibility}>                 
+                    <div class="slds-col slds-p-bottom_xx-small">                     
+                        <span>
+                            <lightning-button-icon icon-name="utility:chevronleft" variant="bare" size="medium" alternative-text="Previous Page" onclick={previousPage}></lightning-button-icon>
+                        </span>
+                        <label class="slds-text-color_weak slds-p-horizontal_x-small" for="pageNum">Page:</label> 
+                        <input type="number" id="pageNum" value={pageNumber} maxlength="4" onkeypress={handlePageNumberChange} class="customInput" title="Go to a Page" readonly></input>
+                        <span>&nbsp;of&nbsp;<b id="totalPages">{totalPages}</b></span>
+                        <span>
+                            <template if:true={pageNumber}></template>
+                            <lightning-button-icon icon-name="utility:chevronright" variant="bare" size="medium" alternative-text="Next Page" onclick={nextPage} class="slds-p-horizontal_x-small"></lightning-button-icon>
+                        </span>                                                          
+                    </div>
+                </div>
+            </div>      
+        </div>
+
+    </template>    
+</template>

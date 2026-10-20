@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cannot_be_checked_if_there_is_traffic</fullName>
+    <active>true</active>
+    <description>Cannot be checked if there is traffic bulk/non bulk.</description>
+    <errorConditionFormula>AND(
+Is_Adjustment__c = TRUE,
+OR(
+Traffic_Bulk_Amount__c &gt; 0,
+Traffic_Non_Bulk_Amount__c &gt; 0
+)
+)</errorConditionFormula>
+    <errorMessage>Cannot be checked if there is traffic bulk/non bulk.</errorMessage>
+</ValidationRule>

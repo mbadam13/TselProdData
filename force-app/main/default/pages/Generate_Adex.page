@@ -1,0 +1,32 @@
+<!-- 
+    Created by Victor
+    25/1/2022
+    
+    This page just for execute class GenerateAdexBrand
+-->
+
+<apex:page lightningStyleSheets="true" controller="GenerateAdexBrand" action="{!execute}">
+	<script type="text/javascript">
+        function doRedirect(){
+            window.history.back();
+        }
+    </script>
+    <apex:pageMessages />
+    
+    <div align="left" >
+    	<apex:sectionHeader title="Generate Adex Brand" />
+    </div>
+    <apex:form >
+        <apex:pageBlock id="idPageBlock">
+            <apex:pageBlockSection rendered="{!batchStatusBool}">
+                <apex:actionStatus id="idActionStatus" startText="Checking…" />
+                	<apex:outputLabel > Generate Adex Brand Status is <b>{!batchStatus}</b> </apex:outputLabel>
+                <apex:actionPoller interval="5" action="{!checkBatchStatus}" enabled="{!pollerBool}" reRender="idPageBlock" status="idActionStatus"/>
+
+            </apex:pageBlockSection>
+            <div style="text-align: left">
+		    	<apex:commandButton value="Back" oncomplete="doRedirect();"/>
+			</div>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

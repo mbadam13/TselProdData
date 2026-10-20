@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>adSize__c</fullName>
+    <externalId>false</externalId>
+    <formula>CASE( 
+   Ad_Size__c, 
+   &apos;728x90&apos;, &apos;7&apos;, 
+   &apos;300x250&apos;, &apos;9&apos;, 
+   &apos;320x50&apos;, &apos;31&apos;, 
+   &apos;300x600&apos;, &apos;26&apos;,
+   &apos;Video&apos;, &apos;97&apos;, 
+   &apos;&apos;
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>adSize</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

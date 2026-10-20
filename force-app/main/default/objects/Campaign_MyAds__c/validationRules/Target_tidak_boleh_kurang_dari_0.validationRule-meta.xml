@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Target_tidak_boleh_kurang_dari_0</fullName>
+    <active>true</active>
+    <description>Target tidak boleh kurang dari 0</description>
+    <errorConditionFormula>OR
+(
+Target_User_Topup_Voucher__c &lt; 0,
+Target_User_Register__c &lt; 0,
+Target_Retopup__c &lt;0,
+User_Top_Up__c &lt;0,
+Actual_User_Register__c &lt;0,
+User_Retopup__c &lt;0
+)</errorConditionFormula>
+    <errorMessage>tidak boleh kurang dari 0</errorMessage>
+</ValidationRule>

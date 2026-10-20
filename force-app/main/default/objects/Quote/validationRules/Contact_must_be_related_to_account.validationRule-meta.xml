@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Contact_must_be_related_to_account</fullName>
+    <active>false</active>
+    <errorConditionFormula>Contact.AccountId &lt;&gt;  Opportunity.AccountId</errorConditionFormula>
+    <errorMessage>Contact Name must be filled, This account is not related to account</errorMessage>
+</ValidationRule>

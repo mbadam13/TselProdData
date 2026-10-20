@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Campaign_Categories__c</fullName>
+    <label>Campaign Categories</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>LBA ON Location</fullName>
+                <default>false</default>
+                <label>LBA ON Location</label>
+            </value>
+            <value>
+                <fullName>LBA OFF Location</fullName>
+                <default>false</default>
+                <label>LBA OFF Location</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

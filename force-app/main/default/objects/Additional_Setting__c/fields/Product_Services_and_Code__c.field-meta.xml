@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Product_Services_and_Code__c</fullName>
+    <label>Product Services and Code</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <controllingField>Type__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetName>Product_Services_and_Code_Media_Seller</valueSetName>
+        <valueSettings>
+            <controllingFieldValue>Discount</controllingFieldValue>
+            <valueName>Bulk IVR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Discount</controllingFieldValue>
+            <valueName>Bulk SMS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Discount</controllingFieldValue>
+            <valueName>Bulk MMS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Discount</controllingFieldValue>
+            <valueName>Bulk USSD</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Discount</controllingFieldValue>
+            <valueName>Non Bulk IVR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Discount</controllingFieldValue>
+            <valueName>Non Bulk SMS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Discount</controllingFieldValue>
+            <valueName>Non Bulk MMS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Discount</controllingFieldValue>
+            <valueName>Non Bulk NSP</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Discount</controllingFieldValue>
+            <valueName>Non Bulk Symphony</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Discount</controllingFieldValue>
+            <valueName>Non Bulk USSD</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Discount</controllingFieldValue>
+            <valueName>PNV</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Discount</controllingFieldValue>
+            <valueName>PNV Reg PL</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Discount</controllingFieldValue>
+            <valueName>PNV Reg TL</valueName>
+        </valueSettings>
+    </valueSet>
+    <visibleLines>5</visibleLines>
+</CustomField>

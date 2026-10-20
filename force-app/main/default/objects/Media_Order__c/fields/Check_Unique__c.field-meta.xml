@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Check_Unique__c</fullName>
+    <externalId>false</externalId>
+    <formula>MID(Name, 
+    FIND(&quot;/&quot;, Name) + 1, 
+    FIND(&quot;/&quot;, Name, FIND(&quot;/&quot;, Name) + 1) - FIND(&quot;/&quot;, Name) - 1
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Check Unique</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

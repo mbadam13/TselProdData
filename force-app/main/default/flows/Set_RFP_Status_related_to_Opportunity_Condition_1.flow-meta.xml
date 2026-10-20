@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <name>BypassTriggerActionClass</name>
+        <label>BypassTriggerActionClass</label>
+        <locationX>281</locationX>
+        <locationY>323</locationY>
+        <actionName>TriggerActionFlowBypass</actionName>
+        <actionType>apex</actionType>
+        <connector>
+            <targetReference>myRule_1</targetReference>
+        </connector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>bypassType</name>
+            <value>
+                <stringValue>Apex</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>name</name>
+            <value>
+                <stringValue>TA_VR_RFP_BU_OwnerValidation</stringValue>
+            </value>
+        </inputParameters>
+        <nameSegment>TriggerActionFlowBypass</nameSegment>
+        <offset>0</offset>
+    </actionCalls>
+    <apiVersion>61.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <decisions>
+        <name>myRule_1</name>
+        <label>stage is Send Proposal</label>
+        <locationX>281</locationX>
+        <locationY>431</locationY>
+        <defaultConnector>
+            <targetReference>myRule_4</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>FALSE_stage is Send Proposal</defaultConnectorLabel>
+        <rules>
+            <name>TRUE_myRule_1</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.StageName</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.StageName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Send Proposal</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Templated_Proposal__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>myRule_1_A1</targetReference>
+            </connector>
+            <label>TRUE_stage is Send Proposal</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>myRule_4</name>
+        <label>stage is proposal</label>
+        <locationX>512</locationX>
+        <locationY>539</locationY>
+        <defaultConnector>
+            <targetReference>myRule_7</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>FALSE_stage is proposal</defaultConnectorLabel>
+        <rules>
+            <name>TRUE_myRule_4</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.StageName</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.StageName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Proposal / PO Sign</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>myRule_4_A1</targetReference>
+            </connector>
+            <label>TRUE_stage is proposal</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>myRule_7</name>
+        <label>need Revise</label>
+        <locationX>710</locationX>
+        <locationY>647</locationY>
+        <defaultConnectorLabel>FALSE_need Revise</defaultConnectorLabel>
+        <rules>
+            <name>TRUE_myRule_7</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Request_for_Proposal_Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Revise</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Request_for_Proposal_Status__c</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>myRule_7_A1</targetReference>
+            </connector>
+            <label>TRUE_need Revise</label>
+        </rules>
+    </decisions>
+    <description>Migrated from the Set RFP Status related to Opportunity Condition process using multiple criteria.
+change stage from Proposal to Proposal / PO Sign
+
+27/August/2024 - Syaiful Syafani - Update bypass action
+
+14/fEBUARI/2025 - M. Reza Maulana - Update First Criteria</description>
+    <environments>Default</environments>
+    <interviewLabel>Set RFP Status related to Opportunity Condition_1 {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Set RFP Status related to Opportunity Condition_1</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>myRule_1_A1</name>
+        <label>set to Send Proposal</label>
+        <locationX>50</locationX>
+        <locationY>539</locationY>
+        <connector>
+            <targetReference>myRule_1_A2</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>Request_for_Proposal_Status__c</field>
+            <value>
+                <stringValue>Send Proposal</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record.Request_for_proposal__r</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>myRule_1_A2</name>
+        <label>set Status Send Proposal</label>
+        <locationX>50</locationX>
+        <locationY>647</locationY>
+        <inputAssignments>
+            <field>RFP_Status__c</field>
+            <value>
+                <stringValue>Send Proposal</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>myRule_4_A1</name>
+        <label>set RFP status to Closed</label>
+        <locationX>314</locationX>
+        <locationY>647</locationY>
+        <connector>
+            <targetReference>myRule_4_A2</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>Request_for_Proposal_Status__c</field>
+            <value>
+                <stringValue>Closed</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record.Request_for_proposal__r</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>myRule_4_A2</name>
+        <label>set Stage proposal</label>
+        <locationX>314</locationX>
+        <locationY>755</locationY>
+        <inputAssignments>
+            <field>RFP_Status__c</field>
+            <value>
+                <stringValue>Proposal</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>myRule_7_A1</name>
+        <label>set RFP status to need revision</label>
+        <locationX>578</locationX>
+        <locationY>755</locationY>
+        <connector>
+            <targetReference>myRule_7_A2</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>Request_for_Proposal_Status__c</field>
+            <value>
+                <stringValue>Ask Revision</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record.Request_for_proposal__r</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>myRule_7_A2</name>
+        <label>Set RFP Status to Revise</label>
+        <locationX>578</locationX>
+        <locationY>863</locationY>
+        <inputAssignments>
+            <field>RFP_Status__c</field>
+            <value>
+                <stringValue>Ask Revision</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>155</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>BypassTriggerActionClass</targetReference>
+        </connector>
+        <filterLogic>1 AND (2 OR 3)</filterLogic>
+        <filters>
+            <field>StageName</field>
+            <operator>IsChanged</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <filters>
+            <field>StageName</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Proposal / PO Sign</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>StageName</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Send Proposal</stringValue>
+            </value>
+        </filters>
+        <object>Opportunity</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

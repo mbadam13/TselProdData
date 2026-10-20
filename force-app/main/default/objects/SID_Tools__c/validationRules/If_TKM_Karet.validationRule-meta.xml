@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>If_TKM_Karet</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+Kategori_Industri__r.prefix_ms__c = &apos;tkm&apos;,
+Text (Karet__c) = &apos;Yes&apos;)</errorConditionFormula>
+    <errorMessage>Others Telkom are not eligble for Karet. Please choose other Kategori Industri</errorMessage>
+</ValidationRule>

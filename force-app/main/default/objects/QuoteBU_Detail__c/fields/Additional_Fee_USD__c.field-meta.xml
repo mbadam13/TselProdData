@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Additional_Fee_USD__c</fullName>
+    <formula>IF( Account_Name__c == &apos;Kinarya Solusi&apos; &amp;&amp; TEXT(QuoteBU__r.Opportunity__r.StageName) != &apos;Close Won&apos;, 0-(0.05 * Sub_Total_USD__c ) , 0)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Additional Fee USD</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

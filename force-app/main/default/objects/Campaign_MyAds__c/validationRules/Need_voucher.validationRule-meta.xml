@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Need_voucher</fullName>
+    <active>true</active>
+    <description>untuk memvalidasi ketika dia memilih voucher maka kode voucher perlu di masukan dan seballiknya</description>
+    <errorConditionFormula>OR(
+ISPICKVAL( Voucher__c , &quot;Pakai Kode Voucher&quot;),
+AND(
+NOT(ISBLANK( Kode_Voucher__c ))))
+&amp;&amp;
+OR(
+ISPICKVAL( Voucher__c , &quot;Tanpa Kode Voucher&quot;),
+AND(
+ISBLANK( Kode_Voucher__c )))</errorConditionFormula>
+    <errorDisplayField>Kode_Voucher__c</errorDisplayField>
+    <errorMessage>Jika menggunakan Voucher maka Kode Voucher Harap diisi, Jika tidak menggunakan Kode Voucher maka Kode Voucher dikosongkan</errorMessage>
+</ValidationRule>

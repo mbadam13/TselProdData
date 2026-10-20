@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>53.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <decisions>
+        <name>Compare_Date_Decision</name>
+        <label>Compare Date Decision</label>
+        <locationX>160</locationX>
+        <locationY>320</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>If_True_Compare_Date</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Event_Date__c</leftValueReference>
+                <operator>LessThanOrEqualTo</operator>
+                <rightValue>
+                    <elementReference>CompareDate</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Create_Change_Traffic_Logs</targetReference>
+            </connector>
+            <label>If True Compare Date</label>
+        </rules>
+    </decisions>
+    <description>Ver.5 + Stamping Traffic SID in CLT record</description>
+    <formulas>
+        <name>CompareDate</name>
+        <dataType>Date</dataType>
+        <expression>TODAY()-7</expression>
+    </formulas>
+    <formulas>
+        <name>CompareDateInt</name>
+        <dataType>Date</dataType>
+        <expression>TODAY()-5</expression>
+    </formulas>
+    <interviewLabel>Create Traffic Create Change Log Traffic {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Create Traffic Create Change Log Traffic</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>FREE_FORM_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordCreates>
+        <name>Create_Change_Traffic_Logs</name>
+        <label>Create Change Traffic Logs</label>
+        <locationX>479</locationX>
+        <locationY>316</locationY>
+        <inputAssignments>
+            <field>Change_Type__c</field>
+            <value>
+                <stringValue>Add</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Event_Date_Traffic__c</field>
+            <value>
+                <elementReference>$Record.Event_Date__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>New_Value__c</field>
+            <value>
+                <elementReference>$Record.Traffic__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Record_ID__c</field>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Traffic_Type__c</field>
+            <value>
+                <stringValue>Traffic SID</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Traffics_SID__c</field>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Change_Log_Traffic__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <start>
+        <locationX>50</locationX>
+        <locationY>50</locationY>
+        <connector>
+            <targetReference>Compare_Date_Decision</targetReference>
+        </connector>
+        <object>Traffics_SID__c</object>
+        <recordTriggerType>Create</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

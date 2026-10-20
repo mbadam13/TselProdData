@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Extend_Order</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+   TEXT(Status__c) = &apos;Extended&apos;,
+   $User.Id !=  $Label.Ops_User_Id_for_Extend_Order
+)</errorConditionFormula>
+    <errorMessage>Only Settlement Team can set Status to &quot;Extended&quot;. Please submit approval to extend order date.</errorMessage>
+</ValidationRule>

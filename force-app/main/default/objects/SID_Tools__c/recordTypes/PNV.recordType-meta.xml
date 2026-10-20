@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PNV</fullName>
+    <active>true</active>
+    <label>PNV</label>
+    <picklistValues>
+        <picklist>Indico__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Karet__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Kategori_Pesan__c</picklist>
+        <values>
+            <fullName>PNV</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Premium Ads</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Premium Notif</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Premium OTP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Regular Ads</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Regular Notif</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>PrivyID_Process__c</picklist>
+        <values>
+            <fullName>In Progress</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>completed</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>SID_Approval__c</picklist>
+        <values>
+            <fullName>Approved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rejected</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Submited</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Status__c</picklist>
+        <values>
+            <fullName>Completed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Partnership Verification</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Submission</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type_SMS__c</picklist>
+        <values>
+            <fullName>CDN Eyeball Telkomsel</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MMS Bulk</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PNV</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reward Data 0%2E5 GB %2830 Days%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reward Data 1 GB %2830 Days%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reward Data 2 GB %2830 Days%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reward Data 2%2E5 GB %285 Days%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reward Data 3 GB %285 Days%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reward Data 7 GB %287 Days%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SMS Bulk</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>USSD Bulk</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type_Sender__c</picklist>
+        <values>
+            <fullName>Contextual</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PNV</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Premium</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Use_Case__c</picklist>
+        <values>
+            <fullName>OTP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Priority Client</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Registration Partner Lead</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Registration Telkomsel Lead</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>docType__c</picklist>
+        <values>
+            <fullName>Parallel</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Serial</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+</RecordType>

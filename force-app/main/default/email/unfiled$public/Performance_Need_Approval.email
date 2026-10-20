@@ -1,0 +1,8 @@
+Hello,
+
+The performance campaign for opportunity {!Opportunity.Name} need to be checked,
+Click link bellow for more information
+{!Opportunity.Link}.
+
+Regards,
+Salesforce

@@ -1,0 +1,11 @@
+Hello,
+
+The opportunity {!Opportunity.Name} Need discount approval
+Click link below for more information
+Opportunity Link:
+{!Opportunity.Link}
+Discount Average:
+{!Opportunity.Discount_Average__c} %
+
+Regards,
+SalesForce

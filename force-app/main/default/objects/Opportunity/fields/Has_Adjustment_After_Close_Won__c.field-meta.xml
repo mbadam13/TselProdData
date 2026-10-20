@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Has_Adjustment_After_Close_Won__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Marks Opportunities with adjustments after being Closed-Won.
+
+https://coda.io/d/_dlP6anxfjId#Features-Backlogs_tutNbbf5/r15&amp;view=center</description>
+    <label>Has_Adjustment_After_Close_Won</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

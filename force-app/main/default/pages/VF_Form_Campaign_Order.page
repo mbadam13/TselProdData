@@ -1,0 +1,105 @@
+<apex:page StandardController="OrderItem" extensions="MultiAddCampaignOrder" id="thePage"  >
+    <apex:stylesheet value="{!URLFOR($Resource.jQDateTimePicker, 'datetimepicker-master/jquery.datetimepicker.css')}"/>
+    <apex:includeScript value="{!URLFOR($Resource.jQDateTimePicker, 'datetimepicker-master/jquery.js')}"/>
+    <apex:includeScript value="{!URLFOR($Resource.jQDateTimePicker, 'datetimepicker-master/build/jquery.datetimepicker.full.min.js')}"/>
+    <script>
+        j$ = jQuery.noConflict();           
+    </script>     
+    
+    
+ 
+    
+      
+    <apex:form id="form"  >  
+    <apex:pageblock id="pb" >   
+        <apex:pageBlockButtons >     
+            <apex:commandbutton value="Save" action="{!Save}"/>            
+            <apex:commandbutton value="Add" action="{!Add}" rerender="pb1"/>        
+        </apex:pageBlockButtons>
+        <!-- Action funtion to clone entry -->
+        <apex:actionFunction action="{!cloneEntry}" name="cloneEntry1" reRender="pgMsgs,lstproducts" status="pageStatus">
+            <apex:param name="entryToClone" value=""/>
+        </apex:actionFunction>
+        
+        <apex:pageblock id="pb1">
+        <!--<apex:pageBlockSection title="bro" id="sec-1" columns="1"  -->
+            <!--apex:repeat value="{!lstInner}" var="e1" id="therepeat" -->  
+            <apex:pageBlockTable value="{!lstInner}" var="e1" id="therepeat">
+                <apex:column width="20px">
+                	<apex:commandButton value="X" action="{!Del}" rerender="pb1">                
+                            <apex:param name="rowToBeDeleted" value="{!e1.recCount}" assignTo="{!selectedRowIndex}"></apex:param>                
+                     </apex:commandButton>
+                    <apex:commandButton value="Clone" action="{!cloneEntry}" rerender="pb1">                
+                            <apex:param name="selectedRow" value="{!e1.recCount}" assignTo="{!selectedRowIndex}"></apex:param>                
+                     </apex:commandButton>
+                    
+                </apex:column>
+                                
+                <apex:column headerValue="no"  >
+                    <apex:outputText id="no" value="{!e1.recCount}" style="width:50px;" />
+                </apex:column>
+                
+                <apex:column headerValue="Masking Sender Brand"  >
+                    <apex:inputfield id="msb" value="{!e1.CO.Masking_Sender_Brand__c}" style="width:120px;" />
+                </apex:column>
+                
+                <apex:column headerValue="Profiling Lokasi" >
+                    <apex:inputfield value="{!e1.CO.Profiling_Lokasi__c}" style="width:150px;"/>
+                </apex:column>
+                <apex:column headerValue="Channel" >
+                    <apex:selectList id="chn" size="1">
+                        <apex:selectoption itemLabel="LBA" itemValue="LBA"></apex:selectoption>
+                        <apex:selectoption itemLabel="Sms Targeted" itemValue="Sms Targeted"></apex:selectoption>
+                      </apex:selectList>
+                </apex:column>
+                
+                <apex:column headerValue="Start Campaign Time" >
+                    <apex:inputText id="txtDateTime" value="{!e1.tmpStartCampaignDateTime}" style="width:120px;"   />   
+                    <!--- <apex:inputField id="txtDateTime" value="{!e1.CO.Start_Campaign__c}"  type="datetime" style="width:120px;"   />  -->
+                    
+                </apex:column>
+                 
+                <apex:column headerValue="End Campaign Time" >   
+                    <apex:inputText id="txtDateTimeEnd" value="{!e1.tmpEndCampaignDateTime}"  style="width:120px;"/>
+                	<!---<apex:inputField id="txtDateTimeEnd" value="{!e1.CO.End_Campaign__c}" type="datetime"  style="width:120px;"/> -->
+                <script>
+                        j$(document).ready(function(){
+                                jQuery.datetimepicker.setLocale('en');
+                                jQuery('[id$=txtDateTime]').datetimepicker({
+                                    format:'Y-m-d H:i',
+                                    inline:false,
+                                    lang:'id'
+                                });
+                        
+                                 jQuery('[id$=txtDateTimeEnd]').datetimepicker({
+                                    format:'Y-m-d H:i',
+                                    inline:false,
+                                    lang:'id'
+                                });
+                        });
+                    </script>
+                </apex:column>
+                 
+                <apex:column headerValue="Impression Click" > 
+                     <apex:inputfield value="{!e1.CO.Impression_Click__c}"  style="width:75px;"/> 
+                </apex:column>
+                
+                <apex:column headerValue="SMS per day location"  >
+                    <apex:inputfield value="{!e1.CO.SMS_Per_Day_Location__c}"  style="width:75px;"/>   
+                </apex:column>
+                
+                <apex:column headerValue="Wording Picture Video"  > 
+                    <apex:inputfield value="{!e1.CO.WORDING_PICTURE_VIDEO__c}"  style="width:150px;"/> 
+                </apex:column>
+                
+                <apex:column headerValue="Placement"  >
+                    <apex:inputfield value="{!e1.CO.Placement__c}"  style="width:150px;"/>
+                </apex:column>
+                                     
+                    
+            </apex:pageBlockTable>
+        <!--</apex:pageBlockSection> -->
+ 		</apex:pageblock> 
+    </apex:pageblock> 
+    </apex:form>
+</apex:page>

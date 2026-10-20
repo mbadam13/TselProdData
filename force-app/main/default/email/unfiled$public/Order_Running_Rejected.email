@@ -1,0 +1,11 @@
+Helllo,
+
+The order {!Order.Name} from opportunity {!OrderItem.Opportunity__c} are rejected.
+Please check link bellow for more information
+Order:
+{!Order.Link}
+Opportunity:
+{!Opportunity.Name}
+
+Regards,
+Salesforce

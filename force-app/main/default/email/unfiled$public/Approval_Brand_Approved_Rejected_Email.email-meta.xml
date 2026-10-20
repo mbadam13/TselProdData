@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Template Email Approval untuk Brand yang Approved/Rejected</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Approval Brand Approved/Rejected Email</name>
+    <style>none</style>
+    <subject>Brand Approval Status for {!Brand__c.Name} is {!Brand__c.Status__c}</subject>
+    <type>text</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Approve setelah Order Product dan Campaign Order</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>CT Approved Non Bulk</name>
+    <style>none</style>
+    <subject>Order Non Bulk {!Order_Non_Bulk__c.Name} Telah disetujui</subject>
+    <type>text</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

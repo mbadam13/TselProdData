@@ -1,0 +1,13 @@
+Dear Marketing Team,
+
+Please review and provide your approval for the following brand:
+Brand Name: {!Brand__c.Name}
+Brand ID: {!Brand__c.Id}
+
+You can access the details and complete the approval process by clicking the link below:
+{!Brand__c.Link}
+
+Thank you for your time and cooperation.
+
+Best regards,
+{!CreatedById}

@@ -1,0 +1,15 @@
+<template>
+    <aura:component implements="force:appHostable"></aura:component>
+    <lightning-card title="Deal ID Information" icon-name="standard:contact">
+            <template if:true={setVisibleDataTableDealIDForm}>
+                <lightning-datatable key-field="Id" 
+                                    data={opptyLineItemRecord} 
+                                    columns={columns} 
+                                    onsave={handleSave}
+                                    draft-values={saveDraftValues} 
+                                    hide-checkbox-column 
+                                    show-row-number-column>
+                </lightning-datatable>
+            </template>
+        </lightning-card>
+</template>

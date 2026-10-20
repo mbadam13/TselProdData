@@ -1,0 +1,911 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Product_Type__c</fullName>
+    <label>Product Type</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Family</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Profiling</fullName>
+                <default>false</default>
+                <label>Profiling</label>
+            </value>
+            <value>
+                <fullName>Programmatic</fullName>
+                <default>false</default>
+                <label>Programmatic</label>
+            </value>
+            <value>
+                <fullName>LBA</fullName>
+                <default>false</default>
+                <label>LBA</label>
+            </value>
+            <value>
+                <fullName>Insertion</fullName>
+                <default>false</default>
+                <label>Insertion</label>
+            </value>
+            <value>
+                <fullName>Digital Reward</fullName>
+                <default>false</default>
+                <label>Digital Reward</label>
+            </value>
+            <value>
+                <fullName>Targeted</fullName>
+                <default>false</default>
+                <label>Targeted</label>
+            </value>
+            <value>
+                <fullName>ROLI</fullName>
+                <default>false</default>
+                <label>ROLI</label>
+            </value>
+            <value>
+                <fullName>Maxstream</fullName>
+                <default>false</default>
+                <label>Maxstream</label>
+            </value>
+            <value>
+                <fullName>Portal Dunia Games</fullName>
+                <default>false</default>
+                <label>Portal Dunia Games</label>
+            </value>
+            <value>
+                <fullName>SMS</fullName>
+                <default>false</default>
+                <label>SMS</label>
+            </value>
+            <value>
+                <fullName>MMS</fullName>
+                <default>false</default>
+                <label>MMS</label>
+            </value>
+            <value>
+                <fullName>USSD</fullName>
+                <default>false</default>
+                <label>USSD</label>
+            </value>
+            <value>
+                <fullName>IVR</fullName>
+                <default>false</default>
+                <label>IVR</label>
+            </value>
+            <value>
+                <fullName>NSP</fullName>
+                <default>false</default>
+                <label>NSP</label>
+            </value>
+            <value>
+                <fullName>Symphony</fullName>
+                <default>false</default>
+                <label>Symphony</label>
+            </value>
+            <value>
+                <fullName>Klik to Call</fullName>
+                <default>false</default>
+                <label>Klik to Call</label>
+            </value>
+            <value>
+                <fullName>Insertion *888#</fullName>
+                <default>false</default>
+                <label>Insertion *888#</label>
+            </value>
+            <value>
+                <fullName>Banner</fullName>
+                <default>false</default>
+                <label>Banner</label>
+            </value>
+            <value>
+                <fullName>Vending Machine</fullName>
+                <default>false</default>
+                <label>Vending Machine</label>
+            </value>
+            <value>
+                <fullName>Data Reward</fullName>
+                <default>false</default>
+                <label>Data Reward</label>
+            </value>
+            <value>
+                <fullName>Performance</fullName>
+                <default>false</default>
+                <label>Performance</label>
+            </value>
+            <value>
+                <fullName>Open Inventory</fullName>
+                <default>false</default>
+                <label>Open Inventory</label>
+            </value>
+            <value>
+                <fullName>In Vehicle Screen</fullName>
+                <default>false</default>
+                <label>In Vehicle Screen</label>
+            </value>
+            <value>
+                <fullName>Article</fullName>
+                <default>false</default>
+                <label>Article</label>
+            </value>
+            <value>
+                <fullName>Survey</fullName>
+                <default>false</default>
+                <label>Survey</label>
+            </value>
+            <value>
+                <fullName>Push Notification</fullName>
+                <default>false</default>
+                <label>Push Notification</label>
+            </value>
+            <value>
+                <fullName>Development Fee</fullName>
+                <default>false</default>
+                <label>Development Fee</label>
+            </value>
+            <value>
+                <fullName>M-Coupon</fullName>
+                <default>false</default>
+                <label>M-Coupon</label>
+            </value>
+            <value>
+                <fullName>Lockscreen Ads</fullName>
+                <default>false</default>
+                <label>Lockscreen Ads</label>
+            </value>
+            <value>
+                <fullName>Basic Profiling</fullName>
+                <default>false</default>
+                <label>Basic Profiling</label>
+            </value>
+            <value>
+                <fullName>Interest Data</fullName>
+                <default>false</default>
+                <label>Interest Data</label>
+            </value>
+            <value>
+                <fullName>Video</fullName>
+                <default>false</default>
+                <label>Video</label>
+            </value>
+            <value>
+                <fullName>PNV</fullName>
+                <default>false</default>
+                <label>PNV</label>
+            </value>
+            <value>
+                <fullName>Messaging</fullName>
+                <default>false</default>
+                <label>Messaging</label>
+            </value>
+            <value>
+                <fullName>All</fullName>
+                <default>false</default>
+                <label>All</label>
+            </value>
+            <value>
+                <fullName>Creative Ads</fullName>
+                <default>false</default>
+                <label>Creative Ads</label>
+            </value>
+            <value>
+                <fullName>Screensaver Ads</fullName>
+                <default>false</default>
+                <label>Screensaver Ads</label>
+            </value>
+            <value>
+                <fullName>TVC</fullName>
+                <default>false</default>
+                <label>TVC</label>
+            </value>
+            <value>
+                <fullName>Targeted Ads</fullName>
+                <default>false</default>
+                <label>Targeted Ads</label>
+            </value>
+            <value>
+                <fullName>Blocking Channel</fullName>
+                <default>false</default>
+                <label>Blocking Channel</label>
+            </value>
+            <value>
+                <fullName>Virtual Ads</fullName>
+                <default>false</default>
+                <label>Virtual Ads</label>
+            </value>
+            <value>
+                <fullName>Program Production</fullName>
+                <default>false</default>
+                <label>Program Production</label>
+            </value>
+            <value>
+                <fullName>Creative Production</fullName>
+                <default>false</default>
+                <label>Creative Production</label>
+            </value>
+            <value>
+                <fullName>Sponsorship On Air</fullName>
+                <default>false</default>
+                <label>Sponsorship On Air</label>
+            </value>
+            <value>
+                <fullName>Studio</fullName>
+                <default>false</default>
+                <label>Studio</label>
+            </value>
+            <value>
+                <fullName>Off Air Activation</fullName>
+                <default>false</default>
+                <label>Off Air Activation</label>
+            </value>
+            <value>
+                <fullName>IndiHomeTV.com</fullName>
+                <default>false</default>
+                <label>IndiHomeTV.com</label>
+            </value>
+            <value>
+                <fullName>IndiHome TV Apps</fullName>
+                <default>false</default>
+                <label>IndiHome TV Apps</label>
+            </value>
+            <value>
+                <fullName>IndiHome OTT Ads</fullName>
+                <default>false</default>
+                <label>IndiHome OTT Ads</label>
+            </value>
+            <value>
+                <fullName>WABA</fullName>
+                <default>false</default>
+                <label>WABA</label>
+            </value>
+            <value>
+                <fullName>RCS</fullName>
+                <default>false</default>
+                <label>RCS</label>
+            </value>
+            <value>
+                <fullName>Net Message</fullName>
+                <default>false</default>
+                <label>Net Message</label>
+            </value>
+            <value>
+                <fullName>OTA</fullName>
+                <default>false</default>
+                <label>OTA</label>
+            </value>
+            <value>
+                <fullName>Advance Profiling</fullName>
+                <default>false</default>
+                <label>Advance Profiling</label>
+            </value>
+            <value>
+                <fullName>Blocking</fullName>
+                <default>false</default>
+                <label>Blocking</label>
+            </value>
+            <value>
+                <fullName>Display</fullName>
+                <default>false</default>
+                <label>Display</label>
+            </value>
+            <value>
+                <fullName>Whatsapp</fullName>
+                <default>false</default>
+                <label>Whatsapp</label>
+            </value>
+            <value>
+                <fullName>Offdeck, Telomsel.com, My Telkomsel Apps, Dunia Games</fullName>
+                <default>false</default>
+                <label>Offdeck, Telomsel.com, My Telkomsel Apps, Dunia Games</label>
+            </value>
+            <value>
+                <fullName>Offdeck, Telomsel.com</fullName>
+                <default>false</default>
+                <label>Offdeck, Telomsel.com</label>
+            </value>
+            <value>
+                <fullName>Rich Media</fullName>
+                <default>false</default>
+                <label>Rich Media</label>
+            </value>
+            <value>
+                <fullName>Data</fullName>
+                <default>false</default>
+                <label>Data</label>
+            </value>
+            <value>
+                <fullName>T Bill</fullName>
+                <default>false</default>
+                <label>T Bill</label>
+            </value>
+            <value>
+                <fullName>NIK Matching</fullName>
+                <default>false</default>
+                <label>NIK Matching</label>
+            </value>
+            <value>
+                <fullName>Sponsorship</fullName>
+                <default>false</default>
+                <label>Sponsorship</label>
+            </value>
+            <value>
+                <fullName>Cost Per Claim</fullName>
+                <default>false</default>
+                <label>Cost Per Claim</label>
+            </value>
+            <value>
+                <fullName>Alfamart Voucher Code</fullName>
+                <default>false</default>
+                <label>Alfamart Voucher Code</label>
+            </value>
+            <value>
+                <fullName>Generate Unique Voucher Code</fullName>
+                <default>false</default>
+                <label>Generate Unique Voucher Code</label>
+            </value>
+            <value>
+                <fullName>Social Media Ads</fullName>
+                <default>false</default>
+                <label>Social Media Ads</label>
+            </value>
+            <value>
+                <fullName>IPTV</fullName>
+                <default>false</default>
+                <label>IPTV</label>
+            </value>
+            <value>
+                <fullName>Display / Video</fullName>
+                <default>false</default>
+                <label>Display / Video</label>
+            </value>
+            <value>
+                <fullName>Text</fullName>
+                <default>false</default>
+                <label>Text</label>
+            </value>
+            <value>
+                <fullName>Click On Message</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Click On Message</label>
+            </value>
+            <value>
+                <fullName>Dsiplay</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Dsiplay</label>
+            </value>
+            <value>
+                <fullName>IVR Bulk</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>IVR Bulk</label>
+            </value>
+            <value>
+                <fullName>IVR Interactive</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>IVR Interactive</label>
+            </value>
+            <value>
+                <fullName>IVR LBA</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>IVR LBA</label>
+            </value>
+            <value>
+                <fullName>IVR Targeted</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>IVR Targeted</label>
+            </value>
+            <value>
+                <fullName>In App Video</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>In App Video</label>
+            </value>
+            <value>
+                <fullName>MMS Builk</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>MMS Builk</label>
+            </value>
+            <value>
+                <fullName>MMS LBA</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>MMS LBA</label>
+            </value>
+            <value>
+                <fullName>MMS Targeted</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>MMS Targeted</label>
+            </value>
+            <value>
+                <fullName>My Telkomsel Apps</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>My Telkomsel Apps</label>
+            </value>
+            <value>
+                <fullName>OMP</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>OMP</label>
+            </value>
+            <value>
+                <fullName>Oppo Ads</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Oppo Ads</label>
+            </value>
+            <value>
+                <fullName>PMP</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>PMP</label>
+            </value>
+            <value>
+                <fullName>Programmatic Guarantee</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Programmatic Guarantee</label>
+            </value>
+            <value>
+                <fullName>Programmatic Premium Publishers</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Programmatic Premium Publishers</label>
+            </value>
+            <value>
+                <fullName>Reward</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Reward</label>
+            </value>
+            <value>
+                <fullName>SMS Bulk</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>SMS Bulk</label>
+            </value>
+            <value>
+                <fullName>SMS Contextual</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>SMS Contextual</label>
+            </value>
+            <value>
+                <fullName>SMS LBA</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>SMS LBA</label>
+            </value>
+            <value>
+                <fullName>SMS Reward</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>SMS Reward</label>
+            </value>
+            <value>
+                <fullName>SMS Targeted</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>SMS Targeted</label>
+            </value>
+            <value>
+                <fullName>USSD Bulk</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>USSD Bulk</label>
+            </value>
+            <value>
+                <fullName>USSD Interactive</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>USSD Interactive</label>
+            </value>
+            <value>
+                <fullName>USSD LBA</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>USSD LBA</label>
+            </value>
+            <value>
+                <fullName>USSD Targeted</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>USSD Targeted</label>
+            </value>
+            <value>
+                <fullName>Voice Reward</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Voice Reward</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Display</controllingFieldValue>
+            <controllingFieldValue>Reward</controllingFieldValue>
+            <controllingFieldValue>Messaging</controllingFieldValue>
+            <controllingFieldValue>Performance</controllingFieldValue>
+            <valueName>Profiling</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Display</controllingFieldValue>
+            <controllingFieldValue>Reward</controllingFieldValue>
+            <controllingFieldValue>Messaging</controllingFieldValue>
+            <controllingFieldValue>Performance</controllingFieldValue>
+            <valueName>Programmatic</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Display</controllingFieldValue>
+            <controllingFieldValue>Reward</controllingFieldValue>
+            <controllingFieldValue>Messaging</controllingFieldValue>
+            <controllingFieldValue>Performance</controllingFieldValue>
+            <valueName>LBA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Display</controllingFieldValue>
+            <controllingFieldValue>Reward</controllingFieldValue>
+            <controllingFieldValue>Messaging</controllingFieldValue>
+            <controllingFieldValue>Performance</controllingFieldValue>
+            <valueName>Insertion</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Display</controllingFieldValue>
+            <controllingFieldValue>Reward</controllingFieldValue>
+            <controllingFieldValue>Messaging</controllingFieldValue>
+            <controllingFieldValue>Performance</controllingFieldValue>
+            <valueName>Digital Reward</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Display</controllingFieldValue>
+            <controllingFieldValue>Reward</controllingFieldValue>
+            <controllingFieldValue>Messaging</controllingFieldValue>
+            <controllingFieldValue>Performance</controllingFieldValue>
+            <valueName>Targeted</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Display</controllingFieldValue>
+            <controllingFieldValue>Reward</controllingFieldValue>
+            <controllingFieldValue>Messaging</controllingFieldValue>
+            <controllingFieldValue>Performance</controllingFieldValue>
+            <valueName>ROLI</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Display</controllingFieldValue>
+            <controllingFieldValue>Reward</controllingFieldValue>
+            <controllingFieldValue>Messaging</controllingFieldValue>
+            <controllingFieldValue>Performance</controllingFieldValue>
+            <valueName>Maxstream</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Display</controllingFieldValue>
+            <controllingFieldValue>Reward</controllingFieldValue>
+            <controllingFieldValue>Messaging</controllingFieldValue>
+            <controllingFieldValue>Performance</controllingFieldValue>
+            <valueName>Portal Dunia Games</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Display</controllingFieldValue>
+            <controllingFieldValue>Reward</controllingFieldValue>
+            <controllingFieldValue>Messaging</controllingFieldValue>
+            <controllingFieldValue>Performance</controllingFieldValue>
+            <valueName>SMS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Display</controllingFieldValue>
+            <controllingFieldValue>Reward</controllingFieldValue>
+            <controllingFieldValue>Messaging</controllingFieldValue>
+            <controllingFieldValue>Performance</controllingFieldValue>
+            <valueName>MMS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Display</controllingFieldValue>
+            <controllingFieldValue>Reward</controllingFieldValue>
+            <controllingFieldValue>Messaging</controllingFieldValue>
+            <controllingFieldValue>Performance</controllingFieldValue>
+            <valueName>USSD</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Display</controllingFieldValue>
+            <controllingFieldValue>Reward</controllingFieldValue>
+            <controllingFieldValue>Messaging</controllingFieldValue>
+            <controllingFieldValue>Performance</controllingFieldValue>
+            <valueName>IVR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Display</controllingFieldValue>
+            <controllingFieldValue>Reward</controllingFieldValue>
+            <controllingFieldValue>Messaging</controllingFieldValue>
+            <controllingFieldValue>Performance</controllingFieldValue>
+            <valueName>NSP</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Display</controllingFieldValue>
+            <controllingFieldValue>Reward</controllingFieldValue>
+            <controllingFieldValue>Messaging</controllingFieldValue>
+            <controllingFieldValue>Performance</controllingFieldValue>
+            <valueName>Symphony</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Display</controllingFieldValue>
+            <controllingFieldValue>Reward</controllingFieldValue>
+            <controllingFieldValue>Messaging</controllingFieldValue>
+            <controllingFieldValue>Performance</controllingFieldValue>
+            <valueName>Klik to Call</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Display</controllingFieldValue>
+            <controllingFieldValue>Reward</controllingFieldValue>
+            <controllingFieldValue>Messaging</controllingFieldValue>
+            <controllingFieldValue>Performance</controllingFieldValue>
+            <valueName>Insertion *888#</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Display</controllingFieldValue>
+            <controllingFieldValue>Reward</controllingFieldValue>
+            <controllingFieldValue>Messaging</controllingFieldValue>
+            <controllingFieldValue>Performance</controllingFieldValue>
+            <valueName>Banner</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Display</controllingFieldValue>
+            <controllingFieldValue>Reward</controllingFieldValue>
+            <controllingFieldValue>Messaging</controllingFieldValue>
+            <controllingFieldValue>Performance</controllingFieldValue>
+            <valueName>Vending Machine</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Display</controllingFieldValue>
+            <controllingFieldValue>Reward</controllingFieldValue>
+            <controllingFieldValue>Messaging</controllingFieldValue>
+            <controllingFieldValue>Performance</controllingFieldValue>
+            <valueName>Data Reward</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Display</controllingFieldValue>
+            <controllingFieldValue>Reward</controllingFieldValue>
+            <controllingFieldValue>Messaging</controllingFieldValue>
+            <controllingFieldValue>Performance</controllingFieldValue>
+            <valueName>Performance</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Display</controllingFieldValue>
+            <controllingFieldValue>Reward</controllingFieldValue>
+            <controllingFieldValue>Messaging</controllingFieldValue>
+            <controllingFieldValue>Performance</controllingFieldValue>
+            <valueName>Open Inventory</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Display</controllingFieldValue>
+            <controllingFieldValue>Reward</controllingFieldValue>
+            <controllingFieldValue>Messaging</controllingFieldValue>
+            <controllingFieldValue>Performance</controllingFieldValue>
+            <valueName>In Vehicle Screen</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Display</controllingFieldValue>
+            <controllingFieldValue>Reward</controllingFieldValue>
+            <controllingFieldValue>Messaging</controllingFieldValue>
+            <controllingFieldValue>Performance</controllingFieldValue>
+            <valueName>Article</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Display</controllingFieldValue>
+            <controllingFieldValue>Reward</controllingFieldValue>
+            <controllingFieldValue>Messaging</controllingFieldValue>
+            <controllingFieldValue>Performance</controllingFieldValue>
+            <valueName>Survey</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Display</controllingFieldValue>
+            <controllingFieldValue>Reward</controllingFieldValue>
+            <controllingFieldValue>Messaging</controllingFieldValue>
+            <controllingFieldValue>Performance</controllingFieldValue>
+            <valueName>Push Notification</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Display</controllingFieldValue>
+            <controllingFieldValue>Reward</controllingFieldValue>
+            <controllingFieldValue>Messaging</controllingFieldValue>
+            <controllingFieldValue>Performance</controllingFieldValue>
+            <valueName>Development Fee</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Display</controllingFieldValue>
+            <controllingFieldValue>Reward</controllingFieldValue>
+            <controllingFieldValue>Messaging</controllingFieldValue>
+            <controllingFieldValue>Performance</controllingFieldValue>
+            <valueName>M-Coupon</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Display</controllingFieldValue>
+            <controllingFieldValue>Reward</controllingFieldValue>
+            <controllingFieldValue>Messaging</controllingFieldValue>
+            <controllingFieldValue>Performance</controllingFieldValue>
+            <valueName>Lockscreen Ads</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Display</controllingFieldValue>
+            <controllingFieldValue>Reward</controllingFieldValue>
+            <controllingFieldValue>Messaging</controllingFieldValue>
+            <controllingFieldValue>Performance</controllingFieldValue>
+            <valueName>Basic Profiling</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Display</controllingFieldValue>
+            <controllingFieldValue>Reward</controllingFieldValue>
+            <controllingFieldValue>Messaging</controllingFieldValue>
+            <controllingFieldValue>Performance</controllingFieldValue>
+            <valueName>Interest Data</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Display</controllingFieldValue>
+            <controllingFieldValue>Reward</controllingFieldValue>
+            <controllingFieldValue>Messaging</controllingFieldValue>
+            <controllingFieldValue>Performance</controllingFieldValue>
+            <valueName>Video</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Display</controllingFieldValue>
+            <controllingFieldValue>Reward</controllingFieldValue>
+            <controllingFieldValue>Messaging</controllingFieldValue>
+            <controllingFieldValue>Performance</controllingFieldValue>
+            <valueName>PNV</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Display</controllingFieldValue>
+            <controllingFieldValue>Reward</controllingFieldValue>
+            <controllingFieldValue>Messaging</controllingFieldValue>
+            <controllingFieldValue>Performance</controllingFieldValue>
+            <valueName>Messaging</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Display</controllingFieldValue>
+            <controllingFieldValue>Reward</controllingFieldValue>
+            <controllingFieldValue>Messaging</controllingFieldValue>
+            <controllingFieldValue>Performance</controllingFieldValue>
+            <valueName>All</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Display</controllingFieldValue>
+            <valueName>Display</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Display</controllingFieldValue>
+            <valueName>Rich Media</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Display</controllingFieldValue>
+            <controllingFieldValue>Social Media Ads</controllingFieldValue>
+            <valueName>Display / Video</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Display</controllingFieldValue>
+            <valueName>Text</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Programmatic Ads</controllingFieldValue>
+            <valueName>Targeted Ads</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IPTV</controllingFieldValue>
+            <controllingFieldValue>TVC</controllingFieldValue>
+            <valueName>TVC</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IPTV</controllingFieldValue>
+            <valueName>IPTV</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Blocking Channel</controllingFieldValue>
+            <valueName>Blocking Channel</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Messaging</controllingFieldValue>
+            <valueName>WABA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Messaging</controllingFieldValue>
+            <valueName>RCS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Messaging</controllingFieldValue>
+            <valueName>Net Message</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Messaging</controllingFieldValue>
+            <valueName>OTA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Messaging</controllingFieldValue>
+            <valueName>T Bill</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Messaging</controllingFieldValue>
+            <valueName>NIK Matching</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>In House Production</controllingFieldValue>
+            <valueName>Virtual Ads</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>In House Production</controllingFieldValue>
+            <valueName>Program Production</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>In House Production</controllingFieldValue>
+            <valueName>Creative Production</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>In House Production</controllingFieldValue>
+            <valueName>Sponsorship On Air</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>In House Production</controllingFieldValue>
+            <valueName>Studio</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Off Air Activation</controllingFieldValue>
+            <valueName>Off Air Activation</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Performance</controllingFieldValue>
+            <valueName>Cost Per Claim</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Performance</controllingFieldValue>
+            <valueName>Alfamart Voucher Code</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Performance</controllingFieldValue>
+            <valueName>Generate Unique Voucher Code</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>OTT Digital Advertising</controllingFieldValue>
+            <valueName>IndiHomeTV.com</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>OTT Digital Advertising</controllingFieldValue>
+            <valueName>IndiHome TV Apps</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IndiHome OTT Ads</controllingFieldValue>
+            <valueName>IndiHome OTT Ads</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Blocking</controllingFieldValue>
+            <valueName>Blocking</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Data</controllingFieldValue>
+            <valueName>Advance Profiling</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Data</controllingFieldValue>
+            <valueName>Data</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Creative Ads</controllingFieldValue>
+            <valueName>Creative Ads</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Creative Ads</controllingFieldValue>
+            <valueName>Screensaver Ads</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Sponsorship</controllingFieldValue>
+            <valueName>Sponsorship</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Social Media Ads</controllingFieldValue>
+            <valueName>Social Media Ads</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

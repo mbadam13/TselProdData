@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All</fullName>
+    <columns>NAME</columns>
+    <columns>Identifier__c</columns>
+    <columns>Section__c</columns>
+    <columns>Category__c</columns>
+    <columns>Advertiser__c</columns>
+    <columns>Brand_Name__c</columns>
+    <columns>Brand_Type__c</columns>
+    <columns>Brand_Salesforce__c</columns>
+    <columns>LOB__c</columns>
+    <columns>CREATED_DATE</columns>
+    <columns>LAST_UPDATE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>NAME</field>
+        <operation>contains</operation>
+        <value>AB - 000016042</value>
+    </filters>
+    <label>All</label>
+</ListView>

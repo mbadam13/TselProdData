@@ -1,0 +1,70 @@
+<!-- 
+    Created by Victor
+    18/1/2022
+-->
+
+<apex:page standardController="Brand__c" extensions="BrandController" sidebar="true" showHeader="false" lightningStyleSheets="true">
+	<!-- CSS -->
+    <style>
+        .logo {
+        float: right;
+        width: 140px;
+        margin: -61px 20px 0 0;
+        }
+        
+		.lightblueColour {background-color:lightblue;}
+    </style>
+    
+    <apex:sectionHeader title="Brand"/>
+    <apex:image value="https://digiads--devpardot--c.documentforce.com/servlet/servlet.FileDownload?file=0151e0000006ijx" styleClass="logo"/>
+    	
+    <apex:form id="idFormBrand">
+    	<apex:pageMessages />
+    	<apex:pageBlock id="idInputBrand">
+    		<apex:pageBlockSection columns="1" showHeader="true" title="Brand Information">
+    			<apex:inputField id="brandName" value="{!brand.name}" />
+    			<apex:inputField id="productName" value="{!brand.Product_Name__c}" />
+    			<apex:inputField id="picAdvertiser" value="{!brand.PIC_Advertiser__c}" />
+    			
+    			<apex:commandbutton value="Check Valid" action="{!checkValid}" />
+    		</apex:pageBlockSection>
+    	</apex:pageBlock>
+    	
+   		<apex:pageBlock id="idResultBrandAdex" title="Brand by Adex" rendered="{!renderedAdexBrand}">
+	        <apex:pageBlockTable value="{!listWrapperAdexBrand}" var="myAdexBrand">   
+            	<apex:column Headervalue="Select" width="80" >
+	            	<apex:inputCheckbox value="{!myAdexBrand.Selected}"/>
+	            </apex:column>
+            	<apex:column Headervalue="Brand Name">
+            		<apex:outputtext value="{!myAdexBrand.AdexBrand.Brand_Salesforce__c}" />
+				</apex:column>
+				<apex:column Headervalue="LOB">
+					<apex:outputtext value="{!myAdexBrand.AdexBrand.LOB__r.name}" />
+				</apex:column>
+			</apex:pageBlockTable>
+			<apex:outputPanel >
+    			<div align="center" draggable="false" >
+					<apex:commandButton value="Save" action="{!save}" />
+				</div>
+			</apex:outputPanel>
+		</apex:pageBlock>
+		
+		<apex:pageBlock id="idInputTask" rendered="{!renderedTask}">
+    		<apex:pageBlockSection columns="1" showHeader="true" title="Task Information">
+    			<apex:outputText id="taskInformation" value="Do you need to escalate to marketing?" />
+    			<apex:commandbutton value="Create Task" action="{!createTask}" />
+    			
+    			<apex:inputField id="objectTo" value="{!task.WhatId}" rendered="{!renderedInputTask}" />
+    			<apex:inputField id="assignTo" value="{!task.OwnerId}" rendered="{!renderedInputTask}" />
+    			<apex:inputField id="lob" value="{!task.LOB__c}" rendered="{!renderedInputTask}" />
+    			<apex:inputField id="comment" value="{!task.Description}" rendered="{!renderedInputTask}" />
+    			<apex:outputPanel >
+	    			<div align="center" draggable="false" >
+	    				<apex:commandbutton value="Save Task" action="{!saveTask}" rendered="{!renderedInputTask}"/>
+	    			</div>
+    			</apex:outputPanel>
+    		</apex:pageBlockSection>
+    	</apex:pageBlock>
+    </apex:form>
+    
+</apex:page>

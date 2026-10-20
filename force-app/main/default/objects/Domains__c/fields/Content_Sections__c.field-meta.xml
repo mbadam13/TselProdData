@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Content_Sections__c</fullName>
+    <label>Content Sections</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Welcome Page</fullName>
+                <default>false</default>
+                <label>Welcome Page</label>
+            </value>
+            <value>
+                <fullName>Arts &amp; Entertainment</fullName>
+                <default>false</default>
+                <label>Arts &amp; Entertainment</label>
+            </value>
+            <value>
+                <fullName>Automotive</fullName>
+                <default>false</default>
+                <label>Automotive</label>
+            </value>
+            <value>
+                <fullName>News</fullName>
+                <default>false</default>
+                <label>News</label>
+            </value>
+            <value>
+                <fullName>Business</fullName>
+                <default>false</default>
+                <label>Business</label>
+            </value>
+            <value>
+                <fullName>Careers</fullName>
+                <default>false</default>
+                <label>Careers</label>
+            </value>
+            <value>
+                <fullName>Education</fullName>
+                <default>false</default>
+                <label>Education</label>
+            </value>
+            <value>
+                <fullName>Family &amp; Parenting</fullName>
+                <default>false</default>
+                <label>Family &amp; Parenting</label>
+            </value>
+            <value>
+                <fullName>Health &amp; Fitness</fullName>
+                <default>false</default>
+                <label>Health &amp; Fitness</label>
+            </value>
+            <value>
+                <fullName>Food &amp; Drink</fullName>
+                <default>false</default>
+                <label>Food &amp; Drink</label>
+            </value>
+            <value>
+                <fullName>Hobbies &amp; Interests</fullName>
+                <default>false</default>
+                <label>Hobbies &amp; Interests</label>
+            </value>
+            <value>
+                <fullName>Home &amp; Garden</fullName>
+                <default>false</default>
+                <label>Home &amp; Garden</label>
+            </value>
+            <value>
+                <fullName>Law, Gov’t &amp; Politics</fullName>
+                <default>false</default>
+                <label>Law, Gov’t &amp; Politics</label>
+            </value>
+            <value>
+                <fullName>Personal Finance</fullName>
+                <default>false</default>
+                <label>Personal Finance</label>
+            </value>
+            <value>
+                <fullName>Society</fullName>
+                <default>false</default>
+                <label>Society</label>
+            </value>
+            <value>
+                <fullName>Science</fullName>
+                <default>false</default>
+                <label>Science</label>
+            </value>
+            <value>
+                <fullName>Pets</fullName>
+                <default>false</default>
+                <label>Pets</label>
+            </value>
+            <value>
+                <fullName>Sports</fullName>
+                <default>false</default>
+                <label>Sports</label>
+            </value>
+            <value>
+                <fullName>Style &amp; Fashion</fullName>
+                <default>false</default>
+                <label>Style &amp; Fashion</label>
+            </value>
+            <value>
+                <fullName>Technology &amp; Computing</fullName>
+                <default>false</default>
+                <label>Technology &amp; Computing</label>
+            </value>
+            <value>
+                <fullName>Travel</fullName>
+                <default>false</default>
+                <label>Travel</label>
+            </value>
+            <value>
+                <fullName>Real Estate</fullName>
+                <default>false</default>
+                <label>Real Estate</label>
+            </value>
+            <value>
+                <fullName>Shopping</fullName>
+                <default>false</default>
+                <label>Shopping</label>
+            </value>
+            <value>
+                <fullName>Religion &amp; Spirituality</fullName>
+                <default>false</default>
+                <label>Religion &amp; Spirituality</label>
+            </value>
+            <value>
+                <fullName>Uncategorized</fullName>
+                <default>false</default>
+                <label>Uncategorized</label>
+            </value>
+            <value>
+                <fullName>Bisnis</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Bisnis</label>
+            </value>
+            <value>
+                <fullName>Food</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Food</label>
+            </value>
+            <value>
+                <fullName>Health</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Health</label>
+            </value>
+            <value>
+                <fullName>Hiburan</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Hiburan</label>
+            </value>
+            <value>
+                <fullName>Lifestyle</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Lifestyle</label>
+            </value>
+            <value>
+                <fullName>Music &amp; Entertainment</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Music &amp; Entertainment</label>
+            </value>
+            <value>
+                <fullName>Opini</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Opini</label>
+            </value>
+            <value>
+                <fullName>Otomotif</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Otomotif</label>
+            </value>
+            <value>
+                <fullName>Pendidikan</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Pendidikan</label>
+            </value>
+            <value>
+                <fullName>Politik</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Politik</label>
+            </value>
+            <value>
+                <fullName>Properti</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Properti</label>
+            </value>
+            <value>
+                <fullName>Sains</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Sains</label>
+            </value>
+            <value>
+                <fullName>Sport</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Sport</label>
+            </value>
+            <value>
+                <fullName>Tekno</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Tekno</label>
+            </value>
+            <value>
+                <fullName>Wanita</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Wanita</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

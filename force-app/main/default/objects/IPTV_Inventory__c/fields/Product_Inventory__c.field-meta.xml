@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Product_Inventory__c</fullName>
+    <label>Product Inventory</label>
+    <required>true</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <controllingField>Type__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetName>Product_Inventory</valueSetName>
+        <valueSettings>
+            <controllingFieldValue>IPTV</controllingFieldValue>
+            <valueName>2 Studio + Alat +Crew</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IPTV</controllingFieldValue>
+            <valueName>Adlibs</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IPTV</controllingFieldValue>
+            <valueName>Adlibs (TVC)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IPTV</controllingFieldValue>
+            <valueName>Advertorial</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IPTV</controllingFieldValue>
+            <valueName>BI</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IPTV</controllingFieldValue>
+            <valueName>BI (Creative Ads)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IPTV</controllingFieldValue>
+            <valueName>Blocking Channel HD</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IPTV</controllingFieldValue>
+            <valueName>Blocking Channel IPTV SD + HD</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IPTV</controllingFieldValue>
+            <valueName>Blocking Channel Manage Service IPTV HD Channel</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IPTV</controllingFieldValue>
+            <valueName>Blocking Channel Manage Service IPTV SD Channel</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IPTV</controllingFieldValue>
+            <valueName>Blocking Channel OTT SD + HD</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IPTV</controllingFieldValue>
+            <valueName>Blocking Channel SD</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IPTV</controllingFieldValue>
+            <valueName>Blocking Channel SD + HD</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IPTV</controllingFieldValue>
+            <valueName>Blocking Channel UseeTV Go</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IPTV</controllingFieldValue>
+            <valueName>BO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IPTV</controllingFieldValue>
+            <valueName>BO (Creative Ads)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IPTV</controllingFieldValue>
+            <valueName>BOOTING ADS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IPTV</controllingFieldValue>
+            <valueName>Built in</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IPTV</controllingFieldValue>
+            <valueName>Built in (TVC)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IPTV</controllingFieldValue>
+            <valueName>Bundling Mini Studio + Alat + Crew</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IPTV</controllingFieldValue>
+            <valueName>Bundling Package</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IPTV</controllingFieldValue>
+            <valueName>Bundling Usee Hall + Alat + Crew (1)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IPTV</controllingFieldValue>
+            <valueName>CBB</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IPTV</controllingFieldValue>
+            <valueName>CBB (Creative Ads)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IPTV</controllingFieldValue>
+            <valueName>Credit Title</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IPTV</controllingFieldValue>
+            <valueName>Credit Title (Super Impose)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IPTV</controllingFieldValue>
+            <valueName>Detail Live TV</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IPTV</controllingFieldValue>
+            <valueName>Detail Live TV - Showcase</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IPTV</controllingFieldValue>
+            <valueName>Detail News &amp; Promotion</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IPTV</controllingFieldValue>
+            <valueName>Detail VOD</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IPTV</controllingFieldValue>
+            <valueName>Dynamic Image</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IPTV</controllingFieldValue>
+            <valueName>Filler</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IPTV</controllingFieldValue>
+            <valueName>Geo Targeted Creative Ads Navigation</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IPTV</controllingFieldValue>
+            <valueName>Geo Targeted Creative Ads PIP</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IPTV</controllingFieldValue>
+            <valueName>Geo Targeted Creative Ads Pre Roll</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IPTV</controllingFieldValue>
+            <valueName>Geo Targeted Creative Ads Time Shift</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IPTV</controllingFieldValue>
+            <valueName>Halaman Utama</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IPTV</controllingFieldValue>
+            <valueName>Homepage Banner</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IPTV</controllingFieldValue>
+            <valueName>LANDSCAPE ADS (APPS MENU)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IPTV</controllingFieldValue>
+            <valueName>LANDSCAPE ADS (Best Streaming Apps)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IPTV</controllingFieldValue>
+            <valueName>LANDSCAPE ADS (Highlight of The Week)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IPTV</controllingFieldValue>
+            <valueName>LANDSCAPE ADS (HOME MENU)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IPTV</controllingFieldValue>
+            <valueName>LANDSCAPE ADS (MOVIE MENU)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IPTV</controllingFieldValue>
+            <valueName>LANDSCAPE ADS (Top Picks)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IPTV</controllingFieldValue>
+            <valueName>Liputan</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IPTV</controllingFieldValue>
+            <valueName>Live Streaming</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IPTV</controllingFieldValue>
+            <valueName>Live TV Banner</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IPTV</controllingFieldValue>
+            <valueName>NAVIGATION ADS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IPTV</controllingFieldValue>
+            <valueName>OBB</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IPTV</controllingFieldValue>
+            <valueName>OBB (Creative Ads)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IPTV</controllingFieldValue>
+            <valueName>Page About</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IPTV</controllingFieldValue>
+            <valueName>Page Channel</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IPTV</controllingFieldValue>
+            <valueName>Page FAQ</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IPTV</controllingFieldValue>
+            <valueName>Page News &amp; Promotion</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IPTV</controllingFieldValue>
+            <valueName>Page Radio</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IPTV</controllingFieldValue>
+            <valueName>Page VOD</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IPTV</controllingFieldValue>
+            <valueName>PIP</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IPTV</controllingFieldValue>
+            <valueName>POTRAIT BANNER</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IPTV</controllingFieldValue>
+            <valueName>PRE ROLL</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IPTV</controllingFieldValue>
+            <valueName>Production</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IPTV</controllingFieldValue>
+            <valueName>Production (TVC)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IPTV</controllingFieldValue>
+            <valueName>Production Off Air</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IPTV</controllingFieldValue>
+            <valueName>Product Placement</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IPTV</controllingFieldValue>
+            <valueName>Product Placement (Creative Ads)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IPTV</controllingFieldValue>
+            <valueName>QR Code</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IPTV</controllingFieldValue>
+            <valueName>ROTATE BANNER</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IPTV</controllingFieldValue>
+            <valueName>RUNNING TEXT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IPTV</controllingFieldValue>
+            <valueName>RUNNING TEXT (SEA TODAY)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IPTV</controllingFieldValue>
+            <valueName>Running Text (Super Impose)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IPTV</controllingFieldValue>
+            <valueName>SCREENSAVER ADS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IPTV</controllingFieldValue>
+            <valueName>SQUEEZE FRAME</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IPTV</controllingFieldValue>
+            <valueName>Stilll Image</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IPTV</controllingFieldValue>
+            <valueName>Studio (mini studio)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IPTV</controllingFieldValue>
+            <valueName>Studio Usee Hall</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IPTV</controllingFieldValue>
+            <valueName>SUPER IMPOSE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IPTV</controllingFieldValue>
+            <valueName>SUPER IMPOSE (SEA TODAY)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IPTV</controllingFieldValue>
+            <valueName>Talkshow</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IPTV</controllingFieldValue>
+            <valueName>Targeted TVC Ads</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IPTV</controllingFieldValue>
+            <valueName>Template Host / Name</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IPTV</controllingFieldValue>
+            <valueName>Template Host (Creative Ads)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IPTV</controllingFieldValue>
+            <valueName>TIMESHIFT ADS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IPTV</controllingFieldValue>
+            <valueName>TVC</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IPTV</controllingFieldValue>
+            <valueName>TVC Cross Platform</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IPTV</controllingFieldValue>
+            <valueName>TVC GOLD</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IPTV</controllingFieldValue>
+            <valueName>TVC PLATINUM</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IPTV</controllingFieldValue>
+            <valueName>TVC ROS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IPTV</controllingFieldValue>
+            <valueName>TVC SILVER</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IPTV</controllingFieldValue>
+            <valueName>TV Shopping Landscape</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IPTV</controllingFieldValue>
+            <valueName>Venue</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IPTV</controllingFieldValue>
+            <valueName>Webinar</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IPTV</controllingFieldValue>
+            <valueName>PICTURE IN PICTURE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IPTV</controllingFieldValue>
+            <valueName>POTRAIT BANNER (Home Carousel)</valueName>
+        </valueSettings>
+    </valueSet>
+    <visibleLines>10</visibleLines>
+</CustomField>

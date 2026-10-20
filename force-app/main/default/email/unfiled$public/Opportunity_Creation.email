@@ -1,0 +1,16 @@
+Dear {!Opportunity.OwnerFullName},
+
+We are excited to inform you that a new sales opportunity has been created in our Salesforce system.
+
+Opportunity Details:
+- Opportunity Name : {!Opportunity.Name}
+- Account Name       : {!Opportunity.Account_Name__c}
+- Owner                    : {!Opportunity.Sales_Executive__c}
+- Close Date             : {!Opportunity.CloseDate}
+- Stage                     : {!Opportunity.StageName}
+
+{!Opportunity.Link}
+
+Please review the details and take any necessary actions.
+Thank You,
+{!Organization.Name}

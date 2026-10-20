@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>Email_Alert_Approve</fullName>
+        <description>Email Alert Approve</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>sartika_r_sari@telkomsel.co.id</recipient>
+            <type>user</type>
+        </recipients>
+        <senderAddress>salesforce@saasten.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>unfiled$public/Approved_Bypass</template>
+    </alerts>
+    <alerts>
+        <fullName>Email_Alert_Rejected</fullName>
+        <description>Email Alert Rejected</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>sartika_r_sari@telkomsel.co.id</recipient>
+            <type>user</type>
+        </recipients>
+        <senderAddress>salesforce@saasten.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>unfiled$public/Rejected_Bypass</template>
+    </alerts>
+    <fieldUpdates>
+        <fullName>Setup_Account_External</fullName>
+        <field>Account_Name_External__c</field>
+        <formula>Name</formula>
+        <name>Setup Account External</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Stamping_Account_Type</fullName>
+        <description>Stamping Account Type</description>
+        <field>Stamp_Account_Type__c</field>
+        <formula>TEXT(Account_Type__c)</formula>
+        <name>Stamping Account Type</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Stamping_Date_Changed</fullName>
+        <description>Stamping Date Changed</description>
+        <field>Stamping_Date__c</field>
+        <formula>LastModifiedDate</formula>
+        <name>Stamping Date Changed</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Stamping_User_ID</fullName>
+        <description>Stamping User ID changed</description>
+        <field>Stamp_User_ID__c</field>
+        <formula>User_ID__c</formula>
+        <name>Stamping User ID</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_to_Approved</fullName>
+        <field>Contract_Bypass_Approval__c</field>
+        <literalValue>Approved</literalValue>
+        <name>Update to Approved</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_to_On_Progress</fullName>
+        <field>Contract_Bypass_Approval__c</field>
+        <literalValue>On Progress</literalValue>
+        <name>Update to On Progress</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_to_Reject</fullName>
+        <field>Contract_Bypass_Approval__c</field>
+        <literalValue>Rejected</literalValue>
+        <name>Update to Reject</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <rules>
+        <fullName>Automation Check Total Request</fullName>
+        <actions>
+            <name>Check_Total_Request</name>
+            <type>Task</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Account.Publisher_Status__c</field>
+            <operation>equals</operation>
+            <value>Ad Tag Implemented</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Contract Signed to Active Domain</fullName>
+        <actions>
+            <name>Actived_Domain_for_Share_Ad_Tag_Script</name>
+            <type>Task</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Account.Publisher_Status__c</field>
+            <operation>equals</operation>
+            <value>Contract Signed</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Publisher Traffic Tested</fullName>
+        <actions>
+            <name>Create_Publisher_Dashboard_Account</name>
+            <type>Task</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Account.Publisher_Status__c</field>
+            <operation>equals</operation>
+            <value>Check Total Request</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Setup Account External</fullName>
+        <actions>
+            <name>Setup_Account_External</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <formula>OR(ISNEW(), ISCHANGED(Name))</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Stamping New Account</fullName>
+        <actions>
+            <name>Stamping_Account_Type</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Stamping_Date_Changed</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Stamping_User_ID</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <formula>OR(ISNEW(), ISCHANGED(Account_Type__c))</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <tasks>
+        <fullName>Actived_Domain_for_Share_Ad_Tag_Script</fullName>
+        <assignedTo>paul_as_pakpahan@telkomsel.co.id</assignedTo>
+        <assignedToType>user</assignedToType>
+        <dueDateOffset>1</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <priority>Normal</priority>
+        <protected>false</protected>
+        <status>Open</status>
+        <subject>Actived Domain for Share Ad Tag Script</subject>
+    </tasks>
+    <tasks>
+        <fullName>Approved_Task</fullName>
+        <assignedTo>paul_as_pakpahan@telkomsel.co.id</assignedTo>
+        <assignedToType>user</assignedToType>
+        <dueDateOffset>1</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <priority>Normal</priority>
+        <protected>false</protected>
+        <status>Open</status>
+        <subject>Approved Task</subject>
+    </tasks>
+    <tasks>
+        <fullName>Check_Total_Request</fullName>
+        <assignedTo>paul_as_pakpahan@telkomsel.co.id</assignedTo>
+        <assignedToType>user</assignedToType>
+        <dueDateOffset>1</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <priority>Normal</priority>
+        <protected>false</protected>
+        <status>Open</status>
+        <subject>Check Total Request</subject>
+    </tasks>
+    <tasks>
+        <fullName>Create_Publisher_Dashboard_Account</fullName>
+        <assignedTo>admin@telkomsel.co.id</assignedTo>
+        <assignedToType>user</assignedToType>
+        <dueDateOffset>1</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <priority>Normal</priority>
+        <protected>false</protected>
+        <status>Open</status>
+        <subject>Create Publisher Dashboard Account</subject>
+    </tasks>
+    <tasks>
+        <fullName>Rejected_Task</fullName>
+        <assignedTo>paul_as_pakpahan@telkomsel.co.id</assignedTo>
+        <assignedToType>user</assignedToType>
+        <dueDateOffset>1</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <priority>Normal</priority>
+        <protected>false</protected>
+        <status>Open</status>
+        <subject>Rejected Task</subject>
+    </tasks>
+</Workflow>

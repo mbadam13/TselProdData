@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>isValidSaved__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>This field is used to validate the data is able to saved, the data should be create by custom visualforce.
+This field created because to prevent user create data from lookup dialog.</description>
+    <label>isValidSaved?</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

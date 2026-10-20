@@ -1,0 +1,1180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>Check_Proposal</fullName>
+        <description>Check Proposal</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Sales_Manager__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderAddress>salesforce@saasten.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>unfiled$public/Proposal_need_approval</template>
+    </alerts>
+    <alerts>
+        <fullName>Custom_Campaign_need_Approval_COM</fullName>
+        <description>Custom Campaign need Approval COM</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>achmad_s_fariz@telkomsel.co.id</recipient>
+            <type>user</type>
+        </recipients>
+        <senderAddress>salesforce@saasten.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>unfiled$public/Custom_Campaign_Need_Approval</template>
+    </alerts>
+    <alerts>
+        <fullName>Custom_Campaign_need_Approval_GMOD</fullName>
+        <description>Custom Campaign need Approval GMOD</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>iwan_p_satoto@telkomsel.co.id</recipient>
+            <type>user</type>
+        </recipients>
+        <senderAddress>salesforce@saasten.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>unfiled$public/Custom_Campaign_Need_Approval</template>
+    </alerts>
+    <alerts>
+        <fullName>Custom_Campaign_need_Approval_GMS</fullName>
+        <description>Custom Campaign need Approval GMS</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>General_Sales_Manager</recipient>
+            <type>role</type>
+        </recipients>
+        <senderAddress>salesforce@saasten.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>unfiled$public/Custom_Campaign_Need_Approval</template>
+    </alerts>
+    <alerts>
+        <fullName>Custom_Campaign_need_Approval_SM</fullName>
+        <description>Custom Campaign need Approval SM</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Sales_Manager__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderAddress>salesforce@saasten.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>unfiled$public/Custom_Campaign_Need_Approval</template>
+    </alerts>
+    <alerts>
+        <fullName>Custom_campaign_Approved</fullName>
+        <description>Custom campaign Approved</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderAddress>salesforce@saasten.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>unfiled$public/Custom_Campaign_Approve</template>
+    </alerts>
+    <alerts>
+        <fullName>Custom_campaign_Rejected</fullName>
+        <description>Custom campaign Rejected</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderAddress>salesforce@saasten.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>unfiled$public/Custom_Campaign_Rejected</template>
+    </alerts>
+    <alerts>
+        <fullName>Discount_Need_Approval_DIR</fullName>
+        <description>Discount Need Approval DIR</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>soonnam@telkomsel.co.id</recipient>
+            <type>user</type>
+        </recipients>
+        <senderAddress>salesforce@saasten.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>unfiled$public/Discount_need_approval</template>
+    </alerts>
+    <alerts>
+        <fullName>Discount_Need_Approval_GMS</fullName>
+        <description>Discount Need Approval GMS</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>General_Sales_Manager</recipient>
+            <type>role</type>
+        </recipients>
+        <senderAddress>salesforce@saasten.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>unfiled$public/Discount_need_approval</template>
+    </alerts>
+    <alerts>
+        <fullName>Discount_Need_Approval_L1</fullName>
+        <description>Discount Need Approval L1</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Approval_1__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderAddress>salesforce@saasten.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>unfiled$public/Discount_need_approval</template>
+    </alerts>
+    <alerts>
+        <fullName>Discount_Need_Approval_L2</fullName>
+        <description>Discount Need Approval L2</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Approval_2__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Discount_need_approval</template>
+    </alerts>
+    <alerts>
+        <fullName>Discount_Need_Approval_L3</fullName>
+        <description>Discount Need Approval L3</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Approval_3__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderAddress>salesforce@saasten.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>unfiled$public/Discount_need_approval</template>
+    </alerts>
+    <alerts>
+        <fullName>Discount_Need_Approval_L4</fullName>
+        <description>Discount Need Approval L4</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Approval_4__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Discount_need_approval</template>
+    </alerts>
+    <alerts>
+        <fullName>Discount_Need_Approval_SM</fullName>
+        <description>Discount Need Approval SM</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Sales_Manager__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderAddress>salesforce@saasten.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>unfiled$public/Discount_need_approval</template>
+    </alerts>
+    <alerts>
+        <fullName>Discount_Need_Approval_VP</fullName>
+        <description>Discount Need Approval VP</description>
+        <protected>false</protected>
+        <recipients>
+            <field>VP__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderAddress>salesforce@saasten.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>unfiled$public/Discount_need_approval</template>
+    </alerts>
+    <alerts>
+        <fullName>Discount_approval_approved</fullName>
+        <description>Discount approval approved</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderAddress>salesforce@saasten.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>unfiled$public/Discount_approval_Approved</template>
+    </alerts>
+    <alerts>
+        <fullName>Discount_approval_rejected</fullName>
+        <description>Discount approval rejected</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderAddress>salesforce@saasten.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>unfiled$public/Discount_approval_Rejeceted</template>
+    </alerts>
+    <alerts>
+        <fullName>Opportunity_Close_won_notify_to_AM</fullName>
+        <description>Opportunity Close won notify to AM</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderAddress>salesforce@saasten.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>unfiled$public/Opportunity_Close_Won</template>
+    </alerts>
+    <alerts>
+        <fullName>Performance_Approved</fullName>
+        <description>Performance Approved</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderAddress>salesforce@saasten.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>unfiled$public/Performance_Approved</template>
+    </alerts>
+    <alerts>
+        <fullName>Performance_Rejected</fullName>
+        <description>Performance Rejected</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderAddress>salesforce@saasten.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>unfiled$public/Performance_reject</template>
+    </alerts>
+    <alerts>
+        <fullName>Performance_need_approval</fullName>
+        <description>Performance need approval SM</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Sales_Manager__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderAddress>salesforce@saasten.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>unfiled$public/Performance_Need_Approval</template>
+    </alerts>
+    <alerts>
+        <fullName>Performance_need_approval_COM</fullName>
+        <description>Performance need approval COM</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Campaign_Operation_Manager__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderAddress>salesforce@saasten.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>unfiled$public/Performance_Need_Approval</template>
+    </alerts>
+    <alerts>
+        <fullName>Performance_need_approval_GMOD</fullName>
+        <description>Performance need approval GMOD</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>alexandra_deby@telkomsel.co.id</recipient>
+            <type>user</type>
+        </recipients>
+        <senderAddress>salesforce@saasten.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>unfiled$public/Performance_Need_Approval</template>
+    </alerts>
+    <alerts>
+        <fullName>Performance_need_approval_GMS</fullName>
+        <description>Performance need approval GMS</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>General_Sales_Manager</recipient>
+            <type>role</type>
+        </recipients>
+        <senderAddress>salesforce@saasten.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>unfiled$public/Performance_Need_Approval</template>
+    </alerts>
+    <alerts>
+        <fullName>Postpaid_Payment_Approved</fullName>
+        <description>Postpaid Payment Approved</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderAddress>salesforce@saasten.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>unfiled$public/Postpaid_approve</template>
+    </alerts>
+    <alerts>
+        <fullName>Postpaid_Payment_Rejected</fullName>
+        <description>Postpaid Payment Rejected</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderAddress>salesforce@saasten.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>unfiled$public/Postpaid_Rejected</template>
+    </alerts>
+    <alerts>
+        <fullName>Postpaid_need_Approval</fullName>
+        <description>Postpaid need Approval</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>alexandra_deby@telkomsel.co.id</recipient>
+            <type>user</type>
+        </recipients>
+        <senderAddress>salesforce@saasten.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>unfiled$public/Postpaid_Need_Approval</template>
+    </alerts>
+    <alerts>
+        <fullName>Proggramatic_Approved</fullName>
+        <description>Proggramatic Approved</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderAddress>salesforce@saasten.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>unfiled$public/Programmatic_Approved</template>
+    </alerts>
+    <alerts>
+        <fullName>Programatic_Rejected</fullName>
+        <description>Programatic Rejected</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderAddress>salesforce@saasten.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>unfiled$public/Programmaric_Rejected</template>
+    </alerts>
+    <alerts>
+        <fullName>Programmatic_need_approval</fullName>
+        <ccEmails>david.wong@saasten.com;davidwong87@yahoo.com</ccEmails>
+        <description>Programmatic need approval</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>achmad_s_fariz@telkomsel.co.id</recipient>
+            <type>user</type>
+        </recipients>
+        <senderAddress>salesforce@saasten.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>unfiled$public/Programmatic_need_approval</template>
+    </alerts>
+    <alerts>
+        <fullName>Proposal_Approve</fullName>
+        <description>Proposal Approve</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderAddress>salesforce@saasten.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>unfiled$public/Proposal_Approved</template>
+    </alerts>
+    <alerts>
+        <fullName>Proposal_Reject</fullName>
+        <description>Proposal Reject</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderAddress>salesforce@saasten.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>unfiled$public/Proposal_Rejected</template>
+    </alerts>
+    <alerts>
+        <fullName>Send_Email_after_create_oppty</fullName>
+        <description>Send Email after create oppty</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Opportunity_Creation</template>
+    </alerts>
+    <alerts>
+        <fullName>Send_Email_after_updated_oppty</fullName>
+        <description>Send Email after updated oppty</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Opportunity_Updated</template>
+    </alerts>
+    <fieldUpdates>
+        <fullName>Approval_Process_Status_Step</fullName>
+        <description>Approval Process Status Step</description>
+        <field>Approval_Process_Status_Step__c</field>
+        <name>Approval Process Status Step</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Approval_Remark</fullName>
+        <description>Approval Remark</description>
+        <field>Approval_Remark__c</field>
+        <name>Approval Remark</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Null</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Approval_Status_Nego</fullName>
+        <field>Approval_Status__c</field>
+        <name>Approval Status Nego</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Approved</fullName>
+        <field>Approval_Status__c</field>
+        <literalValue>Approved</literalValue>
+        <name>Approved</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Approved_Postpaid</fullName>
+        <field>Approval_Remark_Postpaid__c</field>
+        <literalValue>Approved</literalValue>
+        <name>Approved Postpaid</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Approved_Remark</fullName>
+        <field>Approval_Remark__c</field>
+        <formula>&apos;Approved&apos;</formula>
+        <name>Approved Remark</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Campaign_Customize_Done</fullName>
+        <field>Campaign_Customize_Done__c</field>
+        <literalValue>1</literalValue>
+        <name>Campaign Customize Done</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Check_PO_Approval</fullName>
+        <field>Check_PO__c</field>
+        <literalValue>OK</literalValue>
+        <name>Check PO Approval</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Check_PO_Not</fullName>
+        <field>Check_PO__c</field>
+        <literalValue>Not Oke</literalValue>
+        <name>Check PO Not</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Check_PO_Ok</fullName>
+        <field>isSubmitCheckPOApproval__c</field>
+        <literalValue>1</literalValue>
+        <name>Check PO Ok</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Check_PO_Rejected</fullName>
+        <field>isSubmitCheckPOApproval__c</field>
+        <literalValue>0</literalValue>
+        <name>Check PO Rejected</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Closed_Won</fullName>
+        <field>StageName</field>
+        <literalValue>Closed Won</literalValue>
+        <name>Closed Won</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Director_Approved</fullName>
+        <field>Approval_History__c</field>
+        <formula>&apos;Director Approved&apos;</formula>
+        <name>Director Approved</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Director_Approved_2</fullName>
+        <field>Approval_History__c</field>
+        <formula>&apos;Director Approved&apos;</formula>
+        <name>Director Approved</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Director_Rejected</fullName>
+        <field>Approval_History__c</field>
+        <formula>&apos;Director Rejected&apos;</formula>
+        <name>Director Rejected</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>GM_Approved</fullName>
+        <field>Approval_History__c</field>
+        <formula>&apos;GM Approved&apos;</formula>
+        <name>GM Approved</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>GM_Rejected</fullName>
+        <field>Approval_History__c</field>
+        <formula>&apos;GM Rejected&apos;</formula>
+        <name>GM Rejected</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>I_O_Count</fullName>
+        <field>I_O_Product__c</field>
+        <literalValue>1</literalValue>
+        <name>I/O Count</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>I_O_Done</fullName>
+        <field>I_O_Done__c</field>
+        <literalValue>1</literalValue>
+        <name>I/O Done</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Initial_Approval_Process_Step</fullName>
+        <field>Approval_Process_Status_Step__c</field>
+        <literalValue>In Progress</literalValue>
+        <name>Initial Approval Process Step</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Manager_Approved</fullName>
+        <field>Approval_History__c</field>
+        <formula>&apos;Manager Approved&apos;</formula>
+        <name>Manager Approved</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Manager_Product_Approved</fullName>
+        <description>Manager Product Approved</description>
+        <field>Approval_History__c</field>
+        <formula>&apos;Manager Product Approved&apos;</formula>
+        <name>Manager Product Approved</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Manager_Product_Rejected</fullName>
+        <field>Approval_History__c</field>
+        <formula>&apos;Manager Product Rejected&apos;</formula>
+        <name>Manager Product Rejected</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Manager_Product_Remarks_c_to_Approved</fullName>
+        <field>Manager_Product_Remarks__c</field>
+        <literalValue>Approved</literalValue>
+        <name>Manager_Product_Remarks__c to Approved</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Manager_Rejected</fullName>
+        <field>Approval_History__c</field>
+        <formula>&apos;Manager Rejected&apos;</formula>
+        <name>Manager Rejected</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Need_Director_Approval</fullName>
+        <description>Need Director Approval</description>
+        <field>Approval_Remark__c</field>
+        <formula>&apos;Need Director Approval&apos;</formula>
+        <name>Need Director Approval</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Need_GM_Approval</fullName>
+        <field>Approval_Remark__c</field>
+        <formula>&apos;Need GM Approval&apos;</formula>
+        <name>Need GM Approval</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Need_SM_Approval</fullName>
+        <field>Approval_Remark__c</field>
+        <formula>&apos;Need SM Approval&apos;</formula>
+        <name>Need SM Approval</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Next_Approval_Process_Step</fullName>
+        <field>Approval_Process_Status_Step__c</field>
+        <literalValue>Need Next Approval</literalValue>
+        <name>Next Approval Process Step</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Next_Step</fullName>
+        <field>Approval_Process_Status_Step__c</field>
+        <literalValue>In Progress</literalValue>
+        <name>Next Step</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Performance_Done</fullName>
+        <field>Performance_Done__c</field>
+        <literalValue>1</literalValue>
+        <name>Performance Done</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Performance_Done_Cek</fullName>
+        <field>Performance_Done__c</field>
+        <literalValue>0</literalValue>
+        <name>Performance Done Cek</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Performance_count</fullName>
+        <field>Performance_Product__c</field>
+        <literalValue>1</literalValue>
+        <name>Performance count</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Postpaid_Approval</fullName>
+        <field>Approval_Remark__c</field>
+        <formula>&apos;Postpaid Approval&apos;</formula>
+        <name>Postpaid Approval</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Programmatic_Count</fullName>
+        <field>Programmatic_Product__c</field>
+        <literalValue>1</literalValue>
+        <name>Programmatic Count</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Programmatic_Done</fullName>
+        <field>Programmatic_Done__c</field>
+        <literalValue>1</literalValue>
+        <name>Programmatic Done</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Proposal_Complete</fullName>
+        <field>Request_for_Proposal_Status__c</field>
+        <literalValue>Completed</literalValue>
+        <name>Proposal Complete</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>RFP_Approval_Status</fullName>
+        <field>Request_for_Proposal_Status__c</field>
+        <name>RFP Approval Status</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Recalled</fullName>
+        <field>Approval_Status__c</field>
+        <literalValue>Recalled</literalValue>
+        <name>Recalled</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Recalled_Remark</fullName>
+        <field>Approval_Remark__c</field>
+        <name>Recalled Remark</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Null</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Reject_Postpaid</fullName>
+        <field>Penagihan_based_on__c</field>
+        <literalValue>Prepaid</literalValue>
+        <name>Reject Postpaid</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Rejected</fullName>
+        <field>Approval_Status__c</field>
+        <literalValue>Rejected</literalValue>
+        <name>Rejected</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Rejected_Postpaid</fullName>
+        <field>Approval_Remark_Postpaid__c</field>
+        <literalValue>Rejected</literalValue>
+        <name>Rejected Postpaid</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Rejected_Remark</fullName>
+        <field>Approval_Remark__c</field>
+        <formula>&apos;Rejected&apos;</formula>
+        <name>Rejected Remark</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>SM_Approved</fullName>
+        <field>Approval_History__c</field>
+        <formula>&apos;SM Approved&apos;</formula>
+        <name>SM Approved</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>SM_Rejected</fullName>
+        <field>Approval_History__c</field>
+        <formula>&apos;SM Rejected&apos;</formula>
+        <name>SM Rejected</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_Approval_Remark_to_Empty</fullName>
+        <field>Approval_Remark__c</field>
+        <name>Set Approval Remark to Empty</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Null</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Submit_Check_PO</fullName>
+        <field>Check_PO__c</field>
+        <literalValue>Submit</literalValue>
+        <name>Submit Check PO</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Submit_PO</fullName>
+        <field>isSubmitCheckPOApproval__c</field>
+        <literalValue>1</literalValue>
+        <name>Submit PO</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Submitted</fullName>
+        <description>Submitted</description>
+        <field>Approval_Status__c</field>
+        <literalValue>Submitted</literalValue>
+        <name>Submitted</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Approval_Remark</fullName>
+        <field>Approval_Remark__c</field>
+        <name>Update Approval Remark</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Null</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Approval_Status</fullName>
+        <description>Update Approval Status product</description>
+        <field>Approval_Status__c</field>
+        <name>Update Approval Status</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Cek_PO</fullName>
+        <description>Update Cek PO</description>
+        <field>Check_PO__c</field>
+        <name>Update Cek PO</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Cek_PO_Clone</fullName>
+        <description>Update Cek PO</description>
+        <field>Check_PO__c</field>
+        <name>Update Cek PO_Clone</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Marketing_Package</fullName>
+        <field>Marketing_Package__c</field>
+        <literalValue>1</literalValue>
+        <name>Update Marketing Package</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Net_After_Discount</fullName>
+        <field>Amount</field>
+        <formula>Amount +   Additional_Fee__c</formula>
+        <name>Update Net After Discount</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Oppty_Name</fullName>
+        <field>Name</field>
+        <formula>LEFT(Update_Oppty_Name__c,120)</formula>
+        <name>Update Oppty Name</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Stage</fullName>
+        <description>Update to prospecting stage</description>
+        <field>StageName</field>
+        <literalValue>Prospecting</literalValue>
+        <name>Update Stage</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>VP_Approved</fullName>
+        <field>Approval_History__c</field>
+        <formula>&apos;VP Approved&apos;</formula>
+        <name>VP Approved</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>VP_Approved_1</fullName>
+        <field>Approval_History__c</field>
+        <formula>&apos;VP Approved&apos;</formula>
+        <name>VP Approved</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>VP_Rejected</fullName>
+        <field>Approval_History__c</field>
+        <formula>&apos;VP Rejected&apos;</formula>
+        <name>VP Rejected</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <rules>
+        <fullName>Check Own Proposal</fullName>
+        <actions>
+            <name>Proposal_Complete</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Opportunity.Templated_Proposal__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Clone Create Opportunity</fullName>
+        <actions>
+            <name>Approval_Process_Status_Step</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Approval_Remark</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>RFP_Approval_Status</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Update_Approval_Status</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Update_Cek_PO_Clone</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Update_Stage</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Opportunity.StageName</field>
+            <operation>equals</operation>
+            <value>Closed Won</value>
+        </criteriaItems>
+        <description>Clone Create Opportunity</description>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>Close won notification</fullName>
+        <active>false</active>
+        <booleanFilter>1 AND 2</booleanFilter>
+        <criteriaItems>
+            <field>Opportunity.StageName</field>
+            <operation>equals</operation>
+            <value>Closed Won</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Opportunity.Status_Proposal__c</field>
+            <operation>equals</operation>
+            <value>OK</value>
+        </criteriaItems>
+        <description>Notify to AM when Opportunity Close won for the next step</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>I%2FO Count</fullName>
+        <actions>
+            <name>I_O_Count</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Opportunity.I_O_Product_Count__c</field>
+            <operation>greaterOrEqual</operation>
+            <value>1</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Opportunity Marketing Package</fullName>
+        <actions>
+            <name>Update_Marketing_Package</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>User.UserRoleId</field>
+            <operation>contains</operation>
+            <value>Marketing</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Performance count</fullName>
+        <actions>
+            <name>Performance_count</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Opportunity.I_O_Product_Count__c</field>
+            <operation>greaterThan</operation>
+            <value>0</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Programmatic Count</fullName>
+        <actions>
+            <name>Programmatic_Count</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Opportunity.Programmatic_Product_Count__c</field>
+            <operation>greaterThan</operation>
+            <value>0</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Update Back To Nego</fullName>
+        <actions>
+            <name>Approval_Status_Nego</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Next_Step</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Performance_Done_Cek</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Update_Approval_Remark</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Update_Cek_PO</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Opportunity.StageName</field>
+            <operation>equals</operation>
+            <value>Negotiation</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Opportunity.Check_PO__c</field>
+            <operation>equals</operation>
+            <value>OK</value>
+        </criteriaItems>
+        <description>Update Back To Nego</description>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Update Net After Discount</fullName>
+        <actions>
+            <name>Update_Net_After_Discount</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <formula>1=1</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>convention_name_opportunity</fullName>
+        <actions>
+            <name>Update_Oppty_Name</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <formula>1=1</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+</Workflow>

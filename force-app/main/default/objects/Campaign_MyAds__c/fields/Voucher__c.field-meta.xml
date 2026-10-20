@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Voucher__c</fullName>
+    <label>Voucher</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Campaign_Type__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Pakai Kode Voucher</fullName>
+                <default>true</default>
+                <label>Pakai Kode Voucher</label>
+            </value>
+            <value>
+                <fullName>Tanpa Kode Voucher</fullName>
+                <default>false</default>
+                <label>Tanpa Kode Voucher</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Iklan</controllingFieldValue>
+            <controllingFieldValue>Program</controllingFieldValue>
+            <controllingFieldValue>Retargeting</controllingFieldValue>
+            <valueName>Pakai Kode Voucher</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Iklan</controllingFieldValue>
+            <controllingFieldValue>Program</controllingFieldValue>
+            <controllingFieldValue>Retargeting</controllingFieldValue>
+            <valueName>Tanpa Kode Voucher</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

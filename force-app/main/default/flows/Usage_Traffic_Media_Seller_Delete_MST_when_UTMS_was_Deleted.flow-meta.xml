@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>58.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <decisions>
+        <name>Check_Record_Data</name>
+        <label>Check Record Data</label>
+        <locationX>749</locationX>
+        <locationY>442</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>If_MST_Not_Null</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>getMSTRecord.Id</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue></stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Delete_MST_Data</targetReference>
+            </connector>
+            <label>If MST Not Null</label>
+        </rules>
+    </decisions>
+    <environments>Default</environments>
+    <interviewLabel>Usage Traffic Media Seller - Delete MST when UTMS Delete {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Usage Traffic Media Seller - Delete MST when UTMS was Deleted</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>FREE_FORM_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordDeletes>
+        <name>Delete_MST_Data</name>
+        <label>Delete MST Data</label>
+        <locationX>531</locationX>
+        <locationY>539</locationY>
+        <inputReference>getMSTRecord</inputReference>
+    </recordDeletes>
+    <recordLookups>
+        <name>getMSTRecord</name>
+        <label>getMSTRecord</label>
+        <locationX>517</locationX>
+        <locationY>359</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Check_Record_Data</targetReference>
+        </connector>
+        <filterLogic>((1 AND 5) OR 2) AND 3 AND 4</filterLogic>
+        <filters>
+            <field>Usage_Traffic_Media_Seller__c</field>
+            <operator>NotEqualTo</operator>
+            <value>
+                <stringValue></stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Usage_Traffic_Media_Seller__c</field>
+            <operator>IsNull</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Type__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Revenue Actual</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>MST_Type__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Media Seller</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Usage_Traffic_Media_Seller__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Monthly_Sales_Target__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <start>
+        <locationX>388</locationX>
+        <locationY>48</locationY>
+        <connector>
+            <targetReference>getMSTRecord</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Monthly_Sales_Target__c</field>
+            <operator>NotEqualTo</operator>
+            <value>
+                <stringValue></stringValue>
+            </value>
+        </filters>
+        <object>Usage_Traffic_Media_Seller__c</object>
+        <recordTriggerType>Delete</recordTriggerType>
+        <triggerType>RecordBeforeDelete</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

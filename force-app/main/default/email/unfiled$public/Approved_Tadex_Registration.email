@@ -1,0 +1,27 @@
+Kepada {!Lead.LastName}, 
+
+Terima kasih telah melakukan registrasi di TADEX. Data Anda telah lolos verifikasi Dewan Pers dan sudah berhasil tersimpan.
+  
+Tim kami akan segera menghubungi Anda untuk proses selanjutnya.
+
+Jika Anda membutuhkan bantuan, silakan hubungi kami melalui halo@tadex.id, kami akan dengan senang hati membantu. 
+
+Terima kasih. 
+ 
+Salam, 
+TADEX
+
+********************************************************************************************
+
+Dear {!Lead.LastName}, 
+
+We have received your registration. Your data has been verified by Dewan Pers and successfully recorded on our system.
+
+Furthermore, our team will immediately contact you for the onward process.
+
+If you have any questions about TADEX, please contact us at halo@tadex.id, we’ll be delighted to help you! 
+
+Thank you.
+
+Regards, 
+TADEX

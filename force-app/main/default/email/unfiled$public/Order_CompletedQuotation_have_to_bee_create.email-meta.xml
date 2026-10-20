@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>after order product/campaign id completed, automate sent email to AM/sales to create quotation</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Quotation have to bee create</name>
+    <style>none</style>
+    <subject>Hey, good information campaign for {!OrderItem.Product_Name__c}  has been completed</subject>
+    <type>text</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

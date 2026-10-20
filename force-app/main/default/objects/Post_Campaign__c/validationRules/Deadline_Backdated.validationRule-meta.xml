@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Deadline_Backdated</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+OR(
+ISNEW(),
+ISCHANGED( Deadline__c )),
+Deadline__c &lt; TODAY())</errorConditionFormula>
+    <errorMessage>Deadline tidak boleh backdated</errorMessage>
+</ValidationRule>

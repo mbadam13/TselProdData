@@ -1,0 +1,23 @@
+<apex:page standardController="Campaign_MyAds__c" showHeader="false"  extensions="REST_PrivyID_Check_Doc_StatusCampMyads"  >
+
+   
+  <apex:form >
+    <apex:actionFunction name="CheckDocument" action="{!CheckDocument}" rerender="allPanel"/>
+
+        <!--<apex:pageMessage summary="Successful Check file status from PrivyId, Please Click Back Button." severity="Success" strength="3" />-->
+        <apex:pageMessage summary="Berhasil Check Status Dari PrivyId." severity="Success" strength="3" rendered="{!IF(senderRec[0].docToken__c!=NULL, true, false)}" />
+        <apex:pageMessage summary="Gagal Check Status dari privyId, dokumen tidak di temukan" severity="warning" strength="3" rendered="{!IF(senderRec[0].docToken__c==NULL, true, false)}" />
+        <script>
+           window.onload=function()
+           {
+             CheckDocument();
+           };
+        </script>
+                <br/>
+        <apex:commandButton action="{!back}" value="Back"/>
+  </apex:form>
+
+
+
+
+</apex:page>

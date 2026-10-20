@@ -1,0 +1,22 @@
+<!--
+  @description       : 
+  @author            : Novando Utoyo Agmawan
+  @group             : 
+  @last modified on  : 06-25-2024
+  @last modified by  : Novando Utoyo Agmawan
+  Modifications Log
+  Ver   Date         Author                  Modification
+  1.0   06-25-2024   Novando Utoyo Agmawan   Initial Version
+-->
+
+<template>
+    <lightning-card>
+        <div if:true={isLoaded} class="cstm-spinner">
+            <lightning-spinner alternative-text="Loading..."></lightning-spinner>
+        </div>
+
+        <div if:true={error}>
+            {error}
+        </div>
+    </lightning-card>
+</template>

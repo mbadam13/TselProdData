@@ -1,0 +1,5 @@
+Dear {!OrderItem.Sales__c}, 
+
+This {!Opportunity.Name}  order product / campaign id ({!OrderItem.Campaign_ID__c}) already completed
+
+Thank You

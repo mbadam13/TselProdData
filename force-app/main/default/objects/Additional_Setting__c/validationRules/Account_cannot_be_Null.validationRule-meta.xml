@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Account_cannot_be_Null</fullName>
+    <active>true</active>
+    <description>Revenue Calculation for Discount Inventory - tidak boleh kosong accountnya</description>
+    <errorConditionFormula>AND(
+TEXT(Object_Name__c) = &apos;Revenue_Calculation_for_Discount_Inventory__c&apos;,
+ISBLANK( Account__c ),
+Active__c = true
+)</errorConditionFormula>
+    <errorMessage>Please fill the Account first</errorMessage>
+</ValidationRule>

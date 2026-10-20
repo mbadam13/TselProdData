@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Media_Seller_Accounts</fullName>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>ACCOUNT.ADDRESS1_STATE</columns>
+    <columns>ACCOUNT.PHONE1</columns>
+    <columns>ACCOUNT.TYPE</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>ACCOUNT.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Account.Media_Seller</value>
+    </filters>
+    <label>Media Seller Accounts</label>
+    <sharedTo>
+        <role>Campaign_Operation_Manager</role>
+        <role>Campaign_Operation_Team</role>
+        <role>Director</role>
+        <role>MS_SMC_Manager</role>
+        <role>Media_Seller_Team</role>
+        <role>VP</role>
+    </sharedTo>
+</ListView>

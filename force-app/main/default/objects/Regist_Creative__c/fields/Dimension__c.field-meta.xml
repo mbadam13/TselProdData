@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Dimension__c</fullName>
+    <label>Dimension</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>300x250</fullName>
+                <default>false</default>
+                <label>300x250</label>
+            </value>
+            <value>
+                <fullName>320x50</fullName>
+                <default>false</default>
+                <label>320x50</label>
+            </value>
+            <value>
+                <fullName>728x90</fullName>
+                <default>false</default>
+                <label>728x90</label>
+            </value>
+            <value>
+                <fullName>30 Second</fullName>
+                <default>false</default>
+                <label>30 Second</label>
+            </value>
+            <value>
+                <fullName>15 Second</fullName>
+                <default>false</default>
+                <label>15 Second</label>
+            </value>
+            <value>
+                <fullName>6 Second</fullName>
+                <default>false</default>
+                <label>6 Second</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

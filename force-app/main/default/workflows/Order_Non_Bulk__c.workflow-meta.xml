@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>Approval_Order_non_bulk_Approved_MS_Manager</fullName>
+        <description>Approval Order non bulk Approved MS Manager</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>billie_n_herlambang@telkomsel.co.id</recipient>
+            <type>user</type>
+        </recipients>
+        <senderAddress>salesforce@saasten.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>unfiled$public/MS_Approved_Non_Bulk_Manager</template>
+    </alerts>
+    <alerts>
+        <fullName>Approval_Submit_Order_Non_Bulk</fullName>
+        <description>Approval Submit Order Non Bulk</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>almira_h_suprapto@telkomsel.co.id</recipient>
+            <type>user</type>
+        </recipients>
+        <senderAddress>david.wong@saasten.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>unfiled$public/MS_Approved_Non_Bulk</template>
+    </alerts>
+    <alerts>
+        <fullName>Approval_process_Manager_MS_approved</fullName>
+        <ccEmails>ahmat.murad@saasten.com</ccEmails>
+        <description>Approval process Manager MS approved</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderAddress>david.wong@saasten.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>unfiled$public/MS_Approved_Non_Bulk_Manager</template>
+    </alerts>
+    <alerts>
+        <fullName>Cam_aign_Opeartion_Approved_ONB</fullName>
+        <ccEmails>ahmat.murad@saasten.com</ccEmails>
+        <description>Cam[aign Opeartion Approved ONB</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderAddress>david.wong@saasten.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>unfiled$public/CT_Approved_Non_Bulk</template>
+    </alerts>
+    <alerts>
+        <fullName>Campaign_operation_Rejected</fullName>
+        <ccEmails>ahmat.murad@gmail.com</ccEmails>
+        <description>Campaign operation Rejected</description>
+        <protected>false</protected>
+        <senderAddress>david.wong@saasten.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>unfiled$public/CT_Reject_ONB_Approval</template>
+    </alerts>
+    <alerts>
+        <fullName>Submit_Approval_Order_Non_Bulk</fullName>
+        <description>Submit Approval Order Non Bulk</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>admin@telkomsel.co.id</recipient>
+            <type>user</type>
+        </recipients>
+        <senderAddress>david.wong@saasten.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>unfiled$public/CT_Submited_Non_Bulk</template>
+    </alerts>
+    <alerts>
+        <fullName>Submit_Approve_Non_Bulk</fullName>
+        <ccEmails>ahmat.murad@saasten.com</ccEmails>
+        <description>Submit Approve Non Bulk</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>admin@telkomsel.co.id</recipient>
+            <type>user</type>
+        </recipients>
+        <senderAddress>david.wong@saasten.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>unfiled$public/MS_Approved_Non_Bulk</template>
+    </alerts>
+    <fieldUpdates>
+        <fullName>Active_date</fullName>
+        <field>Active_Date__c</field>
+        <formula>TODAY()</formula>
+        <name>Active date</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Back_To_Draft</fullName>
+        <field>Status__c</field>
+        <literalValue>Draft</literalValue>
+        <name>Back To Draft</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>ONB_Approval_Campaign_ops_Manager</fullName>
+        <field>Approval_Process__c</field>
+        <literalValue>Waiting Approval Campaign Manager</literalValue>
+        <name>ONB Approval Campaign ops Manager</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>ONB_Running</fullName>
+        <description>field update order non bulk running</description>
+        <field>Status__c</field>
+        <literalValue>Running</literalValue>
+        <name>ONB Running</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Onb_Approval_Media_Seller_Team</fullName>
+        <field>Approval_Process__c</field>
+        <literalValue>Waiting Approval Ms Manager</literalValue>
+        <name>Onb Approval Media Seller Team</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Order_Rejected</fullName>
+        <description>field update info order non bulk rejected</description>
+        <field>Approval_Process__c</field>
+        <literalValue>Rejected</literalValue>
+        <name>Order Rejected</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Order_non_buk_submitedx</fullName>
+        <description>info untuk approval submit di order non bulk</description>
+        <field>Approval_Process__c</field>
+        <literalValue>Waiting Approval Campaign Team</literalValue>
+        <name>Order non buk submitedx</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Order_non_bulk_Approved</fullName>
+        <description>update order nonbulk status approved</description>
+        <field>Approval_Process__c</field>
+        <literalValue>Approved</literalValue>
+        <name>Order non bulk Approved</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+</Workflow>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IPTV_MandatoryField</fullName>
+    <active>true</active>
+    <description>this validation only used for IPTV product</description>
+    <errorConditionFormula>AND(
+   ISPICKVAL( Business_Product__c , &quot;TV Media&quot;), 
+   OR(
+      ISPICKVAL( Product_Channel__c , &quot;TVC PLATINUM&quot;),
+      ISPICKVAL( Product_Channel__c , &quot;TVC GOLD&quot;),
+      ISPICKVAL( Product_Channel__c , &quot;TVC SILVER&quot;),
+      ISPICKVAL( Product_Channel__c , &quot;TVC Cross Platform&quot;) 
+   ),
+   OR(
+      ISBLANK( TEXT( Product_Category__c )),
+      ISBLANK( TEXT( Family )),
+      ISBLANK( TEXT( Product_Type__c )),
+      ISBLANK( TEXT( Product_Channel__c )),
+      ISBLANK( TEXT( Ads_Format__c )),
+      ISBLANK( TEXT( Ads_Size__c )),
+      ISBLANK( Tarif__c ),
+      ISBLANK( List_Price__c ),
+      ISBLANK( HJM__c ),
+      ISBLANK( TEXT( Duration__c ))
+   )
+)</errorConditionFormula>
+    <errorMessage>IPTV Product needs: Product Family, Product Type, Product Inventory, Ads Format, Channel Detail, Showtimes, Time, Spot Limits, Rate Card, Tarif (Fill in), RDM (%) (Fill in)</errorMessage>
+</ValidationRule>

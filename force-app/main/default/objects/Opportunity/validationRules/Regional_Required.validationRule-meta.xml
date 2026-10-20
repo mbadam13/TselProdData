@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Regional_Required</fullName>
+    <active>false</active>
+    <errorConditionFormula>AND(
+   ISPICKVAL(Regional__c,&quot;&quot;),
+   ISCHANGED(StageName), 
+   TEXT (StageName) != &quot;Closed Won&quot;
+)</errorConditionFormula>
+    <errorMessage>Regional_Required !</errorMessage>
+</ValidationRule>

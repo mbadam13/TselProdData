@@ -1,0 +1,146 @@
+<apex:page standardController="Kertas_Kerja__c" extensions="KKSummary_Controller" renderAs="pdf" applyBodyTag="false">
+    
+    <head>
+        <style type="text/css" media="print">
+            @page {
+                size: A4 potrait;
+                @bottom-center {
+                    content: element(footer);
+                }
+            }
+            div.footer {
+                display: block;
+                padding: 5px;
+                position: running(footer);
+            }
+            .pagenumber:before {
+                content: counter(page);
+            }
+            .pagecount:before {
+                content: counter(pages);
+            }
+            .htable {
+                font-size: 12px;
+                text-align: center;
+                border-top: 1.5px solid #a39e9e;
+                border-bottom: 1.5px solid #a39e9e;
+            }
+            .TableRow {
+                font-size: 10px;
+                border-top: 0.5px solid #a39e9e;
+                padding: 2px;
+            }
+        </style>
+    </head>
+    
+    <body>
+    <div class="footer">
+        <!--<div style="font-size: 10px;text-align: center;">Page <span class="pagenumber"/> of <span class="pagecount"/></div>-->
+        <table width="100%" border="0">
+            <tr>
+                <td style="border-top: 1.5px solid" colspan="3"></td>
+            </tr>
+            <tr>
+                <td width="30%" style="font-size: 10px;text-align: left;">{!kkRec.Kertas_Kerja_Name__c}</td>
+                <td width="40%" style="font-size: 10px;text-align: center;">
+                    Page <span class="pagenumber"/> of <span class="pagecount"/>
+                </td>
+                <td width="30%" style="font-size: 10px;text-align: right;">{!kkRec.Type__c} | {!kkRec.Month__c} {!kkRec.Year__c}</td>
+            </tr>
+        </table>
+    </div>
+        
+    <!--<h2 style="text-align: center;">
+        Kertas Kerja Validasi
+        <p style="text-align: center;border-bottom: double;padding-bottom: 10px;"> 
+            For Direct Sales <br/>
+            Period: {!kkRec.Month__c} {!kkRec.Year__c} 
+        </p>
+    </h2>-->
+        
+    <table width="100%">
+        <tr>
+            <td style="font-size: 23px;text-align: center;"><b>Kertas Kerja Validasi</b></td>
+        </tr>
+        <tr>
+            <td style="font-size: 15px;text-align: center;"><b>{!kkRec.Kertas_Kerja_Name__c}</b></td>
+        </tr>
+        <tr>
+            <td style="font-size: 12px;text-align: center;">{!kkRec.Type__c} | {!kkRec.Month__c} {!kkRec.Year__c}</td>
+        </tr>
+        <tr>
+            <td style="border-bottom: 1.5px solid;">&nbsp;</td>
+        </tr>
+    </table>
+       
+    <br/>
+    
+    <apex:repeat value="{!map_prodName_oiwList}" var="prodName">
+        <b style="font-size: 13px;">{!prodName}</b>
+        <apex:pageBlock >
+            <apex:pageBlockTable value="{!map_prodName_oiwList[prodName]}" var="oiw" width="100%">
+                <!--<apex:column value="{!oiw.wProductName}" headerValue="Product" styleClass="TableRow" headerClass="htable"/>-->
+                <apex:column value="{!oiw.wStartDate}" headerValue="Start Date" styleClass="TableRow" headerClass="htable" style="text-align: center;" width="15%" />
+                <apex:column value="{!oiw.wEndDate}" headerValue="End Date" styleClass="TableRow" headerClass="htable" style="text-align: center;" width="15%"/>
+                <apex:column value="{!oiw.wRemark}" headerValue="Remark" styleClass="TableRow" headerClass="htable" width="40%"/>
+                <apex:column headerValue="Pembelian" styleClass="TableRow" headerClass="htable" style="text-align: right; padding-right: 10px;" width="10%">
+                    <apex:outputText value="{0, number,#,##0.00}">
+                        <apex:param value="{!oiw.wPembelian}"/>
+                    </apex:outputText>
+                </apex:column>
+                <apex:column headerValue="Penggunaan" styleClass="TableRow" headerClass="htable" style="text-align: right; padding-right: 5px;" width="10%">
+                    <apex:outputText value="{0, number,#,##0.00}">
+                        <apex:param value="{!oiw.wPenggunaan}"/>
+                    </apex:outputText>
+                </apex:column>
+                <apex:column headerValue="Saldo" styleClass="TableRow" headerClass="htable" style="text-align: right;" width="10%">
+                    <apex:outputText value="{0, number,#,##0.00}">
+                        <apex:param value="{!oiw.wSaldo}"/>
+                    </apex:outputText>
+                </apex:column>
+            </apex:pageBlockTable>
+        </apex:pageBlock>
+        <br/>
+    </apex:repeat>
+    
+    <br/><br/>
+        
+    <p style="font-size: 13px;">Jakarta, {!str_pdfGenerateDate}</p>
+    <br/><br/><br/><br/><br/><br/>
+    <table width="100%">
+        <tr>
+            <td style="font-size: 13px;text-align: center;" colspan="3"><u><b>Eka P. Sjaerodji</b></u></td>
+            <td style="font-size: 13px;text-align: center;" colspan="3"><u><b>Achmad S. Fariz</b></u></td>
+        </tr>
+        <tr>
+            <td width="10%">&nbsp;</td>
+            <td style="font-size: 13px;text-align: center;" width="30%">Manager Digital Advertising and Financial Services Budgeting, Settlement and Performance</td>
+            <td width="10%">&nbsp;</td>
+            <td width="10%">&nbsp;</td>
+            <td style="font-size: 13px;text-align: center;" width="30%">Manager Digital Advertising and Financial Services Business Operation</td>
+            <td width="10%">&nbsp;</td>
+        </tr>
+    </table>
+    
+        
+    <!--
+    <br/><br/>
+    -----------------------------------------------------------------------------------------------------------------------------------------------------
+    <br/><br/>
+        
+    <apex:pageBlock>
+        <apex:pageBlockTable value="{!oiw_list}" var="oiw" width="100%">
+            <apex:column value="{!oiw.wProductName}" headerValue="Product" styleClass="TableRow" headerClass="htable"/>
+            <apex:column value="{!oiw.wStartDate}" headerValue="Start Date" styleClass="TableRow" headerClass="htable" style="text-align: center;"/>
+            <apex:column value="{!oiw.wEndDate}" headerValue="End Date" styleClass="TableRow" headerClass="htable" style="text-align: center;"/>
+            <apex:column value="{!oiw.wRemark}" headerValue="Remark" styleClass="TableRow" headerClass="htable"/>
+            <apex:column value="{!oiw.wPembelian}" headerValue="Pembelian" styleClass="TableRow" headerClass="htable" style="text-align: right;"/>
+            <apex:column value="{!oiw.wPenggunaan}" headerValue="Penggunaan" styleClass="TableRow" headerClass="htable" style="text-align: right;"/>
+            <apex:column value="{!oiw.wSaldo}" headerValue="Saldo" styleClass="TableRow" headerClass="htable" style="text-align: right;"/>
+        </apex:pageBlockTable>
+    </apex:pageBlock>
+    -->
+        
+    </body>
+    
+</apex:page>

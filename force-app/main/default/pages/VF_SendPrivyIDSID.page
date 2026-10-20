@@ -1,0 +1,22 @@
+<apex:page standardController="SID_Tools__c" showHeader="true"  extensions="REST_PrivyID_SendPrivyidSID">
+
+   
+  <apex:form >
+    <apex:actionFunction name="UploadDocument" action="{!UploadDocument}" rerender="allPanel"/>
+        <apex:sectionHeader title="Upload File Data" subtitle="Document SID"/>
+        <apex:pageMessages id="msg"/>
+            <!--<apex:pageMessage summary="Successful Sent file to PrivyId." severity="Success" strength="3" />-->
+        <apex:pageMessage summary="Gagal upload ke privyid, Submit Approval terlebih dahulu." severity="warning" strength="3" rendered="{!IF(ISNULL(senderRec[0].SID_Approval__c), true, false)}" />
+        <apex:pageMessage summary="Gagal upload ke privyid, mohon upload file PrivyId terlebih dahulu." severity="warning" strength="3" rendered="{!IF(getFile.size==0, true, false)}" />
+        <apex:pageMessage summary="Berhasil upload ke privyid." severity="Success" strength="3" rendered="{!IF(getFile.size!=0 && senderRec[0].SID_Approval__c=='Approved', true, false)}" />
+       
+        <script>
+           window.onload=function()
+           {
+             UploadDocument();
+           };
+        </script>
+        <br/>
+        <apex:commandButton action="{!back}" value="Back"/>
+  </apex:form>
+</apex:page>

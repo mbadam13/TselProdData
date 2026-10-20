@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Closed_Won</fullName>
+    <active>false</active>
+    <description>FUT - 25/Jul/2024</description>
+    <errorConditionFormula>AND(
+   ISPICKVAL( StageName , &quot;Closed Won&quot;),
+   NOT(ISPICKVAL(Check_PO__c  , &quot;OK&quot;))
+)</errorConditionFormula>
+    <errorDisplayField>Check_PO__c</errorDisplayField>
+    <errorMessage>Negotiation has not approved</errorMessage>
+</ValidationRule>

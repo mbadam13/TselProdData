@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>unit_price_changed</fullName>
+    <active>false</active>
+    <errorConditionFormula>ISCHANGED(UnitPrice)</errorConditionFormula>
+    <errorDisplayField>UnitPrice</errorDisplayField>
+    <errorMessage>cannot change unit price</errorMessage>
+</ValidationRule>

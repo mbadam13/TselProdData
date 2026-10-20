@@ -1,0 +1,1008 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Product_Channel__c</fullName>
+    <description>Programmatic Push Notification</description>
+    <label>Product Inventory</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Product_Type__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetName>Product_Inventory</valueSetName>
+        <valueSettings>
+            <controllingFieldValue>T Bill</controllingFieldValue>
+            <valueName>T Bill</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NIK Matching</controllingFieldValue>
+            <valueName>NIK Matching</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Sponsorship</controllingFieldValue>
+            <valueName>Sponsorship</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cost Per Claim</controllingFieldValue>
+            <valueName>Cost Per Claim</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Alfamart Voucher Code</controllingFieldValue>
+            <valueName>Alfamart Voucher Code</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Generate Unique Voucher Code</controllingFieldValue>
+            <valueName>Generate Unique Voucher Code</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Social Media Ads</controllingFieldValue>
+            <controllingFieldValue>Performance</controllingFieldValue>
+            <valueName>Google Ads</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Social Media Ads</controllingFieldValue>
+            <controllingFieldValue>Performance</controllingFieldValue>
+            <valueName>Mets Ads</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Social Media Ads</controllingFieldValue>
+            <controllingFieldValue>Display / Video</controllingFieldValue>
+            <valueName>Social Media Ads</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Social Media Ads</controllingFieldValue>
+            <controllingFieldValue>Display / Video</controllingFieldValue>
+            <valueName>3P Programmatic</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IPTV</controllingFieldValue>
+            <controllingFieldValue>TVC</controllingFieldValue>
+            <valueName>Cartoonito, Rock Action, My Kidz, Fight Sports, NBA TV, Thrill, Love Nature, CNN International</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IPTV</controllingFieldValue>
+            <controllingFieldValue>TVC</controllingFieldValue>
+            <valueName>Horee</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Vending Machine</controllingFieldValue>
+            <controllingFieldValue>Data Reward</controllingFieldValue>
+            <controllingFieldValue>Performance</controllingFieldValue>
+            <controllingFieldValue>Open Inventory</controllingFieldValue>
+            <controllingFieldValue>In Vehicle Screen</controllingFieldValue>
+            <controllingFieldValue>Article</controllingFieldValue>
+            <controllingFieldValue>All</controllingFieldValue>
+            <controllingFieldValue>Survey</controllingFieldValue>
+            <controllingFieldValue>Push Notification</controllingFieldValue>
+            <controllingFieldValue>SMS</controllingFieldValue>
+            <controllingFieldValue>MMS</controllingFieldValue>
+            <controllingFieldValue>USSD</controllingFieldValue>
+            <controllingFieldValue>IVR</controllingFieldValue>
+            <controllingFieldValue>NSP</controllingFieldValue>
+            <controllingFieldValue>Symphony</controllingFieldValue>
+            <controllingFieldValue>Klik to Call</controllingFieldValue>
+            <controllingFieldValue>Insertion *888#</controllingFieldValue>
+            <controllingFieldValue>Banner</controllingFieldValue>
+            <controllingFieldValue>Development Fee</controllingFieldValue>
+            <controllingFieldValue>M-Coupon</controllingFieldValue>
+            <controllingFieldValue>Lockscreen Ads</controllingFieldValue>
+            <controllingFieldValue>Basic Profiling</controllingFieldValue>
+            <controllingFieldValue>Interest Data</controllingFieldValue>
+            <controllingFieldValue>Video</controllingFieldValue>
+            <controllingFieldValue>PNV</controllingFieldValue>
+            <controllingFieldValue>Messaging</controllingFieldValue>
+            <controllingFieldValue>Profiling</controllingFieldValue>
+            <controllingFieldValue>Programmatic</controllingFieldValue>
+            <controllingFieldValue>LBA</controllingFieldValue>
+            <controllingFieldValue>Insertion</controllingFieldValue>
+            <controllingFieldValue>Digital Reward</controllingFieldValue>
+            <controllingFieldValue>Targeted</controllingFieldValue>
+            <controllingFieldValue>ROLI</controllingFieldValue>
+            <controllingFieldValue>Maxstream</controllingFieldValue>
+            <controllingFieldValue>Portal Dunia Games</controllingFieldValue>
+            <valueName>All</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Vending Machine</controllingFieldValue>
+            <controllingFieldValue>Data Reward</controllingFieldValue>
+            <controllingFieldValue>Performance</controllingFieldValue>
+            <controllingFieldValue>Open Inventory</controllingFieldValue>
+            <controllingFieldValue>In Vehicle Screen</controllingFieldValue>
+            <controllingFieldValue>Article</controllingFieldValue>
+            <controllingFieldValue>All</controllingFieldValue>
+            <controllingFieldValue>Survey</controllingFieldValue>
+            <controllingFieldValue>Push Notification</controllingFieldValue>
+            <controllingFieldValue>SMS</controllingFieldValue>
+            <controllingFieldValue>MMS</controllingFieldValue>
+            <controllingFieldValue>USSD</controllingFieldValue>
+            <controllingFieldValue>IVR</controllingFieldValue>
+            <controllingFieldValue>NSP</controllingFieldValue>
+            <controllingFieldValue>Symphony</controllingFieldValue>
+            <controllingFieldValue>Klik to Call</controllingFieldValue>
+            <controllingFieldValue>Insertion *888#</controllingFieldValue>
+            <controllingFieldValue>Banner</controllingFieldValue>
+            <controllingFieldValue>Development Fee</controllingFieldValue>
+            <controllingFieldValue>M-Coupon</controllingFieldValue>
+            <controllingFieldValue>Lockscreen Ads</controllingFieldValue>
+            <controllingFieldValue>Basic Profiling</controllingFieldValue>
+            <controllingFieldValue>Interest Data</controllingFieldValue>
+            <controllingFieldValue>Video</controllingFieldValue>
+            <controllingFieldValue>PNV</controllingFieldValue>
+            <controllingFieldValue>Messaging</controllingFieldValue>
+            <controllingFieldValue>Profiling</controllingFieldValue>
+            <controllingFieldValue>Programmatic</controllingFieldValue>
+            <controllingFieldValue>LBA</controllingFieldValue>
+            <controllingFieldValue>Insertion</controllingFieldValue>
+            <controllingFieldValue>Digital Reward</controllingFieldValue>
+            <controllingFieldValue>Targeted</controllingFieldValue>
+            <controllingFieldValue>ROLI</controllingFieldValue>
+            <controllingFieldValue>Maxstream</controllingFieldValue>
+            <controllingFieldValue>Portal Dunia Games</controllingFieldValue>
+            <valueName>Mobile</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Vending Machine</controllingFieldValue>
+            <controllingFieldValue>Data Reward</controllingFieldValue>
+            <controllingFieldValue>Performance</controllingFieldValue>
+            <controllingFieldValue>Open Inventory</controllingFieldValue>
+            <controllingFieldValue>In Vehicle Screen</controllingFieldValue>
+            <controllingFieldValue>Article</controllingFieldValue>
+            <controllingFieldValue>All</controllingFieldValue>
+            <controllingFieldValue>Survey</controllingFieldValue>
+            <controllingFieldValue>Push Notification</controllingFieldValue>
+            <controllingFieldValue>SMS</controllingFieldValue>
+            <controllingFieldValue>MMS</controllingFieldValue>
+            <controllingFieldValue>USSD</controllingFieldValue>
+            <controllingFieldValue>IVR</controllingFieldValue>
+            <controllingFieldValue>NSP</controllingFieldValue>
+            <controllingFieldValue>Symphony</controllingFieldValue>
+            <controllingFieldValue>Klik to Call</controllingFieldValue>
+            <controllingFieldValue>Insertion *888#</controllingFieldValue>
+            <controllingFieldValue>Banner</controllingFieldValue>
+            <controllingFieldValue>Development Fee</controllingFieldValue>
+            <controllingFieldValue>M-Coupon</controllingFieldValue>
+            <controllingFieldValue>Lockscreen Ads</controllingFieldValue>
+            <controllingFieldValue>Basic Profiling</controllingFieldValue>
+            <controllingFieldValue>Interest Data</controllingFieldValue>
+            <controllingFieldValue>Video</controllingFieldValue>
+            <controllingFieldValue>PNV</controllingFieldValue>
+            <controllingFieldValue>Messaging</controllingFieldValue>
+            <controllingFieldValue>Profiling</controllingFieldValue>
+            <controllingFieldValue>Programmatic</controllingFieldValue>
+            <controllingFieldValue>LBA</controllingFieldValue>
+            <controllingFieldValue>Insertion</controllingFieldValue>
+            <controllingFieldValue>Digital Reward</controllingFieldValue>
+            <controllingFieldValue>Targeted</controllingFieldValue>
+            <controllingFieldValue>ROLI</controllingFieldValue>
+            <controllingFieldValue>Maxstream</controllingFieldValue>
+            <controllingFieldValue>Portal Dunia Games</controllingFieldValue>
+            <valueName>Off Deck</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Vending Machine</controllingFieldValue>
+            <controllingFieldValue>Data Reward</controllingFieldValue>
+            <controllingFieldValue>Performance</controllingFieldValue>
+            <controllingFieldValue>Open Inventory</controllingFieldValue>
+            <controllingFieldValue>In Vehicle Screen</controllingFieldValue>
+            <controllingFieldValue>Article</controllingFieldValue>
+            <controllingFieldValue>All</controllingFieldValue>
+            <controllingFieldValue>Survey</controllingFieldValue>
+            <controllingFieldValue>Push Notification</controllingFieldValue>
+            <controllingFieldValue>SMS</controllingFieldValue>
+            <controllingFieldValue>MMS</controllingFieldValue>
+            <controllingFieldValue>USSD</controllingFieldValue>
+            <controllingFieldValue>IVR</controllingFieldValue>
+            <controllingFieldValue>NSP</controllingFieldValue>
+            <controllingFieldValue>Symphony</controllingFieldValue>
+            <controllingFieldValue>Klik to Call</controllingFieldValue>
+            <controllingFieldValue>Insertion *888#</controllingFieldValue>
+            <controllingFieldValue>Banner</controllingFieldValue>
+            <controllingFieldValue>Development Fee</controllingFieldValue>
+            <controllingFieldValue>M-Coupon</controllingFieldValue>
+            <controllingFieldValue>Lockscreen Ads</controllingFieldValue>
+            <controllingFieldValue>Basic Profiling</controllingFieldValue>
+            <controllingFieldValue>Interest Data</controllingFieldValue>
+            <controllingFieldValue>Video</controllingFieldValue>
+            <controllingFieldValue>PNV</controllingFieldValue>
+            <controllingFieldValue>Messaging</controllingFieldValue>
+            <controllingFieldValue>Profiling</controllingFieldValue>
+            <controllingFieldValue>Programmatic</controllingFieldValue>
+            <controllingFieldValue>LBA</controllingFieldValue>
+            <controllingFieldValue>Insertion</controllingFieldValue>
+            <controllingFieldValue>Digital Reward</controllingFieldValue>
+            <controllingFieldValue>Targeted</controllingFieldValue>
+            <controllingFieldValue>ROLI</controllingFieldValue>
+            <controllingFieldValue>Maxstream</controllingFieldValue>
+            <controllingFieldValue>Portal Dunia Games</controllingFieldValue>
+            <valueName>On Deck</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Vending Machine</controllingFieldValue>
+            <controllingFieldValue>Data Reward</controllingFieldValue>
+            <controllingFieldValue>Performance</controllingFieldValue>
+            <controllingFieldValue>Open Inventory</controllingFieldValue>
+            <controllingFieldValue>In Vehicle Screen</controllingFieldValue>
+            <controllingFieldValue>Article</controllingFieldValue>
+            <controllingFieldValue>All</controllingFieldValue>
+            <controllingFieldValue>Survey</controllingFieldValue>
+            <controllingFieldValue>Push Notification</controllingFieldValue>
+            <controllingFieldValue>SMS</controllingFieldValue>
+            <controllingFieldValue>MMS</controllingFieldValue>
+            <controllingFieldValue>USSD</controllingFieldValue>
+            <controllingFieldValue>IVR</controllingFieldValue>
+            <controllingFieldValue>NSP</controllingFieldValue>
+            <controllingFieldValue>Symphony</controllingFieldValue>
+            <controllingFieldValue>Klik to Call</controllingFieldValue>
+            <controllingFieldValue>Insertion *888#</controllingFieldValue>
+            <controllingFieldValue>Banner</controllingFieldValue>
+            <controllingFieldValue>Development Fee</controllingFieldValue>
+            <controllingFieldValue>M-Coupon</controllingFieldValue>
+            <controllingFieldValue>Lockscreen Ads</controllingFieldValue>
+            <controllingFieldValue>Basic Profiling</controllingFieldValue>
+            <controllingFieldValue>Interest Data</controllingFieldValue>
+            <controllingFieldValue>Video</controllingFieldValue>
+            <controllingFieldValue>PNV</controllingFieldValue>
+            <controllingFieldValue>Messaging</controllingFieldValue>
+            <controllingFieldValue>Profiling</controllingFieldValue>
+            <controllingFieldValue>Programmatic</controllingFieldValue>
+            <controllingFieldValue>LBA</controllingFieldValue>
+            <controllingFieldValue>Insertion</controllingFieldValue>
+            <controllingFieldValue>Digital Reward</controllingFieldValue>
+            <controllingFieldValue>Targeted</controllingFieldValue>
+            <controllingFieldValue>ROLI</controllingFieldValue>
+            <controllingFieldValue>Maxstream</controllingFieldValue>
+            <controllingFieldValue>Portal Dunia Games</controllingFieldValue>
+            <valueName>Partner</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Vending Machine</controllingFieldValue>
+            <controllingFieldValue>Data Reward</controllingFieldValue>
+            <controllingFieldValue>Performance</controllingFieldValue>
+            <controllingFieldValue>Open Inventory</controllingFieldValue>
+            <controllingFieldValue>In Vehicle Screen</controllingFieldValue>
+            <controllingFieldValue>Article</controllingFieldValue>
+            <controllingFieldValue>All</controllingFieldValue>
+            <controllingFieldValue>Survey</controllingFieldValue>
+            <controllingFieldValue>Push Notification</controllingFieldValue>
+            <controllingFieldValue>SMS</controllingFieldValue>
+            <controllingFieldValue>MMS</controllingFieldValue>
+            <controllingFieldValue>USSD</controllingFieldValue>
+            <controllingFieldValue>IVR</controllingFieldValue>
+            <controllingFieldValue>NSP</controllingFieldValue>
+            <controllingFieldValue>Symphony</controllingFieldValue>
+            <controllingFieldValue>Klik to Call</controllingFieldValue>
+            <controllingFieldValue>Insertion *888#</controllingFieldValue>
+            <controllingFieldValue>Banner</controllingFieldValue>
+            <controllingFieldValue>Development Fee</controllingFieldValue>
+            <controllingFieldValue>M-Coupon</controllingFieldValue>
+            <controllingFieldValue>Lockscreen Ads</controllingFieldValue>
+            <controllingFieldValue>Basic Profiling</controllingFieldValue>
+            <controllingFieldValue>Interest Data</controllingFieldValue>
+            <controllingFieldValue>Video</controllingFieldValue>
+            <controllingFieldValue>PNV</controllingFieldValue>
+            <controllingFieldValue>Messaging</controllingFieldValue>
+            <controllingFieldValue>Profiling</controllingFieldValue>
+            <controllingFieldValue>Programmatic</controllingFieldValue>
+            <controllingFieldValue>LBA</controllingFieldValue>
+            <controllingFieldValue>Insertion</controllingFieldValue>
+            <controllingFieldValue>Digital Reward</controllingFieldValue>
+            <controllingFieldValue>Targeted</controllingFieldValue>
+            <controllingFieldValue>ROLI</controllingFieldValue>
+            <controllingFieldValue>Maxstream</controllingFieldValue>
+            <controllingFieldValue>Portal Dunia Games</controllingFieldValue>
+            <valueName>Vending Machine</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Vending Machine</controllingFieldValue>
+            <controllingFieldValue>Data Reward</controllingFieldValue>
+            <controllingFieldValue>Performance</controllingFieldValue>
+            <controllingFieldValue>Open Inventory</controllingFieldValue>
+            <controllingFieldValue>In Vehicle Screen</controllingFieldValue>
+            <controllingFieldValue>Article</controllingFieldValue>
+            <controllingFieldValue>All</controllingFieldValue>
+            <controllingFieldValue>Survey</controllingFieldValue>
+            <controllingFieldValue>Push Notification</controllingFieldValue>
+            <controllingFieldValue>SMS</controllingFieldValue>
+            <controllingFieldValue>MMS</controllingFieldValue>
+            <controllingFieldValue>USSD</controllingFieldValue>
+            <controllingFieldValue>IVR</controllingFieldValue>
+            <controllingFieldValue>NSP</controllingFieldValue>
+            <controllingFieldValue>Symphony</controllingFieldValue>
+            <controllingFieldValue>Klik to Call</controllingFieldValue>
+            <controllingFieldValue>Insertion *888#</controllingFieldValue>
+            <controllingFieldValue>Banner</controllingFieldValue>
+            <controllingFieldValue>Creative Ads</controllingFieldValue>
+            <controllingFieldValue>Screensaver Ads</controllingFieldValue>
+            <controllingFieldValue>TVC</controllingFieldValue>
+            <controllingFieldValue>Targeted Ads</controllingFieldValue>
+            <controllingFieldValue>Development Fee</controllingFieldValue>
+            <controllingFieldValue>Blocking Channel</controllingFieldValue>
+            <controllingFieldValue>M-Coupon</controllingFieldValue>
+            <controllingFieldValue>Virtual Ads</controllingFieldValue>
+            <controllingFieldValue>Lockscreen Ads</controllingFieldValue>
+            <controllingFieldValue>Program Production</controllingFieldValue>
+            <controllingFieldValue>Basic Profiling</controllingFieldValue>
+            <controllingFieldValue>Creative Production</controllingFieldValue>
+            <controllingFieldValue>Interest Data</controllingFieldValue>
+            <controllingFieldValue>Sponsorship On Air</controllingFieldValue>
+            <controllingFieldValue>Video</controllingFieldValue>
+            <controllingFieldValue>Studio</controllingFieldValue>
+            <controllingFieldValue>PNV</controllingFieldValue>
+            <controllingFieldValue>Messaging</controllingFieldValue>
+            <controllingFieldValue>Profiling</controllingFieldValue>
+            <controllingFieldValue>Off Air Activation</controllingFieldValue>
+            <controllingFieldValue>IndiHomeTV.com</controllingFieldValue>
+            <controllingFieldValue>IndiHome TV Apps</controllingFieldValue>
+            <controllingFieldValue>IndiHome OTT Ads</controllingFieldValue>
+            <controllingFieldValue>Programmatic</controllingFieldValue>
+            <controllingFieldValue>WABA</controllingFieldValue>
+            <controllingFieldValue>LBA</controllingFieldValue>
+            <controllingFieldValue>RCS</controllingFieldValue>
+            <controllingFieldValue>Insertion</controllingFieldValue>
+            <controllingFieldValue>Net Message</controllingFieldValue>
+            <controllingFieldValue>Digital Reward</controllingFieldValue>
+            <controllingFieldValue>OTA</controllingFieldValue>
+            <controllingFieldValue>Targeted</controllingFieldValue>
+            <controllingFieldValue>ROLI</controllingFieldValue>
+            <controllingFieldValue>Maxstream</controllingFieldValue>
+            <controllingFieldValue>Portal Dunia Games</controllingFieldValue>
+            <valueName>IPTV Creative CPM</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Vending Machine</controllingFieldValue>
+            <controllingFieldValue>Data Reward</controllingFieldValue>
+            <controllingFieldValue>Performance</controllingFieldValue>
+            <controllingFieldValue>Open Inventory</controllingFieldValue>
+            <controllingFieldValue>In Vehicle Screen</controllingFieldValue>
+            <controllingFieldValue>Article</controllingFieldValue>
+            <controllingFieldValue>All</controllingFieldValue>
+            <controllingFieldValue>Survey</controllingFieldValue>
+            <controllingFieldValue>Push Notification</controllingFieldValue>
+            <controllingFieldValue>SMS</controllingFieldValue>
+            <controllingFieldValue>MMS</controllingFieldValue>
+            <controllingFieldValue>USSD</controllingFieldValue>
+            <controllingFieldValue>IVR</controllingFieldValue>
+            <controllingFieldValue>NSP</controllingFieldValue>
+            <controllingFieldValue>Symphony</controllingFieldValue>
+            <controllingFieldValue>Klik to Call</controllingFieldValue>
+            <controllingFieldValue>Insertion *888#</controllingFieldValue>
+            <controllingFieldValue>Banner</controllingFieldValue>
+            <controllingFieldValue>Creative Ads</controllingFieldValue>
+            <controllingFieldValue>Screensaver Ads</controllingFieldValue>
+            <controllingFieldValue>TVC</controllingFieldValue>
+            <controllingFieldValue>Targeted Ads</controllingFieldValue>
+            <controllingFieldValue>Development Fee</controllingFieldValue>
+            <controllingFieldValue>Blocking Channel</controllingFieldValue>
+            <controllingFieldValue>M-Coupon</controllingFieldValue>
+            <controllingFieldValue>Virtual Ads</controllingFieldValue>
+            <controllingFieldValue>Lockscreen Ads</controllingFieldValue>
+            <controllingFieldValue>Program Production</controllingFieldValue>
+            <controllingFieldValue>Basic Profiling</controllingFieldValue>
+            <controllingFieldValue>Creative Production</controllingFieldValue>
+            <controllingFieldValue>Interest Data</controllingFieldValue>
+            <controllingFieldValue>Sponsorship On Air</controllingFieldValue>
+            <controllingFieldValue>Video</controllingFieldValue>
+            <controllingFieldValue>Studio</controllingFieldValue>
+            <controllingFieldValue>PNV</controllingFieldValue>
+            <controllingFieldValue>Messaging</controllingFieldValue>
+            <controllingFieldValue>Profiling</controllingFieldValue>
+            <controllingFieldValue>Off Air Activation</controllingFieldValue>
+            <controllingFieldValue>IndiHomeTV.com</controllingFieldValue>
+            <controllingFieldValue>IndiHome TV Apps</controllingFieldValue>
+            <controllingFieldValue>IndiHome OTT Ads</controllingFieldValue>
+            <controllingFieldValue>Programmatic</controllingFieldValue>
+            <controllingFieldValue>WABA</controllingFieldValue>
+            <controllingFieldValue>LBA</controllingFieldValue>
+            <controllingFieldValue>RCS</controllingFieldValue>
+            <controllingFieldValue>Insertion</controllingFieldValue>
+            <controllingFieldValue>Net Message</controllingFieldValue>
+            <controllingFieldValue>Digital Reward</controllingFieldValue>
+            <controllingFieldValue>OTA</controllingFieldValue>
+            <controllingFieldValue>Targeted</controllingFieldValue>
+            <controllingFieldValue>ROLI</controllingFieldValue>
+            <controllingFieldValue>Maxstream</controllingFieldValue>
+            <controllingFieldValue>Portal Dunia Games</controllingFieldValue>
+            <valueName>TVC CPM</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Vending Machine</controllingFieldValue>
+            <controllingFieldValue>Data Reward</controllingFieldValue>
+            <controllingFieldValue>Performance</controllingFieldValue>
+            <controllingFieldValue>Open Inventory</controllingFieldValue>
+            <controllingFieldValue>In Vehicle Screen</controllingFieldValue>
+            <controllingFieldValue>Article</controllingFieldValue>
+            <controllingFieldValue>All</controllingFieldValue>
+            <controllingFieldValue>Survey</controllingFieldValue>
+            <controllingFieldValue>Push Notification</controllingFieldValue>
+            <controllingFieldValue>SMS</controllingFieldValue>
+            <controllingFieldValue>MMS</controllingFieldValue>
+            <controllingFieldValue>USSD</controllingFieldValue>
+            <controllingFieldValue>IVR</controllingFieldValue>
+            <controllingFieldValue>NSP</controllingFieldValue>
+            <controllingFieldValue>Symphony</controllingFieldValue>
+            <controllingFieldValue>Klik to Call</controllingFieldValue>
+            <controllingFieldValue>Insertion *888#</controllingFieldValue>
+            <controllingFieldValue>Banner</controllingFieldValue>
+            <controllingFieldValue>Creative Ads</controllingFieldValue>
+            <controllingFieldValue>Screensaver Ads</controllingFieldValue>
+            <controllingFieldValue>TVC</controllingFieldValue>
+            <controllingFieldValue>Targeted Ads</controllingFieldValue>
+            <controllingFieldValue>Development Fee</controllingFieldValue>
+            <controllingFieldValue>Blocking Channel</controllingFieldValue>
+            <controllingFieldValue>M-Coupon</controllingFieldValue>
+            <controllingFieldValue>Virtual Ads</controllingFieldValue>
+            <controllingFieldValue>Lockscreen Ads</controllingFieldValue>
+            <controllingFieldValue>Program Production</controllingFieldValue>
+            <controllingFieldValue>Basic Profiling</controllingFieldValue>
+            <controllingFieldValue>Creative Production</controllingFieldValue>
+            <controllingFieldValue>Interest Data</controllingFieldValue>
+            <controllingFieldValue>Sponsorship On Air</controllingFieldValue>
+            <controllingFieldValue>Video</controllingFieldValue>
+            <controllingFieldValue>Studio</controllingFieldValue>
+            <controllingFieldValue>PNV</controllingFieldValue>
+            <controllingFieldValue>Messaging</controllingFieldValue>
+            <controllingFieldValue>Profiling</controllingFieldValue>
+            <controllingFieldValue>Off Air Activation</controllingFieldValue>
+            <controllingFieldValue>IndiHomeTV.com</controllingFieldValue>
+            <controllingFieldValue>IndiHome TV Apps</controllingFieldValue>
+            <controllingFieldValue>IndiHome OTT Ads</controllingFieldValue>
+            <controllingFieldValue>Programmatic</controllingFieldValue>
+            <controllingFieldValue>WABA</controllingFieldValue>
+            <controllingFieldValue>LBA</controllingFieldValue>
+            <controllingFieldValue>RCS</controllingFieldValue>
+            <controllingFieldValue>Insertion</controllingFieldValue>
+            <controllingFieldValue>Net Message</controllingFieldValue>
+            <controllingFieldValue>Digital Reward</controllingFieldValue>
+            <controllingFieldValue>OTA</controllingFieldValue>
+            <controllingFieldValue>Targeted</controllingFieldValue>
+            <controllingFieldValue>ROLI</controllingFieldValue>
+            <controllingFieldValue>Maxstream</controllingFieldValue>
+            <controllingFieldValue>Portal Dunia Games</controllingFieldValue>
+            <valueName>TVC CPM PMP</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Vending Machine</controllingFieldValue>
+            <controllingFieldValue>Data Reward</controllingFieldValue>
+            <controllingFieldValue>Performance</controllingFieldValue>
+            <controllingFieldValue>Open Inventory</controllingFieldValue>
+            <controllingFieldValue>In Vehicle Screen</controllingFieldValue>
+            <controllingFieldValue>Article</controllingFieldValue>
+            <controllingFieldValue>All</controllingFieldValue>
+            <controllingFieldValue>Survey</controllingFieldValue>
+            <controllingFieldValue>Push Notification</controllingFieldValue>
+            <controllingFieldValue>SMS</controllingFieldValue>
+            <controllingFieldValue>MMS</controllingFieldValue>
+            <controllingFieldValue>USSD</controllingFieldValue>
+            <controllingFieldValue>IVR</controllingFieldValue>
+            <controllingFieldValue>NSP</controllingFieldValue>
+            <controllingFieldValue>Symphony</controllingFieldValue>
+            <controllingFieldValue>Klik to Call</controllingFieldValue>
+            <controllingFieldValue>Insertion *888#</controllingFieldValue>
+            <controllingFieldValue>Banner</controllingFieldValue>
+            <controllingFieldValue>Creative Ads</controllingFieldValue>
+            <controllingFieldValue>Screensaver Ads</controllingFieldValue>
+            <controllingFieldValue>TVC</controllingFieldValue>
+            <controllingFieldValue>Targeted Ads</controllingFieldValue>
+            <controllingFieldValue>Development Fee</controllingFieldValue>
+            <controllingFieldValue>Blocking Channel</controllingFieldValue>
+            <controllingFieldValue>M-Coupon</controllingFieldValue>
+            <controllingFieldValue>Lockscreen Ads</controllingFieldValue>
+            <controllingFieldValue>Basic Profiling</controllingFieldValue>
+            <controllingFieldValue>Interest Data</controllingFieldValue>
+            <controllingFieldValue>Video</controllingFieldValue>
+            <controllingFieldValue>PNV</controllingFieldValue>
+            <controllingFieldValue>Messaging</controllingFieldValue>
+            <controllingFieldValue>Profiling</controllingFieldValue>
+            <controllingFieldValue>Programmatic</controllingFieldValue>
+            <controllingFieldValue>LBA</controllingFieldValue>
+            <controllingFieldValue>Insertion</controllingFieldValue>
+            <controllingFieldValue>Digital Reward</controllingFieldValue>
+            <controllingFieldValue>Targeted</controllingFieldValue>
+            <controllingFieldValue>ROLI</controllingFieldValue>
+            <controllingFieldValue>Maxstream</controllingFieldValue>
+            <controllingFieldValue>Portal Dunia Games</controllingFieldValue>
+            <valueName>N/A</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Display / Video</controllingFieldValue>
+            <controllingFieldValue>Text</controllingFieldValue>
+            <controllingFieldValue>Display</controllingFieldValue>
+            <controllingFieldValue>Video</controllingFieldValue>
+            <valueName>Maxstream TV (App)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Display / Video</controllingFieldValue>
+            <valueName>DOOH Programmatic</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Performance</controllingFieldValue>
+            <valueName>performance</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Performance</controllingFieldValue>
+            <valueName>Inmobi</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Display</controllingFieldValue>
+            <valueName>Vidio</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Display</controllingFieldValue>
+            <valueName>Programmatic Push Notification</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Display</controllingFieldValue>
+            <controllingFieldValue>TVC</controllingFieldValue>
+            <valueName>TVC Regular</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Display</controllingFieldValue>
+            <valueName>Offdeck, Telomsel.com, My Telkomsel Apps, Dunia Games</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Display</controllingFieldValue>
+            <controllingFieldValue>Video</controllingFieldValue>
+            <valueName>My Telkomsel Appss</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Display</controllingFieldValue>
+            <valueName>Programmatic Premium Publishers</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Display</controllingFieldValue>
+            <controllingFieldValue>Messaging</controllingFieldValue>
+            <valueName>SMS Contextual</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Display</controllingFieldValue>
+            <valueName>Indihome IPTV</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Display</controllingFieldValue>
+            <valueName>Oppo Ads</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Display</controllingFieldValue>
+            <valueName>Vivo Ads</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Display</controllingFieldValue>
+            <valueName>Moyo Ads</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Display</controllingFieldValue>
+            <valueName>Affle Ads</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Banner</controllingFieldValue>
+            <valueName>My Telkomsel Apps</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Creative Ads</controllingFieldValue>
+            <valueName>BOOTING ADS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Creative Ads</controllingFieldValue>
+            <valueName>LANDSCAPE ADS (APPS MENU)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Creative Ads</controllingFieldValue>
+            <valueName>LANDSCAPE ADS (Best Streaming Apps)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Creative Ads</controllingFieldValue>
+            <valueName>LANDSCAPE ADS (Highlight of The Week)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Creative Ads</controllingFieldValue>
+            <valueName>LANDSCAPE ADS (HOME MENU)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Creative Ads</controllingFieldValue>
+            <valueName>LANDSCAPE ADS (MOVIE MENU)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Creative Ads</controllingFieldValue>
+            <valueName>LANDSCAPE ADS (Top Picks)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Creative Ads</controllingFieldValue>
+            <valueName>NAVIGATION ADS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Creative Ads</controllingFieldValue>
+            <valueName>PIP</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Creative Ads</controllingFieldValue>
+            <valueName>POTRAIT BANNER</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Creative Ads</controllingFieldValue>
+            <valueName>PRE ROLL</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Creative Ads</controllingFieldValue>
+            <valueName>QR Code</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Creative Ads</controllingFieldValue>
+            <valueName>ROTATE BANNER</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Creative Ads</controllingFieldValue>
+            <controllingFieldValue>Studio</controllingFieldValue>
+            <valueName>RUNNING TEXT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Creative Ads</controllingFieldValue>
+            <valueName>RUNNING TEXT (SEA TODAY)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Creative Ads</controllingFieldValue>
+            <controllingFieldValue>Screensaver Ads</controllingFieldValue>
+            <valueName>SCREENSAVER ADS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Creative Ads</controllingFieldValue>
+            <controllingFieldValue>TVC</controllingFieldValue>
+            <valueName>SQUEEZE FRAME</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Creative Ads</controllingFieldValue>
+            <controllingFieldValue>TVC</controllingFieldValue>
+            <valueName>SUPER IMPOSE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Creative Ads</controllingFieldValue>
+            <valueName>SUPER IMPOSE (SEA TODAY)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Creative Ads</controllingFieldValue>
+            <valueName>TIMESHIFT ADS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Creative Ads</controllingFieldValue>
+            <valueName>TV Shopping Landscape</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Creative Ads</controllingFieldValue>
+            <valueName>PICTURE IN PICTURE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Creative Ads</controllingFieldValue>
+            <valueName>POTRAIT BANNER (Home Carousel)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TVC</controllingFieldValue>
+            <valueName>TVC Cross Platform</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TVC</controllingFieldValue>
+            <valueName>TVC GOLD</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TVC</controllingFieldValue>
+            <valueName>TVC PLATINUM</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TVC</controllingFieldValue>
+            <valueName>TVC ROS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TVC</controllingFieldValue>
+            <valueName>TVC SILVER</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TVC</controllingFieldValue>
+            <valueName>AXN - Cross Platform (30&quot;) , AXN - Single Platform (30&quot;) , K+ (30&quot;)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Targeted Ads</controllingFieldValue>
+            <valueName>Geo Targeted Creative Ads Navigation</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Targeted Ads</controllingFieldValue>
+            <valueName>Geo Targeted Creative Ads PIP</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Targeted Ads</controllingFieldValue>
+            <valueName>Geo Targeted Creative Ads Pre Roll</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Targeted Ads</controllingFieldValue>
+            <valueName>Geo Targeted Creative Ads Time Shift</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Targeted Ads</controllingFieldValue>
+            <valueName>Targeted TVC Ads</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Blocking Channel</controllingFieldValue>
+            <valueName>Blocking Channel HD</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Blocking Channel</controllingFieldValue>
+            <valueName>Blocking Channel IPTV SD + HD</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Blocking Channel</controllingFieldValue>
+            <valueName>Blocking Channel Manage Service IPTV HD Channel</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Blocking Channel</controllingFieldValue>
+            <valueName>Blocking Channel Manage Service IPTV SD Channel</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Blocking Channel</controllingFieldValue>
+            <valueName>Blocking Channel OTT SD + HD</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Blocking Channel</controllingFieldValue>
+            <valueName>Blocking Channel SD</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Blocking Channel</controllingFieldValue>
+            <valueName>Blocking Channel SD + HD</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Blocking Channel</controllingFieldValue>
+            <valueName>Blocking Channel UseeTV Go</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Virtual Ads</controllingFieldValue>
+            <valueName>Dynamic Image</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Virtual Ads</controllingFieldValue>
+            <valueName>Stilll Image</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Program Production</controllingFieldValue>
+            <controllingFieldValue>Studio</controllingFieldValue>
+            <valueName>Liputan</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Program Production</controllingFieldValue>
+            <controllingFieldValue>Studio</controllingFieldValue>
+            <valueName>Live Streaming</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Program Production</controllingFieldValue>
+            <controllingFieldValue>Studio</controllingFieldValue>
+            <valueName>Talkshow</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Program Production</controllingFieldValue>
+            <controllingFieldValue>Studio</controllingFieldValue>
+            <valueName>Webinar</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Creative Production</controllingFieldValue>
+            <controllingFieldValue>Studio</controllingFieldValue>
+            <valueName>Advertorial</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Creative Production</controllingFieldValue>
+            <controllingFieldValue>Studio</controllingFieldValue>
+            <valueName>Filler</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Creative Production</controllingFieldValue>
+            <controllingFieldValue>Studio</controllingFieldValue>
+            <valueName>TVC</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Sponsorship On Air</controllingFieldValue>
+            <valueName>Adlibs (TVC)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Sponsorship On Air</controllingFieldValue>
+            <valueName>BI (Creative Ads)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Sponsorship On Air</controllingFieldValue>
+            <valueName>BO (Creative Ads)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Sponsorship On Air</controllingFieldValue>
+            <valueName>Built in (TVC)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Sponsorship On Air</controllingFieldValue>
+            <valueName>CBB (Creative Ads)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Sponsorship On Air</controllingFieldValue>
+            <valueName>Credit Title (Super Impose)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Sponsorship On Air</controllingFieldValue>
+            <valueName>OBB (Creative Ads)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Sponsorship On Air</controllingFieldValue>
+            <valueName>Production (TVC)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Sponsorship On Air</controllingFieldValue>
+            <valueName>Product Placement (Creative Ads)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Sponsorship On Air</controllingFieldValue>
+            <valueName>Running Text (Super Impose)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Sponsorship On Air</controllingFieldValue>
+            <valueName>Template Host (Creative Ads)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Studio</controllingFieldValue>
+            <valueName>2 Studio + Alat +Crew</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Studio</controllingFieldValue>
+            <valueName>Adlibs</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Studio</controllingFieldValue>
+            <valueName>BI</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Studio</controllingFieldValue>
+            <valueName>BO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Studio</controllingFieldValue>
+            <valueName>Built in</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Studio</controllingFieldValue>
+            <valueName>Bundling Mini Studio + Alat + Crew</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Studio</controllingFieldValue>
+            <valueName>Bundling Usee Hall + Alat + Crew (1)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Studio</controllingFieldValue>
+            <valueName>CBB</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Studio</controllingFieldValue>
+            <valueName>Credit Title</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Studio</controllingFieldValue>
+            <valueName>OBB</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Studio</controllingFieldValue>
+            <valueName>Production</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Studio</controllingFieldValue>
+            <valueName>Product Placement</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Studio</controllingFieldValue>
+            <valueName>Studio (mini studio)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Studio</controllingFieldValue>
+            <valueName>Studio Usee Hall</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Studio</controllingFieldValue>
+            <valueName>Template Host / Name</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Messaging</controllingFieldValue>
+            <controllingFieldValue>Whatsapp</controllingFieldValue>
+            <valueName>Whatsapp</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Messaging</controllingFieldValue>
+            <controllingFieldValue>WABA</controllingFieldValue>
+            <valueName>Messaging</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Off Air Activation</controllingFieldValue>
+            <valueName>Bundling Package</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Off Air Activation</controllingFieldValue>
+            <valueName>Production Off Air</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Off Air Activation</controllingFieldValue>
+            <valueName>Venue</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IndiHomeTV.com</controllingFieldValue>
+            <controllingFieldValue>IndiHome TV Apps</controllingFieldValue>
+            <valueName>Detail Live TV</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IndiHomeTV.com</controllingFieldValue>
+            <valueName>Detail News &amp; Promotion</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IndiHomeTV.com</controllingFieldValue>
+            <valueName>Detail VOD</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IndiHomeTV.com</controllingFieldValue>
+            <controllingFieldValue>IndiHome TV Apps</controllingFieldValue>
+            <valueName>Halaman Utama</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IndiHomeTV.com</controllingFieldValue>
+            <valueName>Page About</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IndiHomeTV.com</controllingFieldValue>
+            <valueName>Page Channel</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IndiHomeTV.com</controllingFieldValue>
+            <valueName>Page FAQ</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IndiHomeTV.com</controllingFieldValue>
+            <valueName>Page News &amp; Promotion</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IndiHomeTV.com</controllingFieldValue>
+            <valueName>Page Radio</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IndiHomeTV.com</controllingFieldValue>
+            <valueName>Page VOD</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IndiHome TV Apps</controllingFieldValue>
+            <valueName>Detail Live TV - Showcase</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IndiHome OTT Ads</controllingFieldValue>
+            <valueName>Homepage Banner</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IndiHome OTT Ads</controllingFieldValue>
+            <valueName>Live TV Banner</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>WABA</controllingFieldValue>
+            <valueName>WABA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>RCS</controllingFieldValue>
+            <valueName>RCS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Net Message</controllingFieldValue>
+            <valueName>Net Message</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>OTA</controllingFieldValue>
+            <valueName>OTA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Advance Profiling</controllingFieldValue>
+            <valueName>Data</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Blocking</controllingFieldValue>
+            <valueName>Blocking Time</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Rich Media</controllingFieldValue>
+            <valueName>Offdeck, Telomsel.com</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Data</controllingFieldValue>
+            <valueName>Meta Ads Audience</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

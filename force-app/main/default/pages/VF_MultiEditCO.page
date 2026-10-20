@@ -1,0 +1,76 @@
+<apex:page StandardController="Order" extensions="MultiEditCO">
+    <apex:stylesheet value="{!URLFOR($Resource.jQDateTimePicker, 'datetimepicker-master/jquery.datetimepicker.css')}"/>
+    <apex:includeScript value="{!URLFOR($Resource.jQDateTimePicker, 'datetimepicker-master/jquery.js')}"/>
+    <apex:includeScript value="{!URLFOR($Resource.jQDateTimePicker, 'datetimepicker-master/build/jquery.datetimepicker.full.min.js')}"/>
+    <script>
+        j$ = jQuery.noConflict();           
+    </script>     
+    
+    <apex:form >
+        <apex:pageblock >
+            <apex:pageBlockButtons >
+                <apex:commandButton value="Save" action="{!Save}" />
+                <apex:commandButton value="Delete" action="{!Deleterow}" />
+                <apex:commandButton value="Close" action="{!Cancel}" /> 
+            </apex:pageBlockButtons>
+            <apex:pageBlockSection columns="1">
+                <apex:dataTable value="{!wrapCOs}" var="c" border="1" rowClasses="odd,even" styleClass="tableClass" cellpadding="3">
+                    <apex:column >
+                        <apex:facet name="header">Actions</apex:facet>
+                        <apex:inputCheckbox value="{!c.Checked}"/>
+                        <apex:commandLink value="Full Edit" action="{!URLFOR($action.Campaign_Order__c.Edit, c.CO.ID)}" target="_blank" />
+                    </apex:column>
+                    <apex:column >
+                        <apex:facet name="header">Name</apex:facet>
+                        <apex:outputText value="{!c.CO.Name}"/>
+                    </apex:column>
+                     <apex:column headerValue="Masking Sender Brand"  >
+                        <apex:inputText value="{!c.CO.Masking_Sender_Brand__c}" style="width:120px;" />
+                    </apex:column>
+                   <apex:column headerValue="Profiling Lokasi" >
+                        <apex:inputText value="{!c.CO.Profiling_Lokasi__c}" style="width:120px;" />
+                    </apex:column>
+                   <apex:column headerValue="Start Campaign Time" >
+                        <!--<apex:inputText value="{!c.CO.Start_Campaign__c}" />-->
+                        <apex:inputText id="txtDateTime" value="{!c.Starttime}" style="width:120px;"   /> 
+                    </apex:column>
+                    <apex:column headerValue="End Campaign Time" > 
+                        <apex:inputText id="txtDateTimeEnd" value="{!c.Endttime}" style="width:120px;"   /> 
+                        
+                        <script>
+                        j$(document).ready(function(){
+                                jQuery.datetimepicker.setLocale('en');
+                                jQuery('[id$=txtDateTime]').datetimepicker({
+                                    format:'Y-m-d H:i',
+                                    inline:false,
+                                    lang:'id'
+                                });
+                        
+                                 jQuery('[id$=txtDateTimeEnd]').datetimepicker({
+                                    format:'Y-m-d H:i',
+                                    inline:false,
+                                    lang:'id'
+                                });
+                        });
+                    </script>
+                    </apex:column>
+                    <apex:column headerValue="Channel" >
+                        <apex:inputText value="{!c.CO.Channel__c}" style="width:120px;" />
+                    </apex:column>
+                    <apex:column headerValue="Impression Click" > 
+                        <apex:inputText value="{!c.CO.Impression_Click__c}" style="width:75px;" />
+                    </apex:column>
+                    <apex:column headerValue="SMS per day location"  >
+                        <apex:inputText value="{!c.CO.SMS_Per_Day_Location__c}" style="width:75px;"/>
+                    </apex:column>
+                   <apex:column headerValue="Wording Picture Video"  > 
+                        <apex:inputText value="{!c.CO.WORDING_PICTURE_VIDEO__c}" style="width:150px;"/>
+                    </apex:column>
+                    <apex:column headerValue="Placement"  >
+                        <apex:inputText value="{!c.CO.Placement__c}" style="width:150px;"/>
+                    </apex:column>
+                </apex:dataTable>
+            </apex:pageBlockSection>
+        </apex:pageblock>
+    </apex:form>
+</apex:page>

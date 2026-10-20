@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Product_Sub_Pilar__c</fullName>
+    <label>Product Sub Pilar</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Product_Pilar__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Blocking Channel</fullName>
+                <default>false</default>
+                <label>Blocking Channel</label>
+            </value>
+            <value>
+                <fullName>Bulk</fullName>
+                <default>false</default>
+                <label>Bulk</label>
+            </value>
+            <value>
+                <fullName>Contextual Ads</fullName>
+                <default>false</default>
+                <label>Contextual Ads</label>
+            </value>
+            <value>
+                <fullName>Creative Ads</fullName>
+                <default>false</default>
+                <label>Creative Ads</label>
+            </value>
+            <value>
+                <fullName>Data</fullName>
+                <default>false</default>
+                <label>Data</label>
+            </value>
+            <value>
+                <fullName>Dunia Games</fullName>
+                <default>false</default>
+                <label>Dunia Games</label>
+            </value>
+            <value>
+                <fullName>FRIDA</fullName>
+                <default>false</default>
+                <label>FRIDA</label>
+            </value>
+            <value>
+                <fullName>GITA</fullName>
+                <default>false</default>
+                <label>GITA</label>
+            </value>
+            <value>
+                <fullName>Interactive</fullName>
+                <default>false</default>
+                <label>Interactive</label>
+            </value>
+            <value>
+                <fullName>Internet Baik</fullName>
+                <default>false</default>
+                <label>Internet Baik</label>
+            </value>
+            <value>
+                <fullName>Langit Musik</fullName>
+                <default>false</default>
+                <label>Langit Musik</label>
+            </value>
+            <value>
+                <fullName>LBA</fullName>
+                <default>false</default>
+                <label>LBA</label>
+            </value>
+            <value>
+                <fullName>MAXStream</fullName>
+                <default>false</default>
+                <label>MAXStream</label>
+            </value>
+            <value>
+                <fullName>MyTelkomsel</fullName>
+                <default>false</default>
+                <label>MyTelkomsel</label>
+            </value>
+            <value>
+                <fullName>Net Message</fullName>
+                <default>false</default>
+                <label>Net Message</label>
+            </value>
+            <value>
+                <fullName>Offdeck</fullName>
+                <default>false</default>
+                <label>Offdeck</label>
+            </value>
+            <value>
+                <fullName>OTA</fullName>
+                <default>false</default>
+                <label>OTA</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Performance</fullName>
+                <default>false</default>
+                <label>Performance</label>
+            </value>
+            <value>
+                <fullName>PNV</fullName>
+                <default>false</default>
+                <label>PNV</label>
+            </value>
+            <value>
+                <fullName>Programmatic</fullName>
+                <default>false</default>
+                <label>Programmatic</label>
+            </value>
+            <value>
+                <fullName>RCS</fullName>
+                <default>false</default>
+                <label>RCS</label>
+            </value>
+            <value>
+                <fullName>ROLi</fullName>
+                <default>false</default>
+                <label>ROLi</label>
+            </value>
+            <value>
+                <fullName>SMS Group</fullName>
+                <default>false</default>
+                <label>SMS Group</label>
+            </value>
+            <value>
+                <fullName>TADEX</fullName>
+                <default>false</default>
+                <label>TADEX</label>
+            </value>
+            <value>
+                <fullName>Targeted</fullName>
+                <default>false</default>
+                <label>Targeted</label>
+            </value>
+            <value>
+                <fullName>Targeted Advance</fullName>
+                <default>false</default>
+                <label>Targeted Advance</label>
+            </value>
+            <value>
+                <fullName>telkomsel.com</fullName>
+                <default>false</default>
+                <label>telkomsel.com</label>
+            </value>
+            <value>
+                <fullName>TVC</fullName>
+                <default>false</default>
+                <label>TVC</label>
+            </value>
+            <value>
+                <fullName>USSD</fullName>
+                <default>false</default>
+                <label>USSD</label>
+            </value>
+            <value>
+                <fullName>VAS Strategy</fullName>
+                <default>false</default>
+                <label>VAS Strategy</label>
+            </value>
+            <value>
+                <fullName>WABA</fullName>
+                <default>false</default>
+                <label>WABA</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Display</controllingFieldValue>
+            <valueName>Data</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Display</controllingFieldValue>
+            <valueName>Dunia Games</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Display</controllingFieldValue>
+            <valueName>Internet Baik</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Display</controllingFieldValue>
+            <valueName>Langit Musik</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Display</controllingFieldValue>
+            <valueName>MAXStream</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Display</controllingFieldValue>
+            <valueName>MyTelkomsel</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Display</controllingFieldValue>
+            <valueName>Offdeck</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Display</controllingFieldValue>
+            <controllingFieldValue>iPTV</controllingFieldValue>
+            <controllingFieldValue>Messaging</controllingFieldValue>
+            <controllingFieldValue>Reward</controllingFieldValue>
+            <valueName>Other</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Display</controllingFieldValue>
+            <valueName>ROLi</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Display</controllingFieldValue>
+            <valueName>TADEX</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Display</controllingFieldValue>
+            <valueName>Targeted Advance</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Display</controllingFieldValue>
+            <valueName>telkomsel.com</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>iPTV</controllingFieldValue>
+            <valueName>Blocking Channel</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>iPTV</controllingFieldValue>
+            <valueName>Creative Ads</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>iPTV</controllingFieldValue>
+            <valueName>Programmatic</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>iPTV</controllingFieldValue>
+            <valueName>TVC</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Messaging</controllingFieldValue>
+            <valueName>Bulk</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Messaging</controllingFieldValue>
+            <valueName>Contextual Ads</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Messaging</controllingFieldValue>
+            <valueName>Interactive</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Messaging</controllingFieldValue>
+            <valueName>LBA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Messaging</controllingFieldValue>
+            <valueName>Net Message</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Messaging</controllingFieldValue>
+            <valueName>OTA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Messaging</controllingFieldValue>
+            <valueName>PNV</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Messaging</controllingFieldValue>
+            <valueName>RCS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Messaging</controllingFieldValue>
+            <valueName>SMS Group</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Messaging</controllingFieldValue>
+            <valueName>Targeted</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Messaging</controllingFieldValue>
+            <valueName>USSD</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Messaging</controllingFieldValue>
+            <valueName>VAS Strategy</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Messaging</controllingFieldValue>
+            <valueName>WABA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Performance</controllingFieldValue>
+            <valueName>Performance</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Reward</controllingFieldValue>
+            <valueName>FRIDA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Reward</controllingFieldValue>
+            <valueName>GITA</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

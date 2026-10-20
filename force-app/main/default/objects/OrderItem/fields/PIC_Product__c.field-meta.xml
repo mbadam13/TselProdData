@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PIC_Product__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(TEXT(Product2.PIC_Product_Type__c)== &quot;Own Media&quot;,&quot;Achmad Salman Fariz&quot;,
+IF(TEXT(Product2.PIC_Product_Type__c)== &quot;Third Party Media&quot;, &quot;Alex Soelistyo&quot;,
+IF(TEXT(Product2.PIC_Product_Type__c)== &quot;Messaging&quot;, &quot;Paul AS Pakpahan&quot;,
+IF(TEXT(Product2.PIC_Product_Type__c)== &quot;IPTV&quot;, &quot;Adhika Winanda&quot;,
+IF(TEXT(Product2.PIC_Product_Type__c)== &quot;Performance&quot;, &quot;Roxas Montezuma&quot;,&quot;&quot;
+)))))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>PIC Product</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

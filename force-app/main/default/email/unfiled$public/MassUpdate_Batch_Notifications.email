@@ -1,0 +1,7 @@
+Dear *!relatedTo.Owner.Name*, /n /n
+The result of batch process has been finished /n
+Job Processed are *!Batch* /n
+Job item processed are *!jobItemProcecss* /n
+Batch with *!failures* /n /n
+Check The Record Below /n
+*!LinkBelow*

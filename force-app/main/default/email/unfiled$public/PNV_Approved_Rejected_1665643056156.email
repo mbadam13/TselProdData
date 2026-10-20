@@ -1,0 +1,17 @@
+<html>
+<head>
+	<title></title>
+</head>
+<body style="height: auto; min-height: auto;"><br />
+<a href="https://digiads.lightning.force.com/lightning/r/SID_Tools__c/{{{SID_Tools__c.Id}}}/view">{{{SID_Tools__c.Name}}}</a>&nbsp;is {{{SID_Tools__c.SID_Approval__c}}}.<br />
+<br />
+Client Id :&nbsp;<strong>{{{SID_Tools__c.Client_ID__c}}}</strong><br />
+Client Name :&nbsp;<strong>{{{SID_Tools__c.Client_Name__c}}}</strong><br />
+Merchant Name :&nbsp;<strong>{{{SID_Tools__c.Merchant_Name__c}}}</strong><br />
+Client Desc :&nbsp;<strong>{{{SID_Tools__c.Client_Desc__c}}}</strong><br />
+Password :&nbsp;<strong>{{{SID_Tools__c.Password__c}}}</strong><br />
+Validity :&nbsp;<strong>{{{SID_Tools__c.Validity__c}}}</strong><br />
+<br />
+<br />
+&nbsp;
+</body></html>

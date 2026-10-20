@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Validation_rule_for_Visit_call</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND( ISPICKVAL(StageName,&apos;Visit / Call&apos;),NOT(ISPICKVAL( Request_for_Proposal_Status__c,&apos;Completed&apos;)),NOT(ISBLANK(TEXT( Penagihan_based_on__c ))) )</errorConditionFormula>
+    <errorMessage>Proposal has not completed (Template proposal)</errorMessage>
+</ValidationRule>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SME_Lead_on_qualificaiton</fullName>
+    <columns>LEAD.COMPANY</columns>
+    <columns>FULL_NAME</columns>
+    <columns>LEAD.TITLE</columns>
+    <columns>LEAD.PHONE</columns>
+    <columns>LEAD.EMAIL</columns>
+    <columns>LEAD.STATUS</columns>
+    <columns>LEAD.RATING</columns>
+    <columns>Call_Customer__c</columns>
+    <columns>Visit_Customer__c</columns>
+    <columns>LEAD.CREATED_DATE</columns>
+    <columns>CORE.USERS.LAST_NAME</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Mitra_MyAds__c</field>
+        <operation>equals</operation>
+        <value>1</value>
+    </filters>
+    <filters>
+        <field>LEAD.STATUS</field>
+        <operation>equals</operation>
+        <value>Lead Qualification</value>
+    </filters>
+    <filters>
+        <field>Account_Type__c</field>
+        <operation>contains</operation>
+        <value>DO</value>
+    </filters>
+    <label>SME Lead on qualification</label>
+    <sharedTo>
+        <role>SME_Manager</role>
+        <role>SME_Team</role>
+    </sharedTo>
+</ListView>

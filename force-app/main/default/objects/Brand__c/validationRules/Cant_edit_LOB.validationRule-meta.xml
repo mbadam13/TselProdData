@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cant_edit_LOB</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND( 
+     OR(
+        ISCHANGED(Brand_Category__c),
+        ISCHANGED(Name)
+     ),
+     $Profile.Name = &apos;Sales&apos;,
+     ISPICKVAL(Status__c , &apos;Approved&apos;)
+)</errorConditionFormula>
+    <errorMessage>Sales tidak dapat edit Nama Brand atau LOB yang sudah disetujui oleh Marketing. Silahakan infokan tim Marketing atau Administrator</errorMessage>
+</ValidationRule>

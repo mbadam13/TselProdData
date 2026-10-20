@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>Email_Approver_IPTV</fullName>
+        <description>Email Approver IPTV</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>adhika_winanda@telkomsel.co.id</recipient>
+            <type>user</type>
+        </recipients>
+        <senderAddress>salesforce@saasten.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>unfiled$public/Approval_Order_Email_Template</template>
+    </alerts>
+    <alerts>
+        <fullName>Email_Approver_MSG</fullName>
+        <description>Email Approver MSG</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>adhika_winanda@telkomsel.co.id</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>paul_as_pakpahan@telkomsel.co.id</recipient>
+            <type>user</type>
+        </recipients>
+        <senderAddress>salesforce@saasten.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>unfiled$public/Approval_Order_Email_Template</template>
+    </alerts>
+    <alerts>
+        <fullName>Email_Approver_Own_Media</fullName>
+        <description>Email Approver Own Media</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>achmad_s_fariz@telkomsel.co.id</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>almira_h_suprapto@telkomsel.co.id</recipient>
+            <type>user</type>
+        </recipients>
+        <senderAddress>salesforce@saasten.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>unfiled$public/Approval_Order_Email_Template</template>
+    </alerts>
+    <alerts>
+        <fullName>Email_Approver_Performance</fullName>
+        <description>Email Approver Performance</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>dev2026@telkomsel.co.id</recipient>
+            <type>user</type>
+        </recipients>
+        <senderAddress>salesforce@saasten.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>unfiled$public/Approval_Order_Email_Template</template>
+    </alerts>
+    <alerts>
+        <fullName>Email_Approver_Third_Party</fullName>
+        <description>Email Approver Third Party</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>alex_sulistyo@telkomsel.co.id</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>yohanes_t@telkomsel.co.id</recipient>
+            <type>user</type>
+        </recipients>
+        <senderAddress>salesforce@saasten.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>unfiled$public/Approval_Order_Email_Template</template>
+    </alerts>
+    <alerts>
+        <fullName>Email_Approver_Third_Party_IPTV</fullName>
+        <description>Email Approver Third Party &amp; IPTV</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>alex_sulistyo@telkomsel.co.id</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>yohanes_t@telkomsel.co.id</recipient>
+            <type>user</type>
+        </recipients>
+        <senderAddress>salesforce@saasten.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>unfiled$public/Approval_Order_Email_Template</template>
+    </alerts>
+    <fieldUpdates>
+        <fullName>Update_IsActived</fullName>
+        <field>Is_Active__c</field>
+        <literalValue>0</literalValue>
+        <name>Update DeActived</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_To_Approved</fullName>
+        <field>Approval_Status__c</field>
+        <literalValue>Approved</literalValue>
+        <name>Update To Approved</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_to_Rejected</fullName>
+        <field>Approval_Status__c</field>
+        <literalValue>Rejected</literalValue>
+        <name>Update to Rejected</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+</Workflow>

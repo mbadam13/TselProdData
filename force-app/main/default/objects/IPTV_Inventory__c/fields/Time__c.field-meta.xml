@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Time__c</fullName>
+    <label>Time</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Show_Time__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>00.00 - 24.00</fullName>
+                <default>false</default>
+                <label>00.00 - 24.00</label>
+            </value>
+            <value>
+                <fullName>17.00 - 24.00</fullName>
+                <default>false</default>
+                <label>17.00 - 24.00</label>
+            </value>
+            <value>
+                <fullName>00.00 - 17.00</fullName>
+                <default>false</default>
+                <label>00.00 - 17.00</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>PRIME TIME</controllingFieldValue>
+            <valueName>17.00 - 24.00</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>REGULAR TIME</controllingFieldValue>
+            <valueName>00.00 - 17.00</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ALL TIME</controllingFieldValue>
+            <valueName>00.00 - 24.00</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

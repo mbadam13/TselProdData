@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All</fullName>
+    <columns>NAME</columns>
+    <columns>Media_Seller__c</columns>
+    <columns>Periode__c</columns>
+    <columns>Minimum_Guarantee__c</columns>
+    <columns>Usage__c</columns>
+    <columns>Excess_Usage__c</columns>
+    <columns>Target_Commitment__c</columns>
+    <columns>Invoice__c</columns>
+    <columns>Selisih_Penagihan__c</columns>
+    <columns>Performance__c</columns>
+    <columns>Excess_Usage_to_Target_Commitment__c</columns>
+    <columns>Special_Price__c</columns>
+    <columns>Total_Special_Price__c</columns>
+    <filterScope>Everything</filterScope>
+    <label>All</label>
+</ListView>

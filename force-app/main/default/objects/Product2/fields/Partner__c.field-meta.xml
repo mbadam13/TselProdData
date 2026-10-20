@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Partner__c</fullName>
+    <label>Partner</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Igloo</fullName>
+                <default>false</default>
+                <label>Igloo</label>
+            </value>
+            <value>
+                <fullName>PT. Asia Quarto</fullName>
+                <default>false</default>
+                <label>PT. Asia Quarto</label>
+            </value>
+            <value>
+                <fullName>PT. Gratika</fullName>
+                <default>false</default>
+                <label>PT. Gratika</label>
+            </value>
+            <value>
+                <fullName>PT. Ieglo</fullName>
+                <default>false</default>
+                <label>PT. Ieglo</label>
+            </value>
+            <value>
+                <fullName>MDM</fullName>
+                <default>false</default>
+                <label>MDM</label>
+            </value>
+            <value>
+                <fullName>Icode</fullName>
+                <default>false</default>
+                <label>Icode</label>
+            </value>
+            <value>
+                <fullName>Promogo</fullName>
+                <default>false</default>
+                <label>Promogo</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

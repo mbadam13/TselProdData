@@ -1,0 +1,8 @@
+Hey 
+
+The campaign for opportunity {!Opportunity.Name}  has been completed, 
+Click link below for more information
+{!Order.Link}
+
+thank you.
+Salesforce.

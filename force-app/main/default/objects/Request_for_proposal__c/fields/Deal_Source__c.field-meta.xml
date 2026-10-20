@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Deal_Source__c</fullName>
+    <label>Deal Source</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Direct Brand</fullName>
+                <default>false</default>
+                <label>Direct Brand</label>
+            </value>
+            <value>
+                <fullName>Agency - GroupM (incl. Essence Mediacom, Mindshare, Wavemaker, Nexus, Msix, Xaxis)</fullName>
+                <default>false</default>
+                <label>Agency - GroupM (incl. Essence Mediacom, Mindshare, Wavemaker, Nexus, Msix, Xaxis)</label>
+            </value>
+            <value>
+                <fullName>Agency - ⁠Dentsu (Carat, Iprospect, Merkle,Dentsu X, DwiSapta)</fullName>
+                <default>false</default>
+                <label>Agency - ⁠Dentsu (Carat, Iprospect, Merkle,Dentsu X, DwiSapta)</label>
+            </value>
+            <value>
+                <fullName>Agency - Bintang Pratama</fullName>
+                <default>false</default>
+                <label>Agency - Bintang Pratama</label>
+            </value>
+            <value>
+                <fullName>Agency - ⁠IDAC</fullName>
+                <default>false</default>
+                <label>Agency - ⁠IDAC</label>
+            </value>
+            <value>
+                <fullName>Agency - ⁠Aisensum</fullName>
+                <default>false</default>
+                <label>Agency - ⁠Aisensum</label>
+            </value>
+            <value>
+                <fullName>Agency - ⁠Havas Moonfolk</fullName>
+                <default>false</default>
+                <label>Agency - ⁠Havas Moonfolk</label>
+            </value>
+            <value>
+                <fullName>Agency - ⁠OMG (OMD, PhD)</fullName>
+                <default>false</default>
+                <label>Agency - ⁠OMG (OMD, PhD)</label>
+            </value>
+            <value>
+                <fullName>Agency - ⁠IDA</fullName>
+                <default>false</default>
+                <label>Agency - ⁠IDA</label>
+            </value>
+            <value>
+                <fullName>Agency - ⁠MD Media</fullName>
+                <default>false</default>
+                <label>Agency - ⁠MD Media</label>
+            </value>
+            <value>
+                <fullName>Agency - ⁠ADA</fullName>
+                <default>false</default>
+                <label>Agency - ⁠ADA</label>
+            </value>
+            <value>
+                <fullName>Agency - ⁠Publicis (Starcomm, Zenith, APEX)</fullName>
+                <default>false</default>
+                <label>Agency - ⁠Publicis (Starcomm, Zenith, APEX)</label>
+            </value>
+            <value>
+                <fullName>Agency - ⁠KPSG</fullName>
+                <default>false</default>
+                <label>Agency - ⁠KPSG</label>
+            </value>
+            <value>
+                <fullName>Agency - ⁠Jatis</fullName>
+                <default>false</default>
+                <label>Agency - ⁠Jatis</label>
+            </value>
+            <value>
+                <fullName>Agency - ⁠Innocean</fullName>
+                <default>false</default>
+                <label>Agency - ⁠Innocean</label>
+            </value>
+            <value>
+                <fullName>Agency - ⁠Leverate</fullName>
+                <default>false</default>
+                <label>Agency - ⁠Leverate</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

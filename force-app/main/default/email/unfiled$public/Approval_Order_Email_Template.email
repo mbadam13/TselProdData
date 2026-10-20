@@ -1,0 +1,8 @@
+Dear {!Sub_Order__c.Manager_Approval__c}
+
+Please help to review approval for this Order: {!Sub_Order__c.Order__c}
+
+Please Click on this Link: {!Sub_Order__c.Order_Link__c}
+
+
+Best regards & thank you.

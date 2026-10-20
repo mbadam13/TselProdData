@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Media_Seller_BAEU_Distributions</fullName>
+    <columns>NAME</columns>
+    <columns>RECORDTYPE</columns>
+    <columns>Type__c</columns>
+    <columns>Start_Date__c</columns>
+    <columns>End_Date__c</columns>
+    <columns>Account__c</columns>
+    <columns>Tiering_Type__c</columns>
+    <columns>Greater_Than_Equal__c</columns>
+    <columns>Less_Than__c</columns>
+    <columns>Value_Type__c</columns>
+    <columns>Value__c</columns>
+    <columns>CREATED_DATE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Object_Name__c</field>
+        <operation>equals</operation>
+        <value>Monthly_Special_Price_Allocation__c</value>
+    </filters>
+    <filters>
+        <field>RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Additional_Setting__c.Monthly_Special_Price_Allocation</value>
+    </filters>
+    <filters>
+        <field>CREATED_DATE</field>
+        <operation>equals</operation>
+        <value>THIS_YEAR</value>
+    </filters>
+    <label>Monthly Special Price Alloc Media Seller</label>
+</ListView>

@@ -1,0 +1,6 @@
+Dear Mr/Mrs ,
+This oppportunity . Click link for more detail.
+{!Opportunity.Link}
+Opportunity Name : {!Opportunity.Name}10.00 Million) Okt-2019
+Opportunity ID : {!Opportunity.Id}
+Discount :{!Opportunity.Discount_Average__c} %

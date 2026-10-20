@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Period__c</fullName>
+    <label>Period</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>1 - 3 Months</fullName>
+                <default>false</default>
+                <label>1 - 3 Months</label>
+            </value>
+            <value>
+                <fullName>3 - 5 Months</fullName>
+                <default>false</default>
+                <label>3 - 5 Months</label>
+            </value>
+            <value>
+                <fullName>5 - 12 Months</fullName>
+                <default>false</default>
+                <label>5 - 12 Months</label>
+            </value>
+            <value>
+                <fullName>&gt; 12 Months</fullName>
+                <default>false</default>
+                <label>&gt; 12 Months</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

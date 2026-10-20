@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PNV</fullName>
+    <columns>NAME</columns>
+    <columns>Media_Seller__c</columns>
+    <columns>Company__c</columns>
+    <columns>CP_Name__c</columns>
+    <columns>SID__c</columns>
+    <columns>Sender_ID__c</columns>
+    <columns>CREATED_DATE</columns>
+    <columns>Submit_Date__c</columns>
+    <columns>SID_Approval__c</columns>
+    <columns>Batch__c</columns>
+    <columns>LAST_ACTIVITY</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>SID_Tools__c.PNV</value>
+    </filters>
+    <label>PNV</label>
+</ListView>

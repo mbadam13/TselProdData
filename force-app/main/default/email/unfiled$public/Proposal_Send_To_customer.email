@@ -1,0 +1,9 @@
+Hello,
+
+The proposal {!Request_for_proposal__c.Name} for opportunity {!Opportunity.Name} was send.
+click link below for more information
+Opportunity page {!Opportunity.Link}
+RFP page {!Request_for_proposal__c.Link}
+
+Regards,
+Salesforce

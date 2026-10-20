@@ -1,0 +1,12 @@
+Hello,
+
+The contract for opportunity {!Opportunity.Name} need to be check
+Click link bellow for more information
+Contract: {!Contract.ContractNumber}
+{!Contract.Link}
+Account: {!Account.Name}
+{!Account.Link}
+
+
+Regards,
+Salesforce

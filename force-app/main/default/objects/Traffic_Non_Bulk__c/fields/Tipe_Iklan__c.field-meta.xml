@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Tipe_Iklan__c</fullName>
+    <label>Tipe Iklan</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>BULK</fullName>
+                <default>false</default>
+                <label>BULK</label>
+            </value>
+            <value>
+                <fullName>LBA</fullName>
+                <default>false</default>
+                <label>LBA</label>
+            </value>
+            <value>
+                <fullName>TARGETED</fullName>
+                <default>false</default>
+                <label>TARGETED</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Approval_Order_Running</fullName>
+    <active>true</active>
+    <description>dugunakan untuk mencegah user melakukan running order non bulk</description>
+    <errorConditionFormula>AND(
+OR(
+ISPICKVAL( Status__c, &apos;running&apos;), ISPICKVAL( Status__c, &apos;Completed&apos;)), ISPICKVAL( Approval_Process__c , &apos;&apos;))</errorConditionFormula>
+    <errorMessage>Silahkan Klik tombol submit for approval untuk melakukan Running Order Non Bulk</errorMessage>
+</ValidationRule>

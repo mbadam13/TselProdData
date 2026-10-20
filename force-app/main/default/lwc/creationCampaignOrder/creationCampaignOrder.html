@@ -1,0 +1,113 @@
+<!--
+  @description       : 
+  @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+  @group             : 
+  @last modified on  : 12-22-2020
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+  Modifications Log 
+  Ver   Date         Author                               Modification
+  1.0   09-29-2020   ChangeMeIn@UserSettingsUnder.SFDoc   Initial Version
+-->
+<template>
+    <lightning-card>
+        <h3 slot="title">
+            <lightning-icon icon-name="standard:timesheet" alternative-text="Event" size="small"></lightning-icon>
+            &nbsp;Campaign Order Creation
+        </h3>
+        <template for:each={itemList} for:item="item" for:index="index">
+            <lightning-record-edit-form key={item.id} object-api-name="Campaign_Order__c">
+                <lightning-messages> </lightning-messages>
+                <lightning-layout multiple-rows>
+                    <lightning-layout-item size="10" small-device-size="6" medium-device-size="4" large-device-size="2"
+                        padding="around-small">
+                        <lightning-input-field field-name="Masking_Sender_Brand__c" variant="label-stacked" required>
+                        </lightning-input-field>
+                    </lightning-layout-item>
+                    <lightning-layout-item size="10" small-device-size="6" medium-device-size="4" large-device-size="2"
+                        padding="around-small">
+                        <lightning-input-field field-name="Profiling_Lokasi__c" variant="label-stacked" required>
+                        </lightning-input-field>
+                    </lightning-layout-item>
+                    <lightning-layout-item size="6" small-device-size="6" medium-device-size="4" large-device-size="2"
+                        padding="around-small">
+                        <lightning-input-field field-name="Gender__c" variant="label-stacked" required>
+                        </lightning-input-field>
+                    </lightning-layout-item>
+                    <lightning-layout-item size="3" small-device-size="3" medium-device-size="3" large-device-size="2"
+                        padding="around-small">
+                        <lightning-input-field field-name="Umur__c" variant="label-stacked" required>
+                        </lightning-input-field>
+                    </lightning-layout-item>
+                    <lightning-layout-item size="6" small-device-size="6" medium-device-size="4" large-device-size="2"
+                        padding="around-small">
+                        <lightning-input-field field-name="ARPU__c" variant="label-stacked" required>
+                        </lightning-input-field>
+                    </lightning-layout-item>
+                    <lightning-layout-item size="6" small-device-size="6" medium-device-size="4" large-device-size="2"
+                        padding="around-small">
+                        <lightning-input-field field-name="Religion__c" variant="label-stacked" required>
+                        </lightning-input-field>
+                    </lightning-layout-item>
+                   <!-- <lightning-layout-item size="10" small-device-size="6" medium-device-size="4" large-device-size="2"
+                        padding="around-small">
+                        <lightning-input-field field-name="Profiling_Lokasi__c" variant="label-stacked" required>
+                        </lightning-input-field>
+                    </lightning-layout-item>-->
+                    <lightning-layout-item size="10" small-device-size="6" medium-device-size="4" large-device-size="2"
+                        padding="around-small">
+                        <lightning-input-field field-name="Channel__c" variant="label-stacked" required>
+                        </lightning-input-field>
+                    </lightning-layout-item>
+                    <lightning-layout-item size="10" small-device-size="6" medium-device-size="4" large-device-size="2"
+                        padding="around-small">
+                        <lightning-input-field field-name="Start_Campaign__c" variant="label-stacked" required class="dateCmp">
+                        </lightning-input-field>
+                    </lightning-layout-item>
+                    <lightning-layout-item size="10" small-device-size="6" medium-device-size="4" large-device-size="2"
+                        padding="around-small">
+                        <lightning-input-field field-name="End_Campaign__c" variant="label-stacked" required class="EnddateCmp">
+                        </lightning-input-field>
+                    </lightning-layout-item>
+                    <lightning-layout-item size="10" small-device-size="6" medium-device-size="4" large-device-size="2"
+                        padding="around-small">
+                        <lightning-input-field field-name="of_Broadcast__c" variant="label-stacked" required>
+                        </lightning-input-field>
+                    </lightning-layout-item>
+                    
+                    
+                    
+                    <lightning-layout-item size="10" small-device-size="6" medium-device-size="4" large-device-size="2"
+                        padding="around-small">
+                        <lightning-input-field field-name="Order_Non_Bulk__c" variant="label-stacked" value={recordId}>
+                        </lightning-input-field>
+                    </lightning-layout-item>
+                    <br>
+                    
+                   <!-- <lightning-layout-item size="12" small-device-size="6" medium-device-size="4" large-device-size="2"
+                        padding="around-small">
+                        <div class="slds-p-top_medium">
+                            <lightning-icon icon-name="action:new" access-key={item.id} id={index}
+                                alternative-text="Add Row" size="small" title="Add Row" onclick={addRow}>
+                            </lightning-icon>
+                            <lightning-icon icon-name="action:delete" access-key={item.id} id={index}
+                                alternative-text="Delete Row" size="small" title="Delete Row" onclick={removeRow}>
+                            </lightning-icon>
+                        </div>
+                    </lightning-layout-item>-->
+                </lightning-layout>
+                <lightning-layout-item size="12" small-device-size="10" medium-device-size="10" large-device-size="2"
+                        padding="around-small" flexibility="auto">
+                        <lightning-input-field field-name="WORDING_PICTURE_VIDEO__c" variant="label-stacked" required>
+                        </lightning-input-field>
+                    </lightning-layout-item>
+            </lightning-record-edit-form>
+        </template>
+        </br>
+        <lightning-layout>
+            <div class="slds-align_absolute-center">
+                <lightning-button variant="success" onclick={handleSubmit} name="submit" label="Submit">
+                </lightning-button>
+            </div>
+        </lightning-layout>
+    </lightning-card>
+</template>

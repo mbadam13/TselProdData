@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Validation_rule_Proposal</fullName>
+    <active>false</active>
+    <description>Deactive - FUT_25/Jul/2024</description>
+    <errorConditionFormula>AND(ISPICKVAL(StageName , &quot;Proposal&quot;), 
+NOT(ISPICKVAL(Approval_Status__c , &quot;Approved&quot;))
+)</errorConditionFormula>
+    <errorMessage>Negotiation has not approved</errorMessage>
+</ValidationRule>

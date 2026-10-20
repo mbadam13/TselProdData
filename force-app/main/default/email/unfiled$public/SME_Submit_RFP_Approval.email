@@ -1,0 +1,10 @@
+Hello,
+
+Campaign MyAds {!Request_for_proposal__c.Campaign_MyAds__c} Request for Proposal. Jangan lupa untuk menyetujui sebelum membuat proposal.
+
+Klik link di bawah untuk informasi lebih lanjut
+Link:
+{!Request_for_proposal__c.Link}
+
+Terimakasih,
+Salesforce

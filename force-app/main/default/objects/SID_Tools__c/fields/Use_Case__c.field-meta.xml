@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Use_Case__c</fullName>
+    <label>Use Case</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>OTP</fullName>
+                <default>false</default>
+                <label>OTP</label>
+            </value>
+            <value>
+                <fullName>Registration Partner Lead</fullName>
+                <default>false</default>
+                <label>Registration Partner Lead</label>
+            </value>
+            <value>
+                <fullName>Registration Telkomsel Lead</fullName>
+                <default>false</default>
+                <label>Registration Telkomsel Lead</label>
+            </value>
+            <value>
+                <fullName>Priority Client</fullName>
+                <default>false</default>
+                <label>Priority Client</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

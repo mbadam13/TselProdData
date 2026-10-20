@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Periode__c</fullName>
+    <externalId>false</externalId>
+    <formula>CASE(MONTH(  Start_Date__c ),
+1, &quot;[01-&quot;+TEXT( YEAR(Start_Date__c ))+&quot;]. JAN&quot;,
+2, &quot;[02-&quot;+TEXT( YEAR(Start_Date__c ))+&quot;]. FEB&quot;,
+3, &quot;[03-&quot;+TEXT( YEAR(Start_Date__c ))+&quot;]. MAR&quot;,
+4, &quot;[04-&quot;+TEXT( YEAR(Start_Date__c ))+&quot;]. APR&quot;,
+5, &quot;[05-&quot;+TEXT( YEAR(Start_Date__c ))+&quot;]. MAY&quot;,
+6, &quot;[06-&quot;+TEXT( YEAR(Start_Date__c ))+&quot;]. JUN&quot;,
+7, &quot;[07-&quot;+TEXT( YEAR(Start_Date__c ))+&quot;]. JUL&quot;,
+8, &quot;[08-&quot;+TEXT( YEAR(Start_Date__c ))+&quot;]. AUG&quot;,
+9, &quot;[09-&quot;+TEXT( YEAR(Start_Date__c ))+&quot;]. SEP&quot;,
+10, &quot;[10-&quot;+TEXT( YEAR(Start_Date__c ))+&quot;]. OCT&quot;,
+11, &quot;[11-&quot;+TEXT( YEAR(Start_Date__c ))+&quot;]. NOV&quot;,
+12, &quot;[12-&quot;+TEXT( YEAR(Start_Date__c ))+&quot;]. DEC&quot;,
+&quot;None&quot;)
+
++ &quot; &quot; + TEXT( YEAR(Start_Date__c ) )</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Periode</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

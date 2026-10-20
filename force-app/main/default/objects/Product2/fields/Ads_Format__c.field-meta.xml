@@ -1,0 +1,547 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Ads_Format__c</fullName>
+    <label>Ads Format</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Product_Channel__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Text</fullName>
+                <default>false</default>
+                <label>Text</label>
+            </value>
+            <value>
+                <fullName>Image</fullName>
+                <default>false</default>
+                <label>Image</label>
+            </value>
+            <value>
+                <fullName>Video</fullName>
+                <default>false</default>
+                <label>Video</label>
+            </value>
+            <value>
+                <fullName>Voice</fullName>
+                <default>false</default>
+                <label>Voice</label>
+            </value>
+            <value>
+                <fullName>Product</fullName>
+                <default>false</default>
+                <label>Product</label>
+            </value>
+            <value>
+                <fullName>Data</fullName>
+                <default>false</default>
+                <label>Data</label>
+            </value>
+            <value>
+                <fullName>All</fullName>
+                <default>false</default>
+                <label>All</label>
+            </value>
+            <value>
+                <fullName>Interactive</fullName>
+                <default>false</default>
+                <label>Interactive</label>
+            </value>
+            <value>
+                <fullName>Additional Feature</fullName>
+                <default>false</default>
+                <label>Additional Feature</label>
+            </value>
+            <value>
+                <fullName>Display</fullName>
+                <default>false</default>
+                <label>Display</label>
+            </value>
+            <value>
+                <fullName>Activation</fullName>
+                <default>false</default>
+                <label>Activation</label>
+            </value>
+            <value>
+                <fullName>Rich Media</fullName>
+                <default>false</default>
+                <label>Rich Media</label>
+            </value>
+            <value>
+                <fullName>N/A</fullName>
+                <default>false</default>
+                <label>N/A</label>
+            </value>
+            <value>
+                <fullName>Messaging</fullName>
+                <default>false</default>
+                <label>Messaging</label>
+            </value>
+            <value>
+                <fullName>MP4 , MOV</fullName>
+                <default>false</default>
+                <label>MP4 , MOV</label>
+            </value>
+            <value>
+                <fullName>Image/ MOV</fullName>
+                <default>false</default>
+                <label>Image/ MOV</label>
+            </value>
+            <value>
+                <fullName>MOV / PNG</fullName>
+                <default>false</default>
+                <label>MOV / PNG</label>
+            </value>
+            <value>
+                <fullName>PNG, JPG, MP4 Video MP4 fps 25s(min) codec H.264</fullName>
+                <default>false</default>
+                <label>PNG, JPG, MP4 Video MP4 fps 25s(min) codec H.264</label>
+            </value>
+            <value>
+                <fullName>Icon MP4</fullName>
+                <default>false</default>
+                <label>Icon MP4</label>
+            </value>
+            <value>
+                <fullName>Text / Image</fullName>
+                <default>false</default>
+                <label>Text / Image</label>
+            </value>
+            <value>
+                <fullName>Survey</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Survey</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Page VOD</controllingFieldValue>
+            <controllingFieldValue>Detail VOD</controllingFieldValue>
+            <controllingFieldValue>OBB</controllingFieldValue>
+            <controllingFieldValue>CBB</controllingFieldValue>
+            <controllingFieldValue>Page Radio</controllingFieldValue>
+            <controllingFieldValue>Page News &amp; Promotion</controllingFieldValue>
+            <controllingFieldValue>Detail News &amp; Promotion</controllingFieldValue>
+            <controllingFieldValue>Product Placement</controllingFieldValue>
+            <controllingFieldValue>Page About</controllingFieldValue>
+            <controllingFieldValue>Page FAQ</controllingFieldValue>
+            <controllingFieldValue>Detail Live TV - Showcase</controllingFieldValue>
+            <controllingFieldValue>Homepage Banner</controllingFieldValue>
+            <controllingFieldValue>Live TV Banner</controllingFieldValue>
+            <controllingFieldValue>Mobile</controllingFieldValue>
+            <controllingFieldValue>POTRAIT BANNER (Home Carousel)</controllingFieldValue>
+            <controllingFieldValue>Off Deck</controllingFieldValue>
+            <controllingFieldValue>PICTURE IN PICTURE</controllingFieldValue>
+            <controllingFieldValue>On Deck</controllingFieldValue>
+            <controllingFieldValue>IPTV Creative CPM</controllingFieldValue>
+            <controllingFieldValue>Vending Machine</controllingFieldValue>
+            <controllingFieldValue>TVC CPM</controllingFieldValue>
+            <controllingFieldValue>All</controllingFieldValue>
+            <controllingFieldValue>TVC CPM PMP</controllingFieldValue>
+            <controllingFieldValue>Partner</controllingFieldValue>
+            <controllingFieldValue>My Telkomsel Apps</controllingFieldValue>
+            <controllingFieldValue>BOOTING ADS</controllingFieldValue>
+            <controllingFieldValue>NAVIGATION ADS</controllingFieldValue>
+            <controllingFieldValue>POTRAIT BANNER</controllingFieldValue>
+            <controllingFieldValue>ROTATE BANNER</controllingFieldValue>
+            <controllingFieldValue>LANDSCAPE ADS (HOME MENU)</controllingFieldValue>
+            <controllingFieldValue>LANDSCAPE ADS (MOVIE MENU)</controllingFieldValue>
+            <controllingFieldValue>LANDSCAPE ADS (APPS MENU)</controllingFieldValue>
+            <controllingFieldValue>TV Shopping Landscape</controllingFieldValue>
+            <controllingFieldValue>PIP</controllingFieldValue>
+            <controllingFieldValue>TIMESHIFT ADS</controllingFieldValue>
+            <controllingFieldValue>PRE ROLL</controllingFieldValue>
+            <controllingFieldValue>QR Code</controllingFieldValue>
+            <controllingFieldValue>Google Ads</controllingFieldValue>
+            <controllingFieldValue>Mets Ads</controllingFieldValue>
+            <controllingFieldValue>SCREENSAVER ADS</controllingFieldValue>
+            <controllingFieldValue>SUPER IMPOSE</controllingFieldValue>
+            <controllingFieldValue>SQUEEZE FRAME</controllingFieldValue>
+            <controllingFieldValue>Geo Targeted Creative Ads Navigation</controllingFieldValue>
+            <controllingFieldValue>Indihome IPTV</controllingFieldValue>
+            <controllingFieldValue>Cartoonito, Rock Action, My Kidz, Fight Sports, NBA TV, Thrill, Love Nature, CNN International</controllingFieldValue>
+            <controllingFieldValue>Geo Targeted Creative Ads Pre Roll</controllingFieldValue>
+            <controllingFieldValue>Geo Targeted Creative Ads Time Shift</controllingFieldValue>
+            <controllingFieldValue>Geo Targeted Creative Ads PIP</controllingFieldValue>
+            <controllingFieldValue>Stilll Image</controllingFieldValue>
+            <controllingFieldValue>Dynamic Image</controllingFieldValue>
+            <controllingFieldValue>OBB (Creative Ads)</controllingFieldValue>
+            <controllingFieldValue>CBB (Creative Ads)</controllingFieldValue>
+            <controllingFieldValue>BI (Creative Ads)</controllingFieldValue>
+            <controllingFieldValue>BO (Creative Ads)</controllingFieldValue>
+            <controllingFieldValue>Product Placement (Creative Ads)</controllingFieldValue>
+            <controllingFieldValue>RUNNING TEXT</controllingFieldValue>
+            <controllingFieldValue>LANDSCAPE ADS (Best Streaming Apps)</controllingFieldValue>
+            <controllingFieldValue>LANDSCAPE ADS (Top Picks)</controllingFieldValue>
+            <controllingFieldValue>LANDSCAPE ADS (Highlight of The Week)</controllingFieldValue>
+            <controllingFieldValue>SUPER IMPOSE (SEA TODAY)</controllingFieldValue>
+            <controllingFieldValue>RUNNING TEXT (SEA TODAY)</controllingFieldValue>
+            <controllingFieldValue>Halaman Utama</controllingFieldValue>
+            <controllingFieldValue>Page Channel</controllingFieldValue>
+            <controllingFieldValue>Detail Live TV</controllingFieldValue>
+            <valueName>Display</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Blocking Channel IPTV SD + HD</controllingFieldValue>
+            <controllingFieldValue>Blocking Channel OTT SD + HD</controllingFieldValue>
+            <controllingFieldValue>BI</controllingFieldValue>
+            <controllingFieldValue>BO</controllingFieldValue>
+            <controllingFieldValue>Adlibs</controllingFieldValue>
+            <controllingFieldValue>Production</controllingFieldValue>
+            <controllingFieldValue>Built in</controllingFieldValue>
+            <controllingFieldValue>Mobile</controllingFieldValue>
+            <controllingFieldValue>Off Deck</controllingFieldValue>
+            <controllingFieldValue>On Deck</controllingFieldValue>
+            <controllingFieldValue>IPTV Creative CPM</controllingFieldValue>
+            <controllingFieldValue>Vending Machine</controllingFieldValue>
+            <controllingFieldValue>TVC CPM</controllingFieldValue>
+            <controllingFieldValue>All</controllingFieldValue>
+            <controllingFieldValue>TVC CPM PMP</controllingFieldValue>
+            <controllingFieldValue>Partner</controllingFieldValue>
+            <controllingFieldValue>My Telkomsel Apps</controllingFieldValue>
+            <controllingFieldValue>Blocking Time</controllingFieldValue>
+            <controllingFieldValue>Vidio</controllingFieldValue>
+            <controllingFieldValue>TVC Regular</controllingFieldValue>
+            <controllingFieldValue>Whatsapp</controllingFieldValue>
+            <controllingFieldValue>Offdeck, Telomsel.com, My Telkomsel Apps, Dunia Games</controllingFieldValue>
+            <controllingFieldValue>Offdeck, Telomsel.com</controllingFieldValue>
+            <controllingFieldValue>Meta Ads Audience</controllingFieldValue>
+            <controllingFieldValue>My Telkomsel Appss</controllingFieldValue>
+            <controllingFieldValue>Programmatic Premium Publishers</controllingFieldValue>
+            <controllingFieldValue>SMS Contextual</controllingFieldValue>
+            <controllingFieldValue>Cost Per Claim</controllingFieldValue>
+            <controllingFieldValue>Alfamart Voucher Code</controllingFieldValue>
+            <controllingFieldValue>Generate Unique Voucher Code</controllingFieldValue>
+            <controllingFieldValue>Google Ads</controllingFieldValue>
+            <controllingFieldValue>Mets Ads</controllingFieldValue>
+            <controllingFieldValue>TVC PLATINUM</controllingFieldValue>
+            <controllingFieldValue>TVC GOLD</controllingFieldValue>
+            <controllingFieldValue>TVC SILVER</controllingFieldValue>
+            <controllingFieldValue>TVC ROS</controllingFieldValue>
+            <controllingFieldValue>TVC Cross Platform</controllingFieldValue>
+            <controllingFieldValue>SUPER IMPOSE</controllingFieldValue>
+            <controllingFieldValue>SQUEEZE FRAME</controllingFieldValue>
+            <controllingFieldValue>Targeted TVC Ads</controllingFieldValue>
+            <controllingFieldValue>Indihome IPTV</controllingFieldValue>
+            <controllingFieldValue>Inmobi</controllingFieldValue>
+            <controllingFieldValue>Cartoonito, Rock Action, My Kidz, Fight Sports, NBA TV, Thrill, Love Nature, CNN International</controllingFieldValue>
+            <controllingFieldValue>Horee</controllingFieldValue>
+            <controllingFieldValue>Moyo Ads</controllingFieldValue>
+            <controllingFieldValue>Affle Ads</controllingFieldValue>
+            <controllingFieldValue>AXN - Cross Platform (30&quot;) , AXN - Single Platform (30&quot;) , K+ (30&quot;)</controllingFieldValue>
+            <controllingFieldValue>Blocking Channel SD</controllingFieldValue>
+            <controllingFieldValue>Blocking Channel HD</controllingFieldValue>
+            <controllingFieldValue>Blocking Channel SD + HD</controllingFieldValue>
+            <controllingFieldValue>Blocking Channel Manage Service IPTV SD Channel</controllingFieldValue>
+            <controllingFieldValue>Blocking Channel Manage Service IPTV HD Channel</controllingFieldValue>
+            <controllingFieldValue>Blocking Channel UseeTV Go</controllingFieldValue>
+            <controllingFieldValue>Live Streaming</controllingFieldValue>
+            <controllingFieldValue>Talkshow</controllingFieldValue>
+            <controllingFieldValue>Liputan</controllingFieldValue>
+            <controllingFieldValue>Webinar</controllingFieldValue>
+            <controllingFieldValue>TVC</controllingFieldValue>
+            <controllingFieldValue>Filler</controllingFieldValue>
+            <controllingFieldValue>Advertorial</controllingFieldValue>
+            <controllingFieldValue>Production (TVC)</controllingFieldValue>
+            <controllingFieldValue>Built in (TVC)</controllingFieldValue>
+            <valueName>Video</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Credit Title</controllingFieldValue>
+            <controllingFieldValue>Template Host / Name</controllingFieldValue>
+            <controllingFieldValue>Mobile</controllingFieldValue>
+            <controllingFieldValue>Off Deck</controllingFieldValue>
+            <controllingFieldValue>On Deck</controllingFieldValue>
+            <controllingFieldValue>IPTV Creative CPM</controllingFieldValue>
+            <controllingFieldValue>Vending Machine</controllingFieldValue>
+            <controllingFieldValue>TVC CPM</controllingFieldValue>
+            <controllingFieldValue>All</controllingFieldValue>
+            <controllingFieldValue>TVC CPM PMP</controllingFieldValue>
+            <controllingFieldValue>Partner</controllingFieldValue>
+            <controllingFieldValue>My Telkomsel Apps</controllingFieldValue>
+            <controllingFieldValue>TVC Regular</controllingFieldValue>
+            <controllingFieldValue>Whatsapp</controllingFieldValue>
+            <controllingFieldValue>Offdeck, Telomsel.com, My Telkomsel Apps, Dunia Games</controllingFieldValue>
+            <controllingFieldValue>Offdeck, Telomsel.com</controllingFieldValue>
+            <controllingFieldValue>Meta Ads Audience</controllingFieldValue>
+            <controllingFieldValue>My Telkomsel Appss</controllingFieldValue>
+            <controllingFieldValue>Programmatic Premium Publishers</controllingFieldValue>
+            <controllingFieldValue>SMS Contextual</controllingFieldValue>
+            <controllingFieldValue>T Bill</controllingFieldValue>
+            <controllingFieldValue>NIK Matching</controllingFieldValue>
+            <controllingFieldValue>performance</controllingFieldValue>
+            <controllingFieldValue>Cost Per Claim</controllingFieldValue>
+            <controllingFieldValue>Alfamart Voucher Code</controllingFieldValue>
+            <controllingFieldValue>Generate Unique Voucher Code</controllingFieldValue>
+            <controllingFieldValue>Messaging</controllingFieldValue>
+            <controllingFieldValue>Google Ads</controllingFieldValue>
+            <controllingFieldValue>Mets Ads</controllingFieldValue>
+            <controllingFieldValue>Indihome IPTV</controllingFieldValue>
+            <controllingFieldValue>Cartoonito, Rock Action, My Kidz, Fight Sports, NBA TV, Thrill, Love Nature, CNN International</controllingFieldValue>
+            <controllingFieldValue>Horee</controllingFieldValue>
+            <controllingFieldValue>Maxstream TV (App)</controllingFieldValue>
+            <controllingFieldValue>Running Text (Super Impose)</controllingFieldValue>
+            <controllingFieldValue>Credit Title (Super Impose)</controllingFieldValue>
+            <controllingFieldValue>Adlibs (TVC)</controllingFieldValue>
+            <controllingFieldValue>Template Host (Creative Ads)</controllingFieldValue>
+            <controllingFieldValue>RUNNING TEXT</controllingFieldValue>
+            <valueName>Text</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Bundling Mini Studio + Alat + Crew</controllingFieldValue>
+            <controllingFieldValue>Bundling Usee Hall + Alat + Crew (1)</controllingFieldValue>
+            <controllingFieldValue>Mobile</controllingFieldValue>
+            <controllingFieldValue>Off Deck</controllingFieldValue>
+            <controllingFieldValue>On Deck</controllingFieldValue>
+            <controllingFieldValue>IPTV Creative CPM</controllingFieldValue>
+            <controllingFieldValue>Vending Machine</controllingFieldValue>
+            <controllingFieldValue>TVC CPM</controllingFieldValue>
+            <controllingFieldValue>All</controllingFieldValue>
+            <controllingFieldValue>TVC CPM PMP</controllingFieldValue>
+            <controllingFieldValue>Partner</controllingFieldValue>
+            <controllingFieldValue>My Telkomsel Apps</controllingFieldValue>
+            <controllingFieldValue>Google Ads</controllingFieldValue>
+            <controllingFieldValue>Mets Ads</controllingFieldValue>
+            <controllingFieldValue>Indihome IPTV</controllingFieldValue>
+            <controllingFieldValue>Studio Usee Hall</controllingFieldValue>
+            <controllingFieldValue>2 Studio + Alat +Crew</controllingFieldValue>
+            <controllingFieldValue>Studio (mini studio)</controllingFieldValue>
+            <controllingFieldValue>Venue</controllingFieldValue>
+            <controllingFieldValue>Production Off Air</controllingFieldValue>
+            <controllingFieldValue>Bundling Package</controllingFieldValue>
+            <valueName>Activation</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mobile</controllingFieldValue>
+            <controllingFieldValue>Off Deck</controllingFieldValue>
+            <controllingFieldValue>On Deck</controllingFieldValue>
+            <controllingFieldValue>IPTV Creative CPM</controllingFieldValue>
+            <controllingFieldValue>Vending Machine</controllingFieldValue>
+            <controllingFieldValue>TVC CPM</controllingFieldValue>
+            <controllingFieldValue>All</controllingFieldValue>
+            <controllingFieldValue>TVC CPM PMP</controllingFieldValue>
+            <controllingFieldValue>Partner</controllingFieldValue>
+            <controllingFieldValue>My Telkomsel Apps</controllingFieldValue>
+            <controllingFieldValue>Programmatic Push Notification</controllingFieldValue>
+            <controllingFieldValue>TVC Regular</controllingFieldValue>
+            <controllingFieldValue>Whatsapp</controllingFieldValue>
+            <controllingFieldValue>Offdeck, Telomsel.com, My Telkomsel Apps, Dunia Games</controllingFieldValue>
+            <controllingFieldValue>Offdeck, Telomsel.com</controllingFieldValue>
+            <controllingFieldValue>Meta Ads Audience</controllingFieldValue>
+            <controllingFieldValue>My Telkomsel Appss</controllingFieldValue>
+            <controllingFieldValue>Programmatic Premium Publishers</controllingFieldValue>
+            <controllingFieldValue>SMS Contextual</controllingFieldValue>
+            <controllingFieldValue>performance</controllingFieldValue>
+            <controllingFieldValue>Cost Per Claim</controllingFieldValue>
+            <controllingFieldValue>Alfamart Voucher Code</controllingFieldValue>
+            <controllingFieldValue>Generate Unique Voucher Code</controllingFieldValue>
+            <controllingFieldValue>Google Ads</controllingFieldValue>
+            <controllingFieldValue>Mets Ads</controllingFieldValue>
+            <controllingFieldValue>Indihome IPTV</controllingFieldValue>
+            <controllingFieldValue>Inmobi</controllingFieldValue>
+            <controllingFieldValue>Oppo Ads</controllingFieldValue>
+            <controllingFieldValue>Cartoonito, Rock Action, My Kidz, Fight Sports, NBA TV, Thrill, Love Nature, CNN International</controllingFieldValue>
+            <controllingFieldValue>Horee</controllingFieldValue>
+            <controllingFieldValue>Vivo Ads</controllingFieldValue>
+            <controllingFieldValue>Moyo Ads</controllingFieldValue>
+            <controllingFieldValue>Affle Ads</controllingFieldValue>
+            <valueName>Image</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mobile</controllingFieldValue>
+            <controllingFieldValue>Off Deck</controllingFieldValue>
+            <controllingFieldValue>On Deck</controllingFieldValue>
+            <controllingFieldValue>IPTV Creative CPM</controllingFieldValue>
+            <controllingFieldValue>Vending Machine</controllingFieldValue>
+            <controllingFieldValue>TVC CPM</controllingFieldValue>
+            <controllingFieldValue>All</controllingFieldValue>
+            <controllingFieldValue>TVC CPM PMP</controllingFieldValue>
+            <controllingFieldValue>Partner</controllingFieldValue>
+            <controllingFieldValue>My Telkomsel Apps</controllingFieldValue>
+            <controllingFieldValue>TVC Regular</controllingFieldValue>
+            <controllingFieldValue>Whatsapp</controllingFieldValue>
+            <controllingFieldValue>Offdeck, Telomsel.com, My Telkomsel Apps, Dunia Games</controllingFieldValue>
+            <controllingFieldValue>Offdeck, Telomsel.com</controllingFieldValue>
+            <controllingFieldValue>Meta Ads Audience</controllingFieldValue>
+            <controllingFieldValue>My Telkomsel Appss</controllingFieldValue>
+            <controllingFieldValue>Programmatic Premium Publishers</controllingFieldValue>
+            <controllingFieldValue>SMS Contextual</controllingFieldValue>
+            <controllingFieldValue>Google Ads</controllingFieldValue>
+            <controllingFieldValue>Mets Ads</controllingFieldValue>
+            <controllingFieldValue>Indihome IPTV</controllingFieldValue>
+            <controllingFieldValue>Horee</controllingFieldValue>
+            <valueName>Voice</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mobile</controllingFieldValue>
+            <controllingFieldValue>Off Deck</controllingFieldValue>
+            <controllingFieldValue>On Deck</controllingFieldValue>
+            <controllingFieldValue>IPTV Creative CPM</controllingFieldValue>
+            <controllingFieldValue>Vending Machine</controllingFieldValue>
+            <controllingFieldValue>TVC CPM</controllingFieldValue>
+            <controllingFieldValue>All</controllingFieldValue>
+            <controllingFieldValue>TVC CPM PMP</controllingFieldValue>
+            <controllingFieldValue>Partner</controllingFieldValue>
+            <controllingFieldValue>My Telkomsel Apps</controllingFieldValue>
+            <controllingFieldValue>TVC Regular</controllingFieldValue>
+            <controllingFieldValue>Whatsapp</controllingFieldValue>
+            <controllingFieldValue>Offdeck, Telomsel.com, My Telkomsel Apps, Dunia Games</controllingFieldValue>
+            <controllingFieldValue>Offdeck, Telomsel.com</controllingFieldValue>
+            <controllingFieldValue>Meta Ads Audience</controllingFieldValue>
+            <controllingFieldValue>My Telkomsel Appss</controllingFieldValue>
+            <controllingFieldValue>Programmatic Premium Publishers</controllingFieldValue>
+            <controllingFieldValue>SMS Contextual</controllingFieldValue>
+            <controllingFieldValue>Google Ads</controllingFieldValue>
+            <controllingFieldValue>Mets Ads</controllingFieldValue>
+            <controllingFieldValue>Indihome IPTV</controllingFieldValue>
+            <valueName>Product</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mobile</controllingFieldValue>
+            <controllingFieldValue>Off Deck</controllingFieldValue>
+            <controllingFieldValue>On Deck</controllingFieldValue>
+            <controllingFieldValue>IPTV Creative CPM</controllingFieldValue>
+            <controllingFieldValue>Vending Machine</controllingFieldValue>
+            <controllingFieldValue>TVC CPM</controllingFieldValue>
+            <controllingFieldValue>All</controllingFieldValue>
+            <controllingFieldValue>TVC CPM PMP</controllingFieldValue>
+            <controllingFieldValue>Partner</controllingFieldValue>
+            <controllingFieldValue>Data</controllingFieldValue>
+            <controllingFieldValue>My Telkomsel Apps</controllingFieldValue>
+            <controllingFieldValue>TVC Regular</controllingFieldValue>
+            <controllingFieldValue>Whatsapp</controllingFieldValue>
+            <controllingFieldValue>Offdeck, Telomsel.com, My Telkomsel Apps, Dunia Games</controllingFieldValue>
+            <controllingFieldValue>Offdeck, Telomsel.com</controllingFieldValue>
+            <controllingFieldValue>Meta Ads Audience</controllingFieldValue>
+            <controllingFieldValue>My Telkomsel Appss</controllingFieldValue>
+            <controllingFieldValue>Programmatic Premium Publishers</controllingFieldValue>
+            <controllingFieldValue>SMS Contextual</controllingFieldValue>
+            <controllingFieldValue>Cost Per Claim</controllingFieldValue>
+            <controllingFieldValue>Alfamart Voucher Code</controllingFieldValue>
+            <controllingFieldValue>Generate Unique Voucher Code</controllingFieldValue>
+            <controllingFieldValue>Google Ads</controllingFieldValue>
+            <controllingFieldValue>Mets Ads</controllingFieldValue>
+            <controllingFieldValue>Indihome IPTV</controllingFieldValue>
+            <controllingFieldValue>Cartoonito, Rock Action, My Kidz, Fight Sports, NBA TV, Thrill, Love Nature, CNN International</controllingFieldValue>
+            <valueName>Data</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mobile</controllingFieldValue>
+            <controllingFieldValue>Off Deck</controllingFieldValue>
+            <controllingFieldValue>On Deck</controllingFieldValue>
+            <controllingFieldValue>IPTV Creative CPM</controllingFieldValue>
+            <controllingFieldValue>Vending Machine</controllingFieldValue>
+            <controllingFieldValue>TVC CPM</controllingFieldValue>
+            <controllingFieldValue>All</controllingFieldValue>
+            <controllingFieldValue>TVC CPM PMP</controllingFieldValue>
+            <controllingFieldValue>Partner</controllingFieldValue>
+            <controllingFieldValue>My Telkomsel Apps</controllingFieldValue>
+            <controllingFieldValue>Meta Ads Audience</controllingFieldValue>
+            <controllingFieldValue>My Telkomsel Appss</controllingFieldValue>
+            <controllingFieldValue>Programmatic Premium Publishers</controllingFieldValue>
+            <controllingFieldValue>SMS Contextual</controllingFieldValue>
+            <controllingFieldValue>Google Ads</controllingFieldValue>
+            <controllingFieldValue>Mets Ads</controllingFieldValue>
+            <controllingFieldValue>Indihome IPTV</controllingFieldValue>
+            <valueName>All</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mobile</controllingFieldValue>
+            <controllingFieldValue>Off Deck</controllingFieldValue>
+            <controllingFieldValue>On Deck</controllingFieldValue>
+            <controllingFieldValue>IPTV Creative CPM</controllingFieldValue>
+            <controllingFieldValue>Vending Machine</controllingFieldValue>
+            <controllingFieldValue>TVC CPM</controllingFieldValue>
+            <controllingFieldValue>All</controllingFieldValue>
+            <controllingFieldValue>TVC CPM PMP</controllingFieldValue>
+            <controllingFieldValue>Partner</controllingFieldValue>
+            <controllingFieldValue>My Telkomsel Apps</controllingFieldValue>
+            <controllingFieldValue>Google Ads</controllingFieldValue>
+            <controllingFieldValue>Mets Ads</controllingFieldValue>
+            <controllingFieldValue>Indihome IPTV</controllingFieldValue>
+            <valueName>Interactive</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mobile</controllingFieldValue>
+            <controllingFieldValue>Off Deck</controllingFieldValue>
+            <controllingFieldValue>On Deck</controllingFieldValue>
+            <controllingFieldValue>IPTV Creative CPM</controllingFieldValue>
+            <controllingFieldValue>Vending Machine</controllingFieldValue>
+            <controllingFieldValue>TVC CPM</controllingFieldValue>
+            <controllingFieldValue>All</controllingFieldValue>
+            <controllingFieldValue>TVC CPM PMP</controllingFieldValue>
+            <controllingFieldValue>Partner</controllingFieldValue>
+            <controllingFieldValue>My Telkomsel Apps</controllingFieldValue>
+            <controllingFieldValue>Google Ads</controllingFieldValue>
+            <controllingFieldValue>Mets Ads</controllingFieldValue>
+            <controllingFieldValue>Indihome IPTV</controllingFieldValue>
+            <valueName>Additional Feature</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IPTV Creative CPM</controllingFieldValue>
+            <controllingFieldValue>TVC CPM</controllingFieldValue>
+            <controllingFieldValue>TVC CPM PMP</controllingFieldValue>
+            <controllingFieldValue>My Telkomsel Apps</controllingFieldValue>
+            <controllingFieldValue>Google Ads</controllingFieldValue>
+            <controllingFieldValue>Mets Ads</controllingFieldValue>
+            <controllingFieldValue>Indihome IPTV</controllingFieldValue>
+            <controllingFieldValue>WABA</controllingFieldValue>
+            <controllingFieldValue>RCS</controllingFieldValue>
+            <controllingFieldValue>Net Message</controllingFieldValue>
+            <controllingFieldValue>OTA</controllingFieldValue>
+            <valueName>Rich Media</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>My Telkomsel Apps</controllingFieldValue>
+            <controllingFieldValue>My Telkomsel Appss</controllingFieldValue>
+            <controllingFieldValue>performance</controllingFieldValue>
+            <controllingFieldValue>Google Ads</controllingFieldValue>
+            <controllingFieldValue>Mets Ads</controllingFieldValue>
+            <controllingFieldValue>Indihome IPTV</controllingFieldValue>
+            <controllingFieldValue>Cartoonito, Rock Action, My Kidz, Fight Sports, NBA TV, Thrill, Love Nature, CNN International</controllingFieldValue>
+            <controllingFieldValue>Horee</controllingFieldValue>
+            <valueName>N/A</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>My Telkomsel Apps</controllingFieldValue>
+            <controllingFieldValue>Google Ads</controllingFieldValue>
+            <controllingFieldValue>Mets Ads</controllingFieldValue>
+            <controllingFieldValue>Indihome IPTV</controllingFieldValue>
+            <valueName>Messaging</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>My Telkomsel Appss</controllingFieldValue>
+            <controllingFieldValue>Maxstream TV (App)</controllingFieldValue>
+            <valueName>MP4 , MOV</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>My Telkomsel Appss</controllingFieldValue>
+            <controllingFieldValue>Maxstream TV (App)</controllingFieldValue>
+            <valueName>Image/ MOV</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>My Telkomsel Appss</controllingFieldValue>
+            <controllingFieldValue>Maxstream TV (App)</controllingFieldValue>
+            <valueName>MOV / PNG</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>My Telkomsel Appss</controllingFieldValue>
+            <controllingFieldValue>Maxstream TV (App)</controllingFieldValue>
+            <valueName>PNG, JPG, MP4 Video MP4 fps 25s(min) codec H.264</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>My Telkomsel Appss</controllingFieldValue>
+            <valueName>Icon MP4</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Vivo Ads</controllingFieldValue>
+            <controllingFieldValue>Moyo Ads</controllingFieldValue>
+            <controllingFieldValue>Affle Ads</controllingFieldValue>
+            <controllingFieldValue>DOOH Programmatic</controllingFieldValue>
+            <valueName>Text / Image</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

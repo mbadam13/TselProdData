@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RFP_Assign_To_Me</fullName>
+    <columns>NAME</columns>
+    <columns>Product__c</columns>
+    <columns>Project__c</columns>
+    <columns>Campaign_Investment__c</columns>
+    <columns>Account_Manager__c</columns>
+    <columns>CREATED_DATE</columns>
+    <columns>Deadline__c</columns>
+    <columns>Aging__c</columns>
+    <columns>Request_for_Proposal_Status__c</columns>
+    <columns>Opportunity_Status__c</columns>
+    <columns>OWNER.LAST_NAME</columns>
+    <columns>LAST_UPDATE</columns>
+    <filterScope>Mine</filterScope>
+    <filters>
+        <field>Document_Version__c</field>
+        <operation>equals</operation>
+        <value>Submit</value>
+    </filters>
+    <filters>
+        <field>Request_for_Proposal_Status__c</field>
+        <operation>equals</operation>
+        <value>Request Assign</value>
+    </filters>
+    <label>RFP Assign To Me</label>
+    <sharedTo></sharedTo>
+</ListView>

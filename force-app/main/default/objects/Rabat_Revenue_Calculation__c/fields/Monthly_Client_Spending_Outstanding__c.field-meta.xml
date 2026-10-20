@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Monthly_Client_Spending_Outstanding__c</fullName>
+    <externalId>false</externalId>
+    <formula>HYPERLINK(&apos;https://digiads.lightning.force.com/lightning/r/Report/00O2u000000kIKKEA2/view?&apos; +
+&apos;fv0=&apos; +  Id 
+, &apos;Report: Monthly Client Spending &amp; Outstanding&apos; , &apos;_blank&apos;)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Monthly Client Spending &amp; Outstanding</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

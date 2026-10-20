@@ -1,0 +1,9 @@
+Hey {!Lead.OwnerFullName},
+
+The lead for {!Lead.Advertiser_Name__c} is unqualified.
+Click link bellow for more information
+Lead:
+{!Lead.Link}
+
+Fighting,
+Salesforce

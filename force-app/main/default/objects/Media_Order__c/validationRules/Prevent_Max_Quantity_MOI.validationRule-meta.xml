@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Prevent_Max_Quantity_MOI</fullName>
+    <active>false</active>
+    <description>Prevent Qty MOI Greater Than Qty MO</description>
+    <errorConditionFormula>Sum_Quantity_MOI__c &gt; Quantity__c</errorConditionFormula>
+    <errorMessage>Total Quantity MOI cannot be greater than Quantity MO / Order Item</errorMessage>
+</ValidationRule>

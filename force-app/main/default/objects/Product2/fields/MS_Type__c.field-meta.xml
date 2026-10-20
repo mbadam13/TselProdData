@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>MS_Type__c</fullName>
+    <label>MS Type</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Bulk</fullName>
+                <default>false</default>
+                <label>Bulk</label>
+            </value>
+            <value>
+                <fullName>Non Bulk</fullName>
+                <default>false</default>
+                <label>Non Bulk</label>
+            </value>
+            <value>
+                <fullName>Data Reward</fullName>
+                <default>false</default>
+                <label>Data Reward</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

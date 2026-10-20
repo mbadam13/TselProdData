@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Account_for_Media_Seller</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+   TEXT(Type__c) = &apos;Media Seller&apos;,
+   ISBLANK(Media_Seller__c)
+)</errorConditionFormula>
+    <errorMessage>Choose DWS or Mustika for Media Seller field.</errorMessage>
+</ValidationRule>

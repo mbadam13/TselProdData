@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All</fullName>
+    <columns>Monthly_Client_Traffic__c</columns>
+    <columns>NAME</columns>
+    <columns>Company_Name__c</columns>
+    <columns>Brand_Related__c</columns>
+    <columns>Campaign_ID__c</columns>
+    <columns>Tipe_Kanal__c</columns>
+    <columns>Kategori_Iklan__c</columns>
+    <columns>Product_Related__c</columns>
+    <columns>Sales__c</columns>
+    <columns>tgl_Tayang__c</columns>
+    <columns>Order_Quantity__c</columns>
+    <columns>Traffic_Success__c</columns>
+    <columns>Traffic_Failed__c</columns>
+    <columns>Price__c</columns>
+    <columns>Total_Harga__c</columns>
+    <filterScope>Everything</filterScope>
+    <label>All</label>
+</ListView>

@@ -1,0 +1,30 @@
+<!--
+  @description       : 
+  @author            : Diky Nurosid
+  @group             : 
+  @last modified on  : 10-03-2023
+  @last modified by  : Diky Nurosid
+-->
+<template>
+    <div class="isLoading">
+        <lightning-spinner if:true={showSpinner} size="medium" class="slds-is-fixed"></lightning-spinner>
+   </div>
+    <template if:true={showTable}>
+        <lightning-card variant="Narrow" title="Weekly Report Settlement " icon-name="standard:recipe">
+            <c-datatable-utility records={allRecords} 
+            pick-list-options ={pickListOptions}
+            total-records={recordSize} 
+            columns ={columns}
+            key-field="Id"
+            show-search-box="true"            
+            max-row-selection={recordSize}
+            onpaginatorchange={handlePaginatorChange}
+            onsetselectedrecords={handleAllSelectedRows}
+            sorted-by={sortBy}
+            sorted-direction={sortDirection}
+            onsort={handelSort}
+            table-height="350">
+            </c-datatable-utility>     
+        </lightning-card>
+    </template>
+</template>

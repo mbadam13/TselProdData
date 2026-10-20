@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Phone_Must_be_Number</fullName>
+    <active>false</active>
+    <description>Harus nomor</description>
+    <errorConditionFormula>AND(
+NOT(ISPICKVAL ( Account_Type__c ,&quot;Publisher&quot;)) ,
+TEXT( Status) &lt;&gt; &quot;NEW&quot;,
+NOT(ISNUMBER( Phone)),
+NOT(ISNUMBER( MobilePhone ))
+)</errorConditionFormula>
+    <errorMessage>Please fill phone number and must Only Number</errorMessage>
+</ValidationRule>

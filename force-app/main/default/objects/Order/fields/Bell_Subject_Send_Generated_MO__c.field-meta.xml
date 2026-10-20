@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Bell_Subject_Send_Generated_MO__c</fullName>
+    <externalId>false</externalId>
+    <formula>&apos;Order dengan nomor &apos;+OrderNumber+&apos; siap untuk Generate MO&apos;</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Bell Subject Send Generated MO</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

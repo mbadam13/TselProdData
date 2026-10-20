@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sum_Partner_Revenue__c</fullName>
+    <label>Sum Partner Revenue</label>
+    <summarizedField>Traffics_SID__c.Partner_Revenue__c</summarizedField>
+    <summaryForeignKey>Traffics_SID__c.Usage_Traffic_Media_Seller__c</summaryForeignKey>
+    <summaryOperation>sum</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

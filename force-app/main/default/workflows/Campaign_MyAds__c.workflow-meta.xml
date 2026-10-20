@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldUpdates>
+        <fullName>Account_Type</fullName>
+        <description>Stamping Account type when create camp myads</description>
+        <field>Account_Type__c</field>
+        <formula>TEXT(Partner__r.Account_Type__c)</formula>
+        <name>Account Type</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Campaign_MyAds_completed</fullName>
+        <description>digunakan dalam wf campaign myads auto completed</description>
+        <field>Stage__c</field>
+        <literalValue>Completed</literalValue>
+        <name>Campaign MyAds completed</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Campaign_MyAds_running_scheduler</fullName>
+        <description>Campaign MyAds running scheduler</description>
+        <field>Stage__c</field>
+        <literalValue>Running</literalValue>
+        <name>Campaign MyAds running scheduler</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Campaign_myads_running</fullName>
+        <description>digunakan di WF campaign myads running scheduler</description>
+        <field>Stage__c</field>
+        <literalValue>Running</literalValue>
+        <name>Campaign myads running</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_stage_to_Negotiation</fullName>
+        <description>ini untuk update stage ke negotiation kalo dia pilih own proposal pada campaign myads with partner</description>
+        <field>Stage__c</field>
+        <literalValue>Negotiation</literalValue>
+        <name>Update stage to Negotiation</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>User_ID</fullName>
+        <description>Stamping User ID when create camp myads</description>
+        <field>User_id__c</field>
+        <formula>Partner__r.User_ID__c</formula>
+        <name>User ID</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>update_stage_to_planning</fullName>
+        <description>digunakan untuk WF need approval MyAds</description>
+        <field>Stage__c</field>
+        <literalValue>Planning</literalValue>
+        <name>update stage to planning</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <rules>
+        <fullName>Campaign MyAds completed scheduler</fullName>
+        <actions>
+            <name>Campaign_MyAds_completed</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Campaign_MyAds__c.End_Date__c</field>
+            <operation>equals</operation>
+            <value>TODAY</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Campaign_MyAds__c.Stage__c</field>
+            <operation>equals</operation>
+            <value>Running</value>
+        </criteriaItems>
+        <description>Campaign MyAds completedscheduler</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+        <workflowTimeTriggers>
+            <offsetFromField>Campaign_MyAds__c.End_Date__c</offsetFromField>
+            <timeLength>1</timeLength>
+            <workflowTimeTriggerUnit>Hours</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+    <rules>
+        <fullName>Campaign MyAds running scheduler</fullName>
+        <actions>
+            <name>Campaign_myads_running</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Campaign_MyAds__c.Stage__c</field>
+            <operation>notEqual</operation>
+            <value>Completed</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Campaign_MyAds__c.Stage__c</field>
+            <operation>equals</operation>
+            <value>Planning</value>
+        </criteriaItems>
+        <description>Campaign MyAds running scheduler</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+        <workflowTimeTriggers>
+            <offsetFromField>Campaign_MyAds__c.Start_Date__c</offsetFromField>
+            <timeLength>1</timeLength>
+            <workflowTimeTriggerUnit>Hours</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+    <rules>
+        <fullName>Need Approval MyAds</fullName>
+        <actions>
+            <name>update_stage_to_planning</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Campaign_MyAds__c.Stage__c</field>
+            <operation>equals</operation>
+            <value>Negotiation</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Campaign_MyAds__c.Need_Approval__c</field>
+            <operation>equals</operation>
+            <value>Without Approval</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Own proposal campaign myads</fullName>
+        <actions>
+            <name>Update_stage_to_Negotiation</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Campaign_MyAds__c.Own_proposal__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Campaign_MyAds__c.Stage__c</field>
+            <operation>equals</operation>
+            <value>Draft</value>
+        </criteriaItems>
+        <description>untuk update stage ke negotiation ketika sales memilih own proposal pada campaign myads with partner</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Stamping DOR</fullName>
+        <actions>
+            <name>Account_Type</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>User_ID</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <formula>AND(ISNEW())</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+</Workflow>

@@ -1,0 +1,11 @@
+Hello {!Opportunity.Opportunity_Owner_Name__c},
+
+The contract for opportunity {!Contract.Opportunity__c} was activated.
+Click link bellow for more information
+Contract:
+{!Contract.Link}
+Account:
+{!Account.Link}
+
+Regards,
+Salesforce

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>Contract_Activated</fullName>
+        <description>Contract Activated</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderAddress>salesforce@saasten.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>unfiled$public/Contract_was_Activated</template>
+    </alerts>
+    <alerts>
+        <fullName>Contract_Need_Check</fullName>
+        <description>Contract Need Check</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>eka_p_sjaerodji@telkomsel.co.id</recipient>
+            <type>user</type>
+        </recipients>
+        <senderAddress>salesforce@saasten.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>unfiled$public/Contract_Need_Approval</template>
+    </alerts>
+    <alerts>
+        <fullName>Contract_Rejected</fullName>
+        <description>Contract Rejected</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderAddress>salesforce@saasten.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>unfiled$public/Contract_was_Rejected</template>
+    </alerts>
+    <fieldUpdates>
+        <fullName>Activated</fullName>
+        <field>Status</field>
+        <literalValue>Activated</literalValue>
+        <name>Activated</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>IsSubmitApprovalTRUE</fullName>
+        <description>penanda sales sudah submit approval</description>
+        <field>IsSubmitApproval__c</field>
+        <literalValue>1</literalValue>
+        <name>IsSubmitApprovalTRUE</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Reject_Status</fullName>
+        <field>Status</field>
+        <literalValue>Draft</literalValue>
+        <name>Reject Status</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Stage</fullName>
+        <field>Status</field>
+        <literalValue>In Approval Process</literalValue>
+        <name>Update Stage</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+</Workflow>

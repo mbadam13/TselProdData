@@ -1,0 +1,9 @@
+Dear,
+
+The RFP for Opportunity {!Request_for_proposal__c.Opportunity_Name__c} need to be revise.
+Revise note : {!Opportunity.Revisi_Notes__c}
+Click link below.
+{!Request_for_proposal__c.Link} 
+
+Regards,
+Salesforce

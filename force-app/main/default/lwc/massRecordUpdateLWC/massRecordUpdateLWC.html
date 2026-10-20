@@ -1,0 +1,646 @@
+<!--
+  @description       : 
+  @author            : Syaiful Syafani
+  @group             : 
+  @last modified on  : 10/03/2025
+  @last modified by  : Syaiful Syafani
+  Modifications Log
+  Ver   Date         Author            Modification
+  1.0   10/03/2025   Syaiful Syafani   Initial Version
+-->
+<template>
+    <!-- content search by criteria -->
+    <div class="slds-card">
+        <!-- header content criteria -->
+        <div class="slds-clearfix slds-p-vertical_small slds-p-horizontal_large">
+            <!-- title -->
+            <div class="slds-text-title slds-float_left">
+                <h4 class="slds-text-heading_small">Search Criteria</h4>
+            </div>
+
+            <!-- button hide/unhide content criteria -->
+            <div class="slds-float_right">
+                <a class="slds-button slds-button_neutral slds-button_full-width" name={nameShowContentCriteria}
+                    onclick={handleShowContentCriteria}>
+                    {nameShowContentCriteria}
+                    <lightning-icon class="slds-m-left_x-small" icon-name={iconNameCriteria}
+                        size="xx-small"></lightning-icon>
+                </a>
+            </div>
+        </div>
+
+        <!-- main content search by criteria -->
+        <template if:true={showContectCriteria}>
+            <div class="slds-card slds-p-top_none slds-p-bottom_medium slds-p-horizontal_large">
+                <div class="slds-card__body">
+                    <div class="slds-clearfix">
+                        <!-- operator picklist -->
+                        <div class="slds-float_left">
+                            <lightning-combobox class="combobox" title="Operator for Search Record"
+                                value={valueOperatorFilter} options={operatorOptions}
+                                onchange={getOperatorFilterCondition} variant="label-hidden">
+                            </lightning-combobox>
+                        </div>
+
+                        <!-- button group -->
+                        <div class="slds-float_right">
+                            <!-- search button line 1340-->
+                            <button class="slds-button slds-button_brand slds-m-right_x-small"
+                                onclick={getSobjectRecordList} disabled={activeSearchButton}>Search</button>
+
+                            <!-- delete all row button -->
+                            <button class="slds-button slds-button_destructive" onclick={removeAllRows}>Reset
+                                Rows</button>
+                        </div>
+                    </div>
+
+                    <!-- break -->
+                    <br>
+
+                    <!-- filter row -->
+                    <table class="slds-table slds-table_cell-buffer slds-table_header-hidden slds-no-row-hover">
+                        <tbody>
+                            <template for:each={listFilterGetSobjectRecord} for:item="rec">
+                                <tr key={rec.index} class="slds-hint-parent">
+                                    <!-- choose field -->
+                                    <td class="slds-p-left_none slds-size_1-of-2">
+                                        <lightning-combobox variant="label-hidden" class="combobox"
+                                            name="filterUpdateField" data-id={rec.index} value={rec.filterUpdateField}
+                                            options={fieldsOptionCombobox} onchange={handleInputChange}
+                                            placeholder="--Select Field--">
+                                        </lightning-combobox>
+                                    </td>
+
+                                    <!-- input field -->
+                                    <td class="slds-p-horizontal_x-small slds-size_1-of-2">
+                                        <!-- default field -->
+                                        <template if:true={rec.defaultFieldVisible}>
+                                            <lightning-input variant="label-hidden" type="text" data-id="rec.index"
+                                                name="defaultField" disabled=""></lightning-input>
+                                        </template>
+
+                                        <!-- text -->
+                                        <template if:true={rec.textFieldVisible}>
+                                            <lightning-input variant="label-hidden" type="text" data-id={rec.index}
+                                                placeholder="Type text here..." name="textField" value={rec.textField}
+                                                onchange={handleInputChange}>
+                                            </lightning-input>
+                                        </template>
+
+                                        <!-- number -->
+                                        <template if:true={rec.numberField}>
+                                            <lightning-input variant="label-hidden" type="number"
+                                                visible={setVisibleFieldOptionNumber} data-id={rec.index}
+                                                placeholder="Type number here..." name="numberField"
+                                                value={rec.numberField} onchange={handleInputChange}>
+                                            </lightning-input>
+                                        </template>
+
+                                        <!-- date -->
+                                        <template if:true={rec.dateFieldVisible}>
+                                            <div class="slds-grid slds-gutters">
+                                                <!-- start date -->
+                                                <div class="slds-col">
+                                                    <lightning-input variant="label-hidden" type="date"
+                                                        visible={setVisibleFieldOptionStartDate} name="startDateField"
+                                                        data-id={rec.index} value={rec.startDateField}
+                                                        onchange={handleInputChange}>
+                                                    </lightning-input>
+                                                </div>
+
+                                                <!-- concat -->
+                                                <div class="slds-m-top_xx-small slds-m-horizontal_x-small">
+                                                    <p class="slds-align_absolute-center">—</p>
+                                                </div>
+
+                                                <!-- end date -->
+                                                <div class="slds-col">
+                                                    <lightning-input variant="label-hidden" type="date"
+                                                        name="endDateField" visible={setVisibleFieldOptionEndDate}
+                                                        data-id={rec.index} value={rec.endDateField}
+                                                        onchange={handleInputChange}>
+                                                    </lightning-input>
+                                                </div>
+                                            </div>
+                                        </template>
+
+                                        <!-- datetime -->
+                                        <template if:true={rec.dateTimeFieldVisible}>
+                                            <lightning-input variant="label-hidden" type="datetime"
+                                                visible={setVisibleFieldOptionDateTime} name="dateTimeField"
+                                                data-id={rec.index} value={rec.dateTimeField}
+                                                onchange={handleInputChange}>
+                                            </lightning-input>
+                                        </template>
+
+                                        <!-- checkbox -->
+                                        <template if:true={rec.checkboxFieldVisible}>
+                                            <lightning-input type="checkbox" name="checkboxField"
+                                                visible={setVisibleFieldOptionCheckbox} data-id={rec.index}
+                                                value={rec.checkboxField} onchange={handleInputChangeCheckbox}
+                                                class="slds-m-bottom_xxx-small slds-align_absolute-center">
+                                            </lightning-input>
+                                        </template>
+
+                                        <!-- picklist -->
+                                        <template if:true={rec.picklistFieldVisible}>
+                                            <lightning-combobox variant="label-hidden" class="combobox"
+                                                name="picklistField" data-id={rec.index} value={rec.picklistField}
+                                                visible={setVisibleFieldOptionPicklist} options={rec.valueChoosen}
+                                                onchange={handleInputChange} placeholder="--Select--">
+                                            </lightning-combobox>
+                                        </template>
+                                    </td>
+
+                                    <!-- action -->
+                                    <td style="width: 3rem;" class="slds-p-right_none">
+                                        <ul class="slds-list_horizontal">
+                                            <!-- delete -->
+                                            <li>
+                                                <lightning-button-icon class="slds-m-right_x-small"
+                                                    icon-name="utility:delete" alternative-text="Remove" title="Remove"
+                                                    name={rec.index} onclick={removeRow} disabled={disableRowIndex}>
+                                                </lightning-button-icon>
+                                            </li>
+
+                                            <!-- add row -->
+                                            <li>
+                                                <lightning-button-icon icon-name="utility:add" alternative-text="add"
+                                                    title="add" name={rec.index} onclick={addNewRow}>
+                                                </lightning-button-icon>
+                                            </li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                            </template>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </template>
+    </div>
+
+    <!-- content show record selected by criteria -->
+    <template if:true={showContentResultCriteria}>
+        <div class="slds-card">
+            <!-- header content select records -->
+            <div class="slds-clearfix slds-p-vertical_small slds-p-horizontal_large">
+                <div class="slds-text-title slds-float_left">
+                    <ul class="slds-list_horizontal">
+                        <!-- title -->
+                        <li>
+                            <h4 class="slds-text-heading_small">Result Criteria</h4>
+                        </li>
+
+                        <!-- information for title -->
+                        <li>
+                            <lightning-icon class="slds-m-left_x-small slds-m-top_xx-small" icon-name="utility:info"
+                                title="Filtered Records by Criteria." size="xx-small" onclick={showInformation}>
+                            </lightning-icon>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- button hide/unhide content result criteria -->
+                <div class="slds-float_right">
+                    <a class="slds-button slds-button_neutral slds-button_full-width"
+                        onclick={handleShowContentResultCriteria} name={nameShowContentResultCriteria}>
+                        {nameShowContentResultCriteria}
+                        <lightning-icon class="slds-m-left_x-small" icon-name={iconNameResultCriteria}
+                            size="xx-small"></lightning-icon>
+                    </a>
+                </div>
+            </div>
+
+            <template if:true={showContentResultCriteriaSection}>
+                <!-- main content select records -->
+                <div class="slds-card_body slds-p-top_none slds-p-horizontal_large">
+                    <div class="slds-clearfix">
+                        <div class="slds-float_left">
+                            <div class="slds-m-top_small">
+                                <ul class="slds-list_horizontal">
+                                    <!-- filter records per page -->
+                                    <li>
+                                        <lightning-combobox class="combobox" title="Records per Page"
+                                            value={filterRowSelectedRecordItemsData}
+                                            options={showSearchRecordItemsDataOptions}
+                                            onchange={searchRecordItemsOnChange} variant="label-hidden">
+                                        </lightning-combobox>
+                                    </li>
+
+                                    <!-- checkbox for all records -->
+                                    <li class="slds-m-top_xx-small">
+                                        <ul class="slds-list_horizontal">
+                                            <!-- checkbox -->
+                                            <li>
+                                                <lightning-input class="slds-m-left_medium"
+                                                    onchange={handleCheckBoxSearchAllItem} type="checkbox"
+                                                    variant="label-hidden">
+                                                </lightning-input>
+                                            </li>
+
+                                            <!-- label -->
+                                            <li>
+                                                <p style="color: red;">Check All Record Items (All Pages)</p>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- button group -->
+                        <div class="slds-float_right">
+                            <div class="slds-m-top_small">
+                                <!-- add to record list -->
+                                <button class="slds-button slds-button_brand slds-m-right_x-small"
+                                    onclick={putSelectedRowtoMassRecordUpdateItems} disabled={activeAddtoContainer}>Add
+                                    to Container</button>
+
+                                <!-- List View -->
+                                <button class="slds-button slds-button_outline-brand" onclick={openModalSearch}>List
+                                    View</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- break -->
+                    <br>
+
+                    <!-- datatable records after searching -->
+                    <div class="slds-page-header__row slds-page-header__row_gutters">
+                        <div class="slds-page-header__col-details">
+                            <template if:true={setVisiblesobjectSearchRecorsColumns}>
+                                <div class="slds-p-top_none">
+                                    <lightning-datatable key-field="Id" data={sobjectRecords} show-row-number-column
+                                        suppress-bottom-bar columns={headerColumnSelected}
+                                        onclick={getSelectedSobjectRecordsRow} sorted-by={sortBySearchItem}
+                                        sorted-direction={sortDirectionSearchItem} onsort={doSortingSearchItem}
+                                        class="slds-table slds-table_bordered">
+                                    </lightning-datatable>
+                                </div>
+                            </template>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- footer content select records -->
+                <div class="slds-p-top_large slds-p-bottom_large">
+                    <div class="slds-align_absolute-center">
+                        <!-- button previous -->
+                        <div class="slds-p-right_xx-small">
+                            <button class="slds-button slds-button_brand" disabled={searchRecordItemsIsPrev}
+                                onclick={serchRecordItemHandlePrev}>Prev</button>
+                        </div>
+
+                        <!-- number of records -->
+                        <span class="slds-m-left_x-small slds-m-right_x-small slds-m-top_xxx-small">
+                            {searchRecordItemsRecordStart}-{searchRecordItemsRecordEnd} of
+                            {searchRecordItemsTotalRecords} |
+                            Page {searchRecordItemsPageNumber} of {searchRecordItemsTotalPages}
+                        </span>
+
+                        <!-- button next -->
+                        <div class="slds-p-left_xx-small">
+                            <button class="slds-button slds-button_brand" disabled={searchRecordItemsIsNext}
+                                onclick={serchRecordItemHandleNext}>Next</button>
+                        </div>
+                    </div>
+                </div>
+            </template>
+        </div>
+    </template>
+
+
+    <!-- content selected record list -->
+    <div class="slds-card">
+        <!-- header content selected record list -->
+        <div class="slds-clearfix slds-p-vertical_small slds-p-horizontal_large">
+            <div class="slds-text-title">
+                <ul class="slds-list_horizontal">
+                    <!-- title -->
+                    <li>
+                        <h4 class="slds-text-heading_small">Records Container</h4>
+                    </li>
+
+                    <!-- information for title -->
+                    <li>
+                        <lightning-icon class="slds-m-left_x-small slds-m-top_xx-small" icon-name="utility:info"
+                            title="Container to execute mass records update." size="xx-small" onclick={showInformation}>
+                        </lightning-icon>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- main content selected record list -->
+        <div class="slds-card_body slds-p-top_none slds-p-horizontal_large">
+            <div class="slds-clearfix">
+                <div class="slds-float_left">
+                    <div class="slds-m-top_small">
+                        <ul class="slds-list_horizontal">
+                            <!-- filter records per page -->
+                            <li>
+                                <lightning-combobox class="combobox" title="Records per Page"
+                                    value={filterRowSearchRecordItemsData} options={showSelectedRecordItemsDataOptions}
+                                    onchange={selectedRecordItemsOnChange} variant="label-hidden">
+                                </lightning-combobox>
+                            </li>
+
+                            <!-- checkbox for all records -->
+                            <li class="slds-m-top_xx-small">
+                                <ul class="slds-list_horizontal">
+                                    <!-- checkbox -->
+                                    <li>
+                                        <lightning-input class="slds-m-left_medium"
+                                            onchange={handleCheckBoxcheckAllRecorditem} type="checkbox"
+                                            variant="label-hidden">
+                                        </lightning-input>
+                                    </li>
+
+                                    <!-- label -->
+                                    <li>
+                                        <p style="color: red;">Check All Record Items (All Pages)</p>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- button group -->
+                <div class="slds-float_right">
+                    <div class="slds-m-top_small">
+                        <ul class="slds-list_horizontal">
+                            <!-- search -->
+                            <li style="width: 260px;">
+                                <lightning-input name="enter-search" placeholder="Search here..." type="search"
+                                    onkeypress={handleSearchKeyValue} variant="label-hidden">
+                                </lightning-input>
+                            </li>
+
+                            <!-- refresh table -->
+                            <li>
+                                <lightning-button-icon icon-name="utility:refresh" class="slds-m-left_x-small"
+                                    title="Refresh Table" onclick={refreshTable}>
+                                </lightning-button-icon>
+                            </li>
+
+                            <!-- remove items -->
+                            <li>
+                                <lightning-button-icon icon-name="utility:delete" class="slds-m-left_x-small"
+                                    title="Remove Items" onclick={handleConfirmRemoveItem}>
+                                </lightning-button-icon>
+                            </li>
+
+                            <!-- mass update  disabled={activeMassUpdate} -->
+                            <li>
+                                <button class="slds-button slds-button_brand slds-m-left_x-small"
+                                    onclick={openModalMassUpdate}>Mass Update</button>
+                            </li>
+
+                            <!-- list view -->
+                            <li>
+                                <button class="slds-button slds-button_outline-brand slds-m-left_x-small"
+                                    onclick={openModalRecordItems}>List View</button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- break -->
+            <br>
+
+            <!-- datatable selected records -->
+            <div class="slds-page-header__row slds-page-header__row_gutters">
+                <div class="slds-page-header__col-details">
+                    <template if:true={setVisiblesobjectSelectedItemRecorsColumns}>
+                        <div style="height: auto;">
+                            <lightning-datatable key-field="Id" data={sobjectRecordsSelectedItem} show-row-number-column
+                                columns={headerRecordItemColumnSelected} onclick={getSelectedSobjectRecordItemsRow}
+                                onsave={handleSave} draft-values={saveDraftValues} sorted-by={sortByRecordItem}
+                                sorted-direction={sortDirectionRecordItem} onsort={doSortingRecordItem}
+                                class="slds-table slds-table_bordered slds-table_resizable-cols slds-table_fixed-layout">
+                            </lightning-datatable>
+                        </div>
+                    </template>
+                </div>
+            </div>
+        </div>
+
+        <!-- footer content selected record list -->
+        <div class="slds-p-top_large slds-p-bottom_large">
+            <div class="slds-align_absolute-center">
+                <!-- button previous -->
+                <div class="slds-m-right_xx-small">
+                    <button class="slds-button slds-button_brand" disabled={selectedRecordItemsIsPrev}
+                        onclick={selectedRecordUpdateItemHandlePrev}>Prev</button>
+                </div>
+
+                <!-- number of records -->
+                <span class="slds-m-left_x-small slds-m-right_x-small slds-m-top_xxx-small">
+                    {selectedRecordItemsRecordStart}-{selectedRecordItemsRecordEnd} of
+                    {selectedRecordItemsTotalRecords} | Page {selectedRecordItemsPageNumber} of
+                    {selectedRecordItemsTotalPages}
+                </span>
+
+                <!-- button next -->
+                <div class="slds-m-left_xx-small">
+                    <button class="slds-button slds-button_brand" disabled={selectedRecordItemsIsNext}
+                        onclick={selectedRecordUpdateItemHandleNext}>Next</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- 
+        # other
+     -->
+
+    <!-- loader -->
+    <div if:true={isLoading}>
+        <lightning-spinner alternative-text="Loading..." variant="brand" class="slds-is-fixed">
+        </lightning-spinner>
+    </div>
+
+    <!-- modal search records -->
+    <template if:true={showModalSearch}>
+        <section role="dialog" tabindex="-1" aria-modal="true" aria-labelledby="modal-heading-01"
+            class="slds-modal slds-modal_small slds-fade-in-open">
+            <div class="slds-modal__container">
+                <!-- header -->
+                <div class="slds-modal__header">
+                    <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse"
+                        title="Close" onclick={closeModalSearch}>
+                        <lightning-icon icon-name="utility:close" alternative-text="close" variant="inverse"
+                            size="x-small"></lightning-icon>
+                        <span class="slds-assistive-text">Close</span>
+                    </button>
+                    <h2 class="slds-text-heading_medium slds-hyphenate">Show Field to Display</h2>
+                </div>
+
+                <!-- main content -->
+                <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+                    <lightning-dual-listbox label="Selected View" options={searchItemFields}
+                        value={headercolumnDefaultvalues} onchange={handleSelectedField}>
+                    </lightning-dual-listbox>
+                </div>
+
+                <!-- footer -->
+                <div class="slds-modal__footer">
+                    <button class="slds-button slds-button_neutral slds-m-right_small"
+                        onclick={closeModalSearch}>Close</button>
+                    <button class="slds-button slds-button_brand" onclick={SaveSearchItemListView}>Save</button>
+                </div>
+            </div>
+        </section>
+        <div class="slds-backdrop slds-backdrop_open" role="presentation"></div>
+    </template>
+
+    <!-- modal selected record list -->
+    <template if:true={showModalRecordItems}>
+        <section role="dialog" tabindex="-1" aria-modal="true" aria-labelledby="modal-heading-01"
+            class="slds-modal slds-modal_small slds-fade-in-open">
+            <div class="slds-modal__container">
+                <!-- header -->
+                <div class="slds-modal__header">
+                    <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse"
+                        title="Close" onclick={closeModalRecordItems}>
+                        <lightning-icon icon-name="utility:close" alternative-text="close" variant="inverse"
+                            size="x-small"></lightning-icon>
+                        <span class="slds-assistive-text">Close</span>
+                    </button>
+                    <h2 class="slds-text-heading_medium slds-hyphenate">Show Field to Display</h2>
+                </div>
+
+                <!-- main content -->
+                <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-2">
+                    <lightning-dual-listbox label="Selected View" options={recordItemFields}
+                        value={headerColumnRecordItemDefaultValues} onchange={handleRecordItemSelectedField}>
+                    </lightning-dual-listbox>
+                </div>
+
+                <!-- footer -->
+                <div class="slds-modal__footer">
+                    <button class="slds-button slds-button_neutral slds-m-right_small"
+                        onclick={closeModalRecordItems}>Close</button>
+                    <button class="slds-button slds-button_brand" onclick={SaveRecordItemListView}>Save</button>
+                </div>
+            </div>
+        </section>
+        <div class="slds-backdrop slds-backdrop_open" role="presentation"></div>
+    </template>
+
+    <!-- modal mass update -->
+    <template if:true={showModalMassUpdate}>
+        <section role="dialog" tabindex="-1" aria-modal="true" aria-labelledby="modal-heading-01"
+            class="slds-modal slds-modal_x-small slds-fade-in-open">
+            <div class="slds-modal__container">
+                <!-- close button -->
+                <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" title="Close"
+                    onclick={closeModalMassUpdate}>
+                    <lightning-icon icon-name="utility:close" alternative-text="close" variant="inverse"
+                        size="x-small"></lightning-icon>
+                    <span class="slds-assistive-text">Close</span>
+                </button>
+
+                <!-- content mass update -->
+                <div class="slds-modal__content slds-p-around_large" id="modal-content-id-3">
+                    <!-- title -->
+                    <div class="slds-card_body ">
+                        <div class="slds-text-title">
+                            <h4 class="slds-text-heading_small">Mass Update</h4>
+                        </div>
+                    </div>
+
+                    <!-- main contect -->
+                    <div class="slds-card_body slds-p-top_small">
+                        <ul class="slds-list_horizontal">
+                            <!-- select field -->
+                            <li>
+                                <lightning-combobox class="combobox" name="filterUpdateItemField"
+                                    onchange={handleInputUpdateItem} options={fieldsRecordItemOptionCombobox}
+                                    value={picklistField} placeholder="--Select Field--">
+                                </lightning-combobox>
+                            </li>
+
+                            <!-- default -->
+                            <template if:true={setDefaultField}>
+                                <li style="padding-top: 20px;">
+                                    <lightning-input variant="label-hidden" class="slds-m-left_small"
+                                        name="defaultField" type="text" onchange={handleInputUpdateItem} disabled="">
+                                    </lightning-input>
+                                </li>
+                            </template>
+
+                            <!-- text -->
+                            <template if:true={setVisibleFieldTextUpdateItem}>
+                                <li style="padding-top: 20px;">
+                                    <lightning-input variant="label-hidden" class="slds-m-left_small" name="textField"
+                                        placeholder="Type text here..." type="text" onchange={handleInputUpdateItem}
+                                        value={textField}>
+                                    </lightning-input>
+                                </li>
+                            </template>
+
+                            <!-- number -->
+                            <template if:true={setVisibleFieldNumberUpdateItem}>
+                                <li style="padding-top: 20px;">
+                                    <lightning-input variant="label-hidden" class="slds-m-left_small" type="number"
+                                        placeholder="Type number here..." name="numberField" value={numberField}
+                                        onchange={handleInputUpdateItem}></lightning-input>
+                                </li>
+                            </template>
+
+                            <!-- date -->
+                            <template if:true={setVisibleFieldStartDateUpdateItem}>
+                                <li style="padding-top: 20px;">
+                                    <lightning-input variant="label-hidden" class="slds-m-left_small" type="date"
+                                        name="startDateField" value={startDateField}
+                                        onchange={handleInputUpdateItem}></lightning-input>
+                                </li>
+                            </template>
+
+                            <!-- checkbox -->
+                            <template if:true={setVisibleFieldCheckboxUpdateItem}>
+                                <li style="padding-top: 23px;">
+                                    <lightning-input type="checkbox" class="slds-m-left_small" name="checkboxField"
+                                        value={checkboxField}
+                                        onchange={handleInputUpdateItemCheckbox}></lightning-input>
+                                </li>
+                            </template>
+
+                            <!-- picklist -->
+                            <template if:true={setVisibleFieldPicklistUpdateItem}>
+                                <li>
+                                    <lightning-combobox class="combobox slds-m-left_small" name="picklistField"
+                                        onchange={handleInputUpdateItem} options={selectOptionValue}
+                                        value={valuePicklistField} placeholder="--Select--">
+                                    </lightning-combobox>
+                                </li>
+                            </template>
+
+                            <!-- textarea -->
+                            <template if:true={setVisibleFieldTextareaUpdateItem}>
+                                <li>
+                                    <lightning-textarea class="slds-m-left_small" name="textareaField"
+                                        value={textareaField} onchange={handleInputUpdateItem} style="width: 280px;">
+                                    </lightning-textarea>
+                                </li>
+                            </template>
+
+                            <!-- update button -->
+                            <li style="padding-top: 20px;">
+                                <button class="slds-button slds-button_brand slds-m-left_small"
+                                    onclick={handleConfirmUpdate}>Update</button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="slds-backdrop slds-backdrop_open" role="presentation"></div>
+    </template>
+</template>

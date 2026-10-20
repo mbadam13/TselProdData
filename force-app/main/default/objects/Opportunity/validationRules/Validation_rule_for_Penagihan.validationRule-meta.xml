@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Validation_rule_for_Penagihan</fullName>
+    <active>false</active>
+    <description>Deactive - FUT_25/Jul/2024</description>
+    <errorConditionFormula>AND(ISPICKVAL( StageName , &quot;Negotiation&quot;),  ISBLANK(TEXT( Penagihan_based_on__c)))</errorConditionFormula>
+    <errorDisplayField>Penagihan_based_on__c</errorDisplayField>
+    <errorMessage>Penagihan Harus di Isi</errorMessage>
+</ValidationRule>

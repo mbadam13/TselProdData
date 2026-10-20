@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Type__c</fullName>
+    <label>Type</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Selling Target</fullName>
+                <default>true</default>
+                <label>Selling Target</label>
+            </value>
+            <value>
+                <fullName>Selling Estimation</fullName>
+                <default>false</default>
+                <label>Selling Estimation</label>
+            </value>
+            <value>
+                <fullName>Selling Actual</fullName>
+                <default>false</default>
+                <label>Selling Actual</label>
+            </value>
+            <value>
+                <fullName>Revenue Actual</fullName>
+                <default>false</default>
+                <label>Revenue Actual</label>
+            </value>
+            <value>
+                <fullName>Target User Register</fullName>
+                <default>false</default>
+                <label>Target User Register</label>
+            </value>
+            <value>
+                <fullName>Target User Top Up</fullName>
+                <default>false</default>
+                <label>Target User Top Up</label>
+            </value>
+            <value>
+                <fullName>Target User Re-top</fullName>
+                <default>false</default>
+                <label>Target User Re-top</label>
+            </value>
+            <value>
+                <fullName>Target Campaigns</fullName>
+                <default>false</default>
+                <label>Target Campaigns</label>
+            </value>
+            <value>
+                <fullName>Actual User Register</fullName>
+                <default>false</default>
+                <label>Actual User Register</label>
+            </value>
+            <value>
+                <fullName>Actual User Top Up</fullName>
+                <default>false</default>
+                <label>Actual User Top Up</label>
+            </value>
+            <value>
+                <fullName>Actual User Re-top</fullName>
+                <default>false</default>
+                <label>Actual User Re-top</label>
+            </value>
+            <value>
+                <fullName>Actual Campaigns</fullName>
+                <default>false</default>
+                <label>Actual Campaigns</label>
+            </value>
+            <value>
+                <fullName>Call Actual</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Call Actual</label>
+            </value>
+            <value>
+                <fullName>Call Target</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Call Target</label>
+            </value>
+            <value>
+                <fullName>Selling Minus</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Selling Minus</label>
+            </value>
+            <value>
+                <fullName>Selling Plus</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Selling Plus</label>
+            </value>
+            <value>
+                <fullName>Visit Actual</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Visit Actual</label>
+            </value>
+            <value>
+                <fullName>Visit Target</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Visit Target</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

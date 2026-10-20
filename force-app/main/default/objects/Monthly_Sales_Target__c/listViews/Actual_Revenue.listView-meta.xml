@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Actual_Revenue</fullName>
+    <columns>NAME</columns>
+    <columns>Date__c</columns>
+    <columns>Month__c</columns>
+    <columns>Group_Type__c</columns>
+    <columns>Type__c</columns>
+    <columns>Sales__c</columns>
+    <columns>Amount_Report__c</columns>
+    <columns>Amount_Report_MTD__c</columns>
+    <columns>LAST_UPDATE</columns>
+    <columns>OWNER.ALIAS</columns>
+    <columns>CREATED_DATE</columns>
+    <columns>OWNER.LAST_NAME</columns>
+    <columns>MST_Type__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Group_Type__c</field>
+        <operation>equals</operation>
+        <value>Actual</value>
+    </filters>
+    <filters>
+        <field>Type__c</field>
+        <operation>equals</operation>
+        <value>Revenue Actual</value>
+    </filters>
+    <filters>
+        <field>MST_Type__c</field>
+        <operation>equals</operation>
+    </filters>
+    <label>Actual Revenue</label>
+</ListView>

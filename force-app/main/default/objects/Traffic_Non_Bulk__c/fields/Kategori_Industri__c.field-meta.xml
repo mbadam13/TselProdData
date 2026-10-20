@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Kategori_Industri__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(
+    OR(Contains(CP_Name__c, &apos;Gps&apos;),Contains(CP_Name__c, &apos;_gps&apos;)),
+    &apos;Government &amp; Public Service&apos;,
+         IF(
+            OR(Contains(CP_Name__c, &apos;Oth&apos;),Contains(CP_Name__c, &apos;_oth&apos;)),
+	    &apos;Others&apos;,
+	       IF(
+		  OR(Contains(CP_Name__c, &apos;Ban&apos;),Contains(CP_Name__c, &apos;_ban&apos;)),
+		  &apos;Banking&apos;,
+		  &apos;Others Telkom&apos;
+	       )
+	   )
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Kategori Industri</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

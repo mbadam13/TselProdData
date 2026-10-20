@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Copy_of_Target</fullName>
+    <columns>NAME</columns>
+    <columns>Month__c</columns>
+    <columns>Group_Type__c</columns>
+    <columns>Type__c</columns>
+    <columns>Sales__c</columns>
+    <columns>Amount__c</columns>
+    <columns>Usage__c</columns>
+    <columns>Amount_Report__c</columns>
+    <columns>Probability__c</columns>
+    <columns>CREATED_DATE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Date__c</field>
+        <operation>equals</operation>
+        <value>THIS_YEAR</value>
+    </filters>
+    <label>Copy of Target</label>
+    <sharedTo>
+        <role>Sales_Team_A</role>
+        <role>Sales_Team_B</role>
+    </sharedTo>
+</ListView>

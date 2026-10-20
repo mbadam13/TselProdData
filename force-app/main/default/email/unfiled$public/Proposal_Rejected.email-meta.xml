@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Proposal Rejected</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Proposal Rejected</name>
+    <style>none</style>
+    <subject>Sorry, The Proposal for {!Account.Name} Rejected</subject>
+    <type>text</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

@@ -1,0 +1,16 @@
+Dear {!Opportunity.OwnerFullName},
+
+We would like to inform you that the following sales opportunity has been updated in our Salesforce system.
+
+Updated Opportunity Details:
+- Opportunity Name : {!Opportunity.Name}
+- Account Name       : {!Opportunity.Account_Name__c}
+- Owner                    : {!Opportunity.Sales_Executive__c}
+- Close Date             : {!Opportunity.CloseDate}
+- Current Stage        : {!Opportunity.StageName}
+
+{!Opportunity.Link}
+
+Please review the updated details and take any necessary actions.
+Thank you,
+{!Organization.Name}

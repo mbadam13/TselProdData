@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Total_Amount_Actual__c</fullName>
+    <formula>IF( ISNULL(Opportunity__c) , 
+
+((Exchange_Rates_Related__r.ConversionRate__c * Total_Data_Cost_In_USD__c) / VAT__c / Usage_Actual__c) / 100 * Usage_Actual__c, 
+(IF(Usage_Actual__c &lt; Quantity, Usage_Actual__c,Quantity ) * UnitPrice )
+
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Total Amount Actual</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <type>Currency</type>
+</CustomField>

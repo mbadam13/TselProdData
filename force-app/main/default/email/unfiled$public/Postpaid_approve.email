@@ -1,0 +1,7 @@
+Dear {!Opportunity.OwnerFirstName}{!Opportunity.OwnerLastName},
+
+The postpaid payment for Opportunity {!Opportunity.Name} was approved Click ink below .
+{!Opportunity.Link}
+
+Regards,
+Salesforce

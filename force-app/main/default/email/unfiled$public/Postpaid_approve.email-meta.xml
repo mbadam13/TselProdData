@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Email postpaid approve</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Postpaid approve</name>
+    <style>none</style>
+    <subject>Good News, Postpaid Payment Approve</subject>
+    <type>text</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

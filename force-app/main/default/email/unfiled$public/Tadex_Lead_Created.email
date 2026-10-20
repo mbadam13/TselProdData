@@ -1,0 +1,26 @@
+Kepada {!Lead.LastName}, 
+
+Terima kasih Anda sudah melakukan registrasi sebagai publisher TADEX. 
+
+Tim kami sedang dalam proses melakukan validasi data. Mohon cek email Anda secara berkala untuk mengetahui status verifikasi selanjutnya.
+
+Jika Anda membutuhkan bantuan, silakan hubungi kami melalui halo@tadex.id, dengan senang hati kami akan membantu. 
+
+Terima kasih. 
+
+Salam, 
+TADEX
+
+********************************************************************************************
+Dear {!Lead.LastName}, 
+
+Thank you for your registration as a TADEX publisher.
+
+Now, our team is validating your data. Please check your email periodically to find out your verification status.
+
+If you have any related questions about TADEX, contact us at halo@tadex.id, we’ll be delighted to help you! 
+
+Thank you.  
+
+Regards,  
+TADEX

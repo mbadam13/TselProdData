@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Month_Number__c</fullName>
+    <externalId>false</externalId>
+    <formula>CASE(text( Month__c ),
+&apos;January&apos;, 1,
+&apos;February&apos;, 2,
+&apos;March&apos;, 3,
+&apos;April&apos;, 4,
+&apos;May&apos;, 5,
+&apos;June&apos;, 6,
+&apos;July&apos;, 7,
+&apos;August&apos;, 8,
+&apos;September&apos;, 9,
+&apos;October&apos;, 10,
+&apos;November&apos;, 11,
+&apos;December&apos;, 12,
+0)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Month Number</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

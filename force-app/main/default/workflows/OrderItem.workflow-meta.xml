@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>Order_Over_Limit</fullName>
+        <description>Order Over Limit</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>abdul_a_akhmaddireja@telkomsel.co.id</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>achmad_s_fariz@telkomsel.co.id</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>admin@telkomsel.co.id</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <field>Sales__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderAddress>salesforce@saasten.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>unfiled$public/Order_Over_Limit</template>
+    </alerts>
+    <fieldUpdates>
+        <fullName>update_Additional_fee_order</fullName>
+        <description>untuk update additiona fee yang ada di dalm order</description>
+        <field>temp_additional_fee__c</field>
+        <formula>Additional_Fee__c</formula>
+        <name>update Additional fee order</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <rules>
+        <fullName>Order Over Limit</fullName>
+        <actions>
+            <name>Order_Over_Limit</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>OrderItem.Order_Remarks__c</field>
+            <operation>equals</operation>
+            <value>Order Over Limit</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Update Oppty</fullName>
+        <active>false</active>
+        <criteriaItems>
+            <field>OrderItem.Sales__c</field>
+            <operation>equals</operation>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Update additional fee order</fullName>
+        <actions>
+            <name>update_Additional_fee_order</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>untuk update temp addtional fee pada object order produk ini digunakn untuk rollup sum ke additional fee yang ada di order</description>
+        <formula>1=1</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+</Workflow>

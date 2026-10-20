@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All_Rewards__c</fullName>
+    <externalId>false</externalId>
+    <formula>GITA_1_GB_30_days__c + GITA_10_MB_1_day__c + GITA_100_MB_Content_Provider__c + GITA_100_MB_7_days__c + GITA_11_GB_30_days__c + GITA_110_MB_7_days__c + GITA_16_GB_30_days__c + GITA_2_GB_30_days__c + GITA_20_MB_1_day__c + GITA_250_MB_7_days__c + GITA_3_GB_30_days__c + GITA_30_GB_30_days__c + GITA_35_GB_30_days__c + GITA_4_GB_30_days__c + GITA_420_MB_30_days__c + GITA_5_GB_30_days__c + GITA_5_MB_1_day__c + GITA_50_MB_7_day__c + GITA_500_MB_30_days__c + GITA_750_MB_30_days__c + GITA_8_GB_30_days__c</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>All Rewards</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

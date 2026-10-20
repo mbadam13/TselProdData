@@ -1,0 +1,443 @@
+<apex:page standardController="Berita_Acara__c" extensions="BeritaAcara_controller" renderAs="pdf" applyBodyTag="false">
+    
+    <head>
+        <style type="text/css" media="print">
+            @page {
+                size: A4 potrait;
+                margin-top: 3.5cm;
+                margin-bottom: 3.5cm;
+                margin-left: 1cm;
+                @top-center {
+                    content: element(header);
+                }
+                @bottom-center {
+                    content: element(footer);
+                }
+            }
+            div.header {
+                padding: 10px;
+                position: running(header);
+            }
+            div.footer {
+                display: block;
+                position: running(footer);
+            }
+            div.bodypage {
+                margin-left: 1.3cm;
+            }
+            table {
+                width: 100%;
+                border-collapse: collapse;
+            }
+            .htable {
+                font-size: 12px;
+                text-align: center;
+                border-top: 1.5px solid #a39e9e;
+                border-bottom: 1.5px solid #a39e9e;
+            }
+            .dtable {
+                font-size: 12px;
+                padding: 5px;
+            }
+            .dtable1 {
+                font-size: 10px;
+                padding: 2px;
+                border-top: 0.5px solid #a39e9e;
+            }
+            .dtable2 {
+                font-size: 10px;
+                padding: 2px;
+                border-top: 0.5px solid #a39e9e;
+                border-bottom: 0.5px solid #a39e9e;
+            }
+            .dtable3 {
+                text-align: center;
+                border: 1px solid black;
+            }
+            .dtable4 {
+                text-align: center;
+                border-left: 1px solid black;
+            }
+            .dtable5 {
+                text-align: center;
+                border-right: 1px solid black;
+            }
+            .dtable6 {
+                text-align: center;
+                border-left: 1px solid black;
+                border-right: 1px solid black;
+            }
+            .dtable7 {
+                text-align: center;
+                border-bottom: 0.5px solid black;
+            }
+            .dtable8 {
+                text-align: center;
+                border-bottom: 0.5px solid black;
+                border-left: 1px solid black;
+            }
+            .dtable9 {
+                text-align: center;
+                border-bottom: 0.5px solid black;
+                border-right: 1px solid black;
+            }
+            .TableRow {
+                font-size: 10px;
+                border-top: 0.5px solid #a39e9e;
+                padding: 2px;
+            }
+            .TableRow1 {
+                font-size: 10px;
+                padding: 2px;
+            }
+            
+            /*style="text-align: center;border: 1px solid black;" -- dTable3
+            style="text-align: center;border-left: 1px solid black;" -- dTable4
+            style="text-align: center;border-right: 1px solid black;" -- dTable5
+            style="text-align: center;border-left: 1px solid black;border-right: 1px solid black;" -- dTable6
+            
+            style="text-align: center;border-bottom: 0.5px solid black; -- dTable7
+            style="text-align: center;border-bottom: 0.5px solid black;border-left: 1px solid black;" -- dTable8
+            style="text-align: center;border-bottom: 0.5px solid black;border-right: 1px solid black;" -- dTable9*/
+        </style>
+    </head>
+    
+    <div class="header">
+        <img src='{!$Resource.Tadex_Header}' width="100%" height="100%" />
+    </div>
+    <div class="footer">
+        <img src='{!$Resource.Tadex_Footer}' width="100%" height="100%" />&nbsp;
+    </div>
+    
+    <div class="bodypage">
+        
+        <table>
+            <tr>
+                <td width="7%"  class="dtable">Publihser</td>
+                <td width="1%"  class="dtable">:</td>
+                <td width="30%" class="dtable">{!pubName}</td>
+                <td width="30%" class="dtable" style="text-align:right">Exchange Rate (IDR/USD) = 
+                    <apex:outputText value="{0, number,#,##0.00}">
+                        <apex:param value="{!baRec.Exchange_Rate__c}"/>
+                    </apex:outputText>
+                </td>
+            </tr>
+            <tr>
+                <td class="dtable">Campaign Period</td>
+                <td class="dtable">:</td>
+                <td class="dtable" colspan="2">{!periodBA}</td>
+            </tr>
+            <tr>
+                <td class="dtable">Date</td>
+                <td class="dtable">:</td>
+                <td class="dtable" colspan="2"></td>
+            </tr>
+            <tr>
+                <td class="dtable">BAST no</td>
+                <td class="dtable">:</td>
+                <td class="dtable" colspan="2"></td>
+            </tr>
+        </table>
+        <br/> 
+        
+        <apex:repeat value="{!demandSourceList}" var="ds">
+            <b style="font-size: 13px;">{!ds}</b>
+            <table>
+                <tr>
+                    <th width="80%" class="htable">SITE</th>
+                    <!--th width="45%" class="htable">Deal</th-->
+                    <th width="10%"  class="htable">Revenue USD</th>
+                    <th width="10%"  class="htable">Revenue IDR</th>
+                </tr>
+            </table>
+            <apex:pageBlock >
+                <!--Table berisi SiteName & Deal--><!--Tsel request to take out Deal column - Feb 2023-->
+                <!--apex:pageBlockTable value="{!map_demandSource_siteList[ds]}" var="site">
+                    <apex:column value="{!site}" styleClass="TableRow" width="37%"/>
+                    <apex:column styleClass="TableRow">
+                        <apex:variable var="dss" value="{!ds}--{!site}" />
+                        <apex:pageBlockTable value="{!map_demandSourceSite_wrapArTrafficList[dss]}" var="wrapAT">
+                            <apex:column width="300" styleClass="TableRow1" value="{!wrapAT.wDeal}" style="font-size: 8px;"/>
+                            <apex:column width="70"  styleClass="TableRow1" style="text-align: right;">
+                                <apex:outputText value="{0, number,#,##0.00}">
+                                    <apex:param value="{!wrapAT.wRevUSD}"/>
+                                </apex:outputText>
+                            </apex:column>
+                            <apex:column width="70"  styleClass="TableRow1" style="text-align: right;">
+                                <apex:outputText value="{0, number,#,##0.00}">
+                                    <apex:param value="{!wrapAT.wRevIDR}"/>
+                                </apex:outputText>
+                            </apex:column>
+                        </apex:pageBlockTable>
+                    </apex:column>
+                </apex:pageBlockTable-->
+                <!--Table berisi SiteName-->
+                <apex:pageBlockTable value="{!map_demandSource_wrapArTrafficGroupByDsSiteList[ds]}" var="wat">
+                    <apex:column value="{!wat.wSiteName}" styleClass="TableRow" width="78%"/>
+                    <apex:column styleClass="TableRow" style="text-align: right;" width="11%">
+                        <apex:outputText value="{0, number,#,##0.00}">
+                            <apex:param value="{!wat.wRevUSD}"/>
+                        </apex:outputText>
+                    </apex:column>
+                    <apex:column styleClass="TableRow" style="text-align: right;" width="11%">
+                        <apex:outputText value="{0, number,#,##0.00}">
+                            <apex:param value="{!wat.wRevIDR}"/>
+                        </apex:outputText>
+                    </apex:column>
+                </apex:pageBlockTable>
+            </apex:pageBlock>
+            <apex:variable value="{!map_demandSource_wrapCalcRev[ds]}" var="calcRev"/>
+            <apex:outputPanel rendered="{!IF(ds!='OMP',true,false)}">
+                <table>
+                    <tr>
+                        <td width="35%" >&nbsp;</td>
+                        <td width="2%"  class="dtable1"><b>a</b></td>
+                        <td width="40%" class="dtable1"><b>Revenue Total (Gross) Include VAT</b></td>
+                        <td width="11.5%" class="dtable1" style="text-align: right;font-weight: bold;">
+                            <apex:outputText value="{0, number,#,##0.00}">
+                                <apex:param value="{!calcRev.wCalcA_usd}"/>
+                            </apex:outputText>
+                        </td>
+                        <td width="11.5%"  class="dtable1" style="text-align: right;font-weight: bold;">
+                            <apex:outputText value="{0, number,#,##0.00}">
+                                <apex:param value="{!calcRev.wCalcA_idr}"/>
+                            </apex:outputText>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td class="dtable1">b</td>
+                        <!--td class="dtable1">Telkomsel SSP Tech Fee (10% x a) Include VAT</td-->
+                        <td class="dtable1">Telkomsel SSP Tech Fee ({!calcRev.wTechFee}% x a) Include VAT</td>
+                        <td class="dtable1" style="text-align: right;">
+                            <apex:outputText value="{0, number,#,##0.00}">
+                                <apex:param value="{!calcRev.wCalcB_usd}"/>
+                            </apex:outputText>
+                        </td>
+                        <td class="dtable1" style="text-align: right;">
+                            <apex:outputText value="{0, number,#,##0.00}">
+                                <apex:param value="{!calcRev.wCalcB_idr}"/>
+                            </apex:outputText>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td class="dtable1">c</td>
+                        <td class="dtable1">Telkomsel Shared ({!calcRev.wShare}% x a) Include VAT</td>
+                        <td class="dtable1" style="text-align: right;">
+                            <apex:outputText value="{0, number,#,##0.00}">
+                                <apex:param value="{!calcRev.wCalcC_usd}"/>
+                            </apex:outputText>
+                        </td>
+                        <td class="dtable1" style="text-align: right;">
+                            <apex:outputText value="{0, number,#,##0.00}">
+                                <apex:param value="{!calcRev.wCalcC_idr}"/>
+                            </apex:outputText>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td class="dtable1">d</td>
+                        <td class="dtable1">Total Telkomsel Share ({!calcRev.wShareTotal}%) (b+c)</td>
+                        <td class="dtable1" style="text-align: right;">
+                            <apex:outputText value="{0, number,#,##0.00}">
+                                <apex:param value="{!calcRev.wCalcD_usd}"/>
+                            </apex:outputText>
+                        </td>
+                        <td class="dtable1" style="text-align: right;">
+                            <apex:outputText value="{0, number,#,##0.00}">
+                                <apex:param value="{!calcRev.wCalcD_idr}"/>
+                            </apex:outputText>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td class="dtable2"><b>e</b></td>
+                        <!--td class="dtable2"><b>Total Publisher Include VAT (83%) (a-d)</b></td-->
+                        <td class="dtable2"><b>Total Publisher Include VAT ({!calcRev.wSharePublisher}%) (a-d)</b></td>
+                        <td class="dtable2" style="text-align: right;font-weight: bold;">
+                            <apex:outputText value="{0, number,#,##0.00}">
+                                <apex:param value="{!calcRev.wCalcE_usd}"/>
+                            </apex:outputText>
+                        </td>
+                        <td class="dtable2" style="text-align: right;font-weight: bold;">
+                            <apex:outputText value="{0, number,#,##0.00}">
+                                <apex:param value="{!calcRev.wCalcE_idr}"/>
+                            </apex:outputText>
+                        </td>
+                    </tr>
+                </table>
+            </apex:outputPanel>
+            <apex:outputPanel rendered="{!IF(ds=='OMP',true,false)}">
+                <table>
+                    <tr>
+                        <td width="35%" >&nbsp;</td>
+                        <td width="2%"  class="dtable1"><b>a</b></td>
+                        <td width="40%" class="dtable1"><b>Revenue Total (Gross) Exclude VAT</b></td>
+                        <td width="11.5%" class="dtable1" style="text-align: right;font-weight: bold;">
+                            <apex:outputText value="{0, number,#,##0.00}">
+                                <apex:param value="{!calcRev.wCalcA_usd}"/>
+                            </apex:outputText>
+                        </td>
+                        <td width="11.5%"  class="dtable1" style="text-align: right;font-weight: bold;">
+                            <apex:outputText value="{0, number,#,##0.00}">
+                                <apex:param value="{!calcRev.wCalcA_idr}"/>
+                            </apex:outputText>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td class="dtable1">b</td>
+                        <td class="dtable1">Telkomsel SSP Tech Fee ({!calcRev.wTechFee}% x a) Exclude VAT</td>
+                        <td class="dtable1" style="text-align: right;">
+                            <apex:outputText value="{0, number,#,##0.00}">
+                                <apex:param value="{!calcRev.wCalcB_usd}"/>
+                            </apex:outputText>
+                        </td>
+                        <td class="dtable1" style="text-align: right;">
+                            <apex:outputText value="{0, number,#,##0.00}">
+                                <apex:param value="{!calcRev.wCalcB_idr}"/>
+                            </apex:outputText>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td class="dtable1">c</td>
+                        <td class="dtable1">Telkomsel Shared ({!calcRev.wShare}% x a) Exclude VAT</td>
+                        <td class="dtable1" style="text-align: right;">
+                            <apex:outputText value="{0, number,#,##0.00}">
+                                <apex:param value="{!calcRev.wCalcC_usd}"/>
+                            </apex:outputText>
+                        </td>
+                        <td class="dtable1" style="text-align: right;">
+                            <apex:outputText value="{0, number,#,##0.00}">
+                                <apex:param value="{!calcRev.wCalcC_idr}"/>
+                            </apex:outputText>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td class="dtable1">d</td>
+                        <td class="dtable1">Total Telkomsel Share ({!calcRev.wShareTotal}%) (b+c)</td>
+                        <td class="dtable1" style="text-align: right;">
+                            <apex:outputText value="{0, number,#,##0.00}">
+                                <apex:param value="{!calcRev.wCalcD_usd}"/>
+                            </apex:outputText>
+                        </td>
+                        <td class="dtable1" style="text-align: right;">
+                            <apex:outputText value="{0, number,#,##0.00}">
+                                <apex:param value="{!calcRev.wCalcD_idr}"/>
+                            </apex:outputText>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td class="dtable2"><b>e</b></td>
+                        <td class="dtable2"><b>Total Publisher Exclude VAT ({!calcRev.wSharePublisher}%) (a-d)</b></td>
+                        <td class="dtable2" style="text-align: right;font-weight: bold;">
+                            <apex:outputText value="{0, number,#,##0.00}">
+                                <apex:param value="{!calcRev.wCalcE_usd}"/>
+                            </apex:outputText>
+                        </td>
+                        <td class="dtable2" style="text-align: right;font-weight: bold;">
+                            <apex:outputText value="{0, number,#,##0.00}">
+                                <apex:param value="{!calcRev.wCalcE_idr}"/>
+                            </apex:outputText>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td class="dtable2"><b>f</b></td>
+                        <td class="dtable2"><b>Total Publisher Include VAT ({!vatPercentage}%) (e x {!vat})</b></td>
+                        <td class="dtable2" style="text-align: right;font-weight: bold;">
+                            <apex:outputText value="{0, number,#,##0.00}">
+                                <apex:param value="{!calcRev.wCalcF_usd}"/>
+                            </apex:outputText>
+                        </td>
+                        <td class="dtable2" style="text-align: right;font-weight: bold;">
+                            <apex:outputText value="{0, number,#,##0.00}">
+                                <apex:param value="{!calcRev.wCalcF_idr}"/>
+                            </apex:outputText>
+                        </td>
+                    </tr>
+                </table>
+            </apex:outputPanel>
+            <br/><br/>
+        </apex:repeat>
+        <br/>
+        
+        <table>
+            <tr>
+                <!--td width="80%" class="dtable1"><b>Grand Total Publisher Shared Include VAT (1e +2e)</b></td-->
+                <td width="80%" class="dtable1"><b>Grand Total Publisher Shared Include VAT ({!text_grandTotalPublisher})</b></td>
+                <td width="10%"  class="dtable1" style="text-align: right;font-weight: bold;">
+                    <apex:outputText value="{0, number,#,##0.00}">
+                        <apex:param value="{!gTotalInVat_usd}"/>
+                    </apex:outputText>
+                </td>
+                <td width="10%"  class="dtable1" style="text-align: right;font-weight: bold;">
+                    <apex:outputText value="{0, number,#,##0.00}">
+                        <apex:param value="{!gTotalInVat_idr}"/>
+                    </apex:outputText>
+                </td>
+            </tr>
+            <tr>
+                <td width="80%" class="dtable2"><b>Grand Total Publisher Shared Exclude VAT</b></td>
+                <td width="10%" class="dtable2" style="text-align: right;font-weight: bold;">
+                    <apex:outputText value="{0, number,#,##0.00}">
+                        <apex:param value="{!gTotalExVat_usd}"/>
+                    </apex:outputText>
+                </td>
+                <td width="10%" class="dtable2" style="text-align: right;font-weight: bold;">
+                    <apex:outputText value="{0, number,#,##0.00}">
+                        <apex:param value="{!gTotalExVat_idr}"/>
+                    </apex:outputText>
+                </td>
+            </tr>
+        </table>
+        <br/><br/>
+        
+        <div style="font-size: 15px;font-weight: bold;border: 1px solid black;text-align: justify;padding: 2px">
+            Total Publisher Share Include VAT for {!pubName} during {!periodBA} is IDR 
+            <apex:outputText value="{0, number,#,##0.00}">
+                <apex:param value="{!gTotalInVat_idr}"/>
+            </apex:outputText>
+        </div>
+        <br/><br/><br/><br/>
+        
+        <table>
+            <tr>
+                <td colspan="6" class="dtable3"><b>Sign of sheet</b></td>
+            </tr>
+            <tr>
+                <td colspan="3" class="dtable4"><b>Publisher</b></td>
+                <td colspan="3" class="dtable5"><b>Telkomsel</b></td>
+            </tr>
+            <tr>
+                <td colspan="6" class="dtable6">&nbsp;</td>
+            </tr>
+            <tr>
+                <td colspan="6" class="dtable6">&nbsp;</td>
+            </tr>
+            <tr>
+                <td colspan="6" class="dtable6">&nbsp;</td>
+            </tr>
+            <tr>
+                <td width="5%"  class="dtable4">&nbsp;</td>
+                <td width="40%" class="dtable7">&nbsp;</td>
+                <td width="5%">&nbsp;</td>
+                <td width="5%">&nbsp;</td>
+                <td width="40%" class="dtable7" style="font-size: 13px;">Iwan Pujo Satoto</td>
+                <td width="5%"  class="dtable5">&nbsp;</td>
+            </tr>
+            <tr>
+                <td colspan="4" class="dtable8">&nbsp;</td>
+                <td class="dtable7" style="font-size: 13px;font-weight: bold;">General Manager - Digital Advertising, Wholesale and Interconnect Operations</td>
+                <td class="dtable9">&nbsp;</td>
+            </tr>
+        </table>
+        <br/>
+        
+    </div>
+    
+</apex:page>

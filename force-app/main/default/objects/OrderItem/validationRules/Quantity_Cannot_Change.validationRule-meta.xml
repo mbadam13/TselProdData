@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Quantity_Cannot_Change</fullName>
+    <active>false</active>
+    <description>cannot change quantity after closed won</description>
+    <errorConditionFormula>ISCHANGED(Quantity)</errorConditionFormula>
+    <errorDisplayField>Quantity</errorDisplayField>
+    <errorMessage>cannot change quantity after closed won</errorMessage>
+</ValidationRule>

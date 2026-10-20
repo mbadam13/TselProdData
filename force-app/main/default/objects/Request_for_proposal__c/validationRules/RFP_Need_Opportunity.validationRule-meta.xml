@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RFP_Need_Opportunity</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND 
+((RecordType.Id = &apos;0122u000000ChzmAAC&apos;),
+(ISBLANK( Opportunity_Name__c )
+&amp;&amp;ISBLANK
+( CreatedDate ))
+&amp;&amp; SME_Proposal__c = false)</errorConditionFormula>
+    <errorMessage>RFP_Need_Opportunity</errorMessage>
+</ValidationRule>

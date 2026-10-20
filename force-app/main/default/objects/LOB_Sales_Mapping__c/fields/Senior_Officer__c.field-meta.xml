@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Senior_Officer__c</fullName>
+    <description>Senior Officer (Sales Manager) of LOB Group</description>
+    <externalId>false</externalId>
+    <formula>LOB__r.LOB_Group__r.Senior_Officer__r.FirstName + &apos; &apos; + LOB__r.LOB_Group__r.Senior_Officer__r.LastName</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Senior Officer (Sales Manager) of LOB Group</inlineHelpText>
+    <label>Senior  Officer</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

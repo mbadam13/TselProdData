@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Need_Submit_Approval</fullName>
+    <active>true</active>
+    <description>Need_Submit_Approval</description>
+    <errorConditionFormula>AND(
+    IsSubmitApproval__c = FALSE ,
+    ISPICKVAL(Status,&apos;In Approval Process&apos;)
+)</errorConditionFormula>
+    <errorMessage>Tidak dapat memperbaru status, silahkan Submit Approval terlebih dahulu!</errorMessage>
+</ValidationRule>

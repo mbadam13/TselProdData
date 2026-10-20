@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Order running Rejected</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Order Running Rejected</name>
+    <style>none</style>
+    <subject>Sorry, The order for {!Account.Name} was rejected</subject>
+    <type>text</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

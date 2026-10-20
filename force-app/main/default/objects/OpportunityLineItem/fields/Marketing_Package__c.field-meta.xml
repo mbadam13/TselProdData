@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Marketing_Package__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(Opportunity.Opportunity_Related__r.Marketing_Package__c &lt;&gt; False, &apos;yes&apos;,&apos;no&apos;)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Marketing Package</label>
+    <required>false</required>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

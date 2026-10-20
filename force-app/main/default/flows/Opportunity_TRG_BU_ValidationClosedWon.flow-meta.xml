@@ -1,0 +1,458 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>61.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <customErrors>
+        <name>Contract_Error_Message</name>
+        <label>Contract Error Message</label>
+        <locationX>50</locationX>
+        <locationY>647</locationY>
+        <customErrorMessages>
+            <errorMessage>Check Contract Before Closed Won</errorMessage>
+            <isFieldError>false</isFieldError>
+        </customErrorMessages>
+    </customErrors>
+    <customErrors>
+        <name>Contract_Error_Message1</name>
+        <label>Contract Error Message</label>
+        <locationX>1106</locationX>
+        <locationY>647</locationY>
+        <customErrorMessages>
+            <errorMessage>Check Contract Before Closed Won</errorMessage>
+            <isFieldError>false</isFieldError>
+        </customErrorMessages>
+    </customErrors>
+    <customErrors>
+        <name>Copy_1_of_Contract_Error_Message</name>
+        <label>Contract Error Message</label>
+        <locationX>2426</locationX>
+        <locationY>647</locationY>
+        <customErrorMessages>
+            <errorMessage>Check Contract Before Closed Won</errorMessage>
+            <isFieldError>false</isFieldError>
+        </customErrorMessages>
+    </customErrors>
+    <customErrors>
+        <name>Copy_1_of_Document_Error_Message</name>
+        <label>Document Error Message</label>
+        <locationX>3218</locationX>
+        <locationY>647</locationY>
+        <customErrorMessages>
+            <errorMessage>Attach Document First</errorMessage>
+            <isFieldError>false</isFieldError>
+        </customErrorMessages>
+    </customErrors>
+    <customErrors>
+        <name>Copy_1_of_NPWP_Error_Message</name>
+        <label>NPWP Error Message</label>
+        <locationX>2954</locationX>
+        <locationY>647</locationY>
+        <customErrorMessages>
+            <errorMessage>Check NPWP Information Before Closed Won</errorMessage>
+            <isFieldError>false</isFieldError>
+        </customErrorMessages>
+    </customErrors>
+    <customErrors>
+        <name>Copy_1_of_PO_Error_Message</name>
+        <label>PO Error Message</label>
+        <locationX>2690</locationX>
+        <locationY>647</locationY>
+        <customErrorMessages>
+            <errorMessage>Opportunity doesn&apos;t approve, please check approval or submit approval for this Opportunity</errorMessage>
+            <isFieldError>false</isFieldError>
+        </customErrorMessages>
+    </customErrors>
+    <customErrors>
+        <name>Document_Error_Message</name>
+        <label>Document Error Message</label>
+        <locationX>1898</locationX>
+        <locationY>647</locationY>
+        <customErrorMessages>
+            <errorMessage>Attach Document First</errorMessage>
+            <isFieldError>false</isFieldError>
+        </customErrorMessages>
+    </customErrors>
+    <customErrors>
+        <name>NPWP_Error_Message</name>
+        <label>NPWP Error Message</label>
+        <locationX>578</locationX>
+        <locationY>647</locationY>
+        <customErrorMessages>
+            <errorMessage>Check NPWP Information Before Closed Won</errorMessage>
+            <isFieldError>false</isFieldError>
+        </customErrorMessages>
+    </customErrors>
+    <customErrors>
+        <name>NPWP_Error_Message1</name>
+        <label>NPWP Error Message</label>
+        <locationX>1634</locationX>
+        <locationY>647</locationY>
+        <customErrorMessages>
+            <errorMessage>Check NPWP Information Before Closed Won</errorMessage>
+            <isFieldError>false</isFieldError>
+        </customErrorMessages>
+    </customErrors>
+    <customErrors>
+        <name>PO_Error_Message</name>
+        <label>PO Error Message</label>
+        <locationX>314</locationX>
+        <locationY>647</locationY>
+        <customErrorMessages>
+            <errorMessage>Check PO Before Closed Won</errorMessage>
+            <isFieldError>false</isFieldError>
+        </customErrorMessages>
+    </customErrors>
+    <customErrors>
+        <name>PO_Error_Message1</name>
+        <label>PO Error Message</label>
+        <locationX>1370</locationX>
+        <locationY>647</locationY>
+        <customErrorMessages>
+            <errorMessage>Check PO Before Closed Won</errorMessage>
+            <isFieldError>false</isFieldError>
+        </customErrorMessages>
+    </customErrors>
+    <decisions>
+        <name>Check_Before_Closed_Won</name>
+        <label>Check Before Closed Won</label>
+        <locationX>446</locationX>
+        <locationY>539</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Check_Contract</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.ContractId</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <elementReference>$Record.Account.ContractId__c</elementReference>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Contract_Status__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>Activated</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Contract_Error_Message</targetReference>
+            </connector>
+            <label>Check Contract</label>
+        </rules>
+        <rules>
+            <name>Check_PO</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Check_PO__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>OK</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>PO_Error_Message</targetReference>
+            </connector>
+            <label>Check PO</label>
+        </rules>
+        <rules>
+            <name>Check_NPWP</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Account.NPWP__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>NPWP_Error_Message</targetReference>
+            </connector>
+            <label>Check NPWP</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Check_Before_Closed_Won1</name>
+        <label>Check Before Closed Won</label>
+        <locationX>1634</locationX>
+        <locationY>539</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Check_Contract1</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.ContractId</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <elementReference>$Record.Account.ContractId__c</elementReference>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Contract_Status__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>Activated</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Contract_Error_Message1</targetReference>
+            </connector>
+            <label>Check Contract</label>
+        </rules>
+        <rules>
+            <name>Check_PO1</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Check_PO__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>OK</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>PO_Error_Message1</targetReference>
+            </connector>
+            <label>Check PO</label>
+        </rules>
+        <rules>
+            <name>Check_NPWP1</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Account.NPWP__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>NPWP_Error_Message1</targetReference>
+            </connector>
+            <label>Check NPWP</label>
+        </rules>
+        <rules>
+            <name>Check_Document</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>document_GetRecords</leftValueReference>
+                <operator>IsEmpty</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>document_GetRecords</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Document_Error_Message</targetReference>
+            </connector>
+            <label>Check Document</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Check_Business_Product</name>
+        <label>Check Business Product</label>
+        <locationX>2052</locationX>
+        <locationY>431</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Digital_Media</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Business_Product__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Digital Media</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Check_Before_Closed_Won</targetReference>
+            </connector>
+            <label>Digital Media</label>
+        </rules>
+        <rules>
+            <name>TV_Media</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Business_Product__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>TV Media</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Check_Before_Closed_Won1</targetReference>
+            </connector>
+            <label>TV Media</label>
+        </rules>
+        <rules>
+            <name>Combine</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Business_Product__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Combine</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Copy_1_of_Check_Before_Closed_Won</targetReference>
+            </connector>
+            <label>Combine</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Copy_1_of_Check_Before_Closed_Won</name>
+        <label>Check Before Closed Won</label>
+        <locationX>2954</locationX>
+        <locationY>539</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Copy_1_of_Check_Contract</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.ContractId</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <elementReference>$Record.Account.ContractId__c</elementReference>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Contract_Status__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>Activated</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Copy_1_of_Contract_Error_Message</targetReference>
+            </connector>
+            <label>Check Contract</label>
+        </rules>
+        <rules>
+            <name>Copy_1_of_Check_PO</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Check_PO__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>OK</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Copy_1_of_PO_Error_Message</targetReference>
+            </connector>
+            <label>Check PO</label>
+        </rules>
+        <rules>
+            <name>Copy_1_of_Check_NPWP</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Account.NPWP__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Copy_1_of_NPWP_Error_Message</targetReference>
+            </connector>
+            <label>Check NPWP</label>
+        </rules>
+        <rules>
+            <name>Copy_1_of_Check_Document</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>document_GetRecords</leftValueReference>
+                <operator>IsEmpty</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>document_GetRecords</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Copy_1_of_Document_Error_Message</targetReference>
+            </connector>
+            <label>Check Document</label>
+        </rules>
+    </decisions>
+    <description>- 19/03/25 - Adam - Add Decision For Combine Product</description>
+    <environments>Default</environments>
+    <interviewLabel>Oppty_ {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Opportunity_TRG_BU_ValidationClosedWon</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <name>document_GetRecords</name>
+        <label>document_GetRecords</label>
+        <locationX>2052</locationX>
+        <locationY>323</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Check_Business_Product</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>LinkedEntityId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>false</getFirstRecordOnly>
+        <object>ContentDocumentLink</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <start>
+        <locationX>1926</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>document_GetRecords</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>StageName</field>
+            <operator>IsChanged</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <filters>
+            <field>StageName</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Closed Won</stringValue>
+            </value>
+        </filters>
+        <object>Opportunity</object>
+        <recordTriggerType>Update</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

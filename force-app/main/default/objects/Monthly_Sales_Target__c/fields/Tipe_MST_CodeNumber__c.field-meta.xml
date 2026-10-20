@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Tipe_MST_CodeNumber__c</fullName>
+    <externalId>false</externalId>
+    <formula>CASE(
+   Tipe_MST__c, 
+   &apos;Direct Sales&apos;, 1, 
+   &apos;Media Seller&apos;, 2,
+   &apos;SME&apos;, 3,
+   0
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Tipe MST - CodeNumber</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>KKD_DWS</fullName>
+    <columns>NAME</columns>
+    <columns>Media_Seller__c</columns>
+    <columns>Kertas_Kerja_Detail_Name__c</columns>
+    <columns>Month__c</columns>
+    <columns>Year__c</columns>
+    <columns>Start_Date__c</columns>
+    <columns>End_Date__c</columns>
+    <columns>Type__c</columns>
+    <columns>Pembelian__c</columns>
+    <columns>Pengunaan__c</columns>
+    <columns>CREATED_DATE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Media_Seller__c</field>
+        <operation>equals</operation>
+        <value>DWS</value>
+    </filters>
+    <label>KKD DWS</label>
+</ListView>

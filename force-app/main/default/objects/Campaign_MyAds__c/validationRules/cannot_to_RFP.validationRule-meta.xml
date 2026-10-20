@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>cannot_to_RFP</fullName>
+    <active>true</active>
+    <description>ini dalam kondisi dia telah mencentang xheck box own proposal dia ga bisa masuk ke stage RFP</description>
+    <errorConditionFormula>AND( 
+ISPICKVAL(  Stage__c  ,&apos;RFP&apos;),
+
+NOT(Own_proposal__c != true))</errorConditionFormula>
+    <errorMessage>Karena kamu sudah memilih Own proposal, maka kamu tidak bisa request proposal</errorMessage>
+</ValidationRule>

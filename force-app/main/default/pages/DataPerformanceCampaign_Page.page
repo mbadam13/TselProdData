@@ -1,0 +1,203 @@
+<apex:page controller="DataPerformanceCampaign_Controller">
+    <head>
+        <style type="text/css">
+            .htable {
+                text-align: center;
+            }
+            p.small {
+                line-height: 0.4;
+            }
+            redText { color: red; }
+        </style>
+    </head>
+    <apex:form >
+        <apex:pageBlock >
+            <apex:outputLabel value="Product Target & Price Info" style="font-size: 15px; font-weight: bold;" rendered="{!IF(viewAsOps=false,true,false)}"/>
+            <apex:commandbutton value="Get Product Target & Price Info" action="{!GetProductTargetPrice}" rendered="{!viewAsOps}"/><br/><br/>
+            <apex:pageBlockSection columns="2" >
+                
+                <apex:outputText value="{0, number,#,##0}" rendered="{!Install_display}" label="Target Install">
+                        <apex:param value="{!t_install}"/>
+                </apex:outputText>
+                <apex:outputText value="{0, number,#,##0.00}" rendered="{!Install_display}" label="Price (IDR)">
+                        <apex:param value="{!p_install}"/>
+                </apex:outputText>
+                
+                <apex:outputText value="{0, number,#,##0}" rendered="{!Register_Leads_display}" label="Target Register/Leads">
+                        <apex:param value="{!t_registerlead}"/>
+                </apex:outputText>
+                <apex:outputText value="{0, number,#,##0.00}" rendered="{!Register_Leads_display}" label="Price (IDR)">
+                        <apex:param value="{!p_registerlead}"/>
+                </apex:outputText>
+                
+                <apex:outputText value="{0, number,#,##0}" rendered="{!Acquisition_All_Industries_display}" label="Target Acquisition (All Industries)">
+                        <apex:param value="{!t_acq_all_industries}"/>
+                </apex:outputText>
+                <apex:outputText value="{0, number,#,##0.00}" rendered="{!Acquisition_All_Industries_display}" label="Price (IDR)">
+                        <apex:param value="{!p_acq_all_industries}"/>
+                </apex:outputText>
+                
+                <apex:outputText value="{0, number,#,##0}" rendered="{!Acquisition_F_B_display}" label="Target Acquisition (F&B)">
+                        <apex:param value="{!t_acq_fb}"/>
+                </apex:outputText>
+                <apex:outputText value="{0, number,#,##0.00}" rendered="{!Acquisition_F_B_display}" label="Price (IDR)">
+                        <apex:param value="{!p_acq_fb}"/>
+                </apex:outputText>
+                
+                <apex:outputText value="{0, number,#,##0}" rendered="{!Acquisition_FMCG_display}" label="Target Acquisition (FMCG)">
+                        <apex:param value="{!t_acq_fmcg}"/>
+                </apex:outputText>
+                <apex:outputText value="{0, number,#,##0.00}" rendered="{!Acquisition_FMCG_display}" label="Price (IDR)">
+                    <apex:param value="{!p_acq_fmcg}"/>
+                </apex:outputText>
+                
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+    <apex:form >
+        <apex:pageBlock rendered="{!displayInputSection}">
+            <apex:pageBlockSection columns="2">
+                <apex:inputField value="{!dpcRec.Date__c}" rendered="{!isCreate}" label="<redText>*</redText> Date"/>
+                <apex:outputField value="{!dpcRec.Date__c}" rendered="{!isEdit}"/>
+                <apex:inputField value="{!dpcRec.Harga_COGS_SMS__c}" label="<redText>*</redText> Harga COGS SMS"/>
+                <apex:inputField value="{!dpcRec.Impression__c}" label="<redText>*</redText> Impression"/> 
+                <apex:inputField value="{!dpcRec.Click__c}"/>
+                <apex:inputField value="{!dpcRec.Install__c}" rendered="{!Install_display}"/>
+                <apex:inputField value="{!dpcRec.Install_Price__c}" label="Price" rendered="{!Install_Price_display}"/>
+                <apex:inputField value="{!dpcRec.Register_Leads__c}" rendered="{!Register_Leads_display}"/>
+                <apex:inputField value="{!dpcRec.Register_Leads_Price__c}" label="Price" rendered="{!Register_Leads_Price_display}"/>
+                <apex:inputField value="{!dpcRec.Acquisition_All_Industries__c}" rendered="{!Acquisition_All_Industries_display}"/>
+                <apex:inputField value="{!dpcRec.Acquisition_All_Industries_Price__c}" label="Price" rendered="{!Acquisition_All_Industries_Price_display}"/>
+                <apex:inputField value="{!dpcRec.Acquisition_F_B__c}" rendered="{!Acquisition_F_B_display}"/>
+                <apex:inputField value="{!dpcRec.Acquisition_F_B_Price__c}" label="Price" rendered="{!Acquisition_F_B_Price_display}"/>
+                <apex:inputField value="{!dpcRec.Acquisition_FMCG__c}" rendered="{!Acquisition_FMCG_display}"/>
+                <apex:inputField value="{!dpcRec.Acquisition_FMCG_Price__c}" label="Price" rendered="{!Acquisition_FMCG_Price_display}"/>
+                <apex:inputField value="{!dpcRec.SMS_Bulk__c}" rendered="{!SMS_Bulk_display}"/>  
+            </apex:pageBlockSection>
+            <apex:pageBlockSection columns="1">
+                <apex:inputField value="{!dpcRec.Remark__c}"/>
+            </apex:pageBlockSection>
+            <apex:pageBlockSection columns="2" title="Reward">
+                <apex:inputField value="{!dpcRec.GITA_1_GB_30_days__c}" rendered="{!GITA_1_GB_30_days_display}"/>
+                <apex:inputField value="{!dpcRec.GITA_10_MB_1_day__c}" rendered="{!GITA_10_MB_1_day_display}"/>
+                <apex:inputField value="{!dpcRec.GITA_100_MB_Content_Provider__c}" rendered="{!GITA_100_MB_Content_Provider_display}"/>
+                <apex:inputField value="{!dpcRec.GITA_100_MB_7_days__c}" rendered="{!GITA_100_MB_7_days_display}"/>
+                <!---->
+                <apex:inputField value="{!dpcRec.GITA_11_GB_30_days__c}" rendered="{!GITA_11_GB_30_days_display}"/>
+                <apex:inputField value="{!dpcRec.GITA_110_MB_7_days__c}" rendered="{!GITA_110_MB_7_days_display}"/>
+                <apex:inputField value="{!dpcRec.GITA_16_GB_30_days__c}" rendered="{!GITA_16_GB_30_days_display}"/>
+                <apex:inputField value="{!dpcRec.GITA_2_GB_30_days__c}" rendered="{!GITA_2_GB_30_days_display}"/>
+                <apex:inputField value="{!dpcRec.GITA_20_MB_1_day__c}" rendered="{!GITA_20_MB_1_day_display}"/>
+                <apex:inputField value="{!dpcRec.GITA_250_MB_7_days__c}" rendered="{!GITA_250_MB_7_days_display}"/>
+                <apex:inputField value="{!dpcRec.GITA_3_GB_30_days__c}" rendered="{!GITA_3_GB_30_days_display}"/>
+                <apex:inputField value="{!dpcRec.GITA_30_GB_30_days__c}" rendered="{!GITA_30_GB_30_days_display}"/>
+                <apex:inputField value="{!dpcRec.GITA_35_GB_30_days__c}" rendered="{!GITA_35_GB_30_days_display}"/>
+                <apex:inputField value="{!dpcRec.GITA_4_GB_30_days__c}" rendered="{!GITA_4_GB_30_days_display}"/>
+                <!---->
+                <apex:inputField value="{!dpcRec.GITA_420_MB_30_days__c}" rendered="{!GITA_420_MB_30_days_display}"/>
+                <apex:inputField value="{!dpcRec.GITA_5_GB_30_days__c}" rendered="{!GITA_5_GB_30_days_display}"/>
+                <apex:inputField value="{!dpcRec.GITA_5_MB_1_day__c}" rendered="{!GITA_5_MB_1_day_display}"/>
+                <apex:inputField value="{!dpcRec.GITA_50_MB_7_day__c}" rendered="{!GITA_50_MB_7_day_display}"/>
+                <apex:inputField value="{!dpcRec.GITA_500_MB_30_days__c}" rendered="{!GITA_500_MB_30_days_display}"/>
+                <apex:inputField value="{!dpcRec.GITA_750_MB_30_days__c}" rendered="{!GITA_750_MB_30_days_display}"/>
+                <apex:inputField value="{!dpcRec.GITA_8_GB_30_days__c}" rendered="{!GITA_8_GB_30_days_display}"/>
+                
+            </apex:pageBlockSection>
+            <br/>
+            <table width="100%" border="0">
+                <tr>
+                    <td style="text-align: right; padding-right: 0px;" width="50%">
+                        <apex:commandbutton value="Save" action="{!saveButton}"/>
+                    </td>
+                    <td style="text-align: left; padding-left: 0px;">
+                        <apex:commandbutton value="Cancel" action="{!cancelButton}"/>
+                    </td>
+                </tr>
+            </table>
+        </apex:pageBlock>
+        <apex:pageMessages />
+    </apex:form>
+    <apex:form >
+        <apex:pageBlock >
+            <table width="100%">
+                <tr>
+                    <td style="font-size: 18px;"><b>&nbsp;Historical PC Cumulative</b></td>
+                    <td style="text-align: right; padding-right: 25px; padding-bottom: 10px; padding-top: 10px">
+                        <apex:commandbutton value="Add" action="{!addButton}" rendered="{!viewAsOps}"/>
+                    </td>
+                </tr>
+            </table>
+            <br/>
+            <apex:outputPanel layout="block" style="overflow:auto; height:500px;" rendered="{!hpcw_list.size > 0}">
+            <apex:pageBlockTable value="{!hpcw_list}" var="hpcw" width="100%">
+                <apex:column headerValue="Action" width="8%" style="text-align: center;" rendered="{!viewAsOps}">  
+                    <apex:commandLink value="Edit" action="{!editLink}" style="color:#015ba7">
+                        <apex:param value="{!hpcw.wDpcId}" assignTo="{!param_dpcId}" name="Id"/> 
+                    </apex:commandLink>
+                </apex:column>
+                <!--<apex:column value="{!hpcw.wDpcName}" headerValue="Name" styleClass="TableRow" headerClass="htable" style="text-align: center;" width="15%"/>-->
+                <apex:column value="{!hpcw.wDate}" headerValue="Date" styleClass="TableRow" headerClass="htable" style="text-align: center;"/>
+                <apex:column headerValue="Daily CPI" styleClass="TableRow" headerClass="htable" style="text-align: right;" rendered="{!Install_display}">
+                    <apex:facet name="header">Daily<br/> <p class="small">CPI</p></apex:facet>
+                    <apex:outputText value="{0, number,#,##0}">
+                        <apex:param value="{!hpcw.wInstall}"/>
+                    </apex:outputText>
+                </apex:column>
+                <apex:column headerValue="Daily CPL" styleClass="TableRow" headerClass="htable" style="text-align: right;" rendered="{!Register_Leads_display}">
+                    <apex:facet name="header">Daily<br/> <p class="small">CPL</p></apex:facet>
+                    <apex:outputText value="{0, number,#,##0}">
+                        <apex:param value="{!hpcw.wRegisterLeads}"/>
+                    </apex:outputText>
+                </apex:column>
+                <apex:column headerValue="Daily CPA AI" styleClass="TableRow" headerClass="htable" style="text-align: right;" rendered="{!Acquisition_All_Industries_display}">
+                    <apex:facet name="header">Daily<br/> <p class="small">CPA AI</p></apex:facet>
+                    <apex:outputText value="{0, number,#,##0}">
+                        <apex:param value="{!hpcw.wAcqAllIndusties}"/>
+                    </apex:outputText>
+                </apex:column>
+                <apex:column headerValue="Daily CPA F&B" styleClass="TableRow" headerClass="htable" style="text-align: right;" rendered="{!Acquisition_F_B_display}">
+                    <apex:facet name="header">Daily<br/> <p class="small">CPA F&#38;B</p></apex:facet>
+                    <apex:outputText value="{0, number,#,##0}">
+                        <apex:param value="{!hpcw.wAcqFB}"/>
+                    </apex:outputText>
+                </apex:column>
+                <apex:column headerValue="Daily CPA FMCG" styleClass="TableRow" headerClass="htable" style="text-align: right;" rendered="{!Acquisition_FMCG_display}">
+                    <apex:facet name="header">Daily<br/> <p class="small">CPA FMCG</p></apex:facet>
+                    <apex:outputText value="{0, number,#,##0}">
+                        <apex:param value="{!hpcw.wAcqFMCG}"/>
+                    </apex:outputText>
+                </apex:column>
+                <apex:column headerValue="Revenue (IDR)" styleClass="TableRow" headerClass="htable" style="text-align: right;">
+                    <apex:facet name="header">Revenue<br/> <p class="small">(IDR)</p></apex:facet>
+                    <apex:outputText value="{0, number,#,##0}">
+                        <apex:param value="{!hpcw.wRevenue}"/>
+                    </apex:outputText>
+                </apex:column>
+                <apex:column headerValue="SMS Blast" styleClass="TableRow" headerClass="htable" style="text-align: right;">
+                    <apex:facet name="header">SMS<br/> <p class="small">Blast</p></apex:facet>
+                    <apex:outputText value="{0, number,#,##0}">
+                        <apex:param value="{!hpcw.wImpression}"/>
+                    </apex:outputText>
+                </apex:column>
+                <apex:column headerValue="Sunk Cost (IDR)" styleClass="TableRow" headerClass="htable" style="text-align: right;">
+                    <apex:facet name="header">Sunk Cost<br/> <p class="small">(IDR)</p></apex:facet>
+                    <apex:outputText value="{0, number,#,##0}">
+                        <apex:param value="{!hpcw.wSunkCost}"/>
+                    </apex:outputText>
+                </apex:column>
+                <apex:column headerValue="P&L (IDR)" styleClass="TableRow" headerClass="htable" style="text-align: right;">
+                    <apex:outputText value="{0, number,#,##0}">
+                        <apex:param value="{!hpcw.wPL}"/>
+                    </apex:outputText>
+                </apex:column>
+                <apex:column headerValue="P&L %" styleClass="TableRow" headerClass="htable" style="{!IF((hpcw.wPLPercentage < 0),'color: red;font-weight: bold;text-align: right;','text-align: right;')}">
+                    <apex:outputText value="{0, number,#,##0.00}">
+                        <apex:param value="{!hpcw.wPLPercentage}"/>
+                    </apex:outputText>
+                </apex:column> 
+                <apex:column value="{!hpcw.wDpc.Remark__c}" headerValue="Remark" styleClass="TableRow" headerClass="htable"/>
+            </apex:pageBlockTable>
+            </apex:outputPanel>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

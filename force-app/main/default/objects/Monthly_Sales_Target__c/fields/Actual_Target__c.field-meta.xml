@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Actual_Target__c</fullName>
+    <description>dibuat untuk kebutuhan dashboard MCK</description>
+    <formula>IF(TEXT(Group_Type__c)=&apos;Actual&apos;,Adjustment_Amount__c ,
+IF(TEXT(Group_Type__c)=&apos;Target&apos;, Target_Report__c ,0))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Actual-Target</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

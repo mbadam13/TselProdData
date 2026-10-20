@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Performance Need Approval</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Performance Need Approval</name>
+    <style>none</style>
+    <subject>Hello, The Performance campaign Need To be approval</subject>
+    <type>text</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

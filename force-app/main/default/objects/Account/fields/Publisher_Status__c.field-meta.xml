@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Publisher_Status__c</fullName>
+    <label>Publisher Status</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Draft Contract Sent</fullName>
+                <default>false</default>
+                <label>Draft Contract Sent</label>
+            </value>
+            <value>
+                <fullName>Contract Signed</fullName>
+                <default>false</default>
+                <label>Contract Signed</label>
+            </value>
+            <value>
+                <fullName>Ad Tag Shared</fullName>
+                <default>false</default>
+                <label>Ad Tag Shared</label>
+            </value>
+            <value>
+                <fullName>Ad Tag Implemented</fullName>
+                <default>false</default>
+                <label>Ad Tag Implemented</label>
+            </value>
+            <value>
+                <fullName>Check Total Request</fullName>
+                <default>false</default>
+                <label>Check Total Request</label>
+            </value>
+            <value>
+                <fullName>Dashboard Account Shared</fullName>
+                <default>false</default>
+                <label>Dashboard Account Shared</label>
+            </value>
+            <value>
+                <fullName>Finish</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Finish</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

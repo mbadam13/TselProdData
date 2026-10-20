@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Media_Seller__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <inlineHelpText>Choose Account if Type is &quot;Media Sellert&quot;.</inlineHelpText>
+    <label>Media Seller</label>
+    <lookupFilter>
+        <active>true</active>
+        <filterItems>
+            <field>Account.Id</field>
+            <operation>equals</operation>
+            <value>0012u00000NECqzAAH, 0012u00000NEDV7AAP</value>
+        </filterItems>
+        <isOptional>false</isOptional>
+    </lookupFilter>
+    <referenceTo>Account</referenceTo>
+    <relationshipLabel>Kertas Kerja</relationshipLabel>
+    <relationshipName>Kertas_Kerja</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

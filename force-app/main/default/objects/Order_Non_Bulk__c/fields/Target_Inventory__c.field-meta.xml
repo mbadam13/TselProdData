@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Target_Inventory__c</fullName>
+    <label>Target Inventory</label>
+    <summarizedField>Order_Product_Non_Bulk__c.Quantity__c</summarizedField>
+    <summaryForeignKey>Order_Product_Non_Bulk__c.Order_Non_Bulk_Number__c</summaryForeignKey>
+    <summaryOperation>sum</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

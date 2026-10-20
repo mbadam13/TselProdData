@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>Campaign_completed_AM_have_to_create_quotation</fullName>
+        <ccEmails>doddy.kusumadhynata@saasten.com,</ccEmails>
+        <ccEmails>david.wong@saasten.com</ccEmails>
+        <ccEmails>ahmat.murad@saasten.com</ccEmails>
+        <description>Campaign completed, AM have to create quotation</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderAddress>salesforce@saasten.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>unfiled$public/Order_CompletedQuotation_have_to_bee_create</template>
+    </alerts>
+    <alerts>
+        <fullName>Contract_Need_Check</fullName>
+        <description>Contract Need Check</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>eka_p_sjaerodji@telkomsel.co.id</recipient>
+            <type>user</type>
+        </recipients>
+        <senderAddress>salesforce@saasten.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>unfiled$public/Contract_Need_Approval</template>
+    </alerts>
+    <alerts>
+        <fullName>Order_Already_Completed</fullName>
+        <description>Order Already Completed</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>abdul_a_akhmaddireja@telkomsel.co.id</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>achmad_s_fariz@telkomsel.co.id</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>admin@telkomsel.co.id</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>dev2026@telkomsel.co.id</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <field>Sales__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderAddress>salesforce@saasten.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>unfiled$public/Order_Already_Completed</template>
+    </alerts>
+    <alerts>
+        <fullName>Order_Need_Check</fullName>
+        <description>Order Need Check</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>achmad_s_fariz@telkomsel.co.id</recipient>
+            <type>user</type>
+        </recipients>
+        <senderAddress>salesforce@saasten.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>unfiled$public/Order_Need_Check</template>
+    </alerts>
+    <alerts>
+        <fullName>Order_Running_Approved</fullName>
+        <ccEmails>abdul_a_akhmaddireja@telkomsel.co.id</ccEmails>
+        <ccEmails>yohanes_e_supriyono@telkomsel.co.id</ccEmails>
+        <description>Order Running Approved</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderAddress>salesforce@saasten.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>unfiled$public/Order_Running_Approved</template>
+    </alerts>
+    <alerts>
+        <fullName>Order_Running_Need_To_Revise</fullName>
+        <description>Order Running Need To Revise</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderAddress>salesforce@saasten.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>unfiled$public/Order_Running_Need_To_Revise</template>
+    </alerts>
+    <alerts>
+        <fullName>Order_Running_Rejected</fullName>
+        <description>Order Running Rejected</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderAddress>salesforce@saasten.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>unfiled$public/Order_Running_Rejected</template>
+    </alerts>
+    <alerts>
+        <fullName>Order_Send_Notif_MO_isReady_ToGenerate</fullName>
+        <description>Send Email Notification to Sales (Order /owner) that MO already to generate.</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderAddress>salesforce@saasten.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>unfiled$public/Order_MO_Is_Already_to_Generate</template>
+    </alerts>
+    <alerts>
+        <fullName>Order_Send_Notif_for_Fill_House_Number</fullName>
+        <ccEmails>almira_h_suprapto@telkomsel.co.id, abdul_a_akhmaddireja@telkomsel.co.id</ccEmails>
+        <description>Send Email Notification for Operation Admin for fill the house number in each Order Product</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>Campaign_Operation_Manager</recipient>
+            <type>role</type>
+        </recipients>
+        <senderAddress>salesforce@saasten.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>unfiled$public/Order_Fill_House_Number_For_Each_Product</template>
+    </alerts>
+    <alerts>
+        <fullName>Order_Send_Notif_for_Operation_Admin</fullName>
+        <ccEmails>almira_h_suprapto@telkomsel.co.id, abdul_a_akhmaddireja@telkomsel.co.id</ccEmails>
+        <description>Send Email Notification for Operation Admin for each Order Product</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>Campaign_Operation_Manager</recipient>
+            <type>role</type>
+        </recipients>
+        <senderAddress>salesforce@saasten.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>unfiled$public/Order_Need_Check</template>
+    </alerts>
+    <alerts>
+        <fullName>Order_need_Approval</fullName>
+        <ccEmails>achmad_s_fariz@telkomsel.co.id</ccEmails>
+        <description>Order need Approval</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>achmad_s_fariz@telkomsel.co.id</recipient>
+            <type>user</type>
+        </recipients>
+        <senderAddress>salesforce@saasten.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>unfiled$public/Order_Need_Check</template>
+    </alerts>
+    <fieldUpdates>
+        <fullName>Approve_move_to_running</fullName>
+        <field>Status</field>
+        <literalValue>Running</literalValue>
+        <name>Approve move to running</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Order_Approved</fullName>
+        <field>Status</field>
+        <literalValue>Activated</literalValue>
+        <name>Order Approved</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Order_Rejected</fullName>
+        <field>Status</field>
+        <literalValue>Draft</literalValue>
+        <name>Order Rejected</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Order_Running_Approved</fullName>
+        <field>Approval_Status__c</field>
+        <literalValue>Approved</literalValue>
+        <name>Order Running Approved</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Order_Running_Rejected</fullName>
+        <field>Approval_Status__c</field>
+        <literalValue>Rejected</literalValue>
+        <name>Order Running Rejected</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Order_Running_Submit</fullName>
+        <field>Approval_Status__c</field>
+        <literalValue>Submit</literalValue>
+        <name>Order Running Submit</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+</Workflow>

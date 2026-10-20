@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Channel__c</fullName>
+    <label>Channel*</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>SMS Bulk</fullName>
+                <default>false</default>
+                <label>SMS Bulk</label>
+            </value>
+            <value>
+                <fullName>SMS LBA</fullName>
+                <default>false</default>
+                <label>SMS LBA</label>
+            </value>
+            <value>
+                <fullName>SMS Targeted</fullName>
+                <default>true</default>
+                <label>SMS Targeted</label>
+            </value>
+            <value>
+                <fullName>MMS Bulk</fullName>
+                <default>false</default>
+                <label>MMS Bulk</label>
+            </value>
+            <value>
+                <fullName>MMS LBA</fullName>
+                <default>false</default>
+                <label>MMS LBA</label>
+            </value>
+            <value>
+                <fullName>MMS Targeted</fullName>
+                <default>false</default>
+                <label>MMS Targeted</label>
+            </value>
+            <value>
+                <fullName>USSD Targeted</fullName>
+                <default>false</default>
+                <label>USSD Targeted</label>
+            </value>
+            <value>
+                <fullName>IVR Targeted</fullName>
+                <default>false</default>
+                <label>IVR Targeted</label>
+            </value>
+            <value>
+                <fullName>LBA IVR Basic</fullName>
+                <default>false</default>
+                <label>LBA IVR Basic</label>
+            </value>
+            <value>
+                <fullName>LBA MMS Basic</fullName>
+                <default>false</default>
+                <label>LBA MMS Basic</label>
+            </value>
+            <value>
+                <fullName>LBA USSD Basic</fullName>
+                <default>false</default>
+                <label>LBA USSD Basic</label>
+            </value>
+            <value>
+                <fullName>Contextual Ads</fullName>
+                <default>false</default>
+                <label>Contextual Ads</label>
+            </value>
+            <value>
+                <fullName>Symphony</fullName>
+                <default>false</default>
+                <label>Symphony</label>
+            </value>
+            <value>
+                <fullName>Targeted NSP Basic</fullName>
+                <default>false</default>
+                <label>Targeted NSP Basic</label>
+            </value>
+            <value>
+                <fullName>LBA</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>LBA</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

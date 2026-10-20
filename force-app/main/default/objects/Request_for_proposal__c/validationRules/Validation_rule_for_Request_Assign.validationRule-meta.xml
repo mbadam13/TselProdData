@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Validation_rule_for_Request_Assign</fullName>
+    <active>false</active>
+    <description>-- 21 August 2024 --
+Deactive because assigned user by automation</description>
+    <errorConditionFormula>AND(ISPICKVAL( Request_for_Proposal_Status__c ,&apos;Request Assign&apos;), Owner:Queue.QueueName =&apos;Marketing Queue&apos;)</errorConditionFormula>
+    <errorDisplayField>OwnerId</errorDisplayField>
+    <errorMessage>Must Change Owner</errorMessage>
+</ValidationRule>

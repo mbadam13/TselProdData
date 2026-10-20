@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <name>Post_to_Sales_Owner</name>
+        <label>Post to Sales Owner</label>
+        <locationX>522</locationX>
+        <locationY>298</locationY>
+        <actionName>chatterPost</actionName>
+        <actionType>chatterPost</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>text</name>
+            <value>
+                <stringValue>@[{!$Record.Order_Product__r.Order.Opportunity.Owner.Id}] @[0052v00000ZC0QSAA1] @[0052v00000fzDreAAE] This product  {!$Record.Order_Product__r.Product2.Name} under order {!$Record.Order_Product__r.Order.OrderNumber} is nearly reached its expired date. Please confirm that this will be extend or else it will be automatically expired within 7 days.</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>subjectNameOrId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>chatterPost</nameSegment>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </actionCalls>
+    <actionCalls>
+        <name>Post_to_Sales_Owner_0</name>
+        <label>Post to Sales Owner</label>
+        <locationX>182</locationX>
+        <locationY>409</locationY>
+        <actionName>chatterPost</actionName>
+        <actionType>chatterPost</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>text</name>
+            <value>
+                <stringValue>@[{!$Record.Order_Product__r.Order.Opportunity.Owner.Id}] @[0052v00000ZC0QSAA1] @[0052v00000fzDreAAE] This product  {!$Record.Order_Product__r.Product2.Name} under order {!$Record.Order_Product__r.Order.OrderNumber} is nearly reached its expired date. Please confirm that this will be extend or else it will be automatically expired within 4 days.</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>subjectNameOrId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>chatterPost</nameSegment>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </actionCalls>
+    <apiVersion>53.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <interviewLabel>Reminder Expired Within 4 Days {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Expired Bucket Chatter Notif</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>FREE_FORM_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>50</locationX>
+        <locationY>49</locationY>
+        <connector>
+            <targetReference>Post_to_Sales_Owner</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Status__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Waiting Confirmation</stringValue>
+            </value>
+        </filters>
+        <object>Expired_Bucket__c</object>
+        <recordTriggerType>Create</recordTriggerType>
+        <scheduledPaths>
+            <name>Reminder_Expired_Within_4_Days</name>
+            <connector>
+                <targetReference>Post_to_Sales_Owner_0</targetReference>
+            </connector>
+            <label>Reminder Expired Within 4 Days</label>
+            <offsetNumber>3</offsetNumber>
+            <offsetUnit>Days</offsetUnit>
+            <timeSource>RecordTriggerEvent</timeSource>
+        </scheduledPaths>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

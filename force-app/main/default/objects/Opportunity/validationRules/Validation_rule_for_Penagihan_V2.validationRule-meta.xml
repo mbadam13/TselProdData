@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Validation_rule_for_Penagihan_V2</fullName>
+    <active>false</active>
+    <errorConditionFormula>OR(
+  AND(
+    ISPICKVAL(StageName , &quot;Negotiation&quot;),  
+    ISBLANK(TEXT(Penagihan_based_on__c)),
+    Business_Product__c == &apos;Digital Media&apos;
+  ),
+  AND(
+    ISPICKVAL(StageName , &quot;Negotiation&quot;),
+    ISBLANK(TEXT(Penagihan_based_on_TV__c)),
+    Business_Product__c == &apos;TV Media&apos;
+  ),
+  AND(
+    ISPICKVAL(StageName , &quot;Negotiation&quot;),
+    ISBLANK(TEXT(Penagihan_based_on__c)),
+    ISBLANK(Business_Product__c)
+  )
+)</errorConditionFormula>
+    <errorMessage>Penagihan Harus di Isi</errorMessage>
+</ValidationRule>

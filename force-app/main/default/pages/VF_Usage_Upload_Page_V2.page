@@ -1,0 +1,105 @@
+<!--
+  @description       : 
+  @author            : M Bustamil Adam 
+  @group             : 
+  @last modified on  : 08-08-2024
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+-->
+
+
+
+<apex:page controller="Settlement_usage_Controller_V2">
+    <head>
+        <script src="https://code.jquery.com/jquery-1.10.1.min.js" type="text/javascript"></script>
+        <script type="text/javascript">
+            function disableBttn() {
+                var btn = document.querySelector("[id$='UploadButtonTV']");
+                if (btn) {
+                    btn.disabled = true;
+                   
+                    btn.classList.add("btnDisabled"); // Optional: Apply custom disabled styling
+                    btn.onclick = null; // Remove the onclick handler to prevent further interaction
+                } else {
+                    console.error("Upload button not found.");
+                }
+            }
+        </script>
+    </head>
+    <apex:sectionHeader title="Upload Usage Data" subtitle="AM Usage"/>
+    <apex:pageMessages id="msg"/>
+
+    <apex:form id="form" enctype="multipart/form-data">
+        <!-- Select File Type Section -->
+        <apex:pageBlock title="Select File Type" id="selectFileTypeBlock" rendered="{!selectedFileType != '' && !showUpload}">
+            <apex:pageBlockSection columns="1">
+                <apex:selectRadio value="{!selectedFileType}">
+                    <apex:selectOption itemValue="Digital" itemLabel="Digital"/>
+                    <apex:selectOption itemValue="TV" itemLabel="TV"/>
+                </apex:selectRadio>
+            </apex:pageBlockSection>
+            <apex:commandButton value="Next" action="{!showUploadForm}" />
+        </apex:pageBlock>
+
+        <!-- Upload File Section for Digital -->
+        <apex:outputPanel id="uploadFilePanelDigital" rendered="{!selectedFileType == 'Digital' && showUpload}">
+            <apex:pageBlock title="Upload Digital File">
+                <apex:pageBlockSection >
+                    <apex:inputFile value="{!csvFileBody}" filename="{!csvAsString}"/>
+                    <apex:commandButton value="Upload" action="{!importCSVFileDigital}" />
+                </apex:pageBlockSection>
+            </apex:pageBlock>
+        </apex:outputPanel>
+
+        <!-- Upload File Section for TV -->
+        <apex:outputPanel id="uploadFilePanelTV" rendered="{!selectedFileType == 'TV' && showUpload}">
+            <apex:pageBlock title="Upload TV File">
+                <apex:pageBlockSection >
+                    
+                         <apex:inputFile value="{!csvFileBody}" filename="{!csvAsString}" />
+                         <apex:commandButton value="Upload"  action="{!importCSVFileTV}"  />
+                      
+                       
+                </apex:pageBlockSection>
+            </apex:pageBlock>
+        </apex:outputPanel>
+
+        <!-- Hidden Button for Next ActionSupport -->
+        <apex:commandButton style="display:none;" id="hiddenButton" action="{!showUploadForm}" />
+
+        <!-- Back Button Section -->
+        <apex:commandButton value="Back" action="{!callpageredirect}"/>
+
+        <!-- Usage List Section Digital -->
+        <apex:outputPanel id="usageListPanelDigital">
+            <apex:pageBlock id="usageListSectionDigital" title="Digital Usage List" rendered="{!selectedFileType == 'Digital' && showUpload}">
+                <apex:pageBlockTable value="{!usageList2}" var="usg">
+                    <apex:column value="{!usg.Usage.Sales__c}" />
+                    <apex:column value="{!usg.Usage.NIK__c}" />
+                    <apex:column value="{!usg.Usage.Campaign_ID__c}" />
+                    <apex:column value="{!usg.Usage.Amount__c}" />
+                    <apex:column headerValue="Notes" value="{!usg.notes}" /> 
+                </apex:pageBlockTable>
+            </apex:pageBlock>
+        </apex:outputPanel>
+        
+        <!-- Usage List Section TV -->
+        <apex:outputPanel id="usageListPanelTV">
+            <apex:pageBlock id="usageListSectionTV" title="TV Usage List" rendered="{!selectedFileType == 'TV' && showUpload}">
+                <apex:pageBlockTable value="{!tvUsageIPTVList}" var="usg">
+                    <apex:column headerValue="No" value="{!usg.sequenceNumber}" /> 
+                    <apex:column headerValue="NO MO Item" value="{!usg.MOItem}" /> 
+                    <apex:column headerValue="IPTV Channel" value="{!usg.IPTV_Channel}" />
+                    <apex:column headerValue="Product Name" value="{!usg.Product_Name}" />  
+                    <apex:column headerValue="House Number" value="{!usg.House_Number}" />
+                    <apex:column headerValue="Brand House Number" value="{!usg.Brand_House_Number}" />  
+                    <apex:column headerValue="Versi House Number" value="{!usg.Version_House_Number}" /> 
+                    <apex:column headerValue="Spot ke" value="{!usg.No}" /> 
+                    <apex:column headerValue="Broadcast time" value="{!usg.Broadcast_time}" /> 
+                    <apex:column headerValue="Viewers" value="{!usg.Viewers}" /> 
+                    <apex:column value="{!usg.Usage.Date__c}" />
+                    <apex:column headerValue="Notes" value="{!usg.notes}" /> 
+                </apex:pageBlockTable>
+            </apex:pageBlock>
+        </apex:outputPanel>
+    </apex:form>
+</apex:page>

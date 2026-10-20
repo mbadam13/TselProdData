@@ -1,0 +1,9 @@
+Hey {!Lead.OwnerFullName},
+
+The lead for {!Lead.Advertiser_Name__c} was approved.
+Click link bellow for more information
+Lead:
+{!Lead.Link}
+
+Cheers,
+Salesforce

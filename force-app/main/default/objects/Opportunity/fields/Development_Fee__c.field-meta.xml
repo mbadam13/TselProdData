@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Development_Fee__c</fullName>
+    <label>Development Fee</label>
+    <summarizedField>Development_Fee__c.Total_Development_Fee__c</summarizedField>
+    <summaryFilterItems>
+        <field>Development_Fee__c.Approval_Status__c</field>
+        <operation>equals</operation>
+        <value>Approved, No Discount Apply</value>
+    </summaryFilterItems>
+    <summaryForeignKey>Development_Fee__c.Opportunity__c</summaryForeignKey>
+    <summaryOperation>sum</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <type>Summary</type>
+</CustomField>

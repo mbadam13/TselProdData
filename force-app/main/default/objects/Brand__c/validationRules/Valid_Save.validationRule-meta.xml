@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Valid_Save</fullName>
+    <active>false</active>
+    <description>Brand data should be created by custom visualforce</description>
+    <errorConditionFormula>isValidSaved__c = false</errorConditionFormula>
+    <errorMessage>Please create new brand on menu account</errorMessage>
+</ValidationRule>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All_Spot_Limits</fullName>
+    <columns>NAME</columns>
+    <columns>Channel__c</columns>
+    <columns>IPTV_Inventory__c</columns>
+    <columns>ShowTime__c</columns>
+    <columns>Spot_Limit__c</columns>
+    <columns>Start_Date__c</columns>
+    <columns>End_Date__c</columns>
+    <columns>CREATEDBY_USER</columns>
+    <columns>CREATED_DATE</columns>
+    <columns>UPDATEDBY_USER</columns>
+    <columns>LAST_UPDATE</columns>
+    <columns>is_Active__c</columns>
+    <filterScope>Everything</filterScope>
+    <label>All Spot Limits</label>
+</ListView>

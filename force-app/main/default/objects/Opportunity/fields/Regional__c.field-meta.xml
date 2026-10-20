@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Regional__c</fullName>
+    <label>Regional  (Required)</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>BALINUSRA</fullName>
+                <default>false</default>
+                <label>BALINUSRA</label>
+            </value>
+            <value>
+                <fullName>CENTRAL JABOTABEK</fullName>
+                <default>false</default>
+                <label>CENTRAL JABOTABEK</label>
+            </value>
+            <value>
+                <fullName>EASTERN JABOTABEK</fullName>
+                <default>false</default>
+                <label>EASTERN JABOTABEK</label>
+            </value>
+            <value>
+                <fullName>HEAD OFFICE</fullName>
+                <default>false</default>
+                <label>HEAD OFFICE</label>
+            </value>
+            <value>
+                <fullName>JABAR</fullName>
+                <default>false</default>
+                <label>JABAR</label>
+            </value>
+            <value>
+                <fullName>JABOTABEK</fullName>
+                <default>false</default>
+                <label>JABOTABEK</label>
+            </value>
+            <value>
+                <fullName>JATENG</fullName>
+                <default>false</default>
+                <label>JATENG</label>
+            </value>
+            <value>
+                <fullName>JATIM</fullName>
+                <default>false</default>
+                <label>JATIM</label>
+            </value>
+            <value>
+                <fullName>KALIMANTAN</fullName>
+                <default>false</default>
+                <label>KALIMANTAN</label>
+            </value>
+            <value>
+                <fullName>PUMA</fullName>
+                <default>false</default>
+                <label>PUMA</label>
+            </value>
+            <value>
+                <fullName>SULAWESI</fullName>
+                <default>false</default>
+                <label>SULAWESI</label>
+            </value>
+            <value>
+                <fullName>SUMBAGSEL</fullName>
+                <default>false</default>
+                <label>SUMBAGSEL</label>
+            </value>
+            <value>
+                <fullName>SUMBAGTENG</fullName>
+                <default>false</default>
+                <label>SUMBAGTENG</label>
+            </value>
+            <value>
+                <fullName>SUMBAGUT</fullName>
+                <default>false</default>
+                <label>SUMBAGUT</label>
+            </value>
+            <value>
+                <fullName>WESTERN JABOTABEK</fullName>
+                <default>false</default>
+                <label>WESTERN JABOTABEK</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

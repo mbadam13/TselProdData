@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Target_date_and_remarks</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+    ISPICKVAL(Status, &quot;Lead Qualification&quot;),
+    ISBLANK(Target_Start_Date__c),
+    ISBLANK(Target_Closed_Date__c),
+    ISBLANK(Remarks__c)
+)</errorConditionFormula>
+    <errorMessage>Field Target Start Date, Target Closed Date, dan Remarks harus diisi.</errorMessage>
+</ValidationRule>

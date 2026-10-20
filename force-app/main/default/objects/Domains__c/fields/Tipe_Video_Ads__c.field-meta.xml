@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Tipe_Video_Ads__c</fullName>
+    <label>Tipe Video Ads</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Video instream - VAST</fullName>
+                <default>false</default>
+                <label>Video instream - VAST</label>
+            </value>
+            <value>
+                <fullName>Video instream - VPAID</fullName>
+                <default>false</default>
+                <label>Video instream - VPAID</label>
+            </value>
+            <value>
+                <fullName>Video outstream - VAST</fullName>
+                <default>false</default>
+                <label>Video outstream - VAST</label>
+            </value>
+            <value>
+                <fullName>Video outstream - VPAID</fullName>
+                <default>false</default>
+                <label>Video outstream - VPAID</label>
+            </value>
+            <value>
+                <fullName>IOS Video instream - VAST</fullName>
+                <default>false</default>
+                <label>IOS Video instream - VAST</label>
+            </value>
+            <value>
+                <fullName>IOS Video instream - VPAID</fullName>
+                <default>false</default>
+                <label>IOS Video instream - VPAID</label>
+            </value>
+            <value>
+                <fullName>IOS Video outstream - VAST</fullName>
+                <default>false</default>
+                <label>IOS Video outstream - VAST</label>
+            </value>
+            <value>
+                <fullName>IOS Video outstream - VPAID</fullName>
+                <default>false</default>
+                <label>IOS Video outstream - VPAID</label>
+            </value>
+            <value>
+                <fullName>Android Video instream - VAST</fullName>
+                <default>false</default>
+                <label>Android Video instream - VAST</label>
+            </value>
+            <value>
+                <fullName>Android Video instream - VPAID</fullName>
+                <default>false</default>
+                <label>Android Video instream - VPAID</label>
+            </value>
+            <value>
+                <fullName>Android Video outstream - VAST</fullName>
+                <default>false</default>
+                <label>Android Video outstream - VAST</label>
+            </value>
+            <value>
+                <fullName>Android Video outstream - VPAID</fullName>
+                <default>false</default>
+                <label>Android Video outstream - VPAID</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

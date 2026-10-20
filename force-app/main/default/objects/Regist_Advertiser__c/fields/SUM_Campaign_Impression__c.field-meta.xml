@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SUM_Campaign_Impression__c</fullName>
+    <label>SUM Campaign Impression</label>
+    <summarizedField>Regist_Creative__c.SUM_Impression__c</summarizedField>
+    <summaryForeignKey>Regist_Creative__c.Regist_Advertiser__c</summaryForeignKey>
+    <summaryOperation>sum</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

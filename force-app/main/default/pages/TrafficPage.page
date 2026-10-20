@@ -1,0 +1,191 @@
+<apex:page controller="TrafficController" applyHtmlTag="false" showHeader="false" renderAs="pdf">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+        <style type="text/ccs" media="print">
+            @page {
+                size: A4 potrait;
+                margin-top: 3.5cm;
+                margin-bottom: 2.5cm;
+                @top-center{
+                    content: element(header);            
+                }
+                @bottom-center{
+                    content: element(footer);
+                }
+            }
+            div.header{
+                margin-top: 30px;
+                padding: 10px;
+                position: running(header);
+            }
+            div.footer{
+                display: block;
+                position: running(footer);
+                padding: 5px;
+            }
+            .dtable{
+                font-size: 12px;
+                padding: 5px;
+            }
+            .dtable3 {
+                text-align: left;
+                font-size: 14px;
+                width: 50px;
+            }
+            .dtable4 {
+                text-align: center;
+            }
+            .dtable5 {
+                text-align: center;
+            }
+            .dtable6 {
+                text-align: center;
+            }
+            .dtable7 {
+                text-align: center;
+                border-bottom: 0.5px solid black;
+                padding: 5px;
+                font-size: 14px;
+            }
+            .dtable8 {
+                text-align: center;
+            //border-bottom: 0.5px solid black;
+            }
+            .dtable9 {
+                text-align: center;
+                padding: 5px;
+                font-size: 12px;
+            //border-bottom: 0.5px solid black;
+            }
+            .pagenumber:before {
+                content: counter(page);             
+            }
+            .pagecount:before {
+                content: counter(pages);                
+            }
+            div.tabel{
+                page-break-after: auto;
+            }
+            .TableTitle {
+                font-size:10px;
+                text-align: center;
+                border-top: 0.5px solid #a39e9e;
+                border-bottom: 0.5px solid #a39e9e;
+                padding: 2.5px;
+            }
+            .TableRow {
+                font-size:9px;
+                border-top: 0.5px solid #a39e9e;
+                border-bottom: 0.5px solid #a39e9e;
+                padding: 5px;
+            }
+            .signature1{
+                text-align:center; 
+                width: 50px;
+                height: 50px;
+                border-bottom: 1px solid #000000;
+            }
+            .signature2{
+                text-align:center; 
+                border-right: 1px solid #000000;
+                padding-bottom: 5px;
+            }
+        </style>
+    </head>
+    
+    <div class="header">
+        <img src='{!$Resource.headerTrafficPage}' title="imgHeader2" width="100%" height="100%"/>
+    </div>
+    <div class="footer">
+        <img src='{!$Resource.Tadex_Footer}' title="imgFooter2" width="100%" height="100%"/>
+    </div>         
+
+    <div class="bodypage">
+        <table>
+            <tr>
+                <td class="dtable">Publisher</td>
+                <td class="dtable"> : </td>
+                <td class="dtable" colspan="2">{!pubName}</td>
+            </tr>
+            <tr>
+                <td class="dtable">Period</td>
+                <td class="dtable"> : </td>
+                <td class="dtable" colspan="2">{!periodBA}</td>
+            </tr>
+        </table>
+    
+        <br/>
+     
+        <div class="tabel">
+            <!-- Limit Collection Size 1000 -->
+            <apex:repeat value="{!wrapTrafficList_list}" var="wlt">
+            <apex:pageBlock >
+                <!-- Dengan Deal Column-->
+                <!--apex:pageBlockTable value="{!wlt}" var="traff">                
+                    <apex:column value="{!traff.wDate}" headerValue="Date" headerClass="TableTitle" styleClass="TableRow" width="10%"/>
+                    <apex:column value="{!traff.wDeal}" headerValue="Deal" headerClass="TableTitle" styleClass="TableRow" width="15%"/>
+                    <apex:column value="{!traff.wSiteName}" headerValue="Site Name" headerClass="TableTitle" styleClass="TableRow" width="20%"/>
+                    <apex:column value="{!traff.wPaidImpressions}" headerValue="Paid Impressions" headerClass="TableTitle" styleClass="TableRow" width="10%"/>
+                    <apex:column value="{!traff.wRevenueUSD}" headerValue="Revenue USD" headerClass="TableTitle" styleClass="TableRow" width="10%"/>
+                    <!--apex:column value="{!traff.wDealSource}" headerValue="Deal Source" headerClass="TableTitle" styleClass="TableRow" width="10%"/--><!--Tsel request to take out column Deal Source-->
+                    <!--apex:column value="{!traff.wPMPOMPFees}" headerValue="PMP / OMP Fees" headerClass="TableTitle" styleClass="TableRow" width="5%"/>
+                    <apex:column value="{!traff.wFeesType}" headerValue="Fees Type" headerClass="TableTitle" styleClass="TableRow" width="5%"/>
+                    <apex:column value="{!traff.wNetRevenue}" headerValue="Net Revenue" headerClass="TableTitle" styleClass="TableRow" width="5%"/>                
+                </apex:pageBlockTable--> 
+                <!-- Tanpa Deal -->
+                <apex:pageBlockTable value="{!wlt}" var="traff">                
+                    <apex:column value="{!traff.wDate}" headerValue="Date" headerClass="TableTitle" styleClass="TableRow" width="10%"/>
+                    <!--apex:column value="{!traff.wDeal}" headerValue="Deal" headerClass="TableTitle" styleClass="TableRow" width="15%"/-->
+                    <apex:column value="{!traff.wDealId}" headerValue="Deal ID" headerClass="TableTitle" styleClass="TableRow" width="10%"/>
+                    <apex:column value="{!traff.wSiteName}" headerValue="Site Name" headerClass="TableTitle" styleClass="TableRow" width="25%"/>
+                    <apex:column value="{!traff.wPaidImpressions}" headerValue="Paid Impressions" headerClass="TableTitle" styleClass="TableRow" width="10%"/>
+                    <apex:column value="{!traff.wRevenueUSD}" headerValue="Revenue USD" headerClass="TableTitle" styleClass="TableRow" width="10%"/>
+                    <!--apex:column value="{!traff.wDealSource}" headerValue="Deal Source" headerClass="TableTitle" styleClass="TableRow" width="10%"/--><!--Tsel request to take out column Deal Source-->
+                    <apex:column value="{!traff.wPMPOMPFees}" headerValue="PMP / OMP Fees" headerClass="TableTitle" styleClass="TableRow" width="5%"/>
+                    <apex:column value="{!traff.wFeesType}" headerValue="Fees Type" headerClass="TableTitle" styleClass="TableRow" width="5%"/>
+                    <apex:column value="{!traff.wNetRevenue}" headerValue="Net Revenue" headerClass="TableTitle" styleClass="TableRow" width="5%"/>                
+                </apex:pageBlockTable>
+            </apex:pageBlock>
+            <br/>
+            </apex:repeat>
+        </div>           
+        
+        <br/>
+        
+        <table border="0" width="100%" style="border-spacing: 0px">
+            <tr>
+                <td style="text-align:left;font-size:12px;" width="50%" colspan ="2">
+                    <apex:outputText value="{0, date, 'Jakarta,' dd-MM-yyyy}">
+                        <apex:param value="{!NOW()}" />
+                    </apex:outputText><br/><br/>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3" class="dtable4"><b>Publisher</b></td>
+                <td colspan="3" class="dtable5"><b>Telkomsel</b></td>
+            </tr>
+            <tr>
+                <td colspan="6" class="dtable6">&nbsp;</td>
+            </tr>
+            <tr>
+                <td colspan="6" class="dtable6">&nbsp;</td>
+            </tr>
+            <tr>
+                <td colspan="6" class="dtable6">&nbsp;</td>
+            </tr>
+            <tr>
+                <td width="5%"  class="dtable4">&nbsp;</td>
+                <td width="40%" class="dtable7"></td>
+                <td width="5%">&nbsp;</td>
+                <td width="5%">&nbsp;</td>
+                <td width="40%" class="dtable7">Achmad S Fariz</td>
+                <td width="5%"  class="dtable5">&nbsp;</td>
+            </tr>
+            <tr>
+                <td colspan="4" class="dtable8">&nbsp;</td>
+                <td class="dtable9"><b>Manager - Digital Advertising Business Operations</b></td>
+                <td class="dtable9">&nbsp;</td>
+            </tr>
+        </table>
+    </div>
+</apex:page>

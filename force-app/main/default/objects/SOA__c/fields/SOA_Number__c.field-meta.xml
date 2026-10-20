@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SOA_Number__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF( 
+   AND(
+     TEXT( SOA_Type__c ) = &apos;Opportunity&apos;,
+     Business_Product__c = &apos;Digital Media&apos;
+   ), 
+    &quot;SOA&quot;+&quot;/&quot;+ Name +&quot;/&quot;+ Owner_Name__c +&quot;/&quot;+ TEXT(Month__c) +&quot;/&quot;+ TEXT(Year__c), 
+   IF(
+     AND(
+        TEXT( SOA_Type__c ) = &apos;Opportunity&apos;,
+        Business_Product__c = &apos;TV Media&apos;
+     ),
+     &quot;SOA&quot;+&quot;/TMS&quot;+ Name +&quot;/&quot;+ Owner_Name__c +&quot;/&quot;+ TEXT(Month__c) +&quot;/&quot;+ TEXT(Year__c),
+     &quot;SOA&quot;+&quot;/&quot;+ Name +&quot;/&quot;+ Owner_Name__c +&quot;/&quot; + TEXT(Month__c) +&quot;/&quot;+ TEXT(Year__c) 
+   )
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>SOA Number</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

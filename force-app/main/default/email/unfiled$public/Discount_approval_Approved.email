@@ -1,0 +1,11 @@
+Good news,
+
+The discount approval for opportunity {!Opportunity.Name} was approved.
+Check link below for more information
+Opportunity: {!Opportunity.Name}
+{!Opportunity.Link}
+Account: {!Opportunity.Account}
+{!Account.Link}
+
+Regards,
+Salesforce

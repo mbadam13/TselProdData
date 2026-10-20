@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Discount_Product_Amount__c</fullName>
+    <formula>IF( 
+   start_date__c  &gt; DATE (2021,01,31),
+   IF(
+      start_date__c &gt; DATE (2022,01,31),
+      IF(
+         Discount__c &gt; 0,
+         (List_Price__c*Discount__c),
+         IF(
+            Kategori_Industri__c  =&apos;Others Telkom&apos;,
+            0.5*List_Price__c,
+	    IF(
+	       AND(
+	            start_date__c &gt; DATE(2022,09,30),
+		    CONTAINS(LOWER(CP_Name__c ), &apos;dws&apos;)
+	       ),
+               0.37*List_Price__c,
+	       0.35*List_Price__c
+	    )
+         )
+      ),
+      IF(
+         Discount__c &gt; 0,
+         (List_Price__c*Discount__c),
+         IF(
+            Kategori_Industri__c =&apos;Others Telkom&apos;,
+            0.5*List_Price__c,
+            0.37*List_Price__c
+         )
+      )   
+   ),
+   IF(
+      Discount__c &gt; 0,
+      (List_Price__c*Discount__c),
+      IF(
+         Kategori_Industri__c = &apos;Others Telkom&apos;,
+         0.5*List_Price__c,
+         IF(
+            OR(
+               Kategori_Industri__c = &apos;Government &amp; Public Service&apos;,
+               Kategori_Industri__c =&apos;Banking&apos;
+            ),
+            0.4*List_Price__c,
+            0.35*List_Price__c
+         )
+      )
+   )
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Discount Product Amount</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

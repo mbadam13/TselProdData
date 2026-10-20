@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Programmatic_Product_Count__c</fullName>
+    <label>Programmatic Product Count</label>
+    <summarizedField>OpportunityLineItem.temp_product_id__c</summarizedField>
+    <summaryFilterItems>
+        <field>OpportunityLineItem.Buying_Method_Product__c</field>
+        <operation>equals</operation>
+        <value>Programmatic</value>
+    </summaryFilterItems>
+    <summaryForeignKey>OpportunityLineItem.OpportunityId</summaryForeignKey>
+    <summaryOperation>sum</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <type>Summary</type>
+</CustomField>

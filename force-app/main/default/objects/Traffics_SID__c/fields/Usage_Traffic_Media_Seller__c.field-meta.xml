@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Usage_Traffic_Media_Seller__c</fullName>
+    <description>digunakan untuk set id usage traffic media seller</description>
+    <label>Usage Traffic Media Seller</label>
+    <referenceTo>Usage_Traffic_Media_Seller__c</referenceTo>
+    <relationshipLabel>Traffics SIDS</relationshipLabel>
+    <relationshipName>Traffics_SIDS</relationshipName>
+    <relationshipOrder>0</relationshipOrder>
+    <reparentableMasterDetail>true</reparentableMasterDetail>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MasterDetail</type>
+    <writeRequiresMasterRead>false</writeRequiresMasterRead>
+</CustomField>

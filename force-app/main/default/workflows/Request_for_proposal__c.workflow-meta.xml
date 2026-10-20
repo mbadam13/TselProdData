@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>Email_Notif_to_MM_and_Sales</fullName>
+        <description>Email Notif to MM and Sales</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <recipients>
+            <recipient>rininta@telkomsel.co.id</recipient>
+            <type>user</type>
+        </recipients>
+        <senderAddress>salesforce@saasten.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>unfiled$public/RFP_need_approval</template>
+    </alerts>
+    <alerts>
+        <fullName>RFP_Email_Notif_Approved</fullName>
+        <description>RFP Email Notif Approved</description>
+        <protected>false</protected>
+        <recipients>
+            <type>creator</type>
+        </recipients>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderAddress>salesforce@saasten.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>unfiled$public/RFP_Change_Deadline_Approved</template>
+    </alerts>
+    <alerts>
+        <fullName>RFP_Email_Notif_Rejected</fullName>
+        <description>RFP Email Notif Rejected</description>
+        <protected>false</protected>
+        <recipients>
+            <type>creator</type>
+        </recipients>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderAddress>salesforce@saasten.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>unfiled$public/RFP_Change_Deadline_Rejected</template>
+    </alerts>
+    <alerts>
+        <fullName>RFP_Need_Revise</fullName>
+        <description>RFP Need Revise</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderAddress>salesforce@saasten.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>unfiled$public/RFP_Need_Revise</template>
+    </alerts>
+    <alerts>
+        <fullName>RFP_in_Revise</fullName>
+        <description>RFP in Revise</description>
+        <protected>false</protected>
+        <recipients>
+            <type>accountOwner</type>
+        </recipients>
+        <senderAddress>salesforce@saasten.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>unfiled$public/RFP_In_Revision</template>
+    </alerts>
+    <alerts>
+        <fullName>SME_Approved_RFP_Approval</fullName>
+        <ccEmails>ahmat.murad@saasten.com</ccEmails>
+        <description>SME Approved RFP Approval</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>sartika_r_sari@telkomsel.co.id</recipient>
+            <type>user</type>
+        </recipients>
+        <senderAddress>david.wong@saasten.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>unfiled$public/SME_Approved_RFP_Approval</template>
+    </alerts>
+    <alerts>
+        <fullName>SME_Completed_RFP</fullName>
+        <ccEmails>ahmat.murad@saasten.com</ccEmails>
+        <description>SME Completed  RFP</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>sartika_r_sari@telkomsel.co.id</recipient>
+            <type>user</type>
+        </recipients>
+        <senderAddress>david.wong@saasten.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>unfiled$public/SME_Completed_RFP_Approval</template>
+    </alerts>
+    <alerts>
+        <fullName>SME_Need_Revision_RFP</fullName>
+        <ccEmails>ahmat.murad@saasten.com</ccEmails>
+        <description>SME Need Revision  RFP</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderAddress>david.wong@saasten.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>unfiled$public/SME_Need_Revision_RFP_Approval</template>
+    </alerts>
+    <alerts>
+        <fullName>SME_Submit_RFP_Approval</fullName>
+        <ccEmails>ahmat.murad@saasten.com</ccEmails>
+        <description>SME Submit RFP Approval</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>ahmad_faisal1@telkomsel.co.id</recipient>
+            <type>user</type>
+        </recipients>
+        <senderAddress>david.wong@saasten.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>unfiled$public/SME_Submit_RFP_Approval</template>
+    </alerts>
+    <alerts>
+        <fullName>Send_Proposal_email_notification</fullName>
+        <description>Send Proposal email notification</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderAddress>salesforce@saasten.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>unfiled$public/Proposal_Send_To_customer</template>
+    </alerts>
+    <fieldUpdates>
+        <fullName>Approval_RFP_Approved</fullName>
+        <field>Approval_Status_RFP__c</field>
+        <literalValue>Approved</literalValue>
+        <name>Approval RFP Approved</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Approval_RFP_Rejected</fullName>
+        <field>Approval_Status_RFP__c</field>
+        <literalValue>Rejected</literalValue>
+        <name>Approval RFP Rejected</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Approval_RFP_Submit</fullName>
+        <field>Approval_Status_RFP__c</field>
+        <literalValue>Submit</literalValue>
+        <name>Approval RFP Submit</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Proposal_Approved</fullName>
+        <field>SME_Approval_Status__c</field>
+        <literalValue>Approved</literalValue>
+        <name>Proposal Approved</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Proposal_Rejected</fullName>
+        <field>SME_Approval_Status__c</field>
+        <literalValue>Rejected</literalValue>
+        <name>Proposal Rejected</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>RFP_Assign</fullName>
+        <field>Request_for_Proposal_Status__c</field>
+        <literalValue>Request Assign</literalValue>
+        <name>RFP Assign</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>RFP_stage_Ask_revision</fullName>
+        <description>upadte status ke ask revision</description>
+        <field>Request_for_Proposal_Status__c</field>
+        <literalValue>Ask Revision</literalValue>
+        <name>RFP stage Ask revision</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>SME_Approval_Status</fullName>
+        <field>SME_Approval_Status__c</field>
+        <literalValue>Submited</literalValue>
+        <name>SME Approval Status</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_SME_RFP_to_request_queue</fullName>
+        <description>untuk update owner rfp ke marketing queue</description>
+        <field>OwnerId</field>
+        <lookupValue>Marketing_Queue</lookupValue>
+        <lookupValueType>Queue</lookupValueType>
+        <name>Set SME RFP to request queue</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_RFP_Submit</fullName>
+        <description>Update RFP Submit Document Version</description>
+        <field>Document_Version__c</field>
+        <literalValue>Submit</literalValue>
+        <name>Update RFP Submit</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_owner</fullName>
+        <description>update owner to marketing queue</description>
+        <field>OwnerId</field>
+        <lookupValue>Marketing_Queue</lookupValue>
+        <lookupValueType>Queue</lookupValueType>
+        <name>Update owner</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_stage_to_reques</fullName>
+        <description>untuk update stage ke request queue</description>
+        <field>Request_for_Proposal_Status__c</field>
+        <literalValue>Request</literalValue>
+        <name>Update stage to reques</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>set_to_owner_queue</fullName>
+        <field>OwnerId</field>
+        <lookupValue>Marketing_Queue</lookupValue>
+        <lookupValueType>Queue</lookupValueType>
+        <name>set to owner queue</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>status_RFP</fullName>
+        <description>update status to request queue</description>
+        <field>Request_for_Proposal_Status__c</field>
+        <literalValue>Request</literalValue>
+        <name>status RFP</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>update_stage_to_request_queue</fullName>
+        <field>Request_for_Proposal_Status__c</field>
+        <literalValue>Request</literalValue>
+        <name>update stage to request queue</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <rules>
+        <fullName>Auto RFP assign</fullName>
+        <actions>
+            <name>RFP_Assign</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Request_for_proposal__c.OwnerId</field>
+            <operation>notEqual</operation>
+            <value>Marketing Queue</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Request_for_proposal__c.Request_for_Proposal_Status__c</field>
+            <operation>equals</operation>
+            <value>Request</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>RFP need revision</fullName>
+        <actions>
+            <name>RFP_stage_Ask_revision</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Request_for_proposal__c.Revisi_Status__c</field>
+            <operation>contains</operation>
+            <value>Need Revision</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Request_for_proposal__c.OwnerId</field>
+            <operation>notEqual</operation>
+            <value>Marketing Queue</value>
+        </criteriaItems>
+        <description>automasi untuk merubah stage ke ask revision</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Set Campaign My Ads</fullName>
+        <active>false</active>
+        <criteriaItems>
+            <field>Request_for_proposal__c.Request_for_Proposal_Status__c</field>
+            <operation>equals</operation>
+            <value>Request</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Request_for_proposal__c.SME_Proposal__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Update Opp Owner</fullName>
+        <active>false</active>
+        <criteriaItems>
+            <field>Request_for_proposal__c.Opportunity_Owner__c</field>
+            <operation>equals</operation>
+            <value>null</value>
+        </criteriaItems>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Update Submit RFP</fullName>
+        <actions>
+            <name>Update_RFP_Submit</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Request_for_proposal__c.Project__c</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Request_for_proposal__c.Background__c</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Request_for_proposal__c.KPI__c</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Request_for_proposal__c.Key_Message__c</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Request_for_proposal__c.Target_Audiance__c</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+</Workflow>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All_Orders_For_Admin</fullName>
+    <columns>ORDERS.ORDER_NUMBER</columns>
+    <columns>SALES.ACCOUNT.NAME</columns>
+    <columns>ORDERS.TOTAL_AMOUNT</columns>
+    <columns>ORDERS.STATUS</columns>
+    <columns>CONTRACT.CONTRACT_NUMBER</columns>
+    <columns>Penagihan__c</columns>
+    <columns>QUOTE.NAME</columns>
+    <columns>SOA__c</columns>
+    <columns>ORDERS.EFFECTIVE_DATE</columns>
+    <columns>ORDERS.END_DATE</columns>
+    <columns>CREATEDBY_USER.ALIAS</columns>
+    <columns>ORDERS.CREATED_DATE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>ORDERS.STATUS</field>
+        <operation>equals</operation>
+        <value>Running,Completed</value>
+    </filters>
+    <label>All Orders For Admin</label>
+    <sharedTo>
+        <role>Campaign_Operation_Manager</role>
+        <role>Campaign_Operation_Team</role>
+        <role>Settlement_Manager</role>
+        <role>Settlement_Team</role>
+    </sharedTo>
+</ListView>

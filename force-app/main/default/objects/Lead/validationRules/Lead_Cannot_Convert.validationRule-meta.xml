@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Lead_Cannot_Convert</fullName>
+    <active>false</active>
+    <description>- deactive because use new procces 2/5/2025</description>
+    <errorConditionFormula>AND(
+ISPICKVAL(  Status , &quot;Qualified&quot;),
+RecordTypeId  = &apos;012p0000000OdZmAAK&apos;,
+OR( 
+NOT(
+ISPICKVAL( Approval_Status__c , &quot;Approved&quot;)
+)
+)
+)</errorConditionFormula>
+    <errorDisplayField>Approval_Status__c</errorDisplayField>
+    <errorMessage>Lead was not Approved</errorMessage>
+</ValidationRule>

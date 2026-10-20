@@ -1,0 +1,12 @@
+Dear {!Order.OwnerName},
+
+Order dengan no. {!Order.OrderNumber} sudah diberikan House Number untuk semua produknya. Saatnya untuk mengenerate Media Order. Silahkan click tombol "Generate MO"
+
+Order:
+Order Number: {!Order.OrderNumber}
+Order Name : Order : {!Order.Name} 
+Order Link : {!Order.Link}
+
+
+Regards,
+Salesforce

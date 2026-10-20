@@ -1,0 +1,19 @@
+<apex:page standardController="SOA__c" showHeader="false"  extensions="REST_PrivyID_SOAClass"  >
+
+  <apex:form >
+    <apex:actionFunction name="UploadDocument" action="{!UploadDocument}" rerender="allPanel"/>
+        <apex:sectionHeader title="Upload File Data" subtitle="Document SOA"/>
+        <!--<apex:pageMessage summary="Successful Sent file to PrivyId." severity="Success" strength="3" />-->
+        <apex:pageMessage summary="Gagal upload ke privyid, mohon upload file PrivyId terlebih dahulu." severity="Success" strength="3" rendered="{!IF(getFile.size==0, true, false)}" />
+        <apex:pageMessage summary="Berhasil upload ke privyid." severity="warning" strength="3" rendered="{!IF(getFile.size!=0, true, false)}" />
+
+        <script>
+           window.onload=function()
+           {
+             UploadDocument();
+           };
+        </script>
+        <br/>
+        <apex:commandButton action="{!back}" value="Back"/>
+  </apex:form>
+</apex:page>

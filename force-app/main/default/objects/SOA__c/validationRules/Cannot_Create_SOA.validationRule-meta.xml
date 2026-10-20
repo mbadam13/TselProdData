@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cannot_Create_SOA</fullName>
+    <active>false</active>
+    <errorConditionFormula>NOT(ISPICKVAL(Opportunity__r.Contract.Status, &apos;Activated&apos;))</errorConditionFormula>
+    <errorMessage>Contract Not Activate</errorMessage>
+</ValidationRule>

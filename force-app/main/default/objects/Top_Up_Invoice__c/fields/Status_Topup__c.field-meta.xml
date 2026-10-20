@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Status_Topup__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(
+   Total_Topup__c = 0,
+   &apos;&apos;,
+   IF(
+      Total_Topup__c &gt; 1,
+      &apos;Re-Top Up&apos;,
+      &apos;First Top Up&apos;
+   )
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Status Topup</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

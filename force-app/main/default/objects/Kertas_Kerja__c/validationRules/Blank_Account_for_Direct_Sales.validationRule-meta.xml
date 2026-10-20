@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Blank_Account_for_Direct_Sales</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+   TEXT(Type__c) = &apos;Direct Sales&apos;,
+   NOT(ISBLANK(Media_Seller__c))
+)</errorConditionFormula>
+    <errorMessage>No need to choose Media Seller Account for Type &quot;Direct Sales&quot;.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,11 @@
+Hello Team,
+
+The order for opportunity  {!Order.Opportunity} is already running.
+Check link below for more information
+Order:
+{!Order.Link}
+Opportunity:
+{!Order.Opportunity}
+
+Regards,
+Salesforce

@@ -1,0 +1,6 @@
+Good news, 
+
+The {!OrderItem.Account_Name__c} for order {!Order.Name} want to be running please check the order.
+
+thank you,
+Salesforce

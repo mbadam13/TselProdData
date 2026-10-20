@@ -1,0 +1,11 @@
+Hello,
+
+The campaign customize for {!Opportunity.Name} need approval.
+Click link below for more information
+Opportunity link:
+{!Opportunity.Link}.
+Opportunity name:
+{!Opportunity.Name}
+
+Regards,
+Salesforce

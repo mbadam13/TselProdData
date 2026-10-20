@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Product_Group__c</fullName>
+    <label>Product Group</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Fix</fullName>
+                <default>false</default>
+                <label>Fix</label>
+            </value>
+            <value>
+                <fullName>Offdeck</fullName>
+                <default>false</default>
+                <label>Offdeck</label>
+            </value>
+            <value>
+                <fullName>On Deck</fullName>
+                <default>false</default>
+                <label>On Deck</label>
+            </value>
+            <value>
+                <fullName>Reward</fullName>
+                <default>false</default>
+                <label>Reward</label>
+            </value>
+            <value>
+                <fullName>Performance</fullName>
+                <default>false</default>
+                <label>Performance</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

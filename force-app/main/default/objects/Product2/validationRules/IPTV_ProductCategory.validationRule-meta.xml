@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IPTV_ProductCategory</fullName>
+    <active>true</active>
+    <description>Field Product Category Mandatory for iptv to dependent Product Family</description>
+    <errorConditionFormula>AND(
+   ISPICKVAL( Product_Category__c , &quot;IPTV&quot;),
+   OR(
+     ISPICKVAL( Family , &quot;Display&quot;),
+     ISPICKVAL( Family , &quot;Reward&quot;),
+     ISPICKVAL( Family , &quot;Performance&quot;),
+     ISPICKVAL( Family , &quot;Messaging&quot;)
+   )
+)</errorConditionFormula>
+    <errorDisplayField>Family</errorDisplayField>
+    <errorMessage>Product Category for IPTV:
+Creative Ads, TVC, Programmatic Ads, Blocking Channel, In House Production, Off Air Activation, OTT Digital Advertising.</errorMessage>
+</ValidationRule>

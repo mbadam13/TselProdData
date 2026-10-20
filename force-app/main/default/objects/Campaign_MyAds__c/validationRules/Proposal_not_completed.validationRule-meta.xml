@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Proposal_not_completed</fullName>
+    <active>true</active>
+    <description>validasi untuk membatasi ga bisa next stage karena proposal blm completed</description>
+    <errorConditionFormula>AND(
+ISPICKVAL( Stage__c ,&apos;negotiation&apos;),  Proposal_Status__c != &apos;&apos;,
+
+NOT( 
+OR(Proposal_Status__c = &apos;Completed&apos; , Proposal_Status__c = &apos;Send Proposal&apos; , Proposal_Status__c = &apos;Closed&apos; )))</errorConditionFormula>
+    <errorMessage>Proposal belum selesai, kamu tidak bisa lanjut ke stage berikutnya</errorMessage>
+</ValidationRule>
